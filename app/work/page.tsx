@@ -12,7 +12,12 @@ function Timeline({ items, projects: areProjects = false }: { items: TimelineIte
         <article className="timeline-item" key={item.title}>
           <h2 className={areProjects ? "timeline-item__title timeline-item__title--project" : "timeline-item__title"}>
             {item.url ? (
-              <a className="timeline-item__title-link" href={item.url}>
+              <a
+                className="timeline-item__title-link"
+                href={item.url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 {item.title}
               </a>
             ) : (
@@ -75,7 +80,7 @@ export default function WorkPage() {
                   [{projectsExpanded ? "–" : "+"}] Projects
                 </button>
               </h1>
-              <p>My personal works and team creations</p>
+              <p>My featured works and team creations</p>
             </header>
             <div hidden={!projectsExpanded} id="projects-timeline">
               <Timeline items={projects} projects />

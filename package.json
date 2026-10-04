@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "data:listening": "uv run python scripts/import_listening_stats.py"
   },
   "dependencies": {
     "next": "16.3.8",

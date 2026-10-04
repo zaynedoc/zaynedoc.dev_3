@@ -1,0 +1,154 @@
+{
+  "source": {
+    "capturedAtUtc": "2026-10-03T04:05:02.9178115+00:00",
+    "countMode": "latest cumulative WMP play counts",
+    "snapshot": "20261003T040502917Z.json",
+    "snapshotCount": 11
+  },
+  "albums": [
+    {
+      "album": "Ao",
+      "totalListens": 407,
+      "mostListenedTrack": {
+        "title": "NONSENSE BUNGAKU",
+        "artist": "Eve & Sou",
+        "listens": 34
+      }
+    },
+    {
+      "album": "OFFICIAL NUMBER",
+      "totalListens": 267,
+      "mostListenedTrack": {
+        "title": "Demon dance tokyo (デーモンダンストーキョー)",
+        "artist": "Eve",
+        "listens": 31
+      }
+    },
+    {
+      "album": "ウェザーステーション",
+      "totalListens": 180,
+      "mostListenedTrack": {
+        "title": "Rainy Boots (レイニーブーツ)",
+        "artist": "稲葉曇",
+        "listens": 19
+      }
+    },
+    {
+      "album": "正しい偽りからの起床",
+      "totalListens": 142,
+      "mostListenedTrack": {
+        "title": "Humanoid (ヒューマノイド)",
+        "artist": "Zutomayo",
+        "listens": 26
+      }
+    },
+    {
+      "album": "廻人",
+      "totalListens": 113,
+      "mostListenedTrack": {
+        "title": "YOKU",
+        "artist": "Eve",
+        "listens": 10
+      }
+    },
+    {
+      "album": "おとぎ",
+      "totalListens": 92,
+      "mostListenedTrack": {
+        "title": "Yadorigi (やどりぎ)",
+        "artist": "Eve",
+        "listens": 10
+      }
+    },
+    {
+      "album": "狂言",
+      "totalListens": 85,
+      "mostListenedTrack": {
+        "title": "Usseewa (うっせぇわ)",
+        "artist": "Ado",
+        "listens": 8
+      }
+    },
+    {
+      "album": "Blurryface",
+      "totalListens": 43,
+      "mostListenedTrack": {
+        "title": "Heavydirtysoul",
+        "artist": "twenty one pilots",
+        "listens": 5
+      }
+    },
+    {
+      "album": "Trench",
+      "totalListens": 25,
+      "mostListenedTrack": {
+        "title": "Chlorine",
+        "artist": "twenty one pilots",
+        "listens": 3
+      }
+    },
+    {
+      "album": "IGOR",
+      "totalListens": 24,
+      "mostListenedTrack": {
+        "title": "A BOY IS A GUN*",
+        "artist": "Tyler, The Creator",
+        "listens": 2
+      }
+    },
+    {
+      "album": "Round Robin",
+      "totalListens": 20,
+      "mostListenedTrack": {
+        "title": "Fallin My World (フォーリンマイワールド)",
+        "artist": "Eve",
+        "listens": 2
+      }
+    },
+    {
+      "album": "Wolf",
+      "totalListens": 20,
+      "mostListenedTrack": {
+        "title": "Domo 23",
+        "artist": "Tyler, The Creator",
+        "listens": 2
+      }
+    },
+    {
+      "album": "Wonder Word",
+      "totalListens": 14,
+      "mostListenedTrack": {
+        "title": "Arukari seizin (アルカリ成人)",
+        "artist": "Eve",
+        "listens": 2
+      }
+    },
+    {
+      "album": "House of Balloons",
+      "totalListens": 12,
+      "mostListenedTrack": {
+        "title": "House of Balloons / Glass Table Girls",
+        "artist": "The Weeknd",
+        "listens": 2
+      }
+    },
+    {
+      "album": "play with earth! 0.03",
+      "totalListens": 12,
+      "mostListenedTrack": {
+        "title": "are you bored?",
+        "artist": "wave to earth",
+        "listens": 3
+      }
+    },
+    {
+      "album": "Vessel",
+      "totalListens": 7,
+      "mostListenedTrack": {
+        "title": "Fake You Out",
+        "artist": "twenty one pilots",
+        "listens": 1
+      }
+    }
+  ]
+}

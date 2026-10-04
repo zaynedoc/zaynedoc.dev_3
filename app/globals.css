@@ -284,7 +284,9 @@ a:hover {
 
 .timeline-item__title-link {
   color: inherit;
-  text-decoration: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 9px;
 }
 
 .timeline-item__title-link:focus-visible {
@@ -571,6 +573,13 @@ a:hover {
   line-height: 49px;
 }
 
+.accent-section__inline-link {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
 .about-section {
   display: flex;
   flex-direction: column;
@@ -695,32 +704,36 @@ a:hover {
   margin: 0;
 }
 
-.album-info__album-title {
-  color: var(--text-secondary);
-}
-
-.album-info__album-link {
+.album-info__album-link,
+.album-info__track-link {
+  align-self: center;
+  max-inline-size: 100%;
+  color: var(--text-primary);
+  inline-size: fit-content;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 7px;
 }
 
-.album-info__tracks {
+.album-info__metadata,
+.album-info__top-track {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  align-items: center;
 }
 
-.album-info__tracks ul {
-  padding: 0;
-  list-style: none;
+.album-info__metadata {
+  gap: 12px;
 }
 
-.album-info__tracks a {
-  color: var(--text-secondary);
-  text-decoration-line: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 7px;
+.album-info__top-track {
+  gap: 8px;
+}
+
+.album-info__listen-count {
+  color: var(--decoration-muted);
+  font-size: 0.75em;
+  line-height: 1.15;
 }
 
 .album-info__empty {

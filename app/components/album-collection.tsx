@@ -12,6 +12,10 @@ function wrapIndex(index: number, length: number) {
   return (index + length) % length;
 }
 
+function formatListens(listens: number) {
+  return `${listens.toLocaleString("en-US")} ${listens === 1 ? "listen" : "listens"}`;
+}
+
 function AlbumCover({ album, slot }: { album: Album; slot: string }) {
   const isActive = slot === "active";
   const className = `album-cover album-cover--${slot}`;
@@ -31,13 +35,9 @@ function AlbumCover({ album, slot }: { album: Album; slot: string }) {
     />
   );
 
-  if (!album.url) {
-    return <div className={className}>{cover}</div>;
-  }
-
   return (
     <a
-      aria-label={`Open ${album.title} by ${album.artist}`}
+      aria-label={`Search for ${album.title} by ${album.artist}`}
       className={className}
       href={album.url}
       rel="noreferrer"
@@ -49,7 +49,7 @@ function AlbumCover({ album, slot }: { album: Album; slot: string }) {
 }
 
 export function AlbumCollection({ albums }: AlbumCollectionProps) {
-  const [activeIndex, setActiveIndex] = useState(Math.min(1, albums.length - 1));
+  const [activeIndex, setActiveIndex] = useState(0);
 
   if (albums.length === 0) {
     return null;
@@ -96,52 +96,43 @@ export function AlbumCollection({ albums }: AlbumCollectionProps) {
         </button>
       </div>
 
-      <article className="album-info">
+      <article className="album-info" aria-live="polite">
         <p>Album Info.:</p>
-        {activeAlbum.url ? (
-          <a
-            className="album-info__album-title album-info__album-link"
-            href={activeAlbum.url}
-            rel="noreferrer"
-            target="_blank"
-          >
-            “{activeAlbum.title}” by {activeAlbum.artist}
-          </a>
-        ) : (
-          <p className="album-info__album-title">
-            “{activeAlbum.title}” by {activeAlbum.artist}
+        <a
+          className="album-info__album-title album-info__album-link"
+          href={activeAlbum.url}
+          rel="noreferrer"
+          target="_blank"
+        >
+          “{activeAlbum.title}” by {activeAlbum.artist}
+        </a>
+        <div className="album-info__metadata">
+          <p>
+            ver.: [{activeAlbum.pressing.version}] ({activeAlbum.pressing.matrixCode})
           </p>
-        )}
-        <p>
-          ver.: [{activeAlbum.pressing.version}] ({activeAlbum.pressing.matrixCode})
-        </p>
-        <div className="album-info__tracks">
-          <p>Favorite Tracks:</p>
-          {activeAlbum.favoriteTracks.length > 0 ? (
-            <ul>
-              {activeAlbum.favoriteTracks.map((track) => {
-                const label = (
-                  <>
-                    {track.title}
-                    {track.featuring ? ` (feat. ${track.featuring})` : ""}
-                  </>
-                );
-
-                return (
-                  <li key={track.title}>
-                    {track.url ? (
-                      <a href={track.url} rel="noreferrer" target="_blank">
-                        {label}
-                      </a>
-                    ) : (
-                      label
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
+          <p className="album-info__listen-count">
+            {formatListens(activeAlbum.totalListens)} across this album
+          </p>
+        </div>
+        <div className="album-info__top-track">
+          <p>Most Listened Track:</p>
+          {activeAlbum.mostListenedTrack ? (
+            <>
+              <a
+                className="album-info__track-link"
+                href={activeAlbum.mostListenedTrack.url}
+                rel="noreferrer"
+                target="_blank"
+              >
+                “{activeAlbum.mostListenedTrack.title}” by{" "}
+                {activeAlbum.mostListenedTrack.artist}
+              </a>
+              <p className="album-info__listen-count">
+                {formatListens(activeAlbum.mostListenedTrack.listens)}
+              </p>
+            </>
           ) : (
-            <p className="album-info__empty">No favorite tracks added yet.</p>
+            <p className="album-info__empty">No recorded listens yet.</p>
           )}
         </div>
       </article>

@@ -3,8 +3,15 @@ import { AlbumCollection } from "../components/album-collection";
 import { MosaicDecoration } from "../components/mosaic-decoration";
 import { SiteNavigation } from "../components/site-navigation";
 import { albums } from "../data/albums";
+import { projects } from "../data/work";
 
 export default function MePage() {
+  const wmplWrapUrl = projects.find(({ title }) => title === "WMPL Wrap")?.url;
+
+  if (!wmplWrapUrl) {
+    throw new Error("WMPL Wrap must have a URL in the work dataset.");
+  }
+
   return (
     <main className="interior-page" id="top">
       <div className="desktop-canvas">
@@ -44,7 +51,7 @@ export default function MePage() {
                   height={450}
                   loading="lazy"
                   sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1600px) 46vw, 600px"
-                  src="/images/me-asset-6.webp"
+                  src="/images/genesis-coupe-sunset.webp"
                   width={600}
                 />
                 <Image
@@ -53,7 +60,7 @@ export default function MePage() {
                   height={450}
                   loading="lazy"
                   sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1600px) 50vw, 675px"
-                  src="/images/me-asset-4.webp"
+                  src="/images/genesis-coupe-storm-clouds.webp"
                   width={675}
                 />
               </div>
@@ -63,7 +70,7 @@ export default function MePage() {
                 height={402}
                 loading="lazy"
                 sizes="(max-width: 700px) calc(100vw - 40px), 600px"
-                src="/images/me-asset-10.webp"
+                src="/images/genesis-coupe-golden-hour.webp"
                 width={600}
               />
             </div>
@@ -82,11 +89,26 @@ export default function MePage() {
                 <p>
                   A resultant of this recent hobby of mine was the
                   <br className="responsive-copy-break" />{" "}
-                  “Windows Media Player Legacy (WMPL) Wrap”
+                  “Windows Media Player Legacy (WMPL) {" "}
+                  <a
+                    className="accent-section__inline-link"
+                    href={wmplWrapUrl}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Wrap
+                  </a>”
                   <br className="responsive-copy-break" />{" "}
                   project, allowing me to track logistics of my
                   <br className="responsive-copy-break" />{" "}
                   most listened to CD albums!
+                </p>
+                <p>
+                  The data presented  below is tied to actual
+                  <br className="responsive-copy-break" />{" "}
+                  metadata stored on my WMPL instance. I ran a
+                  <br className="responsive-copy-break" />{" "}
+                  Python script that updates the stats periodically.
                 </p>
               </div>
             </header>
