@@ -6,6 +6,12 @@ export const siteConfig = {
   url: "https://zaynedoc.dev",
   defaultDescription:
     "Portfolio of Zayne Dockery, a developer, ambassador, and undergraduate focused on UX/UI, DevOps, and application security.",
+  socialImage: {
+    path: "/images/social-thumbnail.png",
+    width: 1200,
+    height: 630,
+    alt: "Zayne Dockery — developer, ambassador, and undergraduate",
+  },
   pages: {
     home: {
       path: "/",
@@ -55,11 +61,27 @@ export function createPageMetadata(page: PageName): Metadata {
       siteName: siteConfig.siteName,
       title,
       description: pageConfig.description,
+      images: [
+        {
+          url: siteConfig.socialImage.path,
+          width: siteConfig.socialImage.width,
+          height: siteConfig.socialImage.height,
+          alt: siteConfig.socialImage.alt,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: pageConfig.description,
+      images: [
+        {
+          url: siteConfig.socialImage.path,
+          width: siteConfig.socialImage.width,
+          height: siteConfig.socialImage.height,
+          alt: siteConfig.socialImage.alt,
+        },
+      ],
     },
   };
 }

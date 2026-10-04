@@ -1,23 +1,23 @@
 {
   "source": {
-    "capturedAtUtc": "2026-10-03T04:05:02.9178115+00:00",
+    "capturedAtUtc": "2026-10-04T04:05:02.2928724+00:00",
     "countMode": "latest cumulative WMP play counts",
-    "snapshot": "20261003T040502917Z.json",
-    "snapshotCount": 11
+    "snapshot": "20261004T040502292Z.json",
+    "snapshotCount": 12
   },
   "albums": [
     {
       "album": "Ao",
-      "totalListens": 407,
+      "totalListens": 414,
       "mostListenedTrack": {
-        "title": "NONSENSE BUNGAKU",
+        "title": "TEIKOKU SHOUJO",
         "artist": "Eve & Sou",
-        "listens": 34
+        "listens": 35
       }
     },
     {
       "album": "OFFICIAL NUMBER",
-      "totalListens": 267,
+      "totalListens": 271,
       "mostListenedTrack": {
         "title": "Demon dance tokyo (デーモンダンストーキョー)",
         "artist": "Eve",
@@ -26,9 +26,9 @@
     },
     {
       "album": "ウェザーステーション",
-      "totalListens": 180,
+      "totalListens": 186,
       "mostListenedTrack": {
-        "title": "Rainy Boots (レイニーブーツ)",
+        "title": "Himitsu no Shougakusei (ひみつの小学生)",
         "artist": "稲葉曇",
         "listens": 19
       }
@@ -44,34 +44,34 @@
     },
     {
       "album": "廻人",
-      "totalListens": 113,
+      "totalListens": 118,
       "mostListenedTrack": {
-        "title": "YOKU",
+        "title": "Ao No Waltz (蒼のワルツ)",
         "artist": "Eve",
         "listens": 10
       }
     },
     {
       "album": "おとぎ",
-      "totalListens": 92,
+      "totalListens": 102,
       "mostListenedTrack": {
-        "title": "Yadorigi (やどりぎ)",
+        "title": "Bokuramadaunderground (僕らまだアンダーグラウンド)",
         "artist": "Eve",
-        "listens": 10
+        "listens": 11
       }
     },
     {
       "album": "狂言",
-      "totalListens": 85,
+      "totalListens": 96,
       "mostListenedTrack": {
-        "title": "Usseewa (うっせぇわ)",
+        "title": "Odo (踊)",
         "artist": "Ado",
-        "listens": 8
+        "listens": 9
       }
     },
     {
       "album": "Blurryface",
-      "totalListens": 43,
+      "totalListens": 55,
       "mostListenedTrack": {
         "title": "Heavydirtysoul",
         "artist": "twenty one pilots",
@@ -79,21 +79,30 @@
       }
     },
     {
-      "album": "Trench",
-      "totalListens": 25,
+      "album": "IGOR",
+      "totalListens": 43,
       "mostListenedTrack": {
-        "title": "Chlorine",
-        "artist": "twenty one pilots",
-        "listens": 3
+        "title": "GONE, GONE / THANK YOU",
+        "artist": "Tyler, The Creator",
+        "listens": 5
       }
     },
     {
-      "album": "IGOR",
-      "totalListens": 24,
+      "album": "Trench",
+      "totalListens": 37,
       "mostListenedTrack": {
-        "title": "A BOY IS A GUN*",
-        "artist": "Tyler, The Creator",
-        "listens": 2
+        "title": "Levitate",
+        "artist": "twenty one pilots",
+        "listens": 5
+      }
+    },
+    {
+      "album": "Wolf",
+      "totalListens": 34,
+      "mostListenedTrack": {
+        "title": "Tamale",
+        "artist": "Tyler, The Creator feat. Tallulah",
+        "listens": 4
       }
     },
     {
@@ -106,29 +115,29 @@
       }
     },
     {
-      "album": "Wolf",
-      "totalListens": 20,
+      "album": "House of Balloons",
+      "totalListens": 19,
       "mostListenedTrack": {
-        "title": "Domo 23",
-        "artist": "Tyler, The Creator",
-        "listens": 2
+        "title": "House of Balloons / Glass Table Girls",
+        "artist": "The Weeknd",
+        "listens": 3
       }
     },
     {
       "album": "Wonder Word",
-      "totalListens": 14,
+      "totalListens": 15,
       "mostListenedTrack": {
-        "title": "Arukari seizin (アルカリ成人)",
+        "title": "Yoru no yume (よるのゆめ)",
         "artist": "Eve",
-        "listens": 2
+        "listens": 3
       }
     },
     {
-      "album": "House of Balloons",
-      "totalListens": 12,
+      "album": "Vessel",
+      "totalListens": 14,
       "mostListenedTrack": {
-        "title": "House of Balloons / Glass Table Girls",
-        "artist": "The Weeknd",
+        "title": "Migraine",
+        "artist": "twenty one pilots",
         "listens": 2
       }
     },
@@ -139,15 +148,6 @@
         "title": "are you bored?",
         "artist": "wave to earth",
         "listens": 3
-      }
-    },
-    {
-      "album": "Vessel",
-      "totalListens": 7,
-      "mostListenedTrack": {
-        "title": "Fake You Out",
-        "artist": "twenty one pilots",
-        "listens": 1
       }
     }
   ]
