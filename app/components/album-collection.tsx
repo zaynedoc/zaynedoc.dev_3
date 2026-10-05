@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import type { Album } from "../data/albums";
+import { FadeImage } from "./fade-image";
 
 type AlbumCollectionProps = {
   albums: Album[];
@@ -20,7 +20,7 @@ function AlbumCover({ album, slot }: { album: Album; slot: string }) {
   const isActive = slot === "active";
   const className = `album-cover album-cover--${slot}`;
   const cover = (
-    <Image
+    <FadeImage
       alt={album.coverAlt}
       className={isActive ? "album-covers__featured" : "album-covers__small"}
       height={isActive ? 250 : 200}
@@ -96,26 +96,23 @@ export function AlbumCollection({ albums }: AlbumCollectionProps) {
         </button>
       </div>
 
-      <article className="album-info" aria-live="polite">
-        <p>Album Info.:</p>
-        <a
-          className="album-info__album-title album-info__album-link"
-          href={activeAlbum.url}
-          rel="noreferrer"
-          target="_blank"
-        >
-          “{activeAlbum.title}” by {activeAlbum.artist}
-        </a>
-        <div className="album-info__metadata">
-          <p>
-            ver.: [{activeAlbum.pressing.version}] ({activeAlbum.pressing.matrixCode})
-          </p>
+      <article className="album-info" aria-live="polite">        
+        <div className="album-info__summary">
+          <p>Album Info.:</p>
+          <a
+            className="album-info__album-title album-info__album-link"
+            href={activeAlbum.url}
+            rel="noreferrer"
+            target="_blank"
+          >
+            “{activeAlbum.title}” by {activeAlbum.artist}
+          </a>
           <p className="album-info__listen-count">
-            {formatListens(activeAlbum.totalListens)} across this album
+            {formatListens(activeAlbum.totalListens)} on this album
           </p>
         </div>
         <div className="album-info__top-track">
-          <p>Most Listened Track:</p>
+          <p>Favorite Track:</p>
           {activeAlbum.mostListenedTrack ? (
             <>
               <a

@@ -48,6 +48,45 @@ a:hover {
   color: var(--decoration-muted);
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-copy > *,
+.content-stack > *,
+.not-found-content > * {
+  animation: fade-in 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-copy > :nth-child(2),
+.content-stack > :nth-child(2),
+.not-found-content > :nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.hero-copy > :nth-child(3),
+.content-stack > :nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.content-stack > :nth-child(4) {
+  animation-delay: 360ms;
+}
+
+.reveal-media {
+  opacity: 0;
+}
+
+.reveal-media--loaded {
+  animation: fade-in 600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 .home-page {
   position: relative;
   block-size: 100dvh;
@@ -176,7 +215,7 @@ a:hover {
 .interior-page {
   position: relative;
   min-block-size: 100dvh;
-  overflow: hidden;
+  overflow: clip;
   background: var(--page-background);
 }
 
@@ -235,7 +274,32 @@ a:hover {
 }
 
 .site-navigation a {
-  text-decoration: none;
+  text-decoration-color: var(--text-primary);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+.site-navigation a[aria-current="page"] {
+  color: var(--text-primary);
+  text-decoration-color: var(--decoration-muted);
+}
+
+.site-navigation--sticky {
+  position: sticky;
+  z-index: 20;
+  inset-block-start: 0;
+  background: var(--page-background);
+}
+
+.site-navigation--sticky::after {
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline: 0;
+  block-size: 32px;
+  background: linear-gradient(to bottom, var(--page-background), transparent);
+  content: "";
+  pointer-events: none;
 }
 
 .site-navigation__links {
@@ -296,11 +360,36 @@ a:hover {
 }
 
 .timeline-item {
+  --timeline-item-content-gap: 40px;
+
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--timeline-item-content-gap);
   border-inline-start: 4px solid var(--text-secondary);
   padding-inline-start: 50px;
+}
+
+.timeline-item__readables {
+  display: flex;
+  min-inline-size: 0;
+  flex-direction: column;
+  gap: var(--timeline-item-content-gap);
+}
+
+@media (min-width: 901px) {
+  .timeline-item--expanded {
+    display: grid;
+    grid-template-columns: minmax(280px, 2fr) minmax(0, 3fr);
+    align-items: start;
+    border-inline-start: 0;
+    column-gap: clamp(48px, 5vw, 90px);
+    padding-inline-start: 0;
+  }
+
+  .timeline-item--expanded > .timeline-item__readables {
+    border-inline-start: 4px solid var(--text-secondary);
+    padding-inline-start: 50px;
+  }
 }
 
 .timeline-item__title {
@@ -357,6 +446,63 @@ a:hover {
   font-size: 32px;
   font-weight: 400;
   line-height: 39px;
+}
+
+.project-read-more {
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+.project-read-more:hover {
+  color: var(--decoration-muted);
+}
+
+.project-read-more:focus-visible {
+  outline: 2px solid var(--text-secondary);
+  outline-offset: 8px;
+}
+
+.project-details {
+  display: flex;
+  inline-size: min(100%, 1200px);
+  flex-direction: column;
+  gap: 32px;
+}
+
+.project-details__video,
+.project-details__video-placeholder {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  background: #090d19;
+}
+
+.project-details__video {
+  block-size: auto;
+  object-fit: contain;
+}
+
+.project-details__video-placeholder {
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--decoration-muted);
+  color: var(--decoration-muted);
+  text-align: center;
+}
+
+.project-details__description {
+  max-inline-size: 1200px;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .back-to-top {
@@ -750,15 +896,15 @@ a:hover {
   text-underline-offset: 7px;
 }
 
-.album-info__metadata,
+.album-info__summary,
 .album-info__top-track {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.album-info__metadata {
-  gap: 12px;
+.album-info__summary {
+  gap: 8px;
 }
 
 .album-info__top-track {
@@ -767,7 +913,6 @@ a:hover {
 
 .album-info__listen-count {
   color: var(--decoration-muted);
-  font-size: 0.75em;
   line-height: 1.15;
 }
 
@@ -791,12 +936,6 @@ a:hover {
 
   .album-info {
     margin-inline: 0;
-  }
-}
-
-@media (max-width: 1100px) {
-  .album-info {
-    font-size: clamp(28px, 4vw, 40px);
   }
 }
 
@@ -955,7 +1094,8 @@ a:hover {
   }
 
   .content-section-heading p,
-  .accent-section p {
+  .accent-section p,
+  .album-info {
     font-size: 32px;
     line-height: 1.3;
   }
@@ -1039,7 +1179,8 @@ a:hover {
   }
 
   .content-section-heading p,
-  .accent-section p {
+  .accent-section p,
+  .album-info {
     font-size: 28px;
   }
 
@@ -1189,7 +1330,8 @@ a:hover {
   }
 
   .content-section-heading p,
-  .accent-section p {
+  .accent-section p,
+  .album-info {
     font-size: 24px;
     line-height: 1.35;
     overflow-wrap: anywhere;
@@ -1204,6 +1346,8 @@ a:hover {
   }
 
   .timeline-item {
+    --timeline-item-content-gap: 28px;
+
     gap: 28px;
     padding-inline-start: 20px;
   }
@@ -1383,6 +1527,47 @@ a:hover {
   }
 }
 
+/* Keep the 1200px typography scale through 2K/QHD viewports. Wider
+   screens retain the original large desktop scale declared above. */
+@media (min-width: 1280px) and (max-width: 2560px) {
+  .section-heading h1,
+  .content-section-heading h1,
+  .accent-section h1,
+  .timeline-item__title {
+    font-size: 52px;
+  }
+
+  .section-heading p,
+  .route-link,
+  .social-links,
+  .content-section-heading p,
+  .accent-section p,
+  .album-info,
+  .back-to-top {
+    font-size: 32px;
+  }
+
+  .site-navigation {
+    font-size: 30px;
+  }
+
+  .timeline-role__label {
+    font-size: 38px;
+  }
+
+  .timeline-role__detail {
+    font-size: 27px;
+  }
+
+  .not-found-content h1 {
+    font-size: 100px;
+  }
+
+  .not-found-content p {
+    font-size: 25px;
+  }
+}
+
 @media (max-height: 600px) {
   .hero {
     padding-block: 24px;
@@ -1422,5 +1607,18 @@ a:hover {
 
   .home-mosaic {
     transform: scale(0.24);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy > *,
+  .content-stack > *,
+  .not-found-content > * {
+    animation: none;
+  }
+
+  .reveal-media--loaded {
+    opacity: 1;
+    animation: none;
   }
 }

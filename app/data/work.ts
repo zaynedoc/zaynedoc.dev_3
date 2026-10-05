@@ -4,6 +4,10 @@ export type TimelineRole = {
 };
 
 export type TimelineItem = {
+  details?: {
+    description: string;
+    videoSrc?: string;
+  };
   roles: TimelineRole[];
   title: string;
   url?: string;
@@ -49,6 +53,11 @@ export const experience: TimelineItem[] = [
 export const projects: TimelineItem[] = [
   {
     title: "Vigil SIEM",
+    details: {
+      description:
+        "An open-source, deployable SIEM with real-time threat detection, Sigma rule support, MITRE ATT&CK mapping, and an AI voice assistant that summarizes security posture and recommends remediation actions.",
+      videoSrc: "/videos/projects/vigil.mp4",
+    },
     roles: [
       {
         label: "Knight Hacks’ Project Launch 2026",
@@ -59,6 +68,11 @@ export const projects: TimelineItem[] = [
   },
   {
     title: "Crisis-Net.tech",
+    details: {
+      description:
+        "A real-time disaster-response dashboard that serves National Weather Service alerts through a multi-agent system of Google ADK agents and a FastAPI backend. The project won HackUSF 2026’s Best Use of .Tech award.",
+      videoSrc: "/videos/projects/crisis-net.mp4",
+    },
     roles: [
       {
         label: "Winner at HackUSF 2026",
@@ -69,6 +83,11 @@ export const projects: TimelineItem[] = [
   },
   {
     title: "Fleurish",
+    details: {
+      description:
+        "A team-built mobile experience created for Bloom Knights 2026. I collaborated through Agile Scrum and implemented donation flows using secure Venmo and Cash App payment links.",
+      videoSrc: "/videos/projects/fleurish.mp4",
+    },
     roles: [
       {
         label: "Knight Hacks' Bloom Knights 2026",
@@ -79,12 +98,32 @@ export const projects: TimelineItem[] = [
   },
   {
     title: "WMPL Wrap",
+    details: {
+      description:
+        "A local listening-history companion for Windows Media Player Legacy. It captures read-only library snapshots and turns cumulative play counts into reports for top songs, albums, artists, and recent listening changes.",
+      videoSrc: "/videos/projects/wmpl-wrap.mp4",
+    },
     roles: [
       {
-        label: "Logistics tracker for Legacy WMP",
-        detail: "C#, PowerShell, Azure (Artifact Signing)",
+        label: "Logistics tracker for WMP Legacy",
+        detail: "C#, PowerShell, Azure (Artifact Signing), Discord RPC",
       },
     ],
     url: "https://github.com/zaynedoc/WMPL-Wrap",
+  },
+  {
+    title: "ImpactHub",
+    details: {
+      description:
+        "A workout-tracking web app shaped around the training information I value as a lifter, with focused logging and progress-tracking workflows.",
+      videoSrc: "/videos/projects/impacthub.mp4",
+    },
+    roles: [
+      {
+        label: "A workout tracker WebApp",
+        detail: "Next.js, TypeScript, Tailwind CSS, PostgreSQL",
+      },
+    ],
+    url: "https://github.com/zaynedoc/impacthub",
   },
 ];

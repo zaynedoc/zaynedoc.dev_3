@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { AlbumCollection } from "../components/album-collection";
+import { FadeImage } from "../components/fade-image";
 import { MosaicDecoration } from "../components/mosaic-decoration";
 import { SiteNavigation } from "../components/site-navigation";
 import { albums } from "../data/albums";
@@ -15,7 +15,7 @@ export default function MePage() {
   return (
     <main className="interior-page" id="top">
       <div className="desktop-canvas">
-        <SiteNavigation />
+        <SiteNavigation sticky />
         <div className="content-stack">
           <section className="accent-section" aria-labelledby="who-heading">
             <h1 id="who-heading">Who Am I?</h1>
@@ -45,7 +45,7 @@ export default function MePage() {
             </header>
             <div className="car-gallery" aria-label="Photos of Zayne's Genesis Coupe">
               <div className="car-gallery__row">
-                <Image
+                <FadeImage
                   alt="Silver Genesis Coupe at sunset"
                   className="car-gallery__sunset"
                   height={450}
@@ -54,7 +54,7 @@ export default function MePage() {
                   src="/images/genesis-coupe-sunset.webp"
                   width={600}
                 />
-                <Image
+                <FadeImage
                   alt="Silver Genesis Coupe beneath storm clouds"
                   className="car-gallery__storm"
                   height={450}
@@ -64,7 +64,7 @@ export default function MePage() {
                   width={675}
                 />
               </div>
-              <Image
+              <FadeImage
                 alt="Silver Genesis Coupe in golden-hour light"
                 className="car-gallery__golden-hour"
                 height={402}
