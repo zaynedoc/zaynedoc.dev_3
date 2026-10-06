@@ -1,8 +1,5 @@
-import type { Metadata } from "next";
-import { createPageMetadata } from "../seo";
+import type { ReactNode } from "react";
 
-export const metadata: Metadata = createPageMetadata("work");
-
-export default function WorkLayout({ children }: LayoutProps<"/work">) {
+export default function WorkRedirectLayout({ children }: { children: ReactNode }) {
   return children;
 }

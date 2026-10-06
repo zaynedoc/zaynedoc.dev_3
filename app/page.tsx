@@ -6,14 +6,19 @@ export const metadata: Metadata = createPageMetadata("home");
 
 const navigationLinks = [
   {
-    href: "/work",
-    route: "/work",
-    description: "View my projects & experience",
+    href: "/roles",
+    route: "/roles",
+    description: "My current and past roles",
+  },
+  {
+    href: "/works",
+    route: "/works",
+    description: "My featured projects and works",
   },
   {
     href: "/me",
     route: "/me",
-    description: "Tell you more about who I am",
+    description: "Tell you more about me",
   },
 ];
 

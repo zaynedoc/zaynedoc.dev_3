@@ -18,10 +18,15 @@ export const siteConfig = {
       description:
         "Portfolio of Zayne Dockery, a developer, ambassador, and undergraduate focused on UX/UI, DevOps, and application security.",
     },
-    work: {
-      path: "/work",
+    roles: {
+      path: "/roles",
       description:
-        "Explore Zayne Dockery’s software engineering experience, community roles, and selected development projects.",
+        "Explore Zayne Dockery’s software engineering experience and community roles.",
+    },
+    works: {
+      path: "/works",
+      description:
+        "Explore selected software, security, mobile, and web projects created by Zayne Dockery.",
     },
     me: {
       path: "/me",

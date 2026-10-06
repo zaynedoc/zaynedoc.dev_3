@@ -308,8 +308,7 @@ a:hover {
 }
 
 .site-navigation a:focus-visible,
-.back-to-top:focus-visible,
-.collapse-toggle:focus-visible {
+.back-to-top:focus-visible {
   outline: 2px solid var(--text-secondary);
   outline-offset: 8px;
 }
@@ -514,23 +513,6 @@ a:hover {
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 7px;
-}
-
-.collapse-toggle {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--text-primary);
-  cursor: pointer;
-  font: inherit;
-  line-height: inherit;
-  text-align: start;
-  transition: none;
-}
-
-.collapse-toggle:hover {
-  color: var(--decoration-muted);
 }
 
 .footer-mosaic {

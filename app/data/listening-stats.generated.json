@@ -1,108 +1,126 @@
 {
   "source": {
-    "capturedAtUtc": "2026-10-05T03:40:44.067286+00:00",
+    "capturedAtUtc": "2026-10-06T04:05:02.6773587+00:00",
     "countMode": "positive deltas observed between active snapshots",
-    "snapshot": "20261005T034044067Z.json",
-    "snapshotCount": 13
+    "snapshot": "20261006T040502677Z.json",
+    "snapshotCount": 15
   },
   "albums": [
     {
       "album": "Ao",
-      "totalListens": 322,
+      "totalListens": 336,
       "mostListenedTrack": {
         "title": "DR.",
         "artist": "Eve & Sou",
-        "listens": 27
+        "listens": 28
       }
     },
     {
       "album": "廻人",
-      "totalListens": 118,
+      "totalListens": 130,
       "mostListenedTrack": {
         "title": "Ao No Waltz (蒼のワルツ)",
-        "artist": "Eve",
-        "listens": 11
-      }
-    },
-    {
-      "album": "ウェザーステーション",
-      "totalListens": 113,
-      "mostListenedTrack": {
-        "title": "Himitsu no Shougakusei (ひみつの小学生)",
-        "artist": "稲葉曇",
-        "listens": 13
-      }
-    },
-    {
-      "album": "おとぎ",
-      "totalListens": 103,
-      "mostListenedTrack": {
-        "title": "Bokuramadaunderground (僕らまだアンダーグラウンド)",
         "artist": "Eve",
         "listens": 12
       }
     },
     {
-      "album": "狂言",
-      "totalListens": 99,
+      "album": "ウェザーステーション",
+      "totalListens": 123,
       "mostListenedTrack": {
-        "title": "Odo (踊)",
-        "artist": "Ado",
-        "listens": 10
+        "title": "Himitsu no Shougakusei (ひみつの小学生)",
+        "artist": "稲葉曇",
+        "listens": 15
       }
     },
     {
-      "album": "OFFICIAL NUMBER",
-      "totalListens": 85,
+      "album": "狂言",
+      "totalListens": 114,
       "mostListenedTrack": {
-        "title": "Demon dance tokyo (デーモンダンストーキョー)",
+        "title": "Odo (踊)",
+        "artist": "Ado",
+        "listens": 11
+      }
+    },
+    {
+      "album": "おとぎ",
+      "totalListens": 113,
+      "mostListenedTrack": {
+        "title": "Last Dance (ラストダンス)",
         "artist": "Eve",
         "listens": 13
       }
     },
     {
-      "album": "正しい偽りからの起床",
-      "totalListens": 54,
+      "album": "OFFICIAL NUMBER",
+      "totalListens": 95,
       "mostListenedTrack": {
-        "title": "Humanoid (ヒューマノイド)",
+        "title": "Demon dance tokyo (デーモンダンストーキョー)",
+        "artist": "Eve",
+        "listens": 14
+      }
+    },
+    {
+      "album": "正しい偽りからの起床",
+      "totalListens": 61,
+      "mostListenedTrack": {
+        "title": "Saturn (サターン)",
         "artist": "Zutomayo",
-        "listens": 10
+        "listens": 12
       }
     },
     {
       "album": "Blurryface",
-      "totalListens": 42,
+      "totalListens": 45,
       "mostListenedTrack": {
         "title": "Tear in My Heart",
         "artist": "twenty one pilots",
-        "listens": 5
+        "listens": 6
       }
     },
     {
       "album": "Wolf",
-      "totalListens": 38,
+      "totalListens": 42,
       "mostListenedTrack": {
         "title": "Jamba",
         "artist": "Tyler, The Creator feat. Hodgy Beats",
-        "listens": 4
+        "listens": 5
       }
     },
     {
       "album": "Trench",
-      "totalListens": 27,
+      "totalListens": 32,
       "mostListenedTrack": {
         "title": "Chlorine",
         "artist": "twenty one pilots",
-        "listens": 3
+        "listens": 4
       }
     },
     {
       "album": "IGOR",
-      "totalListens": 21,
+      "totalListens": 26,
       "mostListenedTrack": {
         "title": "WHAT’S GOOD",
         "artist": "Tyler, The Creator",
-        "listens": 4
+        "listens": 5
+      }
+    },
+    {
+      "album": "Round Robin",
+      "totalListens": 16,
+      "mostListenedTrack": {
+        "title": "Fallin My World (フォーリンマイワールド)",
+        "artist": "Eve",
+        "listens": 3
+      }
+    },
+    {
+      "album": "Wonder Word",
+      "totalListens": 15,
+      "mostListenedTrack": {
+        "title": "Arukari seizin (アルカリ成人)",
+        "artist": "Eve",
+        "listens": 3
       }
     },
     {
@@ -115,39 +133,21 @@
       }
     },
     {
-      "album": "Round Robin",
+      "album": "House of Balloons",
       "totalListens": 12,
       "mostListenedTrack": {
-        "title": "Fallin My World (フォーリンマイワールド)",
-        "artist": "Eve",
-        "listens": 2
-      }
-    },
-    {
-      "album": "House of Balloons",
-      "totalListens": 9,
-      "mostListenedTrack": {
-        "title": "The Morning",
+        "title": "The Party & the After Party",
         "artist": "The Weeknd",
-        "listens": 2
-      }
-    },
-    {
-      "album": "Wonder Word",
-      "totalListens": 9,
-      "mostListenedTrack": {
-        "title": "Arukari seizin (アルカリ成人)",
-        "artist": "Eve",
-        "listens": 2
+        "listens": 3
       }
     },
     {
       "album": "Vessel",
-      "totalListens": 7,
+      "totalListens": 8,
       "mostListenedTrack": {
-        "title": "Car Radio",
+        "title": "Semi‐Automatic",
         "artist": "twenty one pilots",
-        "listens": 1
+        "listens": 2
       }
     }
   ]
