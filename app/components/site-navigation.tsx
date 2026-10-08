@@ -7,6 +7,7 @@ const pages = [
   { href: "/roles", label: "/roles" },
   { href: "/works", label: "/works" },
   { href: "/me", label: "/me" },
+  { href: "/archive", label: "/archive" },
 ];
 
 export function SiteNavigation({ sticky = false }: { sticky?: boolean }) {

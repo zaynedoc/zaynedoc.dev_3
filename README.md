@@ -18,7 +18,9 @@ Set the logger's absolute path when it is not in the expected repository folder.
 npm run data:listening
 ```
 
-Import the active WMPL snapshots and regenerate the album listening dataset.
+Import the active WMPL snapshots and regenerate the album listening dataset. The
+website importer always includes first-seen WMP counts, regardless of the WMPL Wrap
+desktop setting.
 
 These snapshots are sourced from your metadata of a valid [WMPL Wrap](https://github.com/zaynedoc/WMPL-Wrap) instance.
 

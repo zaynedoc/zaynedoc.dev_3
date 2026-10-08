@@ -1,0 +1,290 @@
+.section {
+  --edge-decoration-pixel: clamp(0.75px, 0.0390625vw, 1px);
+  --foreground-pixel: clamp(0.75px, 0.0390625vw, 1px);
+  --item-list-gap: 130em;
+
+  isolation: isolate;
+  min-height: clamp(1080px, 56.25vw, 1440px);
+  overflow: clip;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--foreground-pixel);
+  gap: 75em;
+  min-height: 1440em;
+  padding: 100em;
+  pointer-events: none;
+  position: relative;
+  z-index: var(--layer-content);
+}
+
+.headingGroup {
+  display: flex;
+  flex-direction: column;
+  height: 136em;
+  justify-content: space-between;
+  width: 648em;
+}
+
+.heading {
+  background: linear-gradient(104deg, #d262f8 1.45%, rgb(213 145 242 / 95%) 50.98%, rgb(226 183 255 / 90%) 100.5%);
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-display);
+  font-size: 50em;
+  font-weight: 400;
+  line-height: var(--line-height-display);
+  margin: 0;
+}
+
+.headingRule {
+  background: linear-gradient(129deg, #d262f8 1.45%, rgb(213 145 242 / 95%) 50.98%, rgb(226 183 255 / 90%) 100.5%);
+  height: 32em;
+  width: 100%;
+}
+
+.entries {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--item-list-gap);
+  justify-content: flex-start;
+  margin-left: 50em;
+  max-width: 760em;
+  min-height: 0;
+  pointer-events: auto;
+}
+
+.stripes,
+.curves,
+.stickers {
+  pointer-events: none;
+  position: absolute;
+  z-index: var(--layer-decoration);
+}
+
+.stripes {
+  aspect-ratio: 4012 / 3332;
+  opacity: 0.78;
+  right: max(-172px, -9vw);
+  top: 10vh;
+  width: min(62vw, 1200px);
+}
+
+.stripes img {
+  object-fit: fill;
+}
+
+.curves {
+  aspect-ratio: 1536 / 1160;
+  right: 0;
+  top: 0;
+  /* This export spans four grid cells; the masthead curve spans three.
+     Use the shared four-cell value so both decorations stay registered at
+     every desktop width (especially the 1080px minimum clamp). */
+  width: var(--work-project-square-width, clamp(14rem, 20vw, 24rem));
+}
+
+.curves img {
+  object-fit: contain;
+}
+
+.stickers {
+  font-size: var(--foreground-pixel);
+  inset: 0;
+  pointer-events: auto;
+}
+
+.figmaSticker,
+.kdiSticker,
+.khSticker,
+.mgSticker {
+  position: absolute;
+}
+
+.figmaSticker {
+  height: 346em;
+  right: 372em;
+  top: 200em;
+  width: 346em;
+}
+
+.kdiSticker {
+  height: 414em;
+  right: 71em;
+  top: 390em;
+  transform: rotate(8.0deg);
+  width: 414em;
+}
+
+.khSticker {
+  height: 270em;
+  right: 63em;
+  top: 725em;
+  transform: rotate(-5.14deg);
+  width: 809em;
+}
+
+.mgSticker {
+  height: 293em;
+  right: 235em;
+  top: 1010em;
+  transform: rotate(-14.71deg);
+  width: 293em;
+}
+
+.figmaSticker img,
+.kdiSticker img,
+.khSticker img,
+.mgSticker img {
+  filter: drop-shadow(0 8em 10em rgb(61 39 78 / 18%));
+  object-fit: contain;
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .figmaSticker:hover img,
+  .kdiSticker:hover img,
+  .khSticker:hover img,
+  .mgSticker:hover img {
+    filter: drop-shadow(8em 16em 17em rgb(61 39 78 / 30%)) brightness(1.045);
+    transform: translate3d(7em, -10em, 0) scale(1.075);
+  }
+}
+
+/* Keep the content and sticker artwork proportional once the viewport is
+   narrower than the desktop composition. The section decoration uses viewport
+   sizing here (as the hero corner art does), while the content retains its own
+   smaller design-unit scale. */
+@media (max-width: 64rem) {
+  .section {
+    --foreground-pixel: clamp(0.58px, 0.0625vw, 0.7px);
+
+    min-height: clamp(860px, 90vw, 922px);
+  }
+
+}
+
+/* Tablet keeps the desktop sticker composition, but progressively moves it
+   beyond the right edge as the list and sticker column begin to compete. */
+@media (min-width: 37.501rem) and (max-width: 64rem) {
+  .stickers {
+    --tablet-sticker-escape: clamp(0px, calc(1024px - 100vw), 380px);
+  }
+
+  .figmaSticker {
+    translate: var(--tablet-sticker-escape) 0;
+  }
+
+  .kdiSticker {
+    transform: translateX(var(--tablet-sticker-escape)) rotate(8deg);
+  }
+
+  .khSticker {
+    transform: translateX(var(--tablet-sticker-escape)) rotate(-5.14deg);
+  }
+
+  .mgSticker {
+    transform: translateX(var(--tablet-sticker-escape)) rotate(-14.71deg);
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .section {
+    --foreground-pixel: 0.5px;
+    --item-list-gap: 70em;
+
+    min-height: 0;
+  }
+
+  .content {
+    align-items: center;
+    gap: 45em;
+    min-height: 0;
+  }
+
+  .headingGroup {
+    align-items: center;
+    width: min(648em, calc(100vw - 200em));
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .entries {
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .entries {
+    max-width: 760em;
+  }
+
+  .stripes {
+    display: none;
+  }
+
+  /* Four grid units wide, matching the Project square export at this size. */
+  .curves {
+    width: var(--work-project-square-width, 14rem);
+  }
+
+  /* On phones, the stickers become a normal-flow cluster below the list.
+     This means an expanded detail card pushes every sticker down with it. */
+  .stickers {
+    height: 760em;
+    inset: auto;
+    margin-top: 35em;
+    font-size: 0.4px;
+    position: relative;
+  }
+
+  .figmaSticker {
+    left: 40em;
+    right: auto;
+    top: 0;
+  }
+
+  .kdiSticker {
+    right: 300em;
+    top: 0em;
+  }
+
+  .khSticker {
+    right: 0;
+    top: 340em;
+  }
+
+  .mgSticker {
+    left: 120em;
+    right: auto;
+    top: 400em;
+  }
+}
+
+@media (max-width: 30rem) {
+  .stickers {
+    height: 820em;
+  }
+
+  .figmaSticker {
+    left: 10em;
+  }
+
+  .kdiSticker {
+    right: 0;
+  }
+
+  .khSticker {
+    right: -90em;
+  }
+
+  .mgSticker {
+    left: 0em;
+  }
+}

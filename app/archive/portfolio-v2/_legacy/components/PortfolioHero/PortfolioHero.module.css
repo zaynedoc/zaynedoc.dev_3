@@ -1,0 +1,79 @@
+.hero {
+  min-height: calc(100svh - 80px);
+  overflow: clip;
+  position: relative;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: space-between;
+  padding-inline: 100px;
+  position: absolute;
+  z-index: var(--layer-content);
+}
+
+.workContent {
+  --work-content-offset-y: -8svh;
+
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  padding-inline: 100px;
+  transform: translateY(var(--work-content-offset-y));
+}
+
+.workDetails {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: max-content;
+}
+
+.workSocialSpacer {
+  flex: none;
+  height: 48px;
+  width: 100%;
+}
+
+.scrollCue {
+  background: linear-gradient(to bottom, #fff 0%, rgb(249 230 255 / 90%) 100%);
+  background-clip: text;
+  bottom: clamp(1.5rem, 3.5svh, 3rem);
+  color: transparent;
+  filter: drop-shadow(0 3px 5px rgb(53 22 74 / 28%));
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 400;
+  left: 50%;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: var(--layer-content);
+}
+
+@media (max-width: 64rem) {
+  .content {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding-inline: 24px;
+  }
+
+  .workContent {
+    --work-content-offset-y: 0px;
+
+    padding-inline: 24px;
+  }
+
+  .workDetails {
+    gap: 0;
+  }
+
+  .workRoles {
+    display: none;
+  }
+}

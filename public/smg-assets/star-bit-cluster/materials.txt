@@ -1,0 +1,69 @@
+StarPieceClusterMat_v
+=====================
+  Textures:
+    - StarPieceClusterInner
+        Scale: 0.3759765625, 0.3759765625
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 30, 126, 180
+
+  Material Colors:
+    - 203, 201, 203, 255
+    - 203, 201, 203, 255
+
+  Color Registers:
+    - 69, 154, 232, 0
+    - 0, 0, 0, 368
+
+  Steps:
+    1: RGB = (lerp from (0, 30, 126) to (69, 154, 232) using (tex #1 RGB))
+         A = (lerp from 180 to 0 using (vertex A)), multiply by 2
+
+
+
+StarPieceClusterMat_v(2)
+========================
+  Textures:
+    - StarPieceCluster
+        Scale: -0.0830078125, -0.0830078125
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 0, 0, 180
+
+  Material Colors:
+    - 203, 203, 203, 255
+    - 203, 203, 203, 255
+
+  Color Registers:
+    - 255, 255, 255, 0
+    - 0, 0, 0, 368
+
+  Steps:
+    1: RGB = (vertex RGB)
+         A = (lerp from 180 to 0 using (vertex A)), multiply by 2
+    2: RGB = ((prev. RGB) * (tex #1 RGB)), then add (prev. A)
+         A = ((vertex A) * (tex #1 A))
+
+
+
+StarPieceClusterMat_v(3)
+========================
+  Textures:
+    - StarPieceCluster
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))

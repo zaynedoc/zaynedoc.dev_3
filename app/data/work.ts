@@ -4,13 +4,30 @@ export type TimelineRole = {
 };
 
 export type TimelineItem = {
+  action?: {
+    disabled?: boolean;
+    external?: boolean;
+    href?: string;
+    label: string;
+    mobileDisabled?: boolean;
+    mobileDisabledLabel?: string;
+  };
   details?: {
+    carousel?: {
+      intervalMs?: number;
+      label: string;
+      slides: {
+        alt: string;
+        src: string;
+      }[];
+    };
     description: string;
     videoSrc?: string;
   };
   roles: TimelineRole[];
   title: string;
   url?: string;
+  urlExternal?: boolean;
 };
 
 export const experience: TimelineItem[] = [

@@ -1,0 +1,43 @@
+.trigger {
+  aspect-ratio: 438 / 356;
+  display: block;
+  position: relative;
+  width: clamp(16rem, 22.8vw, 27.4rem);
+}
+
+.star,
+.console {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.star img,
+.console img {
+  object-fit: contain;
+}
+
+.console {
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.open {
+  opacity: 0;
+  transform: translate3d(0, 0.65rem, 0) scale(0.97);
+}
+
+.trigger:is(:hover, :focus-visible) .closed {
+  opacity: 0;
+  transform: translate3d(0, 0.35rem, 0) scale(0.97);
+}
+
+.trigger:is(:hover, :focus-visible) .open {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.trigger:focus-visible {
+  border-radius: 1rem;
+  outline: 3px solid #9470d9;
+  outline-offset: 0.4rem;
+}

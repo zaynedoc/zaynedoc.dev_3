@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-08",
+  "font_stack": "Zalando Sans SemiExpanded (self-hosted)",
+  "palette": "dark navy with lavender text and muted blue-grey decoration",
+  "motion": "motion-on (existing CSS fades; imported portfolio also uses framer-motion and lenis)",
+  "spacing": "existing responsive pixel/rem scale",
+  "framework": "Next.js 16.3.8 App Router"
+}

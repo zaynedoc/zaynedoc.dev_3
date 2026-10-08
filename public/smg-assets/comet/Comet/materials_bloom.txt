@@ -1,0 +1,28 @@
+CometMat_v
+==========
+  Textures:
+
+  Ambient Colors:
+    - 100, 100, 100, 132
+
+  Constant Colors:
+    - 146, 78, 0, 180
+
+  Material Colors:
+    - 255, 203, 84, 255
+    - 255, 203, 84, 255
+
+  Color Registers:
+    - 255, 151, 30, 255
+    - 255, 50, 11, 255
+
+  Steps:
+    1: RGB = (255, 50, 11)
+         A = (lerp from 180 to 0 using (vertex A)), multiply by 2
+
+  Colors:
+    - blue: (0, 10, 250)
+    - purple: (240, 0, 240)
+    - red: (255, 151, 30) / (255, 50, 11)
+    - white: (160, 220, 240)
+    - yellow: (240, 240, 0)

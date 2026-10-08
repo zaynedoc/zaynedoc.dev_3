@@ -1,0 +1,75 @@
+/* Hallmark · preservation wrapper · source: portfolio-v2 · responsive: desktop/tablet/mobile */
+.shell {
+  --browser-theme-color: var(--color-legacy-theme);
+  --color-page: var(--color-legacy-page);
+  --color-surface: var(--color-legacy-surface);
+  --color-lavender-strong: var(--color-legacy-lavender-strong);
+  --color-lavender-deep: var(--color-legacy-lavender-deep);
+  --color-ink: var(--color-legacy-ink);
+  --color-ink-muted: var(--color-legacy-ink-muted);
+  --color-focus: var(--color-legacy-focus);
+  --page-transition-cover-duration: 300ms;
+  --page-transition-reveal-duration: 1000ms;
+  --background: var(--color-page);
+  --foreground: var(--color-ink);
+  --font-body: var(--font-zalando-semi-expanded), var(--font-archive-body);
+  --font-code: var(--font-zalando-semi-expanded), monospace;
+  --font-display: var(--font-zalando-expanded), var(--font-archive-display);
+  --line-height-display: 1.18;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --layer-background: 0;
+  --layer-decoration: 1;
+  --layer-content: 2;
+  --layer-header: 10;
+
+  min-block-size: 100dvh;
+  background: var(--browser-theme-color);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  overflow-x: clip;
+}
+
+.shell,
+.shell *,
+.shell *::before,
+.shell *::after {
+  box-sizing: border-box;
+}
+
+.shell a {
+  color: inherit;
+}
+
+.shell button,
+.shell input,
+.shell textarea,
+.shell select {
+  font: inherit;
+}
+
+.shell :focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .shell,
+  .shell * {
+    cursor: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell {
+    scroll-behavior: auto;
+  }
+}

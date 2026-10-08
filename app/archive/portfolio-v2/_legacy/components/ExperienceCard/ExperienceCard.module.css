@@ -1,0 +1,91 @@
+.card {
+  color: #16131a;
+  display: flex;
+  flex-direction: column;
+  gap: 16em;
+  width: 100%;
+}
+
+.trigger {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  width: max-content;
+}
+
+.role,
+.organization {
+  margin: 0;
+}
+
+.role {
+  background: linear-gradient(180deg, #000 0%, rgb(40 40 40 / 90%) 100%);
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-display);
+  font-size: 40em;
+  font-weight: 400;
+  line-height: var(--line-height-display);
+  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 26%));
+  transition: background 180ms ease, filter 180ms ease;
+}
+
+.trigger:is(:hover, :focus-visible) .role,
+.expanded .role {
+  background-image: linear-gradient(180deg, #673278 0%, #a658c1 100%);
+  filter: drop-shadow(0 0 5em rgb(173 105 207 / 42%));
+}
+
+.trigger:focus-visible {
+  outline: 2em solid #9470d9;
+  outline-offset: 8em;
+}
+
+.organization {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-size: 27em;
+  font-style: italic;
+  line-height: var(--line-height-display);
+  filter: drop-shadow(0 2px 4px rgb(0 0 0 / 15%));
+}
+
+.organizationTimeline,
+.organizationLink {
+  background: linear-gradient(180deg, #000 0%, rgb(40 40 40 / 90%) 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.organizationLink {
+  text-decoration: none;
+  transition: background 180ms ease, filter 180ms ease, text-decoration-color 180ms ease;
+}
+
+.organizationLink:is(:hover, :focus-visible) {
+  background-image: linear-gradient(180deg, #673278 0%, #a658c1 100%);
+  filter: drop-shadow(0 0 5em rgb(173 105 207 / 42%));
+  outline: none;
+  text-decoration: underline;
+  text-decoration-color: #9c51b8;
+  text-underline-offset: 0.18em;
+}
+
+@media (max-width: 37.5rem) {
+  .card {
+    align-items: center;
+    text-align: center;
+  }
+
+  .trigger {
+    text-align: center;
+  }
+
+  .organization {
+    align-self: auto;
+  }
+}

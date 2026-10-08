@@ -1,0 +1,114 @@
+.visualizer {
+  left: clamp(8rem, 16vw, 24rem);
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(24rem, 35vw, 44rem);
+  z-index: var(--layer-content);
+}
+
+.float {
+  animation: project-card-float 9s ease-in-out infinite;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  aspect-ratio: 16 / 10;
+  background: rgb(247 242 255 / 68%);
+  border: 2px solid rgb(255 255 255 / 88%);
+  border-radius: 1.5rem;
+  box-shadow:
+    0 1.3rem 2.7rem rgb(66 40 83 / 18%),
+    0 0.15rem 0.7rem rgb(89 54 115 / 14%),
+    inset 0 1px 0 rgb(255 255 255 / 72%);
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.media {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.emptyState,
+.mediaPlaceholder {
+  align-items: flex-start;
+  background:
+    radial-gradient(circle at 20% 15%, rgb(232 204 255 / 76%), transparent 38%),
+    linear-gradient(145deg, rgb(197 147 235 / 92%), rgb(132 89 184 / 94%));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 1.45rem;
+}
+
+.emptyState span,
+.mediaPlaceholder span,
+.label span {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.emptyState strong,
+.mediaPlaceholder strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.emptyState small {
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.emptyState code {
+  font-family: var(--font-code);
+}
+
+.label {
+  background: linear-gradient(to top, rgb(34 20 45 / 76%), transparent);
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+  left: 0;
+  padding: 2.25rem 1.15rem 1rem;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 1px 5px rgb(0 0 0 / 42%);
+}
+
+.label strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.7vw, 1.65rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+@keyframes project-card-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(4deg) rotateY(-7deg) rotateZ(-1.5deg);
+  }
+
+  50% {
+    transform: translate3d(0, -0.85rem, 0) rotateX(-3deg) rotateY(6deg) rotateZ(1deg);
+  }
+}
+
+@media (max-width: 64rem), (prefers-reduced-motion: reduce) {
+  .visualizer {
+    display: none;
+  }
+}

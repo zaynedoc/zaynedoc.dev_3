@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { TimelineItem } from "../data/work";
+import { ArchiveCarousel } from "./archive-carousel";
 import { FadeVideo } from "./fade-video";
 
 type WorkTimelineProps = {
@@ -41,8 +43,9 @@ export function WorkTimeline({
   return (
     <div className="timeline-list">
       {items.map((item, index) => {
-        const detailsId = `project-details-${index}`;
+        const detailsId = `timeline-details-${index}`;
         const isExpanded = expandedItems.has(item.title);
+        const actionLinkClassName = `timeline-role__detail project-archive-link${item.action?.mobileDisabled ? " project-archive-link--desktop-only" : ""}`;
 
         return (
           <article
@@ -57,7 +60,11 @@ export function WorkTimeline({
                     : "timeline-item__title"
                 }
               >
-                {item.url ? (
+                {item.url && item.urlExternal === false ? (
+                  <Link className="timeline-item__title-link" href={item.url}>
+                    {item.title}
+                  </Link>
+                ) : item.url ? (
                   <a
                     className="timeline-item__title-link"
                     href={item.url}
@@ -78,6 +85,46 @@ export function WorkTimeline({
                   </div>
                 ))}
               </div>
+              {item.action ? (
+                <>
+                  {item.action.disabled || !item.action.href ? (
+                    <button
+                      aria-disabled="true"
+                      className="timeline-role__detail project-archive-link"
+                      disabled
+                      type="button"
+                    >
+                      {item.action.label}
+                    </button>
+                  ) : item.action.external ? (
+                    <a
+                      className={actionLinkClassName}
+                      href={item.action.href}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {item.action.label}
+                    </a>
+                  ) : (
+                    <Link
+                      className={actionLinkClassName}
+                      href={item.action.href}
+                    >
+                      {item.action.label}
+                    </Link>
+                  )}
+                  {item.action.mobileDisabled && !item.action.disabled && item.action.href ? (
+                    <button
+                      aria-disabled="true"
+                      className="timeline-role__detail project-archive-link project-archive-link--mobile-only"
+                      disabled
+                      type="button"
+                    >
+                      {item.action.mobileDisabledLabel ?? "Desktop/tablet only"}
+                    </button>
+                  ) : null}
+                </>
+              ) : null}
               {areProjects && item.details ? (
                 <button
                   aria-controls={detailsId}
@@ -92,7 +139,13 @@ export function WorkTimeline({
             </div>
             {areProjects && item.details && isExpanded ? (
               <div className="project-details" id={detailsId}>
-                {item.details.videoSrc ? (
+                {item.details.carousel ? (
+                  <ArchiveCarousel
+                    intervalMs={item.details.carousel.intervalMs}
+                    label={item.details.carousel.label}
+                    slides={item.details.carousel.slides}
+                  />
+                ) : item.details.videoSrc ? (
                   <FadeVideo
                     aria-label={`${item.title} project demonstration`}
                     autoPlay

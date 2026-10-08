@@ -1,0 +1,494 @@
+/* ── Wanted! — game shell styles ────────────────────────────────── */
+
+/* ── Full-viewport wrapper (matches /1118 pattern) ────────────── */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Game window outer chrome ─────────────────────────────────── */
+.gameWindow {
+  position: relative;
+  width: 960px;
+  height: 720px;
+  background: #000;
+  overflow: hidden;
+}
+
+/* ── Start screen (audio unlock gate) ─────────────────────────── */
+.startOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background:
+    rgba(0, 0, 0, 0.88);
+}
+
+.startTitle {
+  font-family: monospace;
+  font-size: 52px;
+  font-weight: bold;
+  color: #d4c4f0;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-shadow: 0 0 20px rgba(90, 60, 140, 0.45);
+}
+
+.startText {
+  font-family: monospace;
+  font-size: 14px;
+  color: #bfb6cf;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.startBtn {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d4c4f0;
+  background: rgba(90, 60, 140, 0.18);
+  border: 2px solid #5a3c8c;
+  border-radius: 8px;
+  padding: 12px 42px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.startBtn:hover {
+  background: #5a3c8c;
+  color: #fff;
+  border-color: #7a5cac;
+  transform: translateY(-1px);
+}
+
+.startHint {
+  font-family: monospace;
+  font-size: 12px;
+  color: #7f7890;
+  letter-spacing: 1px;
+}
+
+/* ── Title bar ────────────────────────────────────────────────── */
+.titleBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 20, 50, 0.92);
+  border-bottom: 1px solid #3a2e50;
+  z-index: 10;
+  user-select: none;
+}
+
+.titleText {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d4c4f0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ── Timer display ────────────────────────────────────────────── */
+.timer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: monospace;
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+  color: #e8d44d;
+  z-index: 10;
+  user-select: none;
+  transition: color 0.3s;
+}
+.timerUrgent {
+  color: #e85050;
+  animation: timerPulse 0.6s ease infinite;
+}
+@keyframes timerPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ── Playfield (sprites live here) ────────────────────────────── */
+.playfield {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* ── Individual sprite in the playfield ───────────────────────── */
+.sprite {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  image-rendering: auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.08s ease;
+  z-index: 2;
+}
+.sprite:hover {
+  transform: scale(1.08);
+}
+
+/* ── Target fade-in (waits for decoy images to load) ──────────── */
+.targetHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.targetVisible {
+  opacity: 1;
+  transition: opacity 0.1s ease-in;
+}
+
+/* ── Back / home label (above game window) ────────────────────── */
+.backLabel {
+  position: absolute;
+  top: calc((100vh - 720px) / 2 - 50px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+  z-index: 20;
+}
+.backLabel:hover {
+  color: #9a8ab0;
+}
+
+/* ── Volume meter placeholder (centered above window) ─────────── */
+.volumeMeter {
+  position: absolute;
+  top: calc((100vh - 720px) / 2 - 26px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #555;
+  z-index: 20;
+  user-select: none;
+}
+
+.volumeIcon {
+  font-size: 13px;
+  line-height: 1;
+  width: 12px;
+  text-align: center;
+}
+
+.volumeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 60px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider:hover {
+  background: #444;
+}
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #777;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider::-webkit-slider-thumb:hover {
+  background: #9a8ab0;
+}
+.volumeSlider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #777;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider::-moz-range-thumb:hover {
+  background: #9a8ab0;
+}
+
+/* ── Round text (below game window) ───────────────────────────── */
+.roundLabel {
+  position: absolute;
+  top: calc((100vh + 720px) / 2 + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 13px;
+  color: #777;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ── Intro reveal overlay ─────────────────────────────────────── */
+.revealOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 20;
+  pointer-events: all;
+  animation: revealFadeIn 0.3s ease;
+}
+
+@keyframes revealFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.revealLabel {
+  font-family: monospace;
+  font-size: 20px;
+  color: #e8d44d;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.revealSprite {
+  image-rendering: auto;
+}
+
+.revealName {
+  font-family: monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4c4f0;
+  margin-top: 16px;
+  letter-spacing: 2px;
+}
+
+/* ── Result overlays (won / lost) ─────────────────────────────── */
+.resultOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 20;
+  pointer-events: none;
+  animation: revealFadeIn 0.25s ease;
+}
+
+.resultText {
+  font-family: monospace;
+  font-size: 36px;
+  font-weight: bold;
+  color: #5de85d;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 16px rgba(93, 232, 93, 0.5);
+}
+
+.resultTextBad {
+  font-family: monospace;
+  font-size: 36px;
+  font-weight: bold;
+  color: #e85050;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 16px rgba(232, 80, 80, 0.5);
+}
+
+/* ── Debug overlay (development only) ─────────────────────────── */
+.debug {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Gimmick: "wait for it..." text overlay ───────────────────── */
+.gimmickTextOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.gimmickText {
+  font-family: monospace;
+  font-size: 32px;
+  font-weight: bold;
+  color: #e8d44d;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(232, 212, 77, 0.4);
+  animation: gimmickPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes gimmickPulse {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+
+/* ── Gimmick: Big Target ──────────────────────────────────────── */
+.bigTarget {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.bigTargetImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+  opacity: 1;
+}
+
+/* ── Wrong-click flash ────────────────────────────────────────── */
+.wrongFlash {
+  position: absolute;
+  inset: 0;
+  background: rgba(232, 60, 60, 0.15);
+  pointer-events: none;
+  z-index: 15;
+  animation: wrongFlashAnim 0.2s ease forwards;
+}
+@keyframes wrongFlashAnim {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ── Gimmick callout (shown during intro reveal) ──────────────── */
+.gimmickCallout {
+  margin-top: 18px;
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: bold;
+  color: #e8a44d;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: gimmickCalloutIn 0.4s ease;
+}
+@keyframes gimmickCalloutIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Game-over overlay ────────────────────────────────────────── */
+.gameOverOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 25;
+  animation: revealFadeIn 0.4s ease;
+}
+
+.gameOverTitle {
+  font-family: monospace;
+  font-size: 40px;
+  font-weight: bold;
+  color: #d4c4f0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  text-shadow: 0 0 20px rgba(90, 60, 140, 0.5);
+}
+
+.gameOverScore {
+  font-family: monospace;
+  font-size: 22px;
+  color: #e8d44d;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.gameOverRound {
+  font-family: monospace;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 28px;
+}
+
+.playAgainBtn {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d4c4f0;
+  background: transparent;
+  border: 2px solid #5a3c8c;
+  border-radius: 6px;
+  padding: 10px 28px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.playAgainBtn:hover {
+  background: #5a3c8c;
+  color: #fff;
+  border-color: #7a5cac;
+}
+

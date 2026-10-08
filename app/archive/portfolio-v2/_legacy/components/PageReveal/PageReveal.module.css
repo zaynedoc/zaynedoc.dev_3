@@ -1,0 +1,23 @@
+.reveal {
+  background: #fff;
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  transition: opacity var(--page-transition-reveal-duration) cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 100;
+}
+
+.covering {
+  opacity: 1;
+  transition-duration: var(--page-transition-cover-duration);
+}
+
+.revealing {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition-duration: 1ms;
+  }
+}

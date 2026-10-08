@@ -1,0 +1,139 @@
+CityLight_Mat_v
+===============
+  Textures:
+    - NightCityk
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Material Colors:
+    - 255, 150, 0, 255
+    - 255, 150, 0, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+EarthFar_v
+==========
+  Textures:
+    - EarthKsMM
+    - EarthFarK
+        Offset: 0.33203125, 0
+    - Cloud01k
+        Offset: 0.6448000073432922, 0.6448000073432922
+        Scale: 0.10000000149011612, 0.5
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 255, 255, 254, 255
+    - 0, 151, 230, 255
+
+  Color Registers:
+    - 0, 16, 44, 255
+    - 0, 25, 52, 255
+
+  Steps:
+    1: RGB = ((vertex RGB) * (tex #1 RGB))
+         A = ((tex #1 A) * (vertex A))
+    2: RGB = (lerp from (0, 25, 52) to (0, 151, 230) using (tex #2 RGB)), then add (prev. RGB)
+         A = (vertex A)
+    3: RGB = ((vertex RGB) * (tex #3 RGB)), then add (prev. RGB)
+         A = (vertex A)
+
+
+
+EarthNightMat_v
+===============
+  Textures:
+    - EarthKsMM
+    - Cloud01k
+        Offset: 0.6448000073432922, 0.6448000073432922
+        Scale: 0.10000000149011612, 0.5
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 25, 52, 255
+
+  Color Registers:
+    - 0, 0, 0, 255
+    - 0, 0, 0, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB)), then add (0, 25, 52)
+         A = ((tex #1 A) * (vertex A))
+    2: RGB = ((tex #2 RGB) * (vertex RGB)), then add (prev. RGB)
+         A = (vertex A)
+
+
+
+Sky_Mat_v
+=========
+  Textures:
+    - Skyk
+        Scale: 4, 1
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 10, 14, 30, 255
+
+  Material Colors:
+    - 0, 83, 255, 255
+    - 0, 83, 255, 255
+
+  Steps:
+    1: RGB = (lerp from (10, 14, 30) to (vertex RGB) using (tex #1 RGB)), multiply by 2
+         A = ((tex #1 A) * (vertex A))
+
+
+
+Space_Mat_v
+===========
+  Textures:
+    - OrbitUniverseL
+        Scale: 0.498046875, 1
+    - Galaxy
+        Offset: -0.2880859375, 0
+        Scale: 0.2490234375, 0.2880859375
+        Rotation: 0.5204931791131321
+    - GalaxyRiverK
+        Offset: 1.03515625, 0
+        Scale: 0.537109375, 0.576171875
+        Rotation: 0.24802392651142918
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 20, 28, 67, 255
+
+  Steps:
+    1: RGB = ((tex #2 RGB) * (vertex RGB)), then add (20, 28, 67)
+         A = ((tex #2 A) * (vertex A))
+    2: RGB = ((vertex RGB) * (tex #1 RGB)), then add (prev. RGB)
+         A = (vertex A)
+    3: RGB = ((vertex RGB) * (tex #3 RGB)), then add (prev. RGB)
+         A = (vertex A)
+
+
+
+Sun_Mat_v
+=========
+  Textures:
+    - PlanetSun
+        Scale: 1.11328125, 1.11328125
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))

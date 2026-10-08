@@ -1,0 +1,1007 @@
+.container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  background: #000;
+  z-index: 11;
+}
+
+.canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.fadeOverlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 10;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 1.2s ease-out;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+/* ================================================================ */
+/*  SMG Title Intro                                                 */
+/* ================================================================ */
+
+.introWrap {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.introPlay {
+  pointer-events: auto;
+}
+
+/* --- White flashbang layer --- */
+.flashbang {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+}
+
+.introPlay .flashbang {
+  animation: flashbang 2.2s ease-out forwards;
+}
+
+@keyframes flashbang {
+  0%   { opacity: 0; }
+  8%   { opacity: 0.85; }
+  30%  { opacity: 0.7; }
+  60%  { opacity: 0.12; }
+  100% { opacity: 0; }
+}
+
+/* --- Logo wrapper (centering + scale) --- */
+.logoWrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo scale: change 0.12 (start) and 1.8 (end) in logoGrow below */
+.logo {
+  position: relative;
+  z-index: 2;
+  width: 23.4vw;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.12);
+  filter: brightness(8) blur(30px) drop-shadow(0 0 80px #fff);
+  will-change: transform, filter, opacity;
+}
+
+.introPlay .logo {
+  animation: logoGrow 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+             logoReveal 1.2s 0.5s ease-out forwards;
+}
+
+/* --- Galaxy fill masked to GALAXY letter shapes --- */
+/* Hidden during glow phase; fades in after logo becomes crisp so the */
+/* mask edges are never visible through blur.                          */
+.galaxyFill {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(1.8);
+  -webkit-mask-image: url("/smg-assets/orbit-sky/szg-mask.png");
+  mask-image: url("/smg-assets/orbit-sky/szg-mask.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.introPlay .galaxyFill {
+  animation: galaxyFadeIn 1s 1.0s ease-out forwards;
+}
+
+/* --- Drop shadow overlay for GALAXY letters (above galaxy fill) --- */
+.galaxyShadow {
+  position: absolute;
+  z-index: 4;
+  width: 23.4vw;
+  height: auto;
+  opacity: 0;
+  transform: scale(1.8);
+  pointer-events: none;
+}
+
+.introPlay .galaxyShadow {
+  animation: galaxyFadeIn 1s 1.1s ease-out forwards;
+}
+
+/* Fade in after the logo glow has fully cleared */
+@keyframes galaxyFadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.galaxyImg {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  animation: galaxyScroll 8s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes galaxyScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-12%); }
+}
+
+/* Phase 1: tiny → full size, white-hot glow */
+@keyframes logoGrow {
+  0% {
+    opacity: 1;
+    transform: scale(0.12);           /* ← starting scale */
+    filter: brightness(8) blur(30px) drop-shadow(0 0 80px #fff);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.8);            /* ← final scale */
+    filter: brightness(4) blur(10px) drop-shadow(0 0 50px #fff);
+  }
+}
+
+/* Phase 2: glow eases away, logo becomes crisp */
+@keyframes logoReveal {
+  0% {
+    filter: brightness(4) blur(10px) drop-shadow(0 0 50px #fff);
+  }
+  100% {
+    filter: brightness(1) blur(0px) drop-shadow(0 0 0px transparent);
+  }
+}
+
+/* --- Static full logo (hidden until dismiss) --- */
+.logoStatic {
+  position: absolute;
+  z-index: 5;
+  width: 23.4vw;
+  height: auto;
+  opacity: 0;
+  transform: scale(1.8);
+  pointer-events: none;
+}
+
+/* --- Press Space prompt --- */
+.pressSpace {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  animation: promptFloat 2s ease-in-out infinite, promptFadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.pressSpaceIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.pressDesktop {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pressMobile {
+  display: none;
+}
+
+.pressSpacePop {
+  animation: promptBubblePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+}
+
+@keyframes promptFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(-8px); }
+}
+
+@keyframes promptFadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes promptBubblePop {
+  0%   { transform: translateX(-50%) scale(1); opacity: 1; }
+  30%  { transform: translateX(-50%) scale(0.7); opacity: 1; }
+  60%  { transform: translateX(-50%) scale(1.15); opacity: 0.8; }
+  100% { transform: translateX(-50%) scale(1); opacity: 0; }
+}
+
+/* --- Dismiss: SMG-style white flash → glow-zoom → fade out --- */
+.introDismissed {
+  pointer-events: none;
+}
+
+/* Hide all individual layers instantly on dismiss */
+.introDismissed .logo,
+.introDismissed .galaxyShadow,
+.introDismissed .galaxyFill {
+  opacity: 0 !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Show static full logo and run the whiteout on it */
+.introDismissed .logoStatic {
+  animation: dismissWhiteout 1.1s ease-out forwards !important;
+}
+
+/* Subtle full-screen bloom pulse */
+.introDismissed .flashbang {
+  animation: dismissFlash 1.1s ease-out forwards !important;
+}
+
+@keyframes dismissWhiteout {
+  0% {
+    filter: brightness(1) blur(0px);
+    opacity: 1;
+    transform: scale(1.8);
+  }
+  15% {
+    filter: brightness(10) blur(4px) drop-shadow(0 0 60px #fff);
+    opacity: 1;
+    transform: scale(1.84);
+  }
+  45% {
+    filter: brightness(10) blur(10px) drop-shadow(0 0 80px rgba(255,255,255,0.6));
+    opacity: 0.7;
+    transform: scale(1.88);
+  }
+  100% {
+    filter: brightness(10) blur(25px) drop-shadow(0 0 100px rgba(255,255,255,0));
+    opacity: 0;
+    transform: scale(1.94);
+  }
+}
+
+@keyframes dismissFlash {
+  0%   { opacity: 0; }
+  12%  { opacity: 0.25; }
+  40%  { opacity: 0.1; }
+  100% { opacity: 0; }
+}
+
+/* ================================================================ */
+/*  SMG Save-File Select Screen                                     */
+/* ================================================================ */
+
+.selectWrap {
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.selectVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Horizontal carousel scroller */
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 calc(50vw - 10vw);
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+  opacity: 1;
+  transition: opacity 0.35s ease-out;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card — starts below viewport, eases up */
+.selectCard {
+  flex-shrink: 0;
+  transform: translateY(110vh);
+  opacity: 0;
+  animation: none;
+}
+
+.selectVisible .selectCard {
+  animation: cardSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scale wrapper — driven by JS scroll position (no CSS transition;
+   smooth scaling comes from high-frequency rAF updates) */
+.cardScaler {
+}
+
+/* Carousel locked during detail view */
+.carouselLocked {
+  overflow: hidden !important;
+  pointer-events: none;
+}
+
+/* Carousel fading during folder transitions */
+.carouselFading {
+  opacity: 0;
+  transition: opacity 0.35s ease-out;
+}
+
+/* ============================================================== */
+/*  Detail View Overlay (SMG save-file style)                     */
+/* ============================================================== */
+
+.detailOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.detailButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* SMG-style info card — sits just above the selected page image */
+.detailInfoCard {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: calc(50% + 6vw + 1.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: detailInfoIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Spacer no longer needed — info card & buttons are absolutely
+   positioned from the viewport center (6vw = half card height) */
+.detailSpacer {
+  display: none;
+}
+
+.detailTitle {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 24px currentColor;
+  margin: 0;
+}
+
+.detailDesc {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin: 0;
+  max-width: 30ch;
+}
+
+/* Action buttons — sit just below the card image */
+.detailActions {
+  pointer-events: auto;
+  display: flex;
+  gap: 1.25rem;
+  position: absolute;
+  top: calc(50% + 6vw + 1.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: detailBtnsIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- exit animations --- */
+.detailOverlay.detailExiting .detailInfoCard {
+  animation: detailInfoOut 0.35s ease-in forwards;
+}
+.detailOverlay.detailExiting .detailActions {
+  animation: detailBtnsOut 0.35s ease-in forwards;
+}
+
+/* ============================================================== */
+/*  Detail Marquee Banners                                        */
+/* ============================================================== */
+
+.detailMarqueeTop,
+.detailMarqueeBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  opacity: 0;
+  animation: marqueeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.detailMarqueeTop {
+  top: 0;
+}
+
+.detailMarqueeBottom {
+  bottom: 0;
+}
+
+.detailOverlay.detailExiting .detailMarqueeTop,
+.detailOverlay.detailExiting .detailMarqueeBottom {
+  animation: marqueeOut 0.3s ease-in forwards;
+}
+
+@keyframes marqueeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marqueeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes detailInfoIn {
+  from {
+    transform: translateX(-50%) translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes detailInfoOut {
+  from {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(60px);
+    opacity: 0;
+  }
+}
+
+@keyframes detailBtnsIn {
+  from {
+    transform: translateX(-50%) translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes detailBtnsOut {
+  from {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(-60px);
+    opacity: 0;
+  }
+}
+
+@keyframes cardSlideUp {
+  0% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Card container — remove default padding from CardContainer */
+.cardContainer {
+  padding: 0 !important;
+}
+
+/* Card body */
+.cardBody {
+  position: relative;
+  width: 20vw;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.55);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardBody:hover {
+  border-color: rgba(100, 200, 255, 0.6);
+  box-shadow: 0 0 30px rgba(100, 200, 255, 0.2), inset 0 0 20px rgba(100, 200, 255, 0.05);
+}
+
+/* Transparent card for folder/back entries */
+.cardBodyTransparent {
+  background: transparent;
+  border-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.cardBodyTransparent:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Preview image area */
+.cardImageWrap {
+  width: 100% !important;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Folder SVG card thumbnail */
+.cardFolderWrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.cardFolderImg {
+  width: 55%;
+  height: auto;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.55));
+}
+
+/* (label styles removed — labels are no longer rendered) */
+
+/* ================================================================ */
+/*  Mobile                                                          */
+/* ================================================================ */
+
+@media (max-width: 768px) {
+  /* Larger logo on mobile */
+  .logo,
+  .galaxyShadow,
+  .logoStatic {
+    width: 70vw;
+  }
+
+  /* "Tap to Start" instead of "Press [space]" */
+  .pressDesktop {
+    display: none;
+  }
+
+  .pressMobile {
+    display: inline;
+  }
+
+  /* Stack cards vertically on mobile */
+  .carousel {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 2rem 0;
+    gap: 1.5rem;
+  }
+
+  .cardBody {
+    width: 70vw;
+  }
+
+  /* Hide desktop detail overlay on mobile */
+  .detailOverlay {
+    display: none;
+  }
+}
+
+/* ================================================================ */
+/*  Mobile card grid                                                */
+/* ================================================================ */
+
+.mobileGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem 0;
+  scrollbar-width: none;
+}
+
+.mobileGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.mobileCard {
+  flex-shrink: 0;
+  width: 75vw;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.55);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transform: translateY(80px);
+  opacity: 0;
+  animation: mobileCardIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobileCard:active {
+  transform: scale(0.97);
+}
+
+.mobileCardImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.mobileCardLabel {
+  display: block;
+  text-align: center;
+  padding: 0.6rem 0;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 12px currentColor;
+}
+
+@keyframes mobileCardIn {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================================================================ */
+/*  Autoplay gate prompt                                            */
+/* ================================================================ */
+
+.gatePrompt {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.gateLine {
+  opacity: 0;
+  animation: gateFadeIn 0.6s ease-out forwards, gateFloat 2s ease-in-out infinite;
+}
+
+.gateLine1 {
+  animation-delay: 0s, 0.6s;
+}
+.gateLine2 {
+  animation-delay: 1.4s, 2s;
+}
+.gateLine3 {
+  animation-delay: 2.8s, 3.4s;
+}
+
+@keyframes gateFadeIn {
+  0%   { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gateFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* ================================================================ */
+/*  Volume meter                                                    */
+/* ================================================================ */
+
+.volumeControl {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #fff;
+  z-index: 50;
+  user-select: none;
+}
+
+.volumeIcon {
+  font-size: 13px;
+  line-height: 1;
+  width: 12px;
+  text-align: center;
+}
+
+.volumeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider::-webkit-slider-thumb:hover {
+  background: #ccc;
+}
+.volumeSlider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider::-moz-range-thumb:hover {
+  background: #ccc;
+}
+
+.volumeValue {
+  min-width: 30px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================================================================ */
+/*  Settings                                                        */
+/* ================================================================ */
+
+.settingsGear {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 50;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.4s ease;
+  padding: 0;
+}
+
+.settingsGear:hover {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+.settingsBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settingsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.06);
+  min-width: 290px;
+  animation: settingsCardIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes settingsCardIn {
+  from {
+    transform: scale(0.88) translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.settingsTitle {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+  margin: 0;
+  text-align: center;
+}
+
+.settingsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.settingsLabel {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.settingsSliderGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---- Toggle switch ---- */
+
+.toggle {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggleInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.toggleTrack {
+  width: 2.4rem;
+  height: 1.3rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  position: relative;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.toggleInput:checked ~ .toggleTrack {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 0.95rem;
+  height: 0.95rem;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.toggleInput:checked ~ .toggleTrack .toggleThumb {
+  left: calc(100% - 0.95rem - 2px);
+  background: #1a1a1a;
+}
+

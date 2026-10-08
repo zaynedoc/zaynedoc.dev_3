@@ -1,0 +1,37 @@
+.background {
+  --section-background-wash: rgb(252 249 255 / 0%);
+
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: var(--layer-background);
+}
+
+.experience {
+  background: #fcf9ff;
+}
+
+.artwork {
+  height: 100%;
+  inset: 0;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  transform: none;
+  width: 100%;
+  z-index: 0;
+}
+
+.background::after {
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.background::after {
+  background: var(--section-background-wash);
+  z-index: 2;
+}

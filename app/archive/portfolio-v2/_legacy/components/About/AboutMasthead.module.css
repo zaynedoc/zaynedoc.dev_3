@@ -1,0 +1,73 @@
+.masthead {
+  --hero-blob-opacity: 0.62;
+
+  height: clamp(7rem, 10vw, 12rem);
+  isolation: isolate;
+  overflow: clip;
+  position: relative;
+}
+
+.title {
+  background: linear-gradient(to bottom, #fff 0%, rgb(249 230 255 / 90%) 100%);
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 10px rgb(0 0 0 / 25%));
+  font-family: var(--font-zalando-expanded-extra-bold), var(--font-display);
+  font-size: clamp(4rem, 7.8125vw, 9.375rem);
+  font-weight: 800;
+  left: clamp(2rem, 5.2083vw, 6.25rem);
+  line-height: 0.78;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--layer-content);
+}
+
+.squares {
+  aspect-ratio: 960 / 192;
+  bottom: 0;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  width: auto;
+  z-index: var(--layer-decoration);
+}
+
+.squares picture,
+.squares img {
+  height: 100%;
+  object-fit: fill;
+  width: auto;
+}
+
+@media (min-width: 37.501rem) and (max-width: 64rem) {
+  .masthead {
+    height: 9rem;
+  }
+
+  .title {
+    font-size: 5.5rem;
+  }
+
+  .squares {
+    height: clamp(2.5rem, 5vw, 3.75rem);
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .masthead {
+    height: 5.5rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .squares {
+    height: clamp(1.25rem, 5vw, 2rem);
+  }
+}

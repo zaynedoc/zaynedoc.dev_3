@@ -1,0 +1,169 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  outline: none;
+  border: 0px solid #3a2e50;
+  border-radius: 4px;
+}
+
+.canvasContainer {
+  position: relative;
+  line-height: 0;
+  transform: scale(2.75);
+  transform-origin: center center;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 16px;
+  color: #b8a0d4;
+  background: #000;
+  pointer-events: none;
+}
+
+/* ── Back label (ASCII, above screen) ─────────────────────────── */
+.backLabel {
+  position: absolute;
+  /* Centre vertically in the gap above the scaled canvas (288×2.75 = 792px) */
+  top: calc((100vh - 792px) / 4);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+  z-index: 20;
+}
+.backLabel:hover {
+  color: #9a8ab0;
+}
+/* ── Master volume control (between back label and canvas) ────── */
+.volumeControl {
+  position: absolute;
+  top: calc((100vh - 792px) / 4 + 22px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #555;
+  z-index: 20;
+  user-select: none;
+}
+
+.volumeIcon {
+  font-size: 13px;
+  line-height: 1;
+  width: 12px;
+  text-align: center;
+}
+
+.volumeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider:hover {
+  background: #444;
+}
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #777;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider::-webkit-slider-thumb:hover {
+  background: #9a8ab0;
+}
+.volumeSlider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #777;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.volumeSlider::-moz-range-thumb:hover {
+  background: #9a8ab0;
+}
+
+.volumeValue {
+  min-width: 30px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+/* ── Room name reveal (below screen, above hint) ──────────────── */
+.roomLabel {
+  position: absolute;
+  /* Upper portion of the gap below the scaled canvas */
+  bottom: calc((100vh - 792px) / 4 + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 13px;
+  color: #777;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.roomLabelVisible {
+  opacity: 1;
+}
+
+/* ── Controls hint (idle-reveal) ──────────────────────────────── */
+.controlsHint {
+  position: absolute;
+  /* Lower portion of the gap below the scaled canvas */
+  bottom: calc((100vh - 792px) / 4 - 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.controlsVisible {
+  opacity: 1;
+}

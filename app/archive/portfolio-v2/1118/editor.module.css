@@ -1,0 +1,676 @@
+/* ================================================================
+   1118 Map Editor — CSS Module
+   ================================================================ */
+
+/* ── Editor wrapper (replaces game wrapper when active) ──────── */
+
+.editorWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  overflow: hidden;
+  font-family: "Consolas", "Monaco", monospace;
+  color: #ccc;
+  font-size: 11px;
+  user-select: none;
+}
+
+/* ── Tab bar (VS Code-style room tabs) ───────────────────────── */
+
+.tabBar {
+  display: flex;
+  background: #0e0e1a;
+  border-bottom: 1px solid #333;
+  overflow-x: auto;
+  flex-shrink: 0;
+  height: 30px;
+  padding: 0 4px;
+  gap: 1px;
+  align-items: flex-end;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 12px;
+  background: #16162a;
+  border: 1px solid #333;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  font-size: 11px;
+  color: #888;
+  white-space: nowrap;
+  height: 26px;
+  flex-shrink: 0;
+  transition: background 0.1s;
+}
+.tab:hover {
+  background: #222244;
+  color: #bbb;
+}
+
+.tabActive {
+  background: #1a1a2e;
+  color: #fff;
+  border-color: #5544aa;
+  border-bottom: 1px solid #1a1a2e;
+}
+
+.tabRegistry {
+  font-style: italic;
+}
+
+.tabFolderIcon {
+  background: none;
+  border: none;
+  padding: 0 1px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.7;
+  border-radius: 3px;
+  transition: opacity 0.1s;
+}
+.tabFolderIcon:hover {
+  opacity: 1;
+}
+
+.tabMinimized {
+  padding: 4px 6px;
+  gap: 0;
+}
+
+/* ── Tab multi-select highlight ─────────────────────────────── */
+.tabSelected {
+  outline: 2px solid #7766cc;
+  outline-offset: -2px;
+  background: #2a2a4a;
+}
+
+/* ── Tab groups (Opera GX style) ────────────────────────────── */
+.tabGroup {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  position: relative;
+}
+
+.tabGroupHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: var(--group-color, #5544aa);
+  border: 1px solid var(--group-color, #5544aa);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  font-size: 10px;
+  color: #fff;
+  white-space: nowrap;
+  height: 26px;
+  flex-shrink: 0;
+  transition: filter 0.1s;
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+.tabGroupHeader:hover {
+  filter: brightness(1.2);
+}
+
+.tabGroupCount {
+  font-size: 8px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 6px;
+  padding: 1px 4px;
+  line-height: 1;
+}
+
+.tabGroupRenameInput {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 4px;
+  outline: none;
+  font-family: inherit;
+  width: 70px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.tabGroupCollapsed .tabGroupTabs {
+  display: none;
+}
+
+.tabGroupTabs {
+  display: flex;
+  gap: 0;
+  align-items: flex-end;
+}
+
+.tabGroupTabs .tab {
+  border-left: 2px solid var(--group-color, #5544aa);
+  border-radius: 0;
+}
+.tabGroupTabs .tab:last-child {
+  border-radius: 0 4px 0 0;
+}
+
+.tabName {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabRenameInput {
+  background: #111;
+  border: 1px solid #5544aa;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 11px;
+  padding: 1px 4px;
+  outline: none;
+  font-family: inherit;
+  width: 100px;
+}
+
+.tabClose {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+.tabClose:hover {
+  color: #f44;
+  background: rgba(255,68,68,0.1);
+}
+
+/* ── Editor body (toolbar + canvas + palette) ────────────────── */
+
+.editorBody {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ── Left: toolbar ───────────────────────────────────────────── */
+
+.toolbar {
+  background: #1a1a2e;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  gap: 6px;
+  overflow-y: auto;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.toolbarSection {
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 6px;
+  background: #16162a;
+}
+
+.toolbarSection h3 {
+  margin: 0 0 4px 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #8a7ab8;
+  letter-spacing: 0.5px;
+}
+
+.toolbarRow {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+/* ── Room list ───────────────────────────────────────────────── */
+
+.roomList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  max-height: 120px;
+  overflow-y: auto;
+  margin-bottom: 4px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background: #111;
+}
+
+.roomItem {
+  display: flex;
+  align-items: center;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 10px;
+  background: #16162a;
+  transition: background 0.1s;
+}
+.roomItem:hover {
+  background: #222244;
+}
+
+.roomItemActive {
+  background: #5544aa;
+  color: #fff;
+}
+.roomItemActive:hover {
+  background: #6655bb;
+}
+
+.roomItemName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.roomDeleteBtn {
+  display: none; /* legacy — delete via tab close button */
+}
+
+.roomRenameInput {
+  display: none; /* legacy — rename via tab bar */
+}
+
+.toolBtn {
+  background: #222244;
+  border: 1px solid #444;
+  border-radius: 3px;
+  color: #ccc;
+  font-size: 10px;
+  padding: 3px 7px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.toolBtn:hover { background: #333366; }
+
+/* stylelint-disable-next-line block-no-empty — exported for JS toggling */
+.active { /* CSS Modules class export */ }
+
+.toolBtn.active {
+  background: #5544aa;
+  border-color: #8877cc;
+  color: #fff;
+}
+
+.toolBtnDanger {
+  composes: toolBtn;
+  border-color: #733;
+}
+.toolBtnDanger:hover { background: #552233; }
+.toolBtnDanger.active {
+  background: #883344;
+  border-color: #aa5566;
+}
+
+.toolBtnExport {
+  composes: toolBtn;
+  background: #224422;
+  border-color: #3a5;
+  width: 100%;
+  padding: 5px;
+  font-size: 11px;
+}
+.toolBtnExport:hover { background: #336633; }
+
+.toolBtnSave {
+  composes: toolBtn;
+  background: #1a3a5c;
+  border-color: #4a9eff;
+  width: 100%;
+  padding: 5px;
+  font-size: 11px;
+}
+.toolBtnSave:hover { background: #264a6e; }
+.toolBtnSave:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.saveStatus {
+  font-size: 10px;
+  margin-top: 4px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  text-align: center;
+}
+.saveStatusOk {
+  color: #6f6;
+}
+.saveStatusErr {
+  color: #f66;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.inputSmall {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 3px;
+  color: #ccc;
+  font-size: 10px;
+  width: 50px;
+  padding: 2px 4px;
+  font-family: inherit;
+}
+
+.selectSmall {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 3px;
+  color: #ccc;
+  font-size: 10px;
+  padding: 2px 4px;
+  font-family: inherit;
+}
+
+/* ── Centre: map canvas area ─────────────────────────────────── */
+
+.mapArea {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #0a0a14;
+}
+
+.mapScroll {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.mapPad {
+  display: inline-block;
+  /* generous padding lets the user scroll well beyond every edge */
+  padding: 200px;
+}
+
+.mapCanvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  cursor: crosshair;
+  display: block;
+}
+
+/* ── Right: palette ──────────────────────────────────────────── */
+
+.palettePanel {
+  background: #1a1a2e;
+  border-left: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* ── Resize handles ──────────────────────────────────────────── */
+
+.resizeHandle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  z-index: 20;
+  background: transparent;
+  transition: background 0.15s;
+}
+.resizeHandle:hover {
+  background: rgba(136, 119, 204, 0.35);
+}
+
+.paletteHeader {
+  padding: 6px;
+  border-bottom: 1px solid #333;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #8a7ab8;
+  letter-spacing: 0.5px;
+}
+
+.paletteScroll {
+  flex: 1;
+  overflow: auto;
+  padding: 4px;
+  cursor: crosshair;
+  /* Prevent text/image selection during drag */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.paletteScroll:active {
+  cursor: crosshair;
+}
+
+.paletteCanvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  /* Cursor is controlled by the scroll container */
+  cursor: inherit;
+  display: block;
+}
+
+.layerToggle {
+  display: flex;
+  gap: 2px;
+  padding: 4px 6px;
+  border-bottom: 1px solid #333;
+}
+
+.layerRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 0;
+}
+
+.layerEye {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 12px;
+  width: 20px;
+  text-align: center;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.layerEye:hover {
+  color: #fff;
+}
+
+.layerName {
+  font-size: 10px;
+  color: #aaa;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.layerActive {
+  background: #5544aa;
+  color: #fff;
+}
+
+.layerSlider {
+  width: 56px;
+  height: 4px;
+  accent-color: #8877cc;
+  flex-shrink: 0;
+}
+
+/* ── Context menu ────────────────────────────────────────────── */
+
+.contextMenu {
+  position: fixed;
+  background: #1a1a2e;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 4px 0;
+  z-index: 100;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.contextItem {
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+}
+.contextItem:hover {
+  background: #333366;
+}
+.contextItemActive {
+  composes: contextItem;
+  color: #bb99ff;
+}
+.contextSep {
+  height: 1px;
+  background: #333;
+  margin: 2px 0;
+}
+
+/* ── Spawn / teleport markers ────────────────────────────────── */
+
+.marker {
+  position: absolute;
+  pointer-events: none;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  z-index: 5;
+}
+
+/* ── Status bar ──────────────────────────────────────────────── */
+
+.statusBar {
+  flex-shrink: 0;
+  height: 20px;
+  background: #16162a;
+  border-top: 1px solid #333;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  gap: 16px;
+  font-size: 10px;
+  color: #888;
+  z-index: 10;
+}
+
+/* ── Teleport editor modal ───────────────────────────────────── */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modalContent {
+  background: #1a1a2e;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 16px;
+  min-width: 300px;
+}
+
+.modalContent h3 {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: #bb99ff;
+}
+
+.modalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.modalInput {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 3px;
+  color: #ccc;
+  font-size: 11px;
+  padding: 3px 6px;
+  width: 140px;
+  font-family: inherit;
+}
+
+.modalBtnRow {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+  justify-content: flex-end;
+}
+
+/* ── Hotbar (Minecraft-style) ────────────────────────────────── */
+
+.hotbar {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0 2px;
+  z-index: 15;
+  pointer-events: auto;
+  background: transparent;
+}
+
+.hotbarCanvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  cursor: pointer;
+  border-radius: 4px;
+  background: rgba(10, 10, 20, 0.9);
+  border: 1px solid #555;
+  padding: 2px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hotbarHint {
+  font-size: 8px;
+  color: #555;
+  margin-top: 2px;
+  text-align: center;
+}

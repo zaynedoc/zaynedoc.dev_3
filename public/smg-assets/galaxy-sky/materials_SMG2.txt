@@ -1,0 +1,25 @@
+UniverseMat_v
+=============
+  Textures:
+    - StarSkyL
+        Scale: 2, 2
+        Rotation: 0.11108737449262979
+    - GalaxySkyGalaxy
+        Offset: 0, 0.07999999821186066
+        Scale: 0.20000000298023224, 0.2099609375
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 35, 73, 255
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB)), then add (0, 35, 73)
+         A = 0
+    2: RGB = (tex #2 RGB), then add (prev. RGB)
+         A = 255

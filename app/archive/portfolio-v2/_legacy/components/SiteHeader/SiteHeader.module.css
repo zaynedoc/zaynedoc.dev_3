@@ -1,0 +1,148 @@
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
+/* Hallmark · component: SiteHeader · tone: Figma navigation · anchor hue: lavender */
+
+.header {
+  height: 80px;
+  isolation: isolate;
+  overflow: clip;
+  position: relative;
+  z-index: var(--layer-header);
+}
+
+.backdrops {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: var(--layer-background);
+}
+
+.backdrop {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tabletBackdrop,
+.phoneBackdrop {
+  display: none;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding-inline: 45px;
+  position: relative;
+  z-index: var(--layer-content);
+}
+
+.wordmark {
+  align-items: baseline;
+  color: var(--color-ink);
+  display: flex;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: var(--line-height-display);
+  padding: 10px 40px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wordmark small {
+  font-size: 16px;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  gap: 30px;
+  line-height: var(--line-height-display);
+  list-style: none;
+  margin: 0;
+  padding: 15px 40px;
+  white-space: nowrap;
+}
+
+.menu a,
+.disabledLink {
+  color: var(--color-ink);
+  display: block;
+  text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:active {
+  color: var(--color-lavender-deep);
+}
+
+.menu .activeLink {
+  color: var(--color-lavender-deep);
+  filter: drop-shadow(0 0 0.34em rgb(148 112 217 / 58%));
+}
+
+.menu a:focus-visible,
+.wordmark:focus-visible {
+  border-radius: 2px;
+}
+
+.disabledLink {
+  cursor: not-allowed;
+  color: #89858e;
+}
+
+@media (max-width: 64rem) {
+  .desktopBackdrop {
+    display: none;
+  }
+
+  .tabletBackdrop {
+    display: block;
+  }
+
+  .content {
+    padding-inline: 20px;
+  }
+
+  .wordmark {
+    padding: 10px;
+  }
+
+  .menu {
+    padding-inline: 10px;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .tabletBackdrop {
+    display: none;
+  }
+
+  .phoneBackdrop {
+    display: block;
+  }
+
+  .content {
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .wordmark {
+    display: none;
+  }
+
+  .content nav {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .menu {
+    justify-content: center;
+    padding-inline: 0;
+  }
+}

@@ -1,0 +1,177 @@
+.title {
+  --shadow-color: rgb(175 124 201 / 78%);
+  --shadow-filter: blur(10px);
+
+  flex: none;
+  height: 268px;
+  margin: 0;
+  position: relative;
+  width: 1060px;
+}
+
+.shadowText {
+  color: var(--shadow-color);
+  filter: var(--shadow-filter);
+  font-family: var(--font-display);
+  font-size: 200px;
+  font-weight: 400;
+  left: 0;
+  line-height: var(--line-height-display);
+  position: absolute;
+  top: 11px;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.shadowMark {
+  height: auto;
+  left: 1000px;
+  filter: brightness(0.82) saturate(1.3);
+  position: absolute;
+  top: -60px;
+  transform: rotate(90deg);
+  width: 176px;
+  z-index: 0;
+}
+
+.shadowBar {
+  background: var(--shadow-color);
+  filter: var(--shadow-filter);
+  height: 15px;
+  left: 316px;
+  position: absolute;
+  top: 232.5px;
+  width: 629px;
+  z-index: 0;
+}
+
+.foreground {
+  align-items: flex-start;
+  display: flex;
+  filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
+  left: 225px;
+  position: absolute;
+  top: 44.5px;
+  width: max-content;
+  z-index: 1;
+}
+
+.letterform {
+  height: auto;
+  flex: none;
+  margin-left: 8px;
+  order: 2;
+  position: relative;
+  top: -22px;
+  width: 155.832px;
+}
+
+.name {
+  background: linear-gradient(to bottom, #fff 0%, rgb(249 230 255 / 90%) 100%);
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-display);
+  font-size: 50px;
+  font-weight: 400;
+  line-height: var(--line-height-display);
+  order: 1;
+  position: relative;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.phoneMark {
+  display: none;
+}
+
+.workTitle .foreground {
+  left: 270px;
+  top: 91px;
+}
+
+@media (max-width: 64rem) {
+  .title {
+    margin-block: -13px;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .foreground {
+    left: 294px;
+    top: 95px;
+  }
+
+  .workTitle .foreground {
+    left: 294px;
+    top: 95px;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .title {
+    --shadow-filter: blur(7.5px);
+
+    height: 153px;
+    margin-block: -19px;
+    transform: scale(0.75);
+    width: 562px;
+  }
+
+  .shadowText {
+    font-size: 100px;
+    top: 28px;
+  }
+
+  .desktopMark {
+    display: none;
+  }
+
+  .phoneMark {
+    display: block;
+  }
+
+  .shadowMark {
+    left: 427px;
+    top: -40px;
+    width: 128px;
+  }
+
+  .shadowBar {
+    filter: var(--shadow-filter);
+    height: 8px;
+    left: 163px;
+    top: 145px;
+    width: 340px;
+  }
+
+  .foreground {
+    height: 50px;
+    left: 96px;
+    top: 37px;
+    width: 400px;
+  }
+
+  .letterform {
+    margin-left: 6px;
+    top: -12px;
+    width: 76px;
+  }
+
+  .name {
+    font-size: 40px;
+    top: 12.5px;
+  }
+
+  .workTitle .foreground {
+    left: 50%;
+    top: 37px;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+}
+
+@media (max-width: 23rem) {
+  .title {
+    transform: scale(0.62);
+  }
+}

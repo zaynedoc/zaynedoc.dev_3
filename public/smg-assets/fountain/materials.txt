@@ -1,0 +1,195 @@
+Kabe_02_v
+=========
+  Textures:
+    - Kabe_01
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 0, 0, 180
+
+  Material Colors:
+    - 203, 203, 203, 255
+    - 203, 203, 203, 255
+
+  Color Registers:
+    - 255, 255, 255, 250
+    - 0, 0, 0, 368
+
+
+
+Stone_05_v
+==========
+  Textures:
+    - Kabe_02
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 2, 0, 0, 180
+
+  Material Colors:
+    - 203, 203, 203, 255
+    - 203, 203, 203, 255
+
+  Color Registers:
+    - 255, 255, 255, 250
+    - 0, 0, 0, 368
+
+
+
+Tile_00_v
+=========
+  Textures:
+    - Corrido
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 0, 0, 50
+
+  Material Colors:
+    - 203, 203, 203, 255
+    - 203, 203, 203, 255
+
+  Color Registers:
+    - 255, 255, 255, 250
+    - 0, 0, 0, 368
+
+
+
+Tile_v
+======
+  Textures:
+    - Tile_00
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 0, 0, 180
+
+  Material Colors:
+    - 203, 203, 203, 255
+    - 203, 203, 203, 255
+
+  Color Registers:
+    - 255, 255, 255, 250
+    - 0, 0, 0, 368
+
+
+
+jimen_v
+=======
+  Textures:
+    - R_corrido2
+    - IndBendZara
+        Offset: 1.6139999628067017, 1.6139999628067017
+        Scale: 0.5, 1
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 107, 124, 134, 255
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Color Registers:
+    - 58, 90, 105, -50
+    - 30, 30, 30, 255
+
+
+
+pla_v
+=====
+  Textures:
+    - HalfTone_00
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 0, 0, 180
+
+  Material Colors:
+    - 203, 203, 203, 255
+    - 203, 203, 203, 255
+
+  Color Registers:
+    - 255, 255, 255, 250
+    - 0, 0, 0, 368
+
+
+
+zz_FallMat_v_x
+==============
+  Textures:
+    - Fall
+        Offset: 0, -3.7660000324249268
+        Scale: 1, 0.30000001192092896
+    - WaterIndirect
+        Scale: 3.583984375, 0.20000000298023224
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 21, 45, 255
+    - 0, 0, 0, 255
+
+  Material Colors:
+    - 252, 252, 252, 206
+    - 252, 252, 252, 206
+
+  Color Registers:
+    - 0, 0, 0, 260
+    - 4, -308, -862, 255
+
+
+
+zz_SpringMat_v_x
+================
+  Textures:
+    - WaterRipple
+        Offset: 0, -5.380000114440918
+        Scale: 1, 1.399999976158142
+    - IndWarpTopWater
+        Offset: 0, -3.7660000324249268
+        Scale: 0.25, 0.30000001192092896
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 168, 219, 255, 255
+
+  Material Colors:
+    - 196, 196, 196, 255
+    - 196, 196, 196, 255
+
+
+
+zz_kasan_v_x
+============
+  Textures:
+    - HalfTone_00
+
+  Ambient Colors:
+    - 100, 100, 100, 195
+
+  Constant Colors:
+    - 0, 0, 0, 180
+
+  Material Colors:
+    - 203, 203, 203, 255
+    - 203, 203, 203, 255
+
+  Color Registers:
+    - 255, 255, 255, 250
+    - 0, 0, 0, 368

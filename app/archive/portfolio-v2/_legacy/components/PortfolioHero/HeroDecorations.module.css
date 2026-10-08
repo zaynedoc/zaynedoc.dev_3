@@ -1,0 +1,70 @@
+.decorations {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: var(--layer-decoration);
+}
+
+.workDecorations {
+  --edge-decoration-pixel: clamp(0.75px, 0.0390625vw, 1px);
+
+  font-size: var(--edge-decoration-pixel);
+}
+
+.squares,
+.curves {
+  position: absolute;
+}
+
+.workDecorations .squares {
+  width: 575em;
+}
+
+.workDecorations .curves {
+  width: 288em;
+}
+
+.squares {
+  aspect-ratio: 2300 / 772;
+  bottom: 0;
+  left: 0;
+  width: min(575px, 29.9479vw);
+}
+
+.curves {
+  aspect-ratio: 1152 / 768;
+  bottom: 0;
+  right: 0;
+  width: min(288px, 15vw);
+}
+
+/* Root gets the opposite corner composition from Work for visual variety.
+   The artwork itself is unchanged; only its anchored corner is swapped. */
+.decorations:not(.workDecorations) .squares {
+  left: auto;
+  right: 0;
+}
+
+.decorations:not(.workDecorations) .curves {
+  left: 0;
+  right: auto;
+  transform: scaleX(-1);
+}
+
+.squares img,
+.curves img {
+  height: 100%;
+  object-fit: fill;
+  width: 100%;
+}
+
+@media (max-width: 64rem) {
+  .workDecorations .squares {
+    width: min(575px, 29.9479vw);
+  }
+
+  .workDecorations .curves {
+    width: min(288px, 15vw);
+  }
+}

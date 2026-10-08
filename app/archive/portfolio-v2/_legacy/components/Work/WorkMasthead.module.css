@@ -1,0 +1,103 @@
+.masthead {
+  --hero-blob-opacity: 0.62;
+
+  /* The header hugs the 288×192 curve asset at its desktop cap. Keeping the
+     band and artwork on the same height prevents the seam from drifting away
+     from the Experience decoration below. */
+  height: clamp(7rem, 10vw, 12rem);
+  isolation: isolate;
+  overflow: clip;
+  position: relative;
+}
+
+.title {
+  background: linear-gradient(to bottom, #fff 0%, rgb(249 230 255 / 90%) 100%);
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-zalando-expanded-extra-bold), var(--font-display);
+  font-size: clamp(4rem, 7.8125vw, 9.375rem);
+  font-weight: 800;
+  left: clamp(2rem, 5.2083vw, 6.25rem);
+  line-height: 0.78;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  /* A filter shadow stays outside the transparent gradient fill. Text-shadow
+     bled through that fill and created the dark halo visible inside WORK. */
+  filter: drop-shadow(0 4px 10px rgb(0 0 0 / 25%));
+  transform: translateY(-50%);
+  z-index: var(--layer-content);
+}
+
+.artwork {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: var(--layer-decoration);
+}
+
+.curves,
+.squares {
+  position: absolute;
+}
+
+.curves {
+  aspect-ratio: 1152 / 768;
+  bottom: 0;
+  height: auto;
+  right: 0;
+  width: var(--work-hero-curve-width, clamp(10.5rem, 15vw, 18rem));
+}
+
+.curves img,
+.squares img {
+  display: block;
+  height: 100%;
+  object-fit: fill;
+  width: 100%;
+}
+
+.decorative .curves {
+  bottom: auto;
+  left: 0;
+  right: auto;
+  top: 0;
+  transform: scaleX(-1);
+}
+
+.squares {
+  aspect-ratio: 2300 / 772;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: var(--work-divider-square-width, clamp(21rem, 30vw, 36rem));
+  transform: rotate(180deg);
+}
+
+@media (min-width: 37.501rem) and (max-width: 64rem) {
+  .masthead {
+    height: 9rem;
+  }
+
+  .title {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .masthead {
+    /* Hug the title on phones; the artwork intentionally stays smaller than
+       WORK and is no longer used to determine the header's height. */
+    height: 5.5rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .decorative {
+    display: none;
+  }
+}

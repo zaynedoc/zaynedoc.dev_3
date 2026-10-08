@@ -83,32 +83,13 @@ def snapshot_tracks(snapshot: dict[str, Any]) -> list[dict[str, Any]]:
     return [track for track in tracks if isinstance(track, dict)]
 
 
-def cumulative_tallies(latest_snapshot: dict[str, Any]) -> list[TrackTally]:
-    tallies: list[TrackTally] = []
-    for track in snapshot_tracks(latest_snapshot):
-        listens = max(0, int(track.get("PlayCount", 0)))
-        album = str(track.get("Album", "")).strip()
-        title = str(track.get("Title", "")).strip()
-        artist = str(track.get("Artist", "")).strip()
-        if album and title and listens > 0:
-            tallies.append(TrackTally(album, artist or "Unknown artist", title, listens))
-    return tallies
-
-
-def observed_tallies(snapshots: list[tuple[Path, dict[str, Any]]]) -> list[TrackTally]:
-    """Mirror WMPL Wrap's all-time observed-delta mode when baselines are disabled."""
-    if len(snapshots) < 2:
-        return []
-
+def inclusive_tallies(snapshots: list[tuple[Path, dict[str, Any]]]) -> list[TrackTally]:
+    """Include each first-seen WMP count, then add later positive deltas."""
     totals: defaultdict[str, int] = defaultdict(int)
     latest_tracks: dict[str, dict[str, Any]] = {}
-    previous_tracks = {
-        str(track.get("Id", "")): track
-        for track in snapshot_tracks(snapshots[0][1])
-        if track.get("Id")
-    }
+    previous_tracks: dict[str, dict[str, Any]] = {}
 
-    for _, snapshot in snapshots[1:]:
+    for _, snapshot in snapshots:
         current_tracks = {
             str(track.get("Id", "")): track
             for track in snapshot_tracks(snapshot)
@@ -116,9 +97,10 @@ def observed_tallies(snapshots: list[tuple[Path, dict[str, Any]]]) -> list[Track
         }
         for track_id, current in current_tracks.items():
             previous = previous_tracks.get(track_id)
-            if previous is None:
-                continue
             current_count = max(0, int(current.get("PlayCount", 0)))
+            if previous is None:
+                totals[track_id] += current_count
+                continue
             previous_count = max(0, int(previous.get("PlayCount", 0)))
             if current_count >= previous_count:
                 totals[track_id] += current_count - previous_count
@@ -169,23 +151,17 @@ def main() -> None:
     arguments = parse_arguments()
     logger_root = arguments.logger_root.expanduser().resolve()
     snapshot_directory = logger_root / "data" / "snapshots"
-    settings_path = logger_root / "data" / "desktop-settings.json"
     snapshots = load_snapshots(snapshot_directory)
 
-    settings = read_json(settings_path) if settings_path.is_file() else {}
-    include_baseline = bool(settings.get("IncludeBaselineSnapshot", True))
-    if include_baseline:
-        tallies = cumulative_tallies(snapshots[-1][1])
-        count_mode = "latest cumulative WMP play counts"
-    else:
-        tallies = observed_tallies(snapshots)
-        count_mode = "positive deltas observed between active snapshots"
+    tallies = inclusive_tallies(snapshots)
+    count_mode = "first-seen WMP counts plus positive deltas between active snapshots"
 
     latest_path, latest_snapshot = snapshots[-1]
     output = {
         "source": {
             "capturedAtUtc": latest_snapshot.get("CapturedAtUtc", ""),
             "countMode": count_mode,
+            "includeFirstSeenCounts": True,
             "snapshot": latest_path.name,
             "snapshotCount": len(snapshots),
         },

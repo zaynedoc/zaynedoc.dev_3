@@ -1,0 +1,153 @@
+.section {
+  --hero-blob-opacity: 0.62;
+
+  isolation: isolate;
+  min-height: clamp(18rem, 24vw, 28rem);
+  overflow: clip;
+  position: relative;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  gap: clamp(1.5rem, 2.6vw, 3.125rem);
+  justify-content: center;
+  min-height: inherit;
+  padding: 3rem;
+  position: relative;
+  z-index: var(--layer-content);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 5vw, 6rem);
+}
+
+.controls button {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  filter: drop-shadow(0 3px 5px rgb(53 22 74 / 28%));
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.08vw, 2.5rem);
+  line-height: 1;
+  padding: 0.15em;
+  transition: color 180ms ease, filter 180ms ease;
+}
+
+.controls button:is(:hover, :focus-visible) {
+  color: #fcecff;
+  filter: drop-shadow(0 0 0.65rem rgb(255 234 255 / 74%));
+  outline: none;
+}
+
+.artwork {
+  aspect-ratio: 1;
+  box-shadow: 0 4px 5px rgb(0 0 0 / 25%);
+  overflow: hidden;
+  position: relative;
+  width: clamp(9rem, 15.625vw, 18.75rem);
+}
+
+.artwork img {
+  animation: artwork-enter 260ms ease both;
+  object-fit: cover;
+}
+
+.player {
+  border: 0;
+  display: block;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.songCopy {
+  color: #fff;
+  filter: drop-shadow(0 3px 5px rgb(53 22 74 / 28%));
+  font-family: var(--font-body);
+}
+
+.songCopy p {
+  margin: 0;
+}
+
+.eyebrow,
+.title {
+  font-size: clamp(1.25rem, 1.875vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.title {
+  margin-top: 1.25rem !important;
+}
+
+.byline {
+  font-size: clamp(1.05rem, 1.56vw, 1.875rem);
+  margin-top: 1.1rem !important;
+}
+
+@keyframes artwork-enter {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .section {
+    min-height: 0;
+  }
+
+  .content {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    padding: 3rem 1.75rem;
+  }
+
+  .controls {
+    align-self: center;
+    gap: 2.75rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    position: absolute;
+  }
+
+  .artwork {
+    grid-column: 1;
+    grid-row: 1;
+    width: max(12.5rem, min(56vw, 14rem));
+  }
+
+  .songCopy {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  .title {
+    margin-top: 0.7rem !important;
+  }
+
+  .byline {
+    margin-top: 0.65rem !important;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artwork img {
+    animation: none;
+  }
+}

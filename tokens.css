@@ -1,0 +1,46 @@
+/* Hallmark · token export · system: zaynedoc.dev archive */
+:root {
+  --color-paper: var(--page-background);
+  --color-paper-raised: oklch(16.168% 0.02635 269.182);
+  --color-ink: var(--text-primary);
+  --color-accent: var(--text-secondary);
+  --color-muted: var(--decoration-muted);
+  --color-rule: var(--decoration-muted);
+  --color-focus: var(--text-secondary);
+
+  --color-legacy-theme: oklch(77.783% 0.0979 311.148);
+  --color-legacy-page: oklch(90.207% 0.05577 300.119);
+  --color-legacy-surface: oklch(96.875% 0.01799 303.42);
+  --color-legacy-lavender-strong: oklch(80.326% 0.11555 299.102);
+  --color-legacy-lavender-deep: oklch(62.67% 0.15557 297.553);
+  --color-legacy-ink: oklch(23.906% 0.06076 300.646);
+  --color-legacy-ink-muted: oklch(46.291% 0.04355 304.023);
+  --color-legacy-focus: oklch(37.514% 0.15939 295.321);
+
+  --font-archive-display: "Zalando Sans SemiExpanded", sans-serif;
+  --font-archive-body: "Zalando Sans SemiExpanded", sans-serif;
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --rule-hairline: 0.125rem;
+  --radius-none: 0;
+}

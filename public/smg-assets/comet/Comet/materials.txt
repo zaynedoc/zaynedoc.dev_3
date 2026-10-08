@@ -1,0 +1,65 @@
+CometMat_v
+==========
+  Textures:
+    - AstroPlanetWall
+        Offset: 0.4333333373069763, 0.4333333373069763
+        Scale: 1, 3.818359375
+
+  Ambient Colors:
+    - 100, 100, 100, 132
+
+  Constant Colors:
+    - 146, 78, 0, 180
+
+  Material Colors:
+    - 255, 203, 84, 255
+    - 255, 203, 84, 255
+
+  Color Registers:
+    - 255, 151, 30, 255
+    - 255, 50, 11, 255
+
+  Steps:
+    1: RGB = ((vertex RGB) * (tex #1 RGB))
+         A = (lerp from 180 to 0 using (vertex A)), multiply by 2
+    2: RGB = (lerp from (255, 50, 11) to (255, 151, 30) using (prev. RGB)), multiply by 2
+         A = 0
+
+  Colors:
+    - blue: lerp from (0, 10, 93) to (0, 174, 242)
+    - purple: lerp from (103, 0, 122) to (240, 146, 240)
+    - red: lerp from (255, 50, 11) to (255, 151, 30)
+    - white: lerp from (100, 100, 100) to (150, 190, 255)
+    - yellow: lerp from (165, 117, 0) to (40, 35, 55)
+
+
+
+CometMat_v(2)
+=============
+  Textures:
+    - AstroPlanetWall
+        Offset: 0.28333336114883423, 0.28333336114883423
+
+  Ambient Colors:
+    - 100, 100, 100, 132
+
+  Constant Colors:
+    - 106, 41, 0, 255
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Color Registers:
+    - 128, 60, 10, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB)), then add (128, 60, 10), subtract 127
+         A = 0
+
+  Colors:
+    - blue: add (7, 64, 112)
+    - purple: add (122, 40, 112)
+    - red: add (128, 60, 10)
+    - white: add (64, 88, 112)
+    - yellow: add (69, 59, 0)

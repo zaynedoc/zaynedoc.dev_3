@@ -1,0 +1,25 @@
+.page {
+  /* The white curve is the master unit for Work's divider and Project art. */
+  --work-hero-curve-width: clamp(10.5rem, 15vw, 18rem);
+  --work-project-square-width: clamp(14rem, 20vw, 24rem);
+  --work-divider-square-width: clamp(21rem, 30vw, 36rem);
+}
+
+@media (min-width: 37.501rem) and (max-width: 64rem) {
+  .page {
+    --work-hero-curve-width: 13.5rem;
+    --work-project-square-width: 18rem;
+    --work-divider-square-width: 27rem;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .page {
+    /* Mobile uses the same 3:4 grid proportions as desktop, with a much
+       smaller unit so artwork remains decorative instead of competing with
+       the centered list content. */
+    --work-hero-curve-width: 5rem;
+    --work-project-square-width: 6.6667rem;
+    --work-divider-square-width: 10rem;
+  }
+}
