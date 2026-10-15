@@ -30,14 +30,46 @@ export type TimelineItem = {
   urlExternal?: boolean;
 };
 
+const ROLE_PLACEHOLDER_IMAGES = [
+  "/images/roles/role-placeholder.svg",
+] as const;
+
+function createRoleDetails(
+  roleName: string,
+  images: readonly string[] = ROLE_PLACEHOLDER_IMAGES,
+  description = `Placeholder description for ${roleName}. Add responsibilities, selected work, and outcomes here.`,
+): NonNullable<TimelineItem["details"]> {
+  return {
+    carousel: {
+      intervalMs: 4000,
+      label: `${roleName} images`,
+      slides: images.map((src, index) => ({
+        alt: `${roleName} image ${index + 1}`,
+        src,
+      })),
+    },
+    description,
+  };
+}
+
 export const experience: TimelineItem[] = [
   {
     title: "Figma",
+    details: createRoleDetails("Figma Campus Leader", [
+      "/images/roles/figma1.webp",
+      "/images/roles/figma2.webp",
+      "/images/roles/figma3.webp",
+      "/images/roles/figma4.webp",
+    ], "Organizing and hosting workshops, events, and hackathon sponsorship initiatives that help 400+ students learn Figma, sharpen design and prototyping skills, and collaborate on creative, portfolio-ready projects!"),
     roles: [{ label: "Figma Campus Leader", detail: "Aug. 2026 – Present" }],
     url: "https://www.figma.com/",
   },
   {
     title: "Bank of New York",
+    details: createRoleDetails("Bank of New York Software Engineer Intern", [
+      "/images/roles/bny1.webp",
+      "/images/roles/bny2.webp",
+    ], "uilding a full-stack banking technology solution, applying DevOps practices, infrastructure fundamentals, and database systems across a collaborative, semester-long project with industry mentors."),
     roles: [
       { label: "Software Engineer Intern", detail: "Jul. 2026 – Present" },
     ],
@@ -45,11 +77,20 @@ export const experience: TimelineItem[] = [
   },
   {
     title: "Knight Design Interactive",
+    details: createRoleDetails("Knight Design Interactive Web Developer", [
+      "/images/roles/kdi1.webp",
+    ], "Architecting and converting high-fidelity prototypes to responsive Next.js websites for the club website!"),
     roles: [{ label: "Web Developer", detail: "Aug. 2026 – Present" }],
     url: "https://www.instagram.com/kdi.club/",
   },
   {
     title: "Knight Hacks",
+    details: createRoleDetails("Knight Hacks", [
+      "/images/roles/knighthacks1.webp",
+      "/images/roles/knighthacks2.webp",
+      "/images/roles/knighthacks3.webp",
+      "/images/roles/knighthacks4.webp",
+    ], "Coordinating with Outreach Team members to organize promotional material for our student club, while offering guidance to mentees for web dev, Figma, and student involvement in extracurriculars!"),
     roles: [
       { label: "Mentor", detail: "Sep. 2026 – Present" },
       { label: "Outreach Team", detail: "Jan. 2026 – Present" },
@@ -59,6 +100,11 @@ export const experience: TimelineItem[] = [
   },
   {
     title: "Moonstone Games",
+    details: createRoleDetails("Moonstone Games", [
+      "/images/roles/moonstone1.webp",
+      "/images/roles/moonstone2.webp",
+      "/images/roles/moonstone3.webp",
+    ], "Conducted bug testing during testing sessions; led to multiple positive improvements in gameplay experience, also developed numerous logo assets!"),
     roles: [
       { label: "QA Tester", detail: "Oct. 2022 – Nov. 2024" },
       { label: "Contributor", detail: "May 2023" },

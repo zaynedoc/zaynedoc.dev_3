@@ -15,8 +15,8 @@ export default function WorksPage() {
         <div className="content-stack">
           <section className="timeline-section" aria-labelledby="works-heading">
             <header className="content-section-heading">
-              <h1 id="works-heading">Projects</h1>
-              <p>My featured works and team creations</p>
+              <h1 id="works-heading">Works</h1>
+              <p>My featured works and team projects</p>
             </header>
             <WorkTimeline initiallyExpanded items={projects} projects />
           </section>

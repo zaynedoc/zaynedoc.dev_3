@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Role image placeholder one</title>
+  <desc id="description">Dark navy placeholder with lavender type and a geometric corner detail.</desc>
+  <rect width="1600" height="900" fill="#11182d"/>
+  <path d="M0 0h420v28H0z" fill="#d1aeef"/>
+  <path d="M1200 900h400V500z" fill="#74768e" opacity=".45"/>
+  <text x="120" y="420" fill="#d7d5ef" font-family="Arial, sans-serif" font-size="104">ROLE IMAGE</text>
+  <text x="120" y="540" fill="#d1aeef" font-family="Arial, sans-serif" font-size="72">01</text>
+</svg>
