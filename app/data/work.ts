@@ -69,7 +69,7 @@ export const experience: TimelineItem[] = [
     details: createRoleDetails("Bank of New York Software Engineer Intern", [
       "/images/roles/bny1.webp",
       "/images/roles/bny2.webp",
-    ], "uilding a full-stack banking technology solution, applying DevOps practices, infrastructure fundamentals, and database systems across a collaborative, semester-long project with industry mentors."),
+    ], "Building a full-stack banking technology solution, applying DevOps practices, infrastructure fundamentals, and database systems across a collaborative, semester-long project with industry mentors."),
     roles: [
       { label: "Software Engineer Intern", detail: "Jul. 2026 – Present" },
     ],
@@ -90,6 +90,7 @@ export const experience: TimelineItem[] = [
       "/images/roles/knighthacks2.webp",
       "/images/roles/knighthacks3.webp",
       "/images/roles/knighthacks4.webp",
+      "/images/roles/knighthacks5.webp",
     ], "Coordinating with Outreach Team members to organize promotional material for our student club, while offering guidance to mentees for web dev, Figma, and student involvement in extracurriculars!"),
     roles: [
       { label: "Mentor", detail: "Sep. 2026 – Present" },
