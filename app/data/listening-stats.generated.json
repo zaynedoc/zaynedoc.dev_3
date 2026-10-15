@@ -1,155 +1,310 @@
 {
   "source": {
-    "capturedAtUtc": "2026-10-06T04:05:02.6773587+00:00",
+    "capturedAtUtc": "2026-10-14T04:05:02.2588473+00:00",
     "countMode": "first-seen WMP counts plus positive deltas between active snapshots",
     "includeFirstSeenCounts": true,
-    "snapshot": "20261006T040502677Z.json",
-    "snapshotCount": 15
+    "snapshot": "20261014T040502258Z.json",
+    "snapshotCount": 25
   },
   "albums": [
     {
       "album": "Ao",
-      "totalListens": 442,
+      "artist": "Eve & Sou",
+      "trackCount": 13,
+      "totalListens": 482,
       "mostListenedTrack": {
         "title": "TEIKOKU SHOUJO",
         "artist": "Eve & Sou",
-        "listens": 38
-      }
+        "listens": 44
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg",
+      "coverAlt": "Ao album cover"
     },
     {
       "album": "OFFICIAL NUMBER",
-      "totalListens": 292,
+      "artist": "Eve",
+      "trackCount": 10,
+      "totalListens": 322,
       "mostListenedTrack": {
         "title": "Demon dance tokyo (デーモンダンストーキョー)",
         "artist": "Eve",
-        "listens": 34
-      }
+        "listens": 38
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg",
+      "coverAlt": "OFFICIAL NUMBER album cover"
     },
     {
       "album": "ウェザーステーション",
-      "totalListens": 212,
+      "artist": "稲葉曇",
+      "trackCount": 11,
+      "totalListens": 247,
       "mostListenedTrack": {
         "title": "Himitsu no Shougakusei (ひみつの小学生)",
         "artist": "稲葉曇",
-        "listens": 23
-      }
-    },
-    {
-      "album": "正しい偽りからの起床",
-      "totalListens": 158,
-      "mostListenedTrack": {
-        "title": "Saturn (サターン)",
-        "artist": "Zutomayo",
         "listens": 29
-      }
+      },
+      "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg",
+      "coverAlt": "ウェザーステーション album cover"
     },
     {
       "album": "廻人",
-      "totalListens": 145,
+      "artist": "Eve",
+      "trackCount": 14,
+      "totalListens": 183,
       "mostListenedTrack": {
         "title": "Ao No Waltz (蒼のワルツ)",
         "artist": "Eve",
-        "listens": 13
-      }
+        "listens": 18
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_kaizin.jpg",
+      "coverAlt": "廻人 album cover"
     },
     {
-      "album": "狂言",
-      "totalListens": 128,
+      "album": "正しい偽りからの起床",
+      "artist": "Zutomayo",
+      "trackCount": 12,
+      "totalListens": 174,
       "mostListenedTrack": {
-        "title": "Odo (踊)",
-        "artist": "Ado",
-        "listens": 12
-      }
+        "title": "Humanoid (ヒューマノイド)",
+        "artist": "Zutomayo",
+        "listens": 32
+      },
+      "coverSrc": "/images/albums/wmpl-imported/zutomayo_hisohiso-banashi.jpg",
+      "coverAlt": "正しい偽りからの起床 album cover"
     },
     {
       "album": "おとぎ",
-      "totalListens": 127,
+      "artist": "Eve",
+      "trackCount": 11,
+      "totalListens": 163,
       "mostListenedTrack": {
         "title": "Last Dance (ラストダンス)",
         "artist": "Eve",
+        "listens": 20
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_otogi.jpg",
+      "coverAlt": "おとぎ album cover"
+    },
+    {
+      "album": "狂言",
+      "artist": "Ado",
+      "trackCount": 14,
+      "totalListens": 162,
+      "mostListenedTrack": {
+        "title": "Motherland (マザーランド)",
+        "artist": "Ado",
+        "listens": 15
+      },
+      "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg",
+      "coverAlt": "狂言 album cover"
+    },
+    {
+      "album": "Parousia",
+      "artist": "xi",
+      "trackCount": 12,
+      "totalListens": 150,
+      "mostListenedTrack": {
+        "title": "Evolve Cybernation",
+        "artist": "xi",
         "listens": 14
-      }
+      },
+      "coverSrc": "/images/albums/wmpl-imported/xi_parousia.jpg",
+      "coverAlt": "Parousia album cover"
     },
     {
       "album": "Blurryface",
-      "totalListens": 61,
+      "artist": "twenty one pilots",
+      "trackCount": 14,
+      "totalListens": 76,
       "mostListenedTrack": {
         "title": "Tear in My Heart",
         "artist": "twenty one pilots",
-        "listens": 7
-      }
+        "listens": 9
+      },
+      "coverSrc": "/images/albums/wmpl-imported/twenty-one-pilots_blurryface.jpg",
+      "coverAlt": "Blurryface album cover"
     },
     {
       "album": "IGOR",
-      "totalListens": 50,
+      "artist": "Tyler, The Creator",
+      "trackCount": 12,
+      "totalListens": 73,
       "mostListenedTrack": {
         "title": "WHAT’S GOOD",
         "artist": "Tyler, The Creator",
-        "listens": 7
-      }
+        "listens": 10
+      },
+      "coverSrc": "/images/albums/wmpl-imported/tyler-the-creator_igor.jpg",
+      "coverAlt": "IGOR album cover"
     },
     {
       "album": "Wolf",
-      "totalListens": 43,
+      "artist": "Tyler, The Creator",
+      "trackCount": 18,
+      "totalListens": 67,
       "mostListenedTrack": {
         "title": "Jamba",
         "artist": "Tyler, The Creator feat. Hodgy Beats",
-        "listens": 5
-      }
-    },
-    {
-      "album": "Trench",
-      "totalListens": 42,
-      "mostListenedTrack": {
-        "title": "Chlorine",
-        "artist": "twenty one pilots",
-        "listens": 5
-      }
+        "listens": 8
+      },
+      "coverSrc": "/images/albums/wmpl-imported/tyler-the-creator_wolf.jpg",
+      "coverAlt": "Wolf album cover"
     },
     {
       "album": "Round Robin",
-      "totalListens": 36,
+      "artist": "Eve",
+      "trackCount": 10,
+      "totalListens": 60,
       "mostListenedTrack": {
-        "title": "Fallin My World (フォーリンマイワールド)",
+        "title": "Meru factory (メルファクトリー)",
         "artist": "Eve",
-        "listens": 5
-      }
+        "listens": 9
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_round-robin.jpg",
+      "coverAlt": "Round Robin album cover"
+    },
+    {
+      "album": "Trench",
+      "artist": "twenty one pilots",
+      "trackCount": 14,
+      "totalListens": 59,
+      "mostListenedTrack": {
+        "title": "Levitate",
+        "artist": "twenty one pilots",
+        "listens": 8
+      },
+      "coverSrc": "/images/albums/wmpl-imported/twenty-one-pilots_trench.jpeg",
+      "coverAlt": "Trench album cover"
     },
     {
       "album": "Wonder Word",
-      "totalListens": 29,
+      "artist": "Eve",
+      "trackCount": 7,
+      "totalListens": 53,
       "mostListenedTrack": {
-        "title": "Arukari seizin (アルカリ成人)",
+        "title": "Yoru wo koero (夜を超えろ)",
         "artist": "Eve",
+        "listens": 15
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_wonder-word.jpg",
+      "coverAlt": "Wonder Word album cover"
+    },
+    {
+      "album": "Quietus Ray",
+      "artist": "xi",
+      "trackCount": 14,
+      "totalListens": 51,
+      "mostListenedTrack": {
+        "title": "Cyberspace",
+        "artist": "xi vs Feryquitous",
         "listens": 5
-      }
+      },
+      "coverSrc": "/images/albums/wmpl-imported/xi_quietus-ray.jpg",
+      "coverAlt": "Quietus Ray album cover"
     },
     {
       "album": "House of Balloons",
-      "totalListens": 24,
+      "artist": "The Weeknd",
+      "trackCount": 10,
+      "totalListens": 45,
       "mostListenedTrack": {
         "title": "The Party & the After Party",
         "artist": "The Weeknd",
-        "listens": 4
-      }
+        "listens": 7
+      },
+      "coverSrc": "/images/albums/wmpl-imported/the-weeknd_house-of-balloons.jpg",
+      "coverAlt": "House of Balloons album cover"
     },
     {
-      "album": "play with earth! 0.03",
-      "totalListens": 16,
+      "album": "World Fragments",
+      "artist": "xi",
+      "trackCount": 12,
+      "totalListens": 45,
       "mostListenedTrack": {
-        "title": "annie.",
-        "artist": "wave to earth",
-        "listens": 3
-      }
+        "title": "over the top",
+        "artist": "xi",
+        "listens": 5
+      },
+      "coverSrc": "/images/albums/wmpl-imported/xi_world-fragments.jpg",
+      "coverAlt": "World Fragments album cover"
+    },
+    {
+      "album": "Agartha",
+      "artist": "xi",
+      "trackCount": 9,
+      "totalListens": 36,
+      "mostListenedTrack": {
+        "title": "HEAVENLY GALAXiES / Xiphoid Sphere",
+        "artist": "xi",
+        "listens": 5
+      },
+      "coverSrc": "/images/albums/wmpl-imported/xi_agartha.jpg",
+      "coverAlt": "Agartha album cover"
     },
     {
       "album": "Vessel",
-      "totalListens": 15,
+      "artist": "twenty one pilots",
+      "trackCount": 12,
+      "totalListens": 27,
       "mostListenedTrack": {
-        "title": "Semi‐Automatic",
+        "title": "House of Gold",
         "artist": "twenty one pilots",
+        "listens": 5
+      },
+      "coverSrc": "/images/albums/wmpl-imported/twenty-one-pilots_vessel.jpeg",
+      "coverAlt": "Vessel album cover"
+    },
+    {
+      "album": "play with earth! 0.03",
+      "artist": "wave to earth",
+      "trackCount": 7,
+      "totalListens": 26,
+      "mostListenedTrack": {
+        "title": "play with earth!",
+        "artist": "wave to earth",
+        "listens": 7
+      },
+      "coverSrc": "/images/albums/wmpl-imported/wave-to-earth_play-with-earth.jpg",
+      "coverAlt": "play with earth! 0.03 album cover"
+    },
+    {
+      "album": "文化",
+      "artist": "Eve",
+      "trackCount": 10,
+      "totalListens": 23,
+      "mostListenedTrack": {
+        "title": "Kaishingeki (会心劇)",
+        "artist": "Eve",
+        "listens": 4
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_bunka.jpg",
+      "coverAlt": "文化 album cover"
+    },
+    {
+      "album": "Smile",
+      "artist": "Eve",
+      "trackCount": 13,
+      "totalListens": 20,
+      "mostListenedTrack": {
+        "title": "doublet",
+        "artist": "Eve",
         "listens": 3
-      }
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg",
+      "coverAlt": "Smile album cover"
+    },
+    {
+      "album": "Starboy",
+      "artist": "The Weeknd",
+      "trackCount": 18,
+      "totalListens": 17,
+      "mostListenedTrack": {
+        "title": "Starboy",
+        "artist": "The Weeknd feat. Daft Punk",
+        "listens": 2
+      },
+      "coverSrc": "/images/albums/wmpl-imported/the-weeknd_starboy.jpg",
+      "coverAlt": "Starboy album cover"
     }
   ]
 }

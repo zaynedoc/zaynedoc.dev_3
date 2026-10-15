@@ -1,4 +1,5 @@
 import listeningData from "./listening-stats.generated.json";
+import { albumSettings, type AlbumOverride } from "./album-settings";
 
 export type MostListenedTrack = {
   artist: string;
@@ -16,12 +17,12 @@ export type Album = {
   artist: string;
   coverAlt: string;
   coverSrc: string;
-  format: string;
+  format?: string;
   id: string;
   mostListenedTrack: MostListenedTrack | null;
-  musicBrainzReleaseId: string;
-  pressing: AlbumPressing;
-  releaseDate: string;
+  musicBrainzReleaseId?: string;
+  pressing?: AlbumPressing;
+  releaseDate?: string;
   title: string;
   totalListens: number;
   trackCount: number;
@@ -33,8 +34,8 @@ type AlbumCatalogEntry = Omit<Album, "mostListenedTrack" | "totalListens" | "url
   listeningTitle?: string;
 };
 
-// Append another object here to add an album to the carousel.
-// Album metadata was read from the tagged files in the local Music library.
+// Existing hand-curated presentation metadata. Imported WMPL albums that are not
+// listed here are added automatically with the placeholder cover.
 const albumCatalog: AlbumCatalogEntry[] = [
   {
     id: "eve-sou-ao",
@@ -231,38 +232,141 @@ const albumCatalog: AlbumCatalogEntry[] = [
 ];
 
 function normalizeAlbumTitle(title: string) {
-  return title.normalize("NFKC").trim().toLocaleLowerCase("en");
+  return title
+    .normalize("NFKC")
+    .trim()
+    .replace(/\s+/g, " ")
+    .toLocaleLowerCase("en");
 }
 
 function googleSearchUrl(title: string, artist: string) {
   return `https://www.google.com/search?q=${encodeURIComponent(`${title} by ${artist}`)}`;
 }
 
-const listeningByAlbum = new Map(
-  listeningData.albums.map((album) => [normalizeAlbumTitle(album.album), album]),
+type GeneratedAlbum = {
+  album: string;
+  artist?: string;
+  coverAlt?: string;
+  coverSrc?: string;
+  trackCount?: number;
+  totalListens: number;
+  mostListenedTrack: Omit<MostListenedTrack, "url"> | null;
+};
+
+type ListeningDataset = {
+  albums: GeneratedAlbum[];
+};
+
+const generatedAlbums = (listeningData as ListeningDataset).albums;
+const placeholderCover = "/images/albums/wmp_empty.png";
+
+const catalogByAlbum = new Map(
+  albumCatalog.map((album) => [
+    normalizeAlbumTitle(album.listeningTitle ?? album.title),
+    album,
+  ]),
 );
 
-export const albums: Album[] = albumCatalog
-  .map(({ listeningTitle, ...album }) => {
-    const listening = listeningByAlbum.get(
-      normalizeAlbumTitle(listeningTitle ?? album.title),
-    );
-    const topTrack = listening?.mostListenedTrack;
+const overridesByAlbum = new Map(
+  Object.entries(albumSettings.albums).map(([title, override]) => [
+    normalizeAlbumTitle(title),
+    override,
+  ]),
+);
 
-    return {
-      ...album,
-      mostListenedTrack: topTrack
-        ? {
-            ...topTrack,
-            url: googleSearchUrl(topTrack.title, topTrack.artist),
-          }
-        : null,
-      totalListens: listening?.totalListens ?? 0,
-      url: googleSearchUrl(album.title, album.artist),
-    };
-  })
-  .sort(
-    (first, second) =>
-      second.totalListens - first.totalListens ||
-      first.title.localeCompare(second.title, undefined, { sensitivity: "base" }),
-  );
+function generatedAlbumId(title: string, artist: string) {
+  const value = `${artist}-${title}`;
+  const slug = value
+    .normalize("NFKD")
+    .toLocaleLowerCase("en")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  let hash = 2166136261;
+
+  for (const character of value) {
+    hash ^= character.codePointAt(0) ?? 0;
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return `${slug || "album"}-${(hash >>> 0).toString(36)}`;
+}
+
+function createAlbum(
+  listeningTitle: string,
+  listening?: GeneratedAlbum,
+  catalog?: AlbumCatalogEntry,
+): Album | null {
+  const override: AlbumOverride =
+    overridesByAlbum.get(normalizeAlbumTitle(listeningTitle)) ?? {};
+  const visibility =
+    override.visibility ?? (catalog ? "show" : albumSettings.defaultVisibility);
+
+  if (visibility === "hide") {
+    return null;
+  }
+
+  const curated = { ...(catalog ?? {}) };
+  const presentationOverride = { ...override };
+  delete curated.listeningTitle;
+  delete presentationOverride.visibility;
+  const fallbackArtist =
+    listening?.artist ??
+    listening?.mostListenedTrack?.artist ??
+    "Unknown artist";
+  const baseTitle = catalog?.title ?? listening?.album ?? listeningTitle;
+  const baseArtist = catalog?.artist ?? fallbackArtist;
+  const album = {
+    artist: baseArtist,
+    coverAlt:
+      listening?.coverAlt ??
+      `Placeholder album cover for ${baseTitle} by ${baseArtist}`,
+    coverSrc: listening?.coverSrc ?? placeholderCover,
+    id: generatedAlbumId(baseTitle, baseArtist),
+    title: baseTitle,
+    trackCount: listening?.trackCount ?? 0,
+    ...curated,
+    ...presentationOverride,
+  };
+  const topTrack = listening?.mostListenedTrack;
+
+  return {
+    ...album,
+    mostListenedTrack: topTrack
+      ? {
+          ...topTrack,
+          url: googleSearchUrl(topTrack.title, topTrack.artist),
+        }
+      : null,
+    totalListens: listening?.totalListens ?? 0,
+    url: googleSearchUrl(album.title, album.artist),
+  };
+}
+
+const matchedCatalogAlbums = new Set<string>();
+const importedAlbums = generatedAlbums.flatMap((listening) => {
+  const normalizedTitle = normalizeAlbumTitle(listening.album);
+  const catalog = catalogByAlbum.get(normalizedTitle);
+
+  if (catalog) {
+    matchedCatalogAlbums.add(normalizedTitle);
+  }
+
+  const album = createAlbum(listening.album, listening, catalog);
+  return album ? [album] : [];
+});
+
+const catalogOnlyAlbums = albumCatalog.flatMap((catalog) => {
+  const listeningTitle = catalog.listeningTitle ?? catalog.title;
+  if (matchedCatalogAlbums.has(normalizeAlbumTitle(listeningTitle))) {
+    return [];
+  }
+
+  const album = createAlbum(listeningTitle, undefined, catalog);
+  return album ? [album] : [];
+});
+
+export const albums: Album[] = [...importedAlbums, ...catalogOnlyAlbums].sort(
+  (first, second) =>
+    second.totalListens - first.totalListens ||
+    first.title.localeCompare(second.title, undefined, { sensitivity: "base" }),
+);
