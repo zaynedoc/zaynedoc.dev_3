@@ -20,11 +20,6 @@ const navigationLinks = [
     route: "/me",
     description: "Tell you more about me",
   },
-  {
-    href: "/archive",
-    route: "/archive",
-    description: "Previous website designs",
-  },
 ];
 
 const socialLinks = [

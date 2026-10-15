@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { TimelineItem } from "../data/work";
-import { ArchiveCarousel } from "./archive-carousel";
+import { ProjectCarousel } from "./project-carousel";
 import { FadeVideo } from "./fade-video";
 
 type WorkTimelineProps = {
@@ -45,7 +45,7 @@ export function WorkTimeline({
       {items.map((item, index) => {
         const detailsId = `timeline-details-${index}`;
         const isExpanded = expandedItems.has(item.title);
-        const actionLinkClassName = `timeline-role__detail project-archive-link${item.action?.mobileDisabled ? " project-archive-link--desktop-only" : ""}`;
+        const actionLinkClassName = `timeline-role__detail project-action-link${item.action?.mobileDisabled ? " project-action-link--desktop-only" : ""}`;
 
         return (
           <article
@@ -90,7 +90,7 @@ export function WorkTimeline({
                   {item.action.disabled || !item.action.href ? (
                     <button
                       aria-disabled="true"
-                      className="timeline-role__detail project-archive-link"
+                      className="timeline-role__detail project-action-link"
                       disabled
                       type="button"
                     >
@@ -116,7 +116,7 @@ export function WorkTimeline({
                   {item.action.mobileDisabled && !item.action.disabled && item.action.href ? (
                     <button
                       aria-disabled="true"
-                      className="timeline-role__detail project-archive-link project-archive-link--mobile-only"
+                      className="timeline-role__detail project-action-link project-action-link--mobile-only"
                       disabled
                       type="button"
                     >
@@ -140,7 +140,7 @@ export function WorkTimeline({
             {areProjects && item.details && isExpanded ? (
               <div className="project-details" id={detailsId}>
                 {item.details.carousel ? (
-                  <ArchiveCarousel
+                  <ProjectCarousel
                     intervalMs={item.details.carousel.intervalMs}
                     label={item.details.carousel.label}
                     slides={item.details.carousel.slides}

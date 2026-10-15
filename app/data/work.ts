@@ -190,4 +190,83 @@ export const projects: TimelineItem[] = [
     ],
     url: "https://github.com/zaynedoc/impacthub",
   },
+  {
+    title: "Portfolio v2",
+    details: {
+      carousel: {
+        intervalMs: 4000,
+        label: "Portfolio v2 screenshots",
+        slides: [
+          {
+            alt: "Portfolio v2 landing page with lavender artwork and oversized name lettering",
+            src: "/images/projects/portfolio-v2/landing.png",
+          },
+          {
+            alt: "Portfolio v2 work page with experience and project sections",
+            src: "/images/projects/portfolio-v2/work.png",
+          },
+          {
+            alt: "Portfolio v2 about page with personal interests and music sections",
+            src: "/images/projects/portfolio-v2/about.png",
+          },
+        ],
+      },
+      description:
+        "The first iteration of my portfolio to be designed with Figma. Although it was my favorite design of all iterations, the Next.js implementation was poorly executed and very unoptimized.",
+    },
+    roles: [
+      {
+        label: "August 2026",
+        detail: "Next.js, React, TypeScript, CSS Modules, Three.js",
+      },
+    ],
+    url: "/works/portfolio-v2",
+    urlExternal: false,
+  },
+  {
+    title: "1118",
+    details: {
+      description:
+        "I got bored one day and made a Yume Nikki-inspired walking simulator game, just to try out web-game dev. No mobile support yet.",
+      videoSrc: "/videos/projects/1118.mp4",
+    },
+    roles: [
+      {
+        label: "Yume Nikki-inspired web game",
+        detail: "Next.js, TypeScript, Tailwind CSS",
+      },
+    ],
+    url: "/works/portfolio-v2/1118",
+    urlExternal: false,
+  },
+  {
+    title: "Legacy Portfolio Website",
+    details: {
+      description:
+        "My first portfolio iteration, which was my major intrudoctory learning block towards learning most things Azure when it came to resource groups, SQL, and containers.",
+      videoSrc: "/videos/projects/legacyPortfolio.mp4",
+    },
+    roles: [
+      {
+        label: "My first portfolio website",
+        detail: "ASP.NET Core, Razor Pages, Azure Web Services",
+      },
+    ],
+    url: "https://github.com/zaynedoc/portfolio-archive1",
+  },
+  {
+    title: "Master's Degree of Time",
+    details: {
+      description:
+        "A game I made before my freshman year of UCF; one brick is placed onto a baseplate everyday, until summer of 2030. The end result will be a fully constructed house.",
+      videoSrc: "/videos/projects/robloxGame.mp4",
+    },
+    roles: [
+      {
+        label: "Time capsule game for 2024 to 2030",
+        detail: "Roblox Studio, Lua",
+      },
+    ],
+    url: "https://www.roblox.com/games/17610203181/Masters-Degree-of-Time",
+  },
 ];
