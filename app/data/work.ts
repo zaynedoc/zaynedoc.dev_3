@@ -105,6 +105,7 @@ export const experience: TimelineItem[] = [
       "/images/roles/moonstone1.webp",
       "/images/roles/moonstone2.webp",
       "/images/roles/moonstone3.webp",
+      "/images/roles/moonstone4.webp",
     ], "Conducted bug testing during testing sessions; led to multiple positive improvements in gameplay experience, also developed numerous logo assets!"),
     roles: [
       { label: "QA Tester", detail: "Oct. 2022 – Nov. 2024" },
