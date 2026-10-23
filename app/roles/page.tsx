@@ -15,7 +15,7 @@ export default function RolesPage() {
         <div className="content-stack">
           <section className="timeline-section" aria-labelledby="roles-heading">
             <header className="content-section-heading">
-              <h1 id="roles-heading">Roles</h1>
+              <h1 id="roles-heading">Experience &amp; Roles</h1>
               <p>My current and past experience</p>
             </header>
             <WorkTimeline initiallyExpanded items={experience} projects />

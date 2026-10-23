@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { indexableRobots } from "../_legacy/data/site";
+import { noIndexRobots } from "../_legacy/data/site";
 
 export const metadata: Metadata = {
   title: "Dashboard | Zayne Doc. / @zaynedoc",
   description:
     "Explore Zayne Dockery's interactive dashboard of software projects, media, and social links.",
-  robots: indexableRobots,
+  robots: noIndexRobots,
   openGraph: {
     title: "Dashboard | Zayne Doc. / @zaynedoc",
     description:

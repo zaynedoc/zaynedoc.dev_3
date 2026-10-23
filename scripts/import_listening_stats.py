@@ -172,6 +172,14 @@ def aggregate_albums(tallies: list[TrackTally]) -> list[dict[str, Any]]:
                 "artist": representative_artist(tracks),
                 "trackCount": len(tracks),
                 "totalListens": sum(track.listens for track in tracks),
+                "tracks": [
+                    {
+                        "title": track.title,
+                        "artist": track.artist,
+                        "listens": track.listens,
+                    }
+                    for track in ranked_tracks
+                ],
                 "mostListenedTrack": (
                     {
                         "title": top_track.title,

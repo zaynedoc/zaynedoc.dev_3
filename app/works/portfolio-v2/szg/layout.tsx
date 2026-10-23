@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { indexableRobots } from "../_legacy/data/site";
+import { noIndexRobots } from "../_legacy/data/site";
 
 export const metadata: Metadata = {
   title: "Super Zayne Galaxy",
   description: "A 3D space experience inspired by Super Mario Galaxy.",
-  robots: indexableRobots,
+  robots: noIndexRobots,
   openGraph: {
     title: "Super Zayne Galaxy | Zayne Dockery",
     description: "A 3D space experience inspired by Super Mario Galaxy.",

@@ -7,17 +7,17 @@ export const metadata: Metadata = createPageMetadata("home");
 const navigationLinks = [
   {
     href: "/roles",
-    route: "/roles",
+    label: "Experience & Roles",
     description: "My current and past roles",
   },
   {
     href: "/works",
-    route: "/works",
+    label: "Selected Work & Projects",
     description: "My featured projects and works",
   },
   {
     href: "/me",
-    route: "/me",
+    label: "About Me",
     description: "Tell you more about me",
   },
 ];
@@ -48,9 +48,9 @@ export default function Home() {
 
             <nav className="route-links" aria-label="Primary navigation">
               {navigationLinks.map((link) => (
-                <div className="route-link" key={link.route}>
+                <div className="route-link" key={link.href}>
                   <a className="route-link__route" href={link.href}>
-                    {link.route}
+                    {link.label}
                   </a>
                   <span className="route-link__description">
                     {link.description}

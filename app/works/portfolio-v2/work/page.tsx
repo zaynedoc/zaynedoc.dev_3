@@ -4,7 +4,7 @@ import { ExperienceSection } from "@/app/works/portfolio-v2/_legacy/components/W
 import { ProjectsSection } from "@/app/works/portfolio-v2/_legacy/components/Work/ProjectsSection";
 import { WorkMasthead } from "@/app/works/portfolio-v2/_legacy/components/Work/WorkMasthead";
 import { SiteFooter } from "@/app/works/portfolio-v2/_legacy/components/SiteFooter/SiteFooter";
-import { indexableRobots, siteName, sitePreviewImage } from "@/app/works/portfolio-v2/_legacy/data/site";
+import { noIndexRobots, siteName, sitePreviewImage } from "@/app/works/portfolio-v2/_legacy/data/site";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/works/portfolio-v2/work",
   },
-  robots: indexableRobots,
+  robots: noIndexRobots,
   title: "Work",
   twitter: {
     card: "summary_large_image",

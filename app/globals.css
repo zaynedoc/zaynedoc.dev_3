@@ -806,34 +806,31 @@ a:hover {
 }
 
 .car-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  display: grid;
+  filter: drop-shadow(0 4px 7.5px rgb(0 0 0 / 25%));
+  gap: 15px;
+  inline-size: min(100%, 921px);
 }
 
-.car-gallery__row {
-  display: flex;
-  gap: 24px;
+.car-gallery__secondary {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .car-gallery img {
+  block-size: auto;
   display: block;
+  inline-size: 100%;
   object-fit: cover;
 }
 
-.car-gallery__sunset {
-  inline-size: 600px;
-  block-size: 450px;
+.car-gallery__primary {
+  aspect-ratio: 4 / 3;
 }
 
-.car-gallery__storm {
-  inline-size: 675px;
-  block-size: 450px;
-}
-
-.car-gallery__golden-hour {
-  inline-size: 600px;
-  block-size: 401.65px;
+.car-gallery__secondary img {
+  aspect-ratio: 3 / 4;
 }
 
 .album-showcase {
@@ -1059,23 +1056,6 @@ a:hover {
     transform-origin: bottom right;
   }
 
-  .car-gallery__row {
-    display: grid;
-    grid-template-columns: minmax(0, 8fr) minmax(0, 9fr);
-    inline-size: min(100%, 1299px);
-  }
-
-  .car-gallery__row img {
-    inline-size: 100%;
-    block-size: auto;
-    aspect-ratio: 4 / 3;
-  }
-
-  .car-gallery__golden-hour {
-    inline-size: min(100%, 600px);
-    block-size: auto;
-    aspect-ratio: 600 / 402;
-  }
 }
 
 @media (max-width: 1279px) {
@@ -1450,22 +1430,6 @@ a:hover {
 
   .about-section {
     gap: 48px;
-  }
-
-  .car-gallery {
-    gap: 16px;
-  }
-
-  .car-gallery__row {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .car-gallery__row img,
-  .car-gallery__golden-hour {
-    inline-size: 100%;
-    block-size: auto;
   }
 
   .album-showcase {

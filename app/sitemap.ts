@@ -8,12 +8,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: page === "home" ? 1 : 0.8,
   }));
 
-  return [
-    ...primaryPages,
-    {
-      url: new URL("/works/portfolio-v2", siteConfig.url).toString(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-  ];
+  return primaryPages;
 }

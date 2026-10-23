@@ -113,19 +113,19 @@ export function AlbumCollection({ albums }: AlbumCollectionProps) {
         </div>
         <div className="album-info__top-track">
           <p>Favorite Track:</p>
-          {activeAlbum.mostListenedTrack ? (
+          {activeAlbum.favoriteTrack ? (
             <>
               <a
                 className="album-info__track-link"
-                href={activeAlbum.mostListenedTrack.url}
+                href={activeAlbum.favoriteTrack.url}
                 rel="noreferrer"
                 target="_blank"
               >
-                “{activeAlbum.mostListenedTrack.title}” by{" "}
-                {activeAlbum.mostListenedTrack.artist}
+                “{activeAlbum.favoriteTrack.title}” by{" "}
+                {activeAlbum.favoriteTrack.artist}
               </a>
               <p className="album-info__listen-count">
-                {formatListens(activeAlbum.mostListenedTrack.listens)}
+                {formatListens(activeAlbum.favoriteTrack.listens)}
               </p>
             </>
           ) : (

@@ -1,21 +1,88 @@
 {
   "source": {
-    "capturedAtUtc": "2026-10-14T04:05:02.2588473+00:00",
+    "capturedAtUtc": "2026-10-23T04:05:01.9079194+00:00",
     "countMode": "first-seen WMP counts plus positive deltas between active snapshots",
     "includeFirstSeenCounts": true,
-    "snapshot": "20261014T040502258Z.json",
-    "snapshotCount": 25
+    "snapshot": "20261023T040501907Z.json",
+    "snapshotCount": 34
   },
   "albums": [
     {
       "album": "Ao",
       "artist": "Eve & Sou",
       "trackCount": 13,
-      "totalListens": 482,
+      "totalListens": 550,
+      "tracks": [
+        {
+          "title": "TEIKOKU SHOUJO",
+          "artist": "Eve & Sou",
+          "listens": 48
+        },
+        {
+          "title": "NONSENSE BUNGAKU",
+          "artist": "Eve & Sou",
+          "listens": 47
+        },
+        {
+          "title": "TIG-HUG",
+          "artist": "Eve & Sou",
+          "listens": 46
+        },
+        {
+          "title": "DR.",
+          "artist": "Eve & Sou",
+          "listens": 45
+        },
+        {
+          "title": "HAITA",
+          "artist": "Eve & Sou",
+          "listens": 43
+        },
+        {
+          "title": "HAKUSHI NO HARU",
+          "artist": "Eve & Sou",
+          "listens": 43
+        },
+        {
+          "title": "INOCHI BAKKARI",
+          "artist": "Eve & Sou",
+          "listens": 42
+        },
+        {
+          "title": "MYOUJOU GYARAKUTIKA",
+          "artist": "Eve & Sou",
+          "listens": 42
+        },
+        {
+          "title": "CHOCOLATE TOWN",
+          "artist": "Eve & Sou",
+          "listens": 40
+        },
+        {
+          "title": "MEBERU",
+          "artist": "Eve & Sou",
+          "listens": 40
+        },
+        {
+          "title": "FAKE",
+          "artist": "Eve & Sou",
+          "listens": 39
+        },
+        {
+          "title": "ODORYA N SE",
+          "artist": "Eve & Sou",
+          "listens": 39
+        },
+        {
+          "title": "AME TO PETORA",
+          "artist": "Eve & Sou",
+          "listens": 36
+        }
+      ],
       "mostListenedTrack": {
         "title": "TEIKOKU SHOUJO",
         "artist": "Eve & Sou",
-        "listens": 44
+        "listens": 48
       },
       "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg",
       "coverAlt": "Ao album cover"
@@ -24,11 +91,63 @@
       "album": "OFFICIAL NUMBER",
       "artist": "Eve",
       "trackCount": 10,
-      "totalListens": 322,
+      "totalListens": 372,
+      "tracks": [
+        {
+          "title": "Demon dance tokyo (デーモンダンストーキョー)",
+          "artist": "Eve",
+          "listens": 44
+        },
+        {
+          "title": "Wakusei loop (惑星ループ)",
+          "artist": "Eve",
+          "listens": 42
+        },
+        {
+          "title": "Rabbit gray (ラビットグレイ)",
+          "artist": "Eve",
+          "listens": 40
+        },
+        {
+          "title": "Perfect seimei (パーフェクト生命)",
+          "artist": "Eve",
+          "listens": 38
+        },
+        {
+          "title": "Caravan (キャラバン)",
+          "artist": "Eve",
+          "listens": 37
+        },
+        {
+          "title": "Fuyukan (浮遊感)",
+          "artist": "Eve",
+          "listens": 35
+        },
+        {
+          "title": "Short umbrella (ショートアンブレラ)",
+          "artist": "Eve",
+          "listens": 35
+        },
+        {
+          "title": "sister",
+          "artist": "Eve",
+          "listens": 35
+        },
+        {
+          "title": "Doshiyomonaikuraini kimigasuki (どうしようもないくらいに君が好き)",
+          "artist": "Eve",
+          "listens": 33
+        },
+        {
+          "title": "Meru factory (メルファクトリー)",
+          "artist": "Eve",
+          "listens": 33
+        }
+      ],
       "mostListenedTrack": {
         "title": "Demon dance tokyo (デーモンダンストーキョー)",
         "artist": "Eve",
-        "listens": 38
+        "listens": 44
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg",
       "coverAlt": "OFFICIAL NUMBER album cover"
@@ -37,11 +156,68 @@
       "album": "ウェザーステーション",
       "artist": "稲葉曇",
       "trackCount": 11,
-      "totalListens": 247,
+      "totalListens": 301,
+      "tracks": [
+        {
+          "title": "Himitsu no Shougakusei (ひみつの小学生)",
+          "artist": "稲葉曇",
+          "listens": 34
+        },
+        {
+          "title": "Lagtrain (ラグトレイン)",
+          "artist": "稲葉曇",
+          "listens": 32
+        },
+        {
+          "title": "Hello Marina (ハローマリーナ)",
+          "artist": "稲葉曇",
+          "listens": 29
+        },
+        {
+          "title": "Rainy Boots (レイニーブーツ)",
+          "artist": "稲葉曇",
+          "listens": 28
+        },
+        {
+          "title": "Katamusubi (かたむすび)",
+          "artist": "稲葉曇",
+          "listens": 27
+        },
+        {
+          "title": "Kiminikaikisen (きみに回帰線)",
+          "artist": "稲葉曇",
+          "listens": 26
+        },
+        {
+          "title": "Postshelter (ポストシェルター)",
+          "artist": "稲葉曇",
+          "listens": 26
+        },
+        {
+          "title": "radar (レーダー)",
+          "artist": "稲葉曇",
+          "listens": 26
+        },
+        {
+          "title": "Tenkyu (天泣)",
+          "artist": "稲葉曇",
+          "listens": 25
+        },
+        {
+          "title": "Haro no Sekibaku (ハルノ寂寞)",
+          "artist": "稲葉曇",
+          "listens": 24
+        },
+        {
+          "title": "Kazemachigusa (カゼマチグサ) (album ver.)",
+          "artist": "稲葉曇",
+          "listens": 24
+        }
+      ],
       "mostListenedTrack": {
         "title": "Himitsu no Shougakusei (ひみつの小学生)",
         "artist": "稲葉曇",
-        "listens": 29
+        "listens": 34
       },
       "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg",
       "coverAlt": "ウェザーステーション album cover"
@@ -50,76 +226,893 @@
       "album": "廻人",
       "artist": "Eve",
       "trackCount": 14,
-      "totalListens": 183,
+      "totalListens": 247,
+      "tracks": [
+        {
+          "title": "Ao No Waltz (蒼のワルツ)",
+          "artist": "Eve",
+          "listens": 24
+        },
+        {
+          "title": "Avant (アヴァン)",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "Heikousen (平行線)",
+          "artist": "Eve × suis from ヨルシカ",
+          "listens": 20
+        },
+        {
+          "title": "Shinkai (心海)",
+          "artist": "Eve",
+          "listens": 20
+        },
+        {
+          "title": "Taikutsuwo Saienshinaide (退屈を再演しないで)",
+          "artist": "Eve",
+          "listens": 19
+        },
+        {
+          "title": "Yoruwahonoka (夜は仄か)",
+          "artist": "Eve",
+          "listens": 19
+        },
+        {
+          "title": "Kaikai Kitan (廻廻奇譚)",
+          "artist": "Eve",
+          "listens": 18
+        },
+        {
+          "title": "Gunjo Sanka (群青讃歌)",
+          "artist": "Eve",
+          "listens": 16
+        },
+        {
+          "title": "YOKU",
+          "artist": "Eve",
+          "listens": 16
+        },
+        {
+          "title": "Yuseiboushi (遊生夢死)",
+          "artist": "Eve",
+          "listens": 16
+        },
+        {
+          "title": "Kaizin (廻人)",
+          "artist": "Eve",
+          "listens": 15
+        },
+        {
+          "title": "Kotonoha (言の葉)",
+          "artist": "Eve",
+          "listens": 15
+        },
+        {
+          "title": "Aisai (藍才)",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "Bouto (暴徒)",
+          "artist": "Eve",
+          "listens": 13
+        }
+      ],
       "mostListenedTrack": {
         "title": "Ao No Waltz (蒼のワルツ)",
         "artist": "Eve",
-        "listens": 18
+        "listens": 24
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_kaizin.jpg",
       "coverAlt": "廻人 album cover"
     },
     {
-      "album": "正しい偽りからの起床",
-      "artist": "Zutomayo",
-      "trackCount": 12,
-      "totalListens": 174,
-      "mostListenedTrack": {
-        "title": "Humanoid (ヒューマノイド)",
-        "artist": "Zutomayo",
-        "listens": 32
-      },
-      "coverSrc": "/images/albums/wmpl-imported/zutomayo_hisohiso-banashi.jpg",
-      "coverAlt": "正しい偽りからの起床 album cover"
-    },
-    {
-      "album": "おとぎ",
-      "artist": "Eve",
-      "trackCount": 11,
-      "totalListens": 163,
-      "mostListenedTrack": {
-        "title": "Last Dance (ラストダンス)",
-        "artist": "Eve",
-        "listens": 20
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_otogi.jpg",
-      "coverAlt": "おとぎ album cover"
-    },
-    {
       "album": "狂言",
       "artist": "Ado",
       "trackCount": 14,
-      "totalListens": 162,
+      "totalListens": 239,
+      "tracks": [
+        {
+          "title": "Motherland (マザーランド)",
+          "artist": "Ado",
+          "listens": 20
+        },
+        {
+          "title": "Readymade (レディメイド)",
+          "artist": "Ado",
+          "listens": 20
+        },
+        {
+          "title": "Aitakute (会いたくて)",
+          "artist": "Ado",
+          "listens": 19
+        },
+        {
+          "title": "KokoroToIuNaNoFukakai (心という名の不可解)",
+          "artist": "Ado",
+          "listens": 19
+        },
+        {
+          "title": "Lucky Bruto (ラッキー・ブルート)",
+          "artist": "Ado",
+          "listens": 18
+        },
+        {
+          "title": "Ashura-chan (阿修羅ちゃん)",
+          "artist": "Ado",
+          "listens": 17
+        },
+        {
+          "title": "Kagakushu (過学習)",
+          "artist": "Ado",
+          "listens": 17
+        },
+        {
+          "title": "Odo (踊)",
+          "artist": "Ado",
+          "listens": 17
+        },
+        {
+          "title": "Usseewa (うっせぇわ)",
+          "artist": "Ado",
+          "listens": 17
+        },
+        {
+          "title": "Yoru No Pierrot (夜のピエロ)",
+          "artist": "Ado",
+          "listens": 17
+        },
+        {
+          "title": "Gira Gira (ギラギラ)",
+          "artist": "Ado",
+          "listens": 16
+        },
+        {
+          "title": "Fireworks (花火)",
+          "artist": "Ado",
+          "listens": 15
+        },
+        {
+          "title": "Domestic De Violence (ドメスティックでバイオレンス)",
+          "artist": "Ado",
+          "listens": 14
+        },
+        {
+          "title": "FREEDOM",
+          "artist": "Ado",
+          "listens": 13
+        }
+      ],
       "mostListenedTrack": {
         "title": "Motherland (マザーランド)",
         "artist": "Ado",
-        "listens": 15
+        "listens": 20
       },
       "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg",
       "coverAlt": "狂言 album cover"
     },
     {
+      "album": "おとぎ",
+      "artist": "Eve",
+      "trackCount": 11,
+      "totalListens": 220,
+      "tracks": [
+        {
+          "title": "Last Dance (ラストダンス)",
+          "artist": "Eve",
+          "listens": 24
+        },
+        {
+          "title": "Outsider (アウトサイダー)",
+          "artist": "Eve",
+          "listens": 23
+        },
+        {
+          "title": "Ambivalent (アンビバレント)",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "Bokuramadaunderground (僕らまだアンダーグラウンド)",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "KiminiSekai (君に世界)",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "slumber",
+          "artist": "Eve",
+          "listens": 19
+        },
+        {
+          "title": "Tokyo Ghetto (トーキョーゲットー)",
+          "artist": "Eve",
+          "listens": 19
+        },
+        {
+          "title": "dawn",
+          "artist": "Eve",
+          "listens": 18
+        },
+        {
+          "title": "Kaede (楓)",
+          "artist": "Eve",
+          "listens": 18
+        },
+        {
+          "title": "Yadorigi (やどりぎ)",
+          "artist": "Eve",
+          "listens": 17
+        },
+        {
+          "title": "Mayoigo (迷い子)",
+          "artist": "Eve",
+          "listens": 16
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Last Dance (ラストダンス)",
+        "artist": "Eve",
+        "listens": 24
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_otogi.jpg",
+      "coverAlt": "おとぎ album cover"
+    },
+    {
+      "album": "正しい偽りからの起床",
+      "artist": "Zutomayo",
+      "trackCount": 12,
+      "totalListens": 206,
+      "tracks": [
+        {
+          "title": "Saturn (サターン)",
+          "artist": "Zutomayo",
+          "listens": 37
+        },
+        {
+          "title": "Byoushinwo Kamu (秒針を噛む)",
+          "artist": "Zutomayo",
+          "listens": 36
+        },
+        {
+          "title": "Humanoid (ヒューマノイド)",
+          "artist": "Zutomayo",
+          "listens": 35
+        },
+        {
+          "title": "Nouriueno Cracker (脳裏上のクラッカー)",
+          "artist": "Zutomayo",
+          "listens": 33
+        },
+        {
+          "title": "Uni To Kuri (雲丹と栗)",
+          "artist": "Zutomayo",
+          "listens": 30
+        },
+        {
+          "title": "Kimigaite Mizuninaru (君がいて水になる)",
+          "artist": "Zutomayo",
+          "listens": 29
+        },
+        {
+          "title": "サターン (Instrumental)",
+          "artist": "Zutomayo",
+          "listens": 1
+        },
+        {
+          "title": "ヒューマノイド (Instrumental)",
+          "artist": "Zutomayo",
+          "listens": 1
+        },
+        {
+          "title": "君がいて水になる (Instrumental)",
+          "artist": "Zutomayo",
+          "listens": 1
+        },
+        {
+          "title": "秒針を噛む (Instrumental)",
+          "artist": "Zutomayo",
+          "listens": 1
+        },
+        {
+          "title": "脳裏上のクラッカー (Instrumental)",
+          "artist": "Zutomayo",
+          "listens": 1
+        },
+        {
+          "title": "雲丹と栗 (Instrumental)",
+          "artist": "Zutomayo",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Saturn (サターン)",
+        "artist": "Zutomayo",
+        "listens": 37
+      },
+      "coverSrc": "/images/albums/wmpl-imported/zutomayo_hisohiso-banashi.jpg",
+      "coverAlt": "正しい偽りからの起床 album cover"
+    },
+    {
       "album": "Parousia",
       "artist": "xi",
       "trackCount": 12,
-      "totalListens": 150,
+      "totalListens": 180,
+      "tracks": [
+        {
+          "title": "PEACE BREAKER",
+          "artist": "xi",
+          "listens": 18
+        },
+        {
+          "title": "Mirage Garden",
+          "artist": "xi",
+          "listens": 17
+        },
+        {
+          "title": "Evolve Cybernation",
+          "artist": "xi",
+          "listens": 16
+        },
+        {
+          "title": "Finder keepers",
+          "artist": "xi",
+          "listens": 16
+        },
+        {
+          "title": "Ascension to Heaven",
+          "artist": "xi",
+          "listens": 15
+        },
+        {
+          "title": "Beatrice",
+          "artist": "xi",
+          "listens": 15
+        },
+        {
+          "title": "Blue Zenith",
+          "artist": "xi",
+          "listens": 15
+        },
+        {
+          "title": "Breakthrough Atmosphere",
+          "artist": "xi",
+          "listens": 15
+        },
+        {
+          "title": "Halcyon",
+          "artist": "xi",
+          "listens": 14
+        },
+        {
+          "title": "FREEDOM DiVE↓",
+          "artist": "xi",
+          "listens": 13
+        },
+        {
+          "title": "Parousia",
+          "artist": "xi",
+          "listens": 13
+        },
+        {
+          "title": "Sedap Malam",
+          "artist": "xi",
+          "listens": 13
+        }
+      ],
       "mostListenedTrack": {
-        "title": "Evolve Cybernation",
+        "title": "PEACE BREAKER",
         "artist": "xi",
-        "listens": 14
+        "listens": 18
       },
       "coverSrc": "/images/albums/wmpl-imported/xi_parousia.jpg",
       "coverAlt": "Parousia album cover"
     },
     {
+      "album": "Round Robin",
+      "artist": "Eve",
+      "trackCount": 10,
+      "totalListens": 116,
+      "tracks": [
+        {
+          "title": "Meru factory (メルファクトリー)",
+          "artist": "Eve",
+          "listens": 15
+        },
+        {
+          "title": "Shinjuku sick (新宿シック)",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "Fallin My World (フォーリンマイワールド)",
+          "artist": "Eve",
+          "listens": 13
+        },
+        {
+          "title": "Miginimagirl (右に曲ガール)",
+          "artist": "Eve",
+          "listens": 13
+        },
+        {
+          "title": "Goodbye day (グッバイデイ)",
+          "artist": "Eve",
+          "listens": 12
+        },
+        {
+          "title": "Hantaishasen (反対車線)",
+          "artist": "Eve",
+          "listens": 11
+        },
+        {
+          "title": "Ikanaide (いかないで album ver)",
+          "artist": "Eve",
+          "listens": 11
+        },
+        {
+          "title": "Namaemo shiranai anatani koi wo shita (名前も知らない貴方に恋をした)",
+          "artist": "Eve",
+          "listens": 10
+        },
+        {
+          "title": "Fukanzen na shogu (不完全な処遇 album ver)",
+          "artist": "Eve",
+          "listens": 9
+        },
+        {
+          "title": "Round Robin",
+          "artist": "Eve",
+          "listens": 8
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Meru factory (メルファクトリー)",
+        "artist": "Eve",
+        "listens": 15
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_round-robin.jpg",
+      "coverAlt": "Round Robin album cover"
+    },
+    {
+      "album": "Wonder Word",
+      "artist": "Eve",
+      "trackCount": 7,
+      "totalListens": 98,
+      "tracks": [
+        {
+          "title": "Yoru wo koero (夜を超えろ)",
+          "artist": "Eve",
+          "listens": 21
+        },
+        {
+          "title": "Arukari seizin (アルカリ成人)",
+          "artist": "Eve",
+          "listens": 15
+        },
+        {
+          "title": "Shinkirou (蜃気楼)",
+          "artist": "Eve",
+          "listens": 15
+        },
+        {
+          "title": "Senkouhanabi (線香花火)",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "Heroumerou (ヘロウメロウ)",
+          "artist": "Eve",
+          "listens": 12
+        },
+        {
+          "title": "Mataashita (またあした)",
+          "artist": "Eve",
+          "listens": 11
+        },
+        {
+          "title": "Yoru no yume (よるのゆめ)",
+          "artist": "Eve",
+          "listens": 10
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Yoru wo koero (夜を超えろ)",
+        "artist": "Eve",
+        "listens": 21
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_wonder-word.jpg",
+      "coverAlt": "Wonder Word album cover"
+    },
+    {
+      "album": "Smile",
+      "artist": "Eve",
+      "trackCount": 13,
+      "totalListens": 96,
+      "tracks": [
+        {
+          "title": "ognanje",
+          "artist": "Eve",
+          "listens": 10
+        },
+        {
+          "title": "LEO",
+          "artist": "Eve",
+          "listens": 9
+        },
+        {
+          "title": "Yamiyo (闇夜)",
+          "artist": "Eve",
+          "listens": 9
+        },
+        {
+          "title": "doublet",
+          "artist": "Eve",
+          "listens": 8
+        },
+        {
+          "title": "Inochi No Tabekata (いのちの食べ方)",
+          "artist": "Eve",
+          "listens": 8
+        },
+        {
+          "title": "Kokoroyohou (心予報)",
+          "artist": "Eve",
+          "listens": 8
+        },
+        {
+          "title": "mellow",
+          "artist": "Eve",
+          "listens": 8
+        },
+        {
+          "title": "Raison Detre (レーゾンデートル)",
+          "artist": "Eve",
+          "listens": 8
+        },
+        {
+          "title": "Asa Ga Furu (朝が降る)",
+          "artist": "Eve",
+          "listens": 7
+        },
+        {
+          "title": "Baumkuchen Edn (バウムクーヘンエンド)",
+          "artist": "Eve",
+          "listens": 7
+        },
+        {
+          "title": "Karo No Kioku (虚の記憶)",
+          "artist": "Eve",
+          "listens": 7
+        },
+        {
+          "title": "Uron Na Shokutaku (胡乱な食卓)",
+          "artist": "Eve",
+          "listens": 4
+        },
+        {
+          "title": "Hakugin (白銀)",
+          "artist": "Eve",
+          "listens": 3
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "ognanje",
+        "artist": "Eve",
+        "listens": 10
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg",
+      "coverAlt": "Smile album cover"
+    },
+    {
+      "album": "World Fragments",
+      "artist": "xi",
+      "trackCount": 12,
+      "totalListens": 94,
+      "tracks": [
+        {
+          "title": "ANiMA",
+          "artist": "xi",
+          "listens": 10
+        },
+        {
+          "title": "Double Helix",
+          "artist": "xi",
+          "listens": 9
+        },
+        {
+          "title": "Dreadnought",
+          "artist": "Mastermind(xi+nora2r)",
+          "listens": 8
+        },
+        {
+          "title": "over the top",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "Tiferet",
+          "artist": "xi feat.Sta",
+          "listens": 8
+        },
+        {
+          "title": "World Fragments I",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "World Fragments III",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "Śiva",
+          "artist": "Diceros Bicornis(xi+BlackY)",
+          "listens": 8
+        },
+        {
+          "title": "Another Halcyon",
+          "artist": "VILA",
+          "listens": 7
+        },
+        {
+          "title": "Aragami",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "World Fragments II",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Hesperides",
+          "artist": "xi",
+          "listens": 6
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "ANiMA",
+        "artist": "xi",
+        "listens": 10
+      },
+      "coverSrc": "/images/albums/wmpl-imported/xi_world-fragments.jpg",
+      "coverAlt": "World Fragments album cover"
+    },
+    {
+      "album": "Quietus Ray",
+      "artist": "xi",
+      "trackCount": 14,
+      "totalListens": 86,
+      "tracks": [
+        {
+          "title": "Albatross",
+          "artist": "xi vs sakuzyo",
+          "listens": 7
+        },
+        {
+          "title": "Bad Elixir",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Cyberspace",
+          "artist": "xi vs Feryquitous",
+          "listens": 7
+        },
+        {
+          "title": "Iolite",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Parousia (Blacklolita remix)",
+          "artist": "xi remixed by Blacklolita",
+          "listens": 7
+        },
+        {
+          "title": "Qliphot",
+          "artist": "Xista(xi + Sta)",
+          "listens": 7
+        },
+        {
+          "title": "Ancient Relics",
+          "artist": "xi",
+          "listens": 6
+        },
+        {
+          "title": "Grand Chariot",
+          "artist": "xi",
+          "listens": 6
+        },
+        {
+          "title": "Hyper Vivacity",
+          "artist": "Diceros Bicornis (xi+BlackY)",
+          "listens": 6
+        },
+        {
+          "title": "To Live",
+          "artist": "xi",
+          "listens": 6
+        },
+        {
+          "title": "FREEDOM DiVE[METAL†DIMENSIONS]",
+          "artist": "xi remixed by cosMo@暴走P",
+          "listens": 5
+        },
+        {
+          "title": "Halcyon (lapix remix)",
+          "artist": "xi remixed by lapix",
+          "listens": 5
+        },
+        {
+          "title": "Longinus",
+          "artist": "xi",
+          "listens": 5
+        },
+        {
+          "title": "Quietus Ray",
+          "artist": "xi",
+          "listens": 5
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Albatross",
+        "artist": "xi vs sakuzyo",
+        "listens": 7
+      },
+      "coverSrc": "/images/albums/wmpl-imported/xi_quietus-ray.jpg",
+      "coverAlt": "Quietus Ray album cover"
+    },
+    {
+      "album": "文化",
+      "artist": "Eve",
+      "trackCount": 10,
+      "totalListens": 84,
+      "tracks": [
+        {
+          "title": "Anoko Secret (あの娘シークレット)",
+          "artist": "Eve",
+          "listens": 11
+        },
+        {
+          "title": "Kaishingeki (会心劇)",
+          "artist": "Eve",
+          "listens": 10
+        },
+        {
+          "title": "Okinimesumama (お気に召すまま)",
+          "artist": "Eve",
+          "listens": 10
+        },
+        {
+          "title": "paradigm (instrumental)",
+          "artist": "Eve",
+          "listens": 10
+        },
+        {
+          "title": "Dramaturgy (ドラマツルギー)",
+          "artist": "Eve",
+          "listens": 9
+        },
+        {
+          "title": "Furiwoshita (ふりをした。)",
+          "artist": "Eve",
+          "listens": 8
+        },
+        {
+          "title": "fanfare (instrumental)",
+          "artist": "Eve",
+          "listens": 7
+        },
+        {
+          "title": "Homesick (ホームシック)",
+          "artist": "Eve",
+          "listens": 7
+        },
+        {
+          "title": "Nonsense Bungaku (ナンセンス文学)",
+          "artist": "Eve",
+          "listens": 7
+        },
+        {
+          "title": "Hitsuji wo kazeote (羊を数えて)",
+          "artist": "Eve",
+          "listens": 5
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Anoko Secret (あの娘シークレット)",
+        "artist": "Eve",
+        "listens": 11
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_bunka.jpg",
+      "coverAlt": "文化 album cover"
+    },
+    {
       "album": "Blurryface",
       "artist": "twenty one pilots",
       "trackCount": 14,
-      "totalListens": 76,
+      "totalListens": 77,
+      "tracks": [
+        {
+          "title": "Tear in My Heart",
+          "artist": "twenty one pilots",
+          "listens": 10
+        },
+        {
+          "title": "Heavydirtysoul",
+          "artist": "twenty one pilots",
+          "listens": 7
+        },
+        {
+          "title": "Lane Boy",
+          "artist": "twenty one pilots",
+          "listens": 7
+        },
+        {
+          "title": "Doubt",
+          "artist": "twenty one pilots",
+          "listens": 6
+        },
+        {
+          "title": "Message Man",
+          "artist": "twenty one pilots",
+          "listens": 6
+        },
+        {
+          "title": "Polarize",
+          "artist": "twenty one pilots",
+          "listens": 6
+        },
+        {
+          "title": "Fairly Local",
+          "artist": "twenty one pilots",
+          "listens": 5
+        },
+        {
+          "title": "Goner",
+          "artist": "twenty one pilots",
+          "listens": 5
+        },
+        {
+          "title": "Ride",
+          "artist": "twenty one pilots",
+          "listens": 5
+        },
+        {
+          "title": "Stressed Out",
+          "artist": "twenty one pilots",
+          "listens": 5
+        },
+        {
+          "title": "Hometown",
+          "artist": "twenty one pilots",
+          "listens": 4
+        },
+        {
+          "title": "The Judge",
+          "artist": "twenty one pilots",
+          "listens": 4
+        },
+        {
+          "title": "We Don't Believe What's on TV",
+          "artist": "twenty one pilots",
+          "listens": 4
+        },
+        {
+          "title": "Not Today",
+          "artist": "twenty one pilots",
+          "listens": 3
+        }
+      ],
       "mostListenedTrack": {
         "title": "Tear in My Heart",
         "artist": "twenty one pilots",
-        "listens": 9
+        "listens": 10
       },
       "coverSrc": "/images/albums/wmpl-imported/twenty-one-pilots_blurryface.jpg",
       "coverAlt": "Blurryface album cover"
@@ -128,7 +1121,69 @@
       "album": "IGOR",
       "artist": "Tyler, The Creator",
       "trackCount": 12,
-      "totalListens": 73,
+      "totalListens": 74,
+      "tracks": [
+        {
+          "title": "WHAT’S GOOD",
+          "artist": "Tyler, The Creator",
+          "listens": 10
+        },
+        {
+          "title": "RUNNING OUT OF TIME",
+          "artist": "Tyler, The Creator",
+          "listens": 9
+        },
+        {
+          "title": "ARE WE STILL FRIENDS?",
+          "artist": "Tyler, The Creator",
+          "listens": 8
+        },
+        {
+          "title": "EARFQUAKE",
+          "artist": "Tyler, The Creator",
+          "listens": 8
+        },
+        {
+          "title": "I THINK",
+          "artist": "Tyler, The Creator",
+          "listens": 8
+        },
+        {
+          "title": "PUPPET",
+          "artist": "Tyler, The Creator",
+          "listens": 8
+        },
+        {
+          "title": "GONE, GONE / THANK YOU",
+          "artist": "Tyler, The Creator",
+          "listens": 7
+        },
+        {
+          "title": "BOYFRIEND",
+          "artist": "Tyler, The Creator",
+          "listens": 5
+        },
+        {
+          "title": "A BOY IS A GUN*",
+          "artist": "Tyler, The Creator",
+          "listens": 3
+        },
+        {
+          "title": "IGOR’S THEME",
+          "artist": "Tyler, The Creator",
+          "listens": 3
+        },
+        {
+          "title": "NEW MAGIC WAND",
+          "artist": "Tyler, The Creator",
+          "listens": 3
+        },
+        {
+          "title": "I DON’T LOVE YOU ANYMORE",
+          "artist": "Tyler, The Creator",
+          "listens": 2
+        }
+      ],
       "mostListenedTrack": {
         "title": "WHAT’S GOOD",
         "artist": "Tyler, The Creator",
@@ -141,7 +1196,99 @@
       "album": "Wolf",
       "artist": "Tyler, The Creator",
       "trackCount": 18,
-      "totalListens": 67,
+      "totalListens": 68,
+      "tracks": [
+        {
+          "title": "Jamba",
+          "artist": "Tyler, The Creator feat. Hodgy Beats",
+          "listens": 8
+        },
+        {
+          "title": "48",
+          "artist": "Tyler, The Creator",
+          "listens": 7
+        },
+        {
+          "title": "Answer",
+          "artist": "Tyler, The Creator",
+          "listens": 7
+        },
+        {
+          "title": "Awkward",
+          "artist": "Tyler, The Creator",
+          "listens": 7
+        },
+        {
+          "title": "Parking Lot",
+          "artist": "Tyler, The Creator feat. Mike G & Casey Veggies",
+          "listens": 7
+        },
+        {
+          "title": "Rusty",
+          "artist": "Tyler, The Creator feat. Domo Genesis & Earl Sweatshirt",
+          "listens": 5
+        },
+        {
+          "title": "Slater",
+          "artist": "Tyler, The Creator feat. Frank Ocean",
+          "listens": 5
+        },
+        {
+          "title": "Tamale",
+          "artist": "Tyler, The Creator feat. Tallulah",
+          "listens": 5
+        },
+        {
+          "title": "Domo 23",
+          "artist": "Tyler, The Creator",
+          "listens": 4
+        },
+        {
+          "title": "PartyIsntOver/Campfire/Bimmer",
+          "artist": "Tyler, The Creator feat. Lætitia Sadier & Frank Ocean",
+          "listens": 2
+        },
+        {
+          "title": "Trashwang",
+          "artist": "Tyler, The Creator feat. Na’kel, Jasper Dolphin, Lucas, L‐Boy, Taco, Left Brain & Lee Spielman",
+          "listens": 2
+        },
+        {
+          "title": "Treehome95",
+          "artist": "Tyler, The Creator feat. Erykah Badu & Coco Owino",
+          "listens": 2
+        },
+        {
+          "title": "Wolf",
+          "artist": "Tyler, The Creator",
+          "listens": 2
+        },
+        {
+          "title": "Colossus",
+          "artist": "Tyler, The Creator",
+          "listens": 1
+        },
+        {
+          "title": "Cowboy",
+          "artist": "Tyler, The Creator",
+          "listens": 1
+        },
+        {
+          "title": "IFHY",
+          "artist": "Tyler, The Creator feat. Pharrell Williams",
+          "listens": 1
+        },
+        {
+          "title": "Lone",
+          "artist": "Tyler, The Creator",
+          "listens": 1
+        },
+        {
+          "title": "Pigs",
+          "artist": "Tyler, The Creator",
+          "listens": 1
+        }
+      ],
       "mostListenedTrack": {
         "title": "Jamba",
         "artist": "Tyler, The Creator feat. Hodgy Beats",
@@ -151,23 +1298,82 @@
       "coverAlt": "Wolf album cover"
     },
     {
-      "album": "Round Robin",
-      "artist": "Eve",
-      "trackCount": 10,
-      "totalListens": 60,
-      "mostListenedTrack": {
-        "title": "Meru factory (メルファクトリー)",
-        "artist": "Eve",
-        "listens": 9
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_round-robin.jpg",
-      "coverAlt": "Round Robin album cover"
-    },
-    {
       "album": "Trench",
       "artist": "twenty one pilots",
       "trackCount": 14,
-      "totalListens": 59,
+      "totalListens": 62,
+      "tracks": [
+        {
+          "title": "Levitate",
+          "artist": "twenty one pilots",
+          "listens": 8
+        },
+        {
+          "title": "Chlorine",
+          "artist": "twenty one pilots",
+          "listens": 7
+        },
+        {
+          "title": "Pet Cheetah",
+          "artist": "twenty one pilots",
+          "listens": 7
+        },
+        {
+          "title": "The Hype",
+          "artist": "twenty one pilots",
+          "listens": 7
+        },
+        {
+          "title": "Nico and the Niners",
+          "artist": "twenty one pilots",
+          "listens": 6
+        },
+        {
+          "title": "Jumpsuit",
+          "artist": "twenty one pilots",
+          "listens": 5
+        },
+        {
+          "title": "Morph",
+          "artist": "twenty one pilots",
+          "listens": 5
+        },
+        {
+          "title": "My Blood",
+          "artist": "twenty one pilots",
+          "listens": 4
+        },
+        {
+          "title": "Smithereens",
+          "artist": "twenty one pilots",
+          "listens": 3
+        },
+        {
+          "title": "Bandito",
+          "artist": "twenty one pilots",
+          "listens": 2
+        },
+        {
+          "title": "Cut My Lip",
+          "artist": "twenty one pilots",
+          "listens": 2
+        },
+        {
+          "title": "Leave the City",
+          "artist": "twenty one pilots",
+          "listens": 2
+        },
+        {
+          "title": "Legend",
+          "artist": "twenty one pilots",
+          "listens": 2
+        },
+        {
+          "title": "Neon Gravestones",
+          "artist": "twenty one pilots",
+          "listens": 2
+        }
+      ],
       "mostListenedTrack": {
         "title": "Levitate",
         "artist": "twenty one pilots",
@@ -177,36 +1383,122 @@
       "coverAlt": "Trench album cover"
     },
     {
-      "album": "Wonder Word",
-      "artist": "Eve",
-      "trackCount": 7,
-      "totalListens": 53,
-      "mostListenedTrack": {
-        "title": "Yoru wo koero (夜を超えろ)",
-        "artist": "Eve",
-        "listens": 15
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_wonder-word.jpg",
-      "coverAlt": "Wonder Word album cover"
-    },
-    {
-      "album": "Quietus Ray",
+      "album": "Agartha",
       "artist": "xi",
-      "trackCount": 14,
-      "totalListens": 51,
+      "trackCount": 9,
+      "totalListens": 58,
+      "tracks": [
+        {
+          "title": "wild card",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "HEAVENLY GALAXiES / Xiphoid Sphere",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Information Transmission",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Valhalla",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "天衣無縫",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Agartha",
+          "artist": "xi",
+          "listens": 6
+        },
+        {
+          "title": "Zauberkugel",
+          "artist": "xi",
+          "listens": 6
+        },
+        {
+          "title": "Niflheimr",
+          "artist": "xi",
+          "listens": 5
+        },
+        {
+          "title": "ハッピーエンドオブザワールド",
+          "artist": "xi",
+          "listens": 5
+        }
+      ],
       "mostListenedTrack": {
-        "title": "Cyberspace",
-        "artist": "xi vs Feryquitous",
-        "listens": 5
+        "title": "wild card",
+        "artist": "xi",
+        "listens": 8
       },
-      "coverSrc": "/images/albums/wmpl-imported/xi_quietus-ray.jpg",
-      "coverAlt": "Quietus Ray album cover"
+      "coverSrc": "/images/albums/wmpl-imported/xi_agartha.jpg",
+      "coverAlt": "Agartha album cover"
     },
     {
       "album": "House of Balloons",
       "artist": "The Weeknd",
       "trackCount": 10,
       "totalListens": 45,
+      "tracks": [
+        {
+          "title": "The Party & the After Party",
+          "artist": "The Weeknd",
+          "listens": 7
+        },
+        {
+          "title": "Coming Down",
+          "artist": "The Weeknd",
+          "listens": 6
+        },
+        {
+          "title": "Wicked Games",
+          "artist": "The Weeknd",
+          "listens": 6
+        },
+        {
+          "title": "House of Balloons / Glass Table Girls",
+          "artist": "The Weeknd",
+          "listens": 5
+        },
+        {
+          "title": "Twenty Eight",
+          "artist": "The Weeknd",
+          "listens": 5
+        },
+        {
+          "title": "What You Need",
+          "artist": "The Weeknd",
+          "listens": 5
+        },
+        {
+          "title": "The Knowing",
+          "artist": "The Weeknd",
+          "listens": 4
+        },
+        {
+          "title": "The Morning",
+          "artist": "The Weeknd",
+          "listens": 3
+        },
+        {
+          "title": "High for This",
+          "artist": "The Weeknd",
+          "listens": 2
+        },
+        {
+          "title": "Loft Music",
+          "artist": "The Weeknd",
+          "listens": 2
+        }
+      ],
       "mostListenedTrack": {
         "title": "The Party & the After Party",
         "artist": "The Weeknd",
@@ -216,36 +1508,372 @@
       "coverAlt": "House of Balloons album cover"
     },
     {
-      "album": "World Fragments",
-      "artist": "xi",
-      "trackCount": 12,
-      "totalListens": 45,
+      "album": "Minecraft Volume Beta",
+      "artist": "C418",
+      "trackCount": 30,
+      "totalListens": 35,
+      "tracks": [
+        {
+          "title": "Blind Spots",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Flake",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Floating Trees",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Haunt Muskie",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Strad",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Alpha",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Aria Math",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Ballad of the Cats",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Beginning 2",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Biome Fest",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Blocks",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Chirp",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Concrete Halls",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Dead Voxel",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Dreiton",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Eleven",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Far",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Intro",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Ki",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Kyoto",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Mall",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Mellohi",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Moog City 2",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Mutation",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Stal",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Taswell",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "The End",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Wait",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Ward",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Warmth",
+          "artist": "C418",
+          "listens": 1
+        }
+      ],
       "mostListenedTrack": {
-        "title": "over the top",
-        "artist": "xi",
-        "listens": 5
+        "title": "Blind Spots",
+        "artist": "C418",
+        "listens": 2
       },
-      "coverSrc": "/images/albums/wmpl-imported/xi_world-fragments.jpg",
-      "coverAlt": "World Fragments album cover"
+      "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg",
+      "coverAlt": "Minecraft Volume Beta album cover"
     },
     {
-      "album": "Agartha",
-      "artist": "xi",
-      "trackCount": 9,
-      "totalListens": 36,
+      "album": "Minecraft - Volume Alpha",
+      "artist": "C418",
+      "trackCount": 24,
+      "totalListens": 29,
+      "tracks": [
+        {
+          "title": "Danny",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Door",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Excuse",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Key",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Moog City",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Wet Hands",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Beginning",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Cat",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Chris",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Clark",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Death",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Dog",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Droopy Likes Ricochet",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Droopy Likes Your Face",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Dry Hands",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Equinoxe",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Haggstrom",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Living Mice",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Mice on Venus",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Minecraft",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Oxygene",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Subwoofer Lullaby",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Sweden",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Thirteen",
+          "artist": "C418",
+          "listens": 0
+        }
+      ],
       "mostListenedTrack": {
-        "title": "HEAVENLY GALAXiES / Xiphoid Sphere",
-        "artist": "xi",
-        "listens": 5
+        "title": "Danny",
+        "artist": "C418",
+        "listens": 2
       },
-      "coverSrc": "/images/albums/wmpl-imported/xi_agartha.jpg",
-      "coverAlt": "Agartha album cover"
+      "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg",
+      "coverAlt": "Minecraft - Volume Alpha album cover"
     },
     {
       "album": "Vessel",
       "artist": "twenty one pilots",
       "trackCount": 12,
       "totalListens": 27,
+      "tracks": [
+        {
+          "title": "House of Gold",
+          "artist": "twenty one pilots",
+          "listens": 5
+        },
+        {
+          "title": "Semi‐Automatic",
+          "artist": "twenty one pilots",
+          "listens": 5
+        },
+        {
+          "title": "Car Radio",
+          "artist": "twenty one pilots",
+          "listens": 3
+        },
+        {
+          "title": "Ode to Sleep",
+          "artist": "twenty one pilots",
+          "listens": 3
+        },
+        {
+          "title": "Guns for Hands",
+          "artist": "twenty one pilots",
+          "listens": 2
+        },
+        {
+          "title": "Holding on to You",
+          "artist": "twenty one pilots",
+          "listens": 2
+        },
+        {
+          "title": "Migraine",
+          "artist": "twenty one pilots",
+          "listens": 2
+        },
+        {
+          "title": "Truce",
+          "artist": "twenty one pilots",
+          "listens": 2
+        },
+        {
+          "title": "Fake You Out",
+          "artist": "twenty one pilots",
+          "listens": 1
+        },
+        {
+          "title": "The Run and Go",
+          "artist": "twenty one pilots",
+          "listens": 1
+        },
+        {
+          "title": "Trees",
+          "artist": "twenty one pilots",
+          "listens": 1
+        },
+        {
+          "title": "Screen",
+          "artist": "twenty one pilots",
+          "listens": 0
+        }
+      ],
       "mostListenedTrack": {
         "title": "House of Gold",
         "artist": "twenty one pilots",
@@ -259,6 +1887,43 @@
       "artist": "wave to earth",
       "trackCount": 7,
       "totalListens": 26,
+      "tracks": [
+        {
+          "title": "play with earth!",
+          "artist": "wave to earth",
+          "listens": 7
+        },
+        {
+          "title": "annie.",
+          "artist": "wave to earth",
+          "listens": 5
+        },
+        {
+          "title": "pueblo (remastered 2024)",
+          "artist": "wave to earth",
+          "listens": 5
+        },
+        {
+          "title": "are you bored?",
+          "artist": "wave to earth",
+          "listens": 3
+        },
+        {
+          "title": "slow dive",
+          "artist": "wave to earth",
+          "listens": 3
+        },
+        {
+          "title": "holyland",
+          "artist": "wave to earth",
+          "listens": 2
+        },
+        {
+          "title": "beck.",
+          "artist": "wave to earth",
+          "listens": 1
+        }
+      ],
       "mostListenedTrack": {
         "title": "play with earth!",
         "artist": "wave to earth",
@@ -268,36 +1933,177 @@
       "coverAlt": "play with earth! 0.03 album cover"
     },
     {
-      "album": "文化",
-      "artist": "Eve",
-      "trackCount": 10,
-      "totalListens": 23,
+      "album": "THE WORLD EP. FIN: WILL",
+      "artist": "ATEEZ",
+      "trackCount": 12,
+      "totalListens": 21,
+      "tracks": [
+        {
+          "title": "ARRIBA",
+          "artist": "ATEEZ",
+          "listens": 2
+        },
+        {
+          "title": "Emergency",
+          "artist": "ATEEZ",
+          "listens": 2
+        },
+        {
+          "title": "Everything",
+          "artist": "종호",
+          "listens": 2
+        },
+        {
+          "title": "FIN: WILL",
+          "artist": "ATEEZ",
+          "listens": 2
+        },
+        {
+          "title": "IT's You",
+          "artist": "여상, 산 & 우영",
+          "listens": 2
+        },
+        {
+          "title": "MATZ",
+          "artist": "홍중 & 성화",
+          "listens": 2
+        },
+        {
+          "title": "WE KNOW",
+          "artist": "ATEEZ",
+          "listens": 2
+        },
+        {
+          "title": "Youth",
+          "artist": "윤호 & 민기",
+          "listens": 2
+        },
+        {
+          "title": "미친 폼 (Crazy Form)",
+          "artist": "ATEEZ",
+          "listens": 2
+        },
+        {
+          "title": "Crescent Part. 2",
+          "artist": "ATEEZ",
+          "listens": 1
+        },
+        {
+          "title": "Silver Light",
+          "artist": "ATEEZ",
+          "listens": 1
+        },
+        {
+          "title": "꿈날 (Dreamy Day)",
+          "artist": "ATEEZ",
+          "listens": 1
+        }
+      ],
       "mostListenedTrack": {
-        "title": "Kaishingeki (会心劇)",
-        "artist": "Eve",
-        "listens": 4
+        "title": "ARRIBA",
+        "artist": "ATEEZ",
+        "listens": 2
       },
-      "coverSrc": "/images/albums/wmpl-imported/eve_bunka.jpg",
-      "coverAlt": "文化 album cover"
-    },
-    {
-      "album": "Smile",
-      "artist": "Eve",
-      "trackCount": 13,
-      "totalListens": 20,
-      "mostListenedTrack": {
-        "title": "doublet",
-        "artist": "Eve",
-        "listens": 3
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg",
-      "coverAlt": "Smile album cover"
+      "coverSrc": "/images/albums/wmpl-imported/ateez_the-world-ep-fin-will.jpg",
+      "coverAlt": "THE WORLD EP. FIN: WILL album cover"
     },
     {
       "album": "Starboy",
       "artist": "The Weeknd",
       "trackCount": 18,
       "totalListens": 17,
+      "tracks": [
+        {
+          "title": "Starboy",
+          "artist": "The Weeknd feat. Daft Punk",
+          "listens": 2
+        },
+        {
+          "title": "A Lonely Night",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "All I Know",
+          "artist": "The Weeknd feat. Future",
+          "listens": 1
+        },
+        {
+          "title": "Attention",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "Die for You",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "I Feel It Coming",
+          "artist": "The Weeknd feat. Daft Punk",
+          "listens": 1
+        },
+        {
+          "title": "Love to Lay",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "Nothing Without You",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "Ordinary Life",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "Party Monster",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "Reminder",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "Secrets",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "Sidewalks",
+          "artist": "The Weeknd feat. Kendrick Lamar",
+          "listens": 1
+        },
+        {
+          "title": "Six Feet Under",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "Stargirl Interlude",
+          "artist": "The Weeknd feat. Lana Del Rey",
+          "listens": 1
+        },
+        {
+          "title": "True Colors",
+          "artist": "The Weeknd",
+          "listens": 1
+        },
+        {
+          "title": "False Alarm",
+          "artist": "The Weeknd",
+          "listens": 0
+        },
+        {
+          "title": "Rockin’",
+          "artist": "The Weeknd",
+          "listens": 0
+        }
+      ],
       "mostListenedTrack": {
         "title": "Starboy",
         "artist": "The Weeknd feat. Daft Punk",
@@ -305,6 +2111,76 @@
       },
       "coverSrc": "/images/albums/wmpl-imported/the-weeknd_starboy.jpg",
       "coverAlt": "Starboy album cover"
+    },
+    {
+      "album": "The Chaos Chapter: FIGHT OR ESCAPE",
+      "artist": "TOMORROW X TOGETHER",
+      "trackCount": 11,
+      "totalListens": 14,
+      "tracks": [
+        {
+          "title": "0X1=LOVESONG (I Know I Love You)",
+          "artist": "TOMORROW X TOGETHER feat. Seori",
+          "listens": 2
+        },
+        {
+          "title": "Anti-Romantic",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 2
+        },
+        {
+          "title": "LO$ER=LO♡ER",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 2
+        },
+        {
+          "title": "0X1=LOVESONG (I Know I Love You) (Emocore Mix)",
+          "artist": "TOMORROW X TOGETHER feat. Seori",
+          "listens": 1
+        },
+        {
+          "title": "Frost",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 1
+        },
+        {
+          "title": "Magic",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 1
+        },
+        {
+          "title": "No Rules",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 1
+        },
+        {
+          "title": "교환일기 (두밧두 와리와리)",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 1
+        },
+        {
+          "title": "디어 스푸트니크",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 1
+        },
+        {
+          "title": "밸런스 게임",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 1
+        },
+        {
+          "title": "소악행",
+          "artist": "TOMORROW X TOGETHER",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "0X1=LOVESONG (I Know I Love You)",
+        "artist": "TOMORROW X TOGETHER feat. Seori",
+        "listens": 2
+      },
+      "coverSrc": "/images/albums/wmpl-imported/tomorrow-x-together_the-chaos-chapter-fight-or-escape.jpg",
+      "coverAlt": "The Chaos Chapter: FIGHT OR ESCAPE album cover"
     }
   ]
 }

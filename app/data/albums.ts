@@ -1,7 +1,7 @@
 import listeningData from "./listening-stats.generated.json";
 import { albumSettings, type AlbumOverride } from "./album-settings";
 
-export type MostListenedTrack = {
+export type TrackStats = {
   artist: string;
   listens: number;
   title: string;
@@ -17,9 +17,9 @@ export type Album = {
   artist: string;
   coverAlt: string;
   coverSrc: string;
+  favoriteTrack: TrackStats | null;
   format?: string;
   id: string;
-  mostListenedTrack: MostListenedTrack | null;
   musicBrainzReleaseId?: string;
   pressing?: AlbumPressing;
   releaseDate?: string;
@@ -29,7 +29,7 @@ export type Album = {
   url: string;
 };
 
-type AlbumCatalogEntry = Omit<Album, "mostListenedTrack" | "totalListens" | "url"> & {
+type AlbumCatalogEntry = Omit<Album, "favoriteTrack" | "totalListens" | "url"> & {
   /** Set this only when the WMP album tag differs from the displayed title. */
   listeningTitle?: string;
 };
@@ -250,8 +250,11 @@ type GeneratedAlbum = {
   coverSrc?: string;
   trackCount?: number;
   totalListens: number;
-  mostListenedTrack: Omit<MostListenedTrack, "url"> | null;
+  mostListenedTrack: GeneratedTrack | null;
+  tracks?: GeneratedTrack[];
 };
+
+type GeneratedTrack = Omit<TrackStats, "url">;
 
 type ListeningDataset = {
   albums: GeneratedAlbum[];
@@ -291,6 +294,28 @@ function generatedAlbumId(title: string, artist: string) {
   return `${slug || "album"}-${(hash >>> 0).toString(36)}`;
 }
 
+function selectFavoriteTrack(
+  listening: GeneratedAlbum | undefined,
+  favoriteTrackTitle: string | undefined,
+) {
+  if (!listening || !favoriteTrackTitle) {
+    return listening?.mostListenedTrack ?? null;
+  }
+
+  const normalizedFavoriteTitle = normalizeAlbumTitle(favoriteTrackTitle);
+  const matchingTrack = listening.tracks?.find(
+    (track) => normalizeAlbumTitle(track.title) === normalizedFavoriteTitle,
+  );
+
+  if (!matchingTrack) {
+    console.warn(
+      `Favorite track "${favoriteTrackTitle}" did not match imported data for "${listening.album}"; using its most-listened track instead.`,
+    );
+  }
+
+  return matchingTrack ?? listening.mostListenedTrack;
+}
+
 function createAlbum(
   listeningTitle: string,
   listening?: GeneratedAlbum,
@@ -309,6 +334,7 @@ function createAlbum(
   const presentationOverride = { ...override };
   delete curated.listeningTitle;
   delete presentationOverride.visibility;
+  delete presentationOverride.favoriteTrackTitle;
   const fallbackArtist =
     listening?.artist ??
     listening?.mostListenedTrack?.artist ??
@@ -327,14 +353,14 @@ function createAlbum(
     ...curated,
     ...presentationOverride,
   };
-  const topTrack = listening?.mostListenedTrack;
+  const favoriteTrack = selectFavoriteTrack(listening, override.favoriteTrackTitle);
 
   return {
     ...album,
-    mostListenedTrack: topTrack
+    favoriteTrack: favoriteTrack
       ? {
-          ...topTrack,
-          url: googleSearchUrl(topTrack.title, topTrack.artist),
+          ...favoriteTrack,
+          url: googleSearchUrl(favoriteTrack.title, favoriteTrack.artist),
         }
       : null,
     totalListens: listening?.totalListens ?? 0,

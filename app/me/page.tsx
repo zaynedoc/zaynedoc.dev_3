@@ -18,7 +18,7 @@ export default function MePage() {
         <SiteNavigation sticky />
         <div className="content-stack">
           <section className="accent-section" aria-labelledby="who-heading">
-            <h1 id="who-heading">Who Am I?</h1>
+            <h1 id="who-heading">About Zayne Dockery</h1>
             <div className="accent-section__body">
               <p>Self-proclaimed “buff wasian dev.”</p>
               <p>I specialize in UX/UI, DevOps, and AppSec.</p>
@@ -44,35 +44,36 @@ export default function MePage() {
               </div>
             </header>
             <div className="car-gallery" aria-label="Photos of Zayne's Genesis Coupe">
-              <div className="car-gallery__row">
+              <FadeImage
+                alt="Silver Genesis Coupe beneath storm clouds"
+                className="car-gallery__primary"
+                height={1500}
+                loading="lazy"
+                sizes="(max-width: 500px) calc(100vw - 32px), (max-width: 700px) calc(100vw - 40px), (max-width: 900px) calc(100vw - 80px), 921px"
+                src="/images/car1.webp"
+                unoptimized
+                width={2000}
+              />
+              <div className="car-gallery__secondary">
                 <FadeImage
-                  alt="Silver Genesis Coupe at sunset"
-                  className="car-gallery__sunset"
-                  height={450}
+                  alt="Silver Genesis Coupe parked near UCF"
+                  height={2000}
                   loading="lazy"
-                  sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1600px) 46vw, 600px"
-                  src="/images/genesis-coupe-sunset.webp"
-                  width={600}
+                  sizes="(max-width: 500px) calc((100vw - 47px) / 2), (max-width: 700px) calc((100vw - 55px) / 2), (max-width: 900px) calc((100vw - 95px) / 2), 453px"
+                  src="/images/car2.webp"
+                  unoptimized
+                  width={1500}
                 />
                 <FadeImage
-                  alt="Silver Genesis Coupe beneath storm clouds"
-                  className="car-gallery__storm"
-                  height={450}
+                  alt="Silver Genesis Coupe on a rooftop beneath blue skies"
+                  height={2000}
                   loading="lazy"
-                  sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1600px) 50vw, 675px"
-                  src="/images/genesis-coupe-storm-clouds.webp"
-                  width={675}
+                  sizes="(max-width: 500px) calc((100vw - 47px) / 2), (max-width: 700px) calc((100vw - 55px) / 2), (max-width: 900px) calc((100vw - 95px) / 2), 453px"
+                  src="/images/car3.webp"
+                  unoptimized
+                  width={1500}
                 />
               </div>
-              <FadeImage
-                alt="Silver Genesis Coupe in golden-hour light"
-                className="car-gallery__golden-hour"
-                height={402}
-                loading="lazy"
-                sizes="(max-width: 700px) calc(100vw - 40px), 600px"
-                src="/images/genesis-coupe-golden-hour.webp"
-                width={600}
-              />
             </div>
           </section>
 

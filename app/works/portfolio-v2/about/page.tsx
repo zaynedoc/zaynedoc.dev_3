@@ -6,7 +6,7 @@ import { GenesisSection } from "@/app/works/portfolio-v2/_legacy/components/Abou
 import { MusicShelf } from "@/app/works/portfolio-v2/_legacy/components/About/MusicShelf";
 import { WhoAmISection } from "@/app/works/portfolio-v2/_legacy/components/About/WhoAmISection";
 import { SiteFooter } from "@/app/works/portfolio-v2/_legacy/components/SiteFooter/SiteFooter";
-import { indexableRobots, siteName, sitePreviewImage } from "@/app/works/portfolio-v2/_legacy/data/site";
+import { noIndexRobots, siteName, sitePreviewImage } from "@/app/works/portfolio-v2/_legacy/data/site";
 
 export const metadata: Metadata = {
   description: "Learn more about Zayne Dockery: a UX/UI-focused developer interested in DevOps, application security, cars, design, and music.",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/works/portfolio-v2/about",
   },
-  robots: indexableRobots,
+  robots: noIndexRobots,
   title: "About",
   twitter: {
     card: "summary_large_image",

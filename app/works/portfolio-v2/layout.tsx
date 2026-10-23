@@ -7,7 +7,7 @@ import { InvertedCursor } from "./_legacy/components/InvertedCursor/InvertedCurs
 import { LenisScroll } from "./_legacy/components/LenisScroll/LenisScroll";
 import { PageReveal } from "./_legacy/components/PageReveal/PageReveal";
 import { SiteHeader } from "./_legacy/components/SiteHeader/SiteHeader";
-import { indexableRobots } from "./_legacy/data/site";
+import { noIndexRobots } from "./_legacy/data/site";
 import styles from "./portfolio-v2.module.css";
 
 const zalandoSemiExpanded = localFont({
@@ -39,7 +39,7 @@ const zalandoExpandedExtraBold = localFont({
 
 export const metadata: Metadata = {
   description: "The second version of zaynedoc.dev, including its original interactive product pages.",
-  robots: indexableRobots,
+  robots: noIndexRobots,
   title: {
     default: "Portfolio v2",
     template: "%s | Portfolio v2",

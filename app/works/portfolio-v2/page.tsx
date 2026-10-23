@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { PortfolioHero } from "@/app/works/portfolio-v2/_legacy/components/PortfolioHero/PortfolioHero";
-import { indexableRobots, siteDescription, siteName, sitePreviewImage, siteTitle } from "@/app/works/portfolio-v2/_legacy/data/site";
+import { noIndexRobots, siteDescription, siteName, sitePreviewImage, siteTitle } from "@/app/works/portfolio-v2/_legacy/data/site";
 import { homeHeroConfig } from "@/app/works/portfolio-v2/_legacy/data/hero";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/works/portfolio-v2",
   },
-  robots: indexableRobots,
+  robots: noIndexRobots,
   twitter: {
     card: "summary_large_image",
     creator: "@zaynedoc",

@@ -15,21 +15,25 @@ export const siteConfig = {
   pages: {
     home: {
       path: "/",
+      title: "Zayne Dockery | Software Developer, Designer & AppSec",
       description:
         "Portfolio of Zayne Dockery, a developer, ambassador, and undergraduate focused on UX/UI, DevOps, and application security.",
     },
     roles: {
       path: "/roles",
+      title: "Experience & Roles | Zayne Dockery",
       description:
-        "Explore Zayne Dockery’s software engineering experience and community roles.",
+        "Software engineering experience and community roles held by Zayne Dockery across UX/UI, DevOps, and application security.",
     },
     works: {
       path: "/works",
+      title: "Selected Work & Projects | Zayne Dockery",
       description:
-        "Explore selected software, security, mobile, and web projects created by Zayne Dockery.",
+        "Selected projects by Zayne Dockery across UX/UI, software development, DevOps, and application security.",
     },
     me: {
       path: "/me",
+      title: "About Zayne Dockery",
       description:
         "Learn more about Zayne Dockery, his interests, Genesis Coupe, and CD album collection.",
     },
@@ -44,8 +48,29 @@ export const siteConfig = {
 export type PageName = keyof typeof siteConfig.pages;
 
 export function pageTitle(page: PageName) {
-  return `${siteConfig.name} (${page})`;
+  return siteConfig.pages[page].title;
 }
+
+export const indexableRobots = {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large" as const,
+    "max-snippet": -1,
+    "max-video-preview": -1,
+  },
+};
+
+export const noIndexRobots = {
+  index: false,
+  follow: false,
+  googleBot: {
+    index: false,
+    follow: false,
+  },
+};
 
 export function createPageMetadata(page: PageName): Metadata {
   const pageConfig = siteConfig.pages[page];
@@ -59,6 +84,7 @@ export function createPageMetadata(page: PageName): Metadata {
     alternates: {
       canonical: pageConfig.path,
     },
+    robots: indexableRobots,
     openGraph: {
       type: "website",
       locale: "en_US",
