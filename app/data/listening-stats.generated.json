@@ -1,153 +1,453 @@
 {
   "source": {
-    "capturedAtUtc": "2026-10-23T04:05:01.9079194+00:00",
+    "capturedAtUtc": "2026-11-02T04:05:02.208435+00:00",
     "countMode": "first-seen WMP counts plus positive deltas between active snapshots",
     "includeFirstSeenCounts": true,
-    "snapshot": "20261023T040501907Z.json",
-    "snapshotCount": 34
+    "snapshot": "20261102T040502208Z.json",
+    "snapshotCount": 44
   },
   "albums": [
     {
       "album": "Ao",
       "artist": "Eve & Sou",
       "trackCount": 13,
-      "totalListens": 550,
+      "totalListens": 604,
       "tracks": [
-        {
-          "title": "TEIKOKU SHOUJO",
-          "artist": "Eve & Sou",
-          "listens": 48
-        },
         {
           "title": "NONSENSE BUNGAKU",
           "artist": "Eve & Sou",
-          "listens": 47
+          "listens": 51
+        },
+        {
+          "title": "TEIKOKU SHOUJO",
+          "artist": "Eve & Sou",
+          "listens": 51
         },
         {
           "title": "TIG-HUG",
           "artist": "Eve & Sou",
-          "listens": 46
+          "listens": 49
         },
         {
           "title": "DR.",
           "artist": "Eve & Sou",
-          "listens": 45
-        },
-        {
-          "title": "HAITA",
-          "artist": "Eve & Sou",
-          "listens": 43
+          "listens": 48
         },
         {
           "title": "HAKUSHI NO HARU",
           "artist": "Eve & Sou",
-          "listens": 43
+          "listens": 48
+        },
+        {
+          "title": "HAITA",
+          "artist": "Eve & Sou",
+          "listens": 47
         },
         {
           "title": "INOCHI BAKKARI",
           "artist": "Eve & Sou",
-          "listens": 42
+          "listens": 47
         },
         {
           "title": "MYOUJOU GYARAKUTIKA",
           "artist": "Eve & Sou",
-          "listens": 42
+          "listens": 46
         },
         {
           "title": "CHOCOLATE TOWN",
           "artist": "Eve & Sou",
-          "listens": 40
-        },
-        {
-          "title": "MEBERU",
-          "artist": "Eve & Sou",
-          "listens": 40
+          "listens": 45
         },
         {
           "title": "FAKE",
           "artist": "Eve & Sou",
-          "listens": 39
+          "listens": 44
+        },
+        {
+          "title": "MEBERU",
+          "artist": "Eve & Sou",
+          "listens": 44
         },
         {
           "title": "ODORYA N SE",
           "artist": "Eve & Sou",
-          "listens": 39
+          "listens": 44
         },
         {
           "title": "AME TO PETORA",
           "artist": "Eve & Sou",
-          "listens": 36
+          "listens": 40
         }
       ],
       "mostListenedTrack": {
-        "title": "TEIKOKU SHOUJO",
+        "title": "NONSENSE BUNGAKU",
         "artist": "Eve & Sou",
-        "listens": 48
+        "listens": 51
       },
       "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg",
       "coverAlt": "Ao album cover"
     },
     {
+      "album": "Minecraft Volume Beta",
+      "artist": "C418",
+      "trackCount": 30,
+      "totalListens": 583,
+      "tracks": [
+        {
+          "title": "Flake",
+          "artist": "C418",
+          "listens": 26
+        },
+        {
+          "title": "Blind Spots",
+          "artist": "C418",
+          "listens": 25
+        },
+        {
+          "title": "Ki",
+          "artist": "C418",
+          "listens": 25
+        },
+        {
+          "title": "Moog City 2",
+          "artist": "C418",
+          "listens": 25
+        },
+        {
+          "title": "Beginning 2",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Blocks",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Floating Trees",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Kyoto",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Strad",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Taswell",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Ward",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Alpha",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Dead Voxel",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Dreiton",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Eleven",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Mutation",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Chirp",
+          "artist": "C418",
+          "listens": 22
+        },
+        {
+          "title": "Intro",
+          "artist": "C418",
+          "listens": 22
+        },
+        {
+          "title": "Stal",
+          "artist": "C418",
+          "listens": 22
+        },
+        {
+          "title": "Wait",
+          "artist": "C418",
+          "listens": 22
+        },
+        {
+          "title": "Aria Math",
+          "artist": "C418",
+          "listens": 21
+        },
+        {
+          "title": "Far",
+          "artist": "C418",
+          "listens": 21
+        },
+        {
+          "title": "Mall",
+          "artist": "C418",
+          "listens": 21
+        },
+        {
+          "title": "Ballad of the Cats",
+          "artist": "C418",
+          "listens": 20
+        },
+        {
+          "title": "Warmth",
+          "artist": "C418",
+          "listens": 20
+        },
+        {
+          "title": "Haunt Muskie",
+          "artist": "C418",
+          "listens": 3
+        },
+        {
+          "title": "Biome Fest",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Concrete Halls",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Mellohi",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "The End",
+          "artist": "C418",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Flake",
+        "artist": "C418",
+        "listens": 26
+      },
+      "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg",
+      "coverAlt": "Minecraft Volume Beta album cover"
+    },
+    {
+      "album": "Minecraft - Volume Alpha",
+      "artist": "C418",
+      "trackCount": 24,
+      "totalListens": 521,
+      "tracks": [
+        {
+          "title": "Clark",
+          "artist": "C418",
+          "listens": 35
+        },
+        {
+          "title": "Cat",
+          "artist": "C418",
+          "listens": 27
+        },
+        {
+          "title": "Danny",
+          "artist": "C418",
+          "listens": 26
+        },
+        {
+          "title": "Moog City",
+          "artist": "C418",
+          "listens": 26
+        },
+        {
+          "title": "Chris",
+          "artist": "C418",
+          "listens": 25
+        },
+        {
+          "title": "Droopy Likes Ricochet",
+          "artist": "C418",
+          "listens": 25
+        },
+        {
+          "title": "Droopy Likes Your Face",
+          "artist": "C418",
+          "listens": 25
+        },
+        {
+          "title": "Equinoxe",
+          "artist": "C418",
+          "listens": 25
+        },
+        {
+          "title": "Door",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Excuse",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Oxygene",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Wet Hands",
+          "artist": "C418",
+          "listens": 24
+        },
+        {
+          "title": "Beginning",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Dog",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Dry Hands",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Haggstrom",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Key",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Mice on Venus",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Minecraft",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Subwoofer Lullaby",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Sweden",
+          "artist": "C418",
+          "listens": 23
+        },
+        {
+          "title": "Living Mice",
+          "artist": "C418",
+          "listens": 2
+        },
+        {
+          "title": "Death",
+          "artist": "C418",
+          "listens": 1
+        },
+        {
+          "title": "Thirteen",
+          "artist": "C418",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Clark",
+        "artist": "C418",
+        "listens": 35
+      },
+      "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg",
+      "coverAlt": "Minecraft - Volume Alpha album cover"
+    },
+    {
       "album": "OFFICIAL NUMBER",
       "artist": "Eve",
       "trackCount": 10,
-      "totalListens": 372,
+      "totalListens": 417,
       "tracks": [
         {
           "title": "Demon dance tokyo (デーモンダンストーキョー)",
           "artist": "Eve",
-          "listens": 44
+          "listens": 48
         },
         {
           "title": "Wakusei loop (惑星ループ)",
           "artist": "Eve",
-          "listens": 42
+          "listens": 47
         },
         {
           "title": "Rabbit gray (ラビットグレイ)",
           "artist": "Eve",
-          "listens": 40
-        },
-        {
-          "title": "Perfect seimei (パーフェクト生命)",
-          "artist": "Eve",
-          "listens": 38
+          "listens": 44
         },
         {
           "title": "Caravan (キャラバン)",
           "artist": "Eve",
-          "listens": 37
+          "listens": 43
         },
         {
-          "title": "Fuyukan (浮遊感)",
+          "title": "Perfect seimei (パーフェクト生命)",
           "artist": "Eve",
-          "listens": 35
-        },
-        {
-          "title": "Short umbrella (ショートアンブレラ)",
-          "artist": "Eve",
-          "listens": 35
+          "listens": 42
         },
         {
           "title": "sister",
           "artist": "Eve",
-          "listens": 35
+          "listens": 40
         },
         {
-          "title": "Doshiyomonaikuraini kimigasuki (どうしようもないくらいに君が好き)",
+          "title": "Fuyukan (浮遊感)",
           "artist": "Eve",
-          "listens": 33
+          "listens": 39
+        },
+        {
+          "title": "Short umbrella (ショートアンブレラ)",
+          "artist": "Eve",
+          "listens": 39
         },
         {
           "title": "Meru factory (メルファクトリー)",
           "artist": "Eve",
-          "listens": 33
+          "listens": 38
+        },
+        {
+          "title": "Doshiyomonaikuraini kimigasuki (どうしようもないくらいに君が好き)",
+          "artist": "Eve",
+          "listens": 37
         }
       ],
       "mostListenedTrack": {
         "title": "Demon dance tokyo (デーモンダンストーキョー)",
         "artist": "Eve",
-        "listens": 44
+        "listens": 48
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg",
       "coverAlt": "OFFICIAL NUMBER album cover"
@@ -156,308 +456,308 @@
       "album": "ウェザーステーション",
       "artist": "稲葉曇",
       "trackCount": 11,
-      "totalListens": 301,
+      "totalListens": 350,
       "tracks": [
         {
           "title": "Himitsu no Shougakusei (ひみつの小学生)",
           "artist": "稲葉曇",
-          "listens": 34
+          "listens": 38
         },
         {
           "title": "Lagtrain (ラグトレイン)",
+          "artist": "稲葉曇",
+          "listens": 37
+        },
+        {
+          "title": "Postshelter (ポストシェルター)",
+          "artist": "稲葉曇",
+          "listens": 33
+        },
+        {
+          "title": "Katamusubi (かたむすび)",
+          "artist": "稲葉曇",
+          "listens": 32
+        },
+        {
+          "title": "Rainy Boots (レイニーブーツ)",
           "artist": "稲葉曇",
           "listens": 32
         },
         {
           "title": "Hello Marina (ハローマリーナ)",
           "artist": "稲葉曇",
-          "listens": 29
-        },
-        {
-          "title": "Rainy Boots (レイニーブーツ)",
-          "artist": "稲葉曇",
-          "listens": 28
-        },
-        {
-          "title": "Katamusubi (かたむすび)",
-          "artist": "稲葉曇",
-          "listens": 27
+          "listens": 31
         },
         {
           "title": "Kiminikaikisen (きみに回帰線)",
           "artist": "稲葉曇",
-          "listens": 26
-        },
-        {
-          "title": "Postshelter (ポストシェルター)",
-          "artist": "稲葉曇",
-          "listens": 26
+          "listens": 31
         },
         {
           "title": "radar (レーダー)",
           "artist": "稲葉曇",
-          "listens": 26
-        },
-        {
-          "title": "Tenkyu (天泣)",
-          "artist": "稲葉曇",
-          "listens": 25
+          "listens": 30
         },
         {
           "title": "Haro no Sekibaku (ハルノ寂寞)",
           "artist": "稲葉曇",
-          "listens": 24
+          "listens": 29
+        },
+        {
+          "title": "Tenkyu (天泣)",
+          "artist": "稲葉曇",
+          "listens": 29
         },
         {
           "title": "Kazemachigusa (カゼマチグサ) (album ver.)",
           "artist": "稲葉曇",
-          "listens": 24
+          "listens": 28
         }
       ],
       "mostListenedTrack": {
         "title": "Himitsu no Shougakusei (ひみつの小学生)",
         "artist": "稲葉曇",
-        "listens": 34
+        "listens": 38
       },
       "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg",
       "coverAlt": "ウェザーステーション album cover"
     },
     {
-      "album": "廻人",
-      "artist": "Eve",
-      "trackCount": 14,
-      "totalListens": 247,
-      "tracks": [
-        {
-          "title": "Ao No Waltz (蒼のワルツ)",
-          "artist": "Eve",
-          "listens": 24
-        },
-        {
-          "title": "Avant (アヴァン)",
-          "artist": "Eve",
-          "listens": 22
-        },
-        {
-          "title": "Heikousen (平行線)",
-          "artist": "Eve × suis from ヨルシカ",
-          "listens": 20
-        },
-        {
-          "title": "Shinkai (心海)",
-          "artist": "Eve",
-          "listens": 20
-        },
-        {
-          "title": "Taikutsuwo Saienshinaide (退屈を再演しないで)",
-          "artist": "Eve",
-          "listens": 19
-        },
-        {
-          "title": "Yoruwahonoka (夜は仄か)",
-          "artist": "Eve",
-          "listens": 19
-        },
-        {
-          "title": "Kaikai Kitan (廻廻奇譚)",
-          "artist": "Eve",
-          "listens": 18
-        },
-        {
-          "title": "Gunjo Sanka (群青讃歌)",
-          "artist": "Eve",
-          "listens": 16
-        },
-        {
-          "title": "YOKU",
-          "artist": "Eve",
-          "listens": 16
-        },
-        {
-          "title": "Yuseiboushi (遊生夢死)",
-          "artist": "Eve",
-          "listens": 16
-        },
-        {
-          "title": "Kaizin (廻人)",
-          "artist": "Eve",
-          "listens": 15
-        },
-        {
-          "title": "Kotonoha (言の葉)",
-          "artist": "Eve",
-          "listens": 15
-        },
-        {
-          "title": "Aisai (藍才)",
-          "artist": "Eve",
-          "listens": 14
-        },
-        {
-          "title": "Bouto (暴徒)",
-          "artist": "Eve",
-          "listens": 13
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "Ao No Waltz (蒼のワルツ)",
-        "artist": "Eve",
-        "listens": 24
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_kaizin.jpg",
-      "coverAlt": "廻人 album cover"
-    },
-    {
       "album": "狂言",
       "artist": "Ado",
       "trackCount": 14,
-      "totalListens": 239,
+      "totalListens": 309,
       "tracks": [
-        {
-          "title": "Motherland (マザーランド)",
-          "artist": "Ado",
-          "listens": 20
-        },
-        {
-          "title": "Readymade (レディメイド)",
-          "artist": "Ado",
-          "listens": 20
-        },
-        {
-          "title": "Aitakute (会いたくて)",
-          "artist": "Ado",
-          "listens": 19
-        },
-        {
-          "title": "KokoroToIuNaNoFukakai (心という名の不可解)",
-          "artist": "Ado",
-          "listens": 19
-        },
-        {
-          "title": "Lucky Bruto (ラッキー・ブルート)",
-          "artist": "Ado",
-          "listens": 18
-        },
-        {
-          "title": "Ashura-chan (阿修羅ちゃん)",
-          "artist": "Ado",
-          "listens": 17
-        },
         {
           "title": "Kagakushu (過学習)",
           "artist": "Ado",
-          "listens": 17
+          "listens": 27
+        },
+        {
+          "title": "Motherland (マザーランド)",
+          "artist": "Ado",
+          "listens": 25
         },
         {
           "title": "Odo (踊)",
           "artist": "Ado",
-          "listens": 17
+          "listens": 24
+        },
+        {
+          "title": "Readymade (レディメイド)",
+          "artist": "Ado",
+          "listens": 24
+        },
+        {
+          "title": "Aitakute (会いたくて)",
+          "artist": "Ado",
+          "listens": 23
+        },
+        {
+          "title": "Lucky Bruto (ラッキー・ブルート)",
+          "artist": "Ado",
+          "listens": 23
         },
         {
           "title": "Usseewa (うっせぇわ)",
           "artist": "Ado",
-          "listens": 17
+          "listens": 23
+        },
+        {
+          "title": "KokoroToIuNaNoFukakai (心という名の不可解)",
+          "artist": "Ado",
+          "listens": 22
         },
         {
           "title": "Yoru No Pierrot (夜のピエロ)",
           "artist": "Ado",
-          "listens": 17
+          "listens": 21
+        },
+        {
+          "title": "Ashura-chan (阿修羅ちゃん)",
+          "artist": "Ado",
+          "listens": 20
         },
         {
           "title": "Gira Gira (ギラギラ)",
           "artist": "Ado",
-          "listens": 16
-        },
-        {
-          "title": "Fireworks (花火)",
-          "artist": "Ado",
-          "listens": 15
+          "listens": 20
         },
         {
           "title": "Domestic De Violence (ドメスティックでバイオレンス)",
           "artist": "Ado",
-          "listens": 14
+          "listens": 19
+        },
+        {
+          "title": "Fireworks (花火)",
+          "artist": "Ado",
+          "listens": 19
         },
         {
           "title": "FREEDOM",
           "artist": "Ado",
-          "listens": 13
+          "listens": 19
         }
       ],
       "mostListenedTrack": {
-        "title": "Motherland (マザーランド)",
+        "title": "Kagakushu (過学習)",
         "artist": "Ado",
-        "listens": 20
+        "listens": 27
       },
       "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg",
       "coverAlt": "狂言 album cover"
     },
     {
-      "album": "おとぎ",
+      "album": "廻人",
       "artist": "Eve",
-      "trackCount": 11,
-      "totalListens": 220,
+      "trackCount": 14,
+      "totalListens": 299,
       "tracks": [
         {
-          "title": "Last Dance (ラストダンス)",
+          "title": "Ao No Waltz (蒼のワルツ)",
+          "artist": "Eve",
+          "listens": 27
+        },
+        {
+          "title": "Avant (アヴァン)",
+          "artist": "Eve",
+          "listens": 26
+        },
+        {
+          "title": "Heikousen (平行線)",
+          "artist": "Eve × suis from ヨルシカ",
+          "listens": 24
+        },
+        {
+          "title": "Shinkai (心海)",
           "artist": "Eve",
           "listens": 24
         },
         {
-          "title": "Outsider (アウトサイダー)",
+          "title": "Taikutsuwo Saienshinaide (退屈を再演しないで)",
           "artist": "Eve",
           "listens": 23
         },
         {
-          "title": "Ambivalent (アンビバレント)",
+          "title": "Yoruwahonoka (夜は仄か)",
           "artist": "Eve",
-          "listens": 22
+          "listens": 23
         },
         {
-          "title": "Bokuramadaunderground (僕らまだアンダーグラウンド)",
+          "title": "Kaikai Kitan (廻廻奇譚)",
           "artist": "Eve",
-          "listens": 22
+          "listens": 21
         },
         {
-          "title": "KiminiSekai (君に世界)",
+          "title": "YOKU",
           "artist": "Eve",
-          "listens": 22
+          "listens": 21
         },
         {
-          "title": "slumber",
+          "title": "Gunjo Sanka (群青讃歌)",
+          "artist": "Eve",
+          "listens": 20
+        },
+        {
+          "title": "Yuseiboushi (遊生夢死)",
+          "artist": "Eve",
+          "listens": 20
+        },
+        {
+          "title": "Kaizin (廻人)",
           "artist": "Eve",
           "listens": 19
         },
         {
-          "title": "Tokyo Ghetto (トーキョーゲットー)",
-          "artist": "Eve",
-          "listens": 19
-        },
-        {
-          "title": "dawn",
+          "title": "Kotonoha (言の葉)",
           "artist": "Eve",
           "listens": 18
         },
         {
-          "title": "Kaede (楓)",
-          "artist": "Eve",
-          "listens": 18
-        },
-        {
-          "title": "Yadorigi (やどりぎ)",
+          "title": "Aisai (藍才)",
           "artist": "Eve",
           "listens": 17
         },
         {
-          "title": "Mayoigo (迷い子)",
+          "title": "Bouto (暴徒)",
           "artist": "Eve",
           "listens": 16
         }
       ],
       "mostListenedTrack": {
+        "title": "Ao No Waltz (蒼のワルツ)",
+        "artist": "Eve",
+        "listens": 27
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_kaizin.jpg",
+      "coverAlt": "廻人 album cover"
+    },
+    {
+      "album": "おとぎ",
+      "artist": "Eve",
+      "trackCount": 11,
+      "totalListens": 269,
+      "tracks": [
+        {
+          "title": "Last Dance (ラストダンス)",
+          "artist": "Eve",
+          "listens": 28
+        },
+        {
+          "title": "Ambivalent (アンビバレント)",
+          "artist": "Eve",
+          "listens": 27
+        },
+        {
+          "title": "KiminiSekai (君に世界)",
+          "artist": "Eve",
+          "listens": 27
+        },
+        {
+          "title": "Outsider (アウトサイダー)",
+          "artist": "Eve",
+          "listens": 27
+        },
+        {
+          "title": "Tokyo Ghetto (トーキョーゲットー)",
+          "artist": "Eve",
+          "listens": 26
+        },
+        {
+          "title": "Bokuramadaunderground (僕らまだアンダーグラウンド)",
+          "artist": "Eve",
+          "listens": 24
+        },
+        {
+          "title": "slumber",
+          "artist": "Eve",
+          "listens": 24
+        },
+        {
+          "title": "dawn",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "Yadorigi (やどりぎ)",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "Kaede (楓)",
+          "artist": "Eve",
+          "listens": 21
+        },
+        {
+          "title": "Mayoigo (迷い子)",
+          "artist": "Eve",
+          "listens": 21
+        }
+      ],
+      "mostListenedTrack": {
         "title": "Last Dance (ラストダンス)",
         "artist": "Eve",
-        "listens": 24
+        "listens": 28
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_otogi.jpg",
       "coverAlt": "おとぎ album cover"
@@ -466,37 +766,37 @@
       "album": "正しい偽りからの起床",
       "artist": "Zutomayo",
       "trackCount": 12,
-      "totalListens": 206,
+      "totalListens": 224,
       "tracks": [
         {
           "title": "Saturn (サターン)",
           "artist": "Zutomayo",
-          "listens": 37
-        },
-        {
-          "title": "Byoushinwo Kamu (秒針を噛む)",
-          "artist": "Zutomayo",
-          "listens": 36
+          "listens": 41
         },
         {
           "title": "Humanoid (ヒューマノイド)",
           "artist": "Zutomayo",
-          "listens": 35
+          "listens": 38
+        },
+        {
+          "title": "Byoushinwo Kamu (秒針を噛む)",
+          "artist": "Zutomayo",
+          "listens": 37
         },
         {
           "title": "Nouriueno Cracker (脳裏上のクラッカー)",
+          "artist": "Zutomayo",
+          "listens": 36
+        },
+        {
+          "title": "Kimigaite Mizuninaru (君がいて水になる)",
           "artist": "Zutomayo",
           "listens": 33
         },
         {
           "title": "Uni To Kuri (雲丹と栗)",
           "artist": "Zutomayo",
-          "listens": 30
-        },
-        {
-          "title": "Kimigaite Mizuninaru (君がいて水になる)",
-          "artist": "Zutomayo",
-          "listens": 29
+          "listens": 33
         },
         {
           "title": "サターン (Instrumental)",
@@ -532,7 +832,7 @@
       "mostListenedTrack": {
         "title": "Saturn (サターン)",
         "artist": "Zutomayo",
-        "listens": 37
+        "listens": 41
       },
       "coverSrc": "/images/albums/wmpl-imported/zutomayo_hisohiso-banashi.jpg",
       "coverAlt": "正しい偽りからの起床 album cover"
@@ -616,196 +916,261 @@
       "album": "Round Robin",
       "artist": "Eve",
       "trackCount": 10,
-      "totalListens": 116,
+      "totalListens": 156,
       "tracks": [
         {
           "title": "Meru factory (メルファクトリー)",
           "artist": "Eve",
-          "listens": 15
+          "listens": 19
         },
         {
           "title": "Shinjuku sick (新宿シック)",
           "artist": "Eve",
-          "listens": 14
-        },
-        {
-          "title": "Fallin My World (フォーリンマイワールド)",
-          "artist": "Eve",
-          "listens": 13
-        },
-        {
-          "title": "Miginimagirl (右に曲ガール)",
-          "artist": "Eve",
-          "listens": 13
+          "listens": 18
         },
         {
           "title": "Goodbye day (グッバイデイ)",
           "artist": "Eve",
-          "listens": 12
+          "listens": 17
         },
         {
-          "title": "Hantaishasen (反対車線)",
+          "title": "Fallin My World (フォーリンマイワールド)",
           "artist": "Eve",
-          "listens": 11
+          "listens": 16
         },
         {
           "title": "Ikanaide (いかないで album ver)",
           "artist": "Eve",
-          "listens": 11
+          "listens": 16
+        },
+        {
+          "title": "Miginimagirl (右に曲ガール)",
+          "artist": "Eve",
+          "listens": 16
         },
         {
           "title": "Namaemo shiranai anatani koi wo shita (名前も知らない貴方に恋をした)",
           "artist": "Eve",
-          "listens": 10
+          "listens": 15
         },
         {
           "title": "Fukanzen na shogu (不完全な処遇 album ver)",
           "artist": "Eve",
-          "listens": 9
+          "listens": 14
+        },
+        {
+          "title": "Hantaishasen (反対車線)",
+          "artist": "Eve",
+          "listens": 14
         },
         {
           "title": "Round Robin",
           "artist": "Eve",
-          "listens": 8
+          "listens": 11
         }
       ],
       "mostListenedTrack": {
         "title": "Meru factory (メルファクトリー)",
         "artist": "Eve",
-        "listens": 15
+        "listens": 19
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_round-robin.jpg",
       "coverAlt": "Round Robin album cover"
     },
     {
-      "album": "Wonder Word",
+      "album": "Smile",
       "artist": "Eve",
-      "trackCount": 7,
-      "totalListens": 98,
+      "trackCount": 13,
+      "totalListens": 149,
       "tracks": [
         {
-          "title": "Yoru wo koero (夜を超えろ)",
-          "artist": "Eve",
-          "listens": 21
-        },
-        {
-          "title": "Arukari seizin (アルカリ成人)",
-          "artist": "Eve",
-          "listens": 15
-        },
-        {
-          "title": "Shinkirou (蜃気楼)",
-          "artist": "Eve",
-          "listens": 15
-        },
-        {
-          "title": "Senkouhanabi (線香花火)",
+          "title": "LEO",
           "artist": "Eve",
           "listens": 14
         },
         {
-          "title": "Heroumerou (ヘロウメロウ)",
+          "title": "ognanje",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "Yamiyo (闇夜)",
+          "artist": "Eve",
+          "listens": 13
+        },
+        {
+          "title": "doublet",
           "artist": "Eve",
           "listens": 12
         },
         {
-          "title": "Mataashita (またあした)",
+          "title": "Karo No Kioku (虚の記憶)",
+          "artist": "Eve",
+          "listens": 12
+        },
+        {
+          "title": "Kokoroyohou (心予報)",
+          "artist": "Eve",
+          "listens": 12
+        },
+        {
+          "title": "mellow",
+          "artist": "Eve",
+          "listens": 12
+        },
+        {
+          "title": "Raison Detre (レーゾンデートル)",
+          "artist": "Eve",
+          "listens": 12
+        },
+        {
+          "title": "Asa Ga Furu (朝が降る)",
           "artist": "Eve",
           "listens": 11
         },
         {
-          "title": "Yoru no yume (よるのゆめ)",
+          "title": "Baumkuchen Edn (バウムクーヘンエンド)",
+          "artist": "Eve",
+          "listens": 11
+        },
+        {
+          "title": "Inochi No Tabekata (いのちの食べ方)",
+          "artist": "Eve",
+          "listens": 11
+        },
+        {
+          "title": "Uron Na Shokutaku (胡乱な食卓)",
+          "artist": "Eve",
+          "listens": 8
+        },
+        {
+          "title": "Hakugin (白銀)",
+          "artist": "Eve",
+          "listens": 7
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "LEO",
+        "artist": "Eve",
+        "listens": 14
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg",
+      "coverAlt": "Smile album cover"
+    },
+    {
+      "album": "文化",
+      "artist": "Eve",
+      "trackCount": 10,
+      "totalListens": 125,
+      "tracks": [
+        {
+          "title": "Anoko Secret (あの娘シークレット)",
+          "artist": "Eve",
+          "listens": 15
+        },
+        {
+          "title": "Okinimesumama (お気に召すまま)",
+          "artist": "Eve",
+          "listens": 15
+        },
+        {
+          "title": "Kaishingeki (会心劇)",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "paradigm (instrumental)",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "Dramaturgy (ドラマツルギー)",
+          "artist": "Eve",
+          "listens": 13
+        },
+        {
+          "title": "Furiwoshita (ふりをした。)",
+          "artist": "Eve",
+          "listens": 13
+        },
+        {
+          "title": "Homesick (ホームシック)",
+          "artist": "Eve",
+          "listens": 11
+        },
+        {
+          "title": "Nonsense Bungaku (ナンセンス文学)",
+          "artist": "Eve",
+          "listens": 11
+        },
+        {
+          "title": "fanfare (instrumental)",
           "artist": "Eve",
           "listens": 10
+        },
+        {
+          "title": "Hitsuji wo kazeote (羊を数えて)",
+          "artist": "Eve",
+          "listens": 9
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Anoko Secret (あの娘シークレット)",
+        "artist": "Eve",
+        "listens": 15
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_bunka.jpg",
+      "coverAlt": "文化 album cover"
+    },
+    {
+      "album": "Wonder Word",
+      "artist": "Eve",
+      "trackCount": 7,
+      "totalListens": 123,
+      "tracks": [
+        {
+          "title": "Yoru wo koero (夜を超えろ)",
+          "artist": "Eve",
+          "listens": 25
+        },
+        {
+          "title": "Arukari seizin (アルカリ成人)",
+          "artist": "Eve",
+          "listens": 19
+        },
+        {
+          "title": "Senkouhanabi (線香花火)",
+          "artist": "Eve",
+          "listens": 18
+        },
+        {
+          "title": "Shinkirou (蜃気楼)",
+          "artist": "Eve",
+          "listens": 17
+        },
+        {
+          "title": "Heroumerou (ヘロウメロウ)",
+          "artist": "Eve",
+          "listens": 16
+        },
+        {
+          "title": "Mataashita (またあした)",
+          "artist": "Eve",
+          "listens": 15
+        },
+        {
+          "title": "Yoru no yume (よるのゆめ)",
+          "artist": "Eve",
+          "listens": 13
         }
       ],
       "mostListenedTrack": {
         "title": "Yoru wo koero (夜を超えろ)",
         "artist": "Eve",
-        "listens": 21
+        "listens": 25
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_wonder-word.jpg",
       "coverAlt": "Wonder Word album cover"
-    },
-    {
-      "album": "Smile",
-      "artist": "Eve",
-      "trackCount": 13,
-      "totalListens": 96,
-      "tracks": [
-        {
-          "title": "ognanje",
-          "artist": "Eve",
-          "listens": 10
-        },
-        {
-          "title": "LEO",
-          "artist": "Eve",
-          "listens": 9
-        },
-        {
-          "title": "Yamiyo (闇夜)",
-          "artist": "Eve",
-          "listens": 9
-        },
-        {
-          "title": "doublet",
-          "artist": "Eve",
-          "listens": 8
-        },
-        {
-          "title": "Inochi No Tabekata (いのちの食べ方)",
-          "artist": "Eve",
-          "listens": 8
-        },
-        {
-          "title": "Kokoroyohou (心予報)",
-          "artist": "Eve",
-          "listens": 8
-        },
-        {
-          "title": "mellow",
-          "artist": "Eve",
-          "listens": 8
-        },
-        {
-          "title": "Raison Detre (レーゾンデートル)",
-          "artist": "Eve",
-          "listens": 8
-        },
-        {
-          "title": "Asa Ga Furu (朝が降る)",
-          "artist": "Eve",
-          "listens": 7
-        },
-        {
-          "title": "Baumkuchen Edn (バウムクーヘンエンド)",
-          "artist": "Eve",
-          "listens": 7
-        },
-        {
-          "title": "Karo No Kioku (虚の記憶)",
-          "artist": "Eve",
-          "listens": 7
-        },
-        {
-          "title": "Uron Na Shokutaku (胡乱な食卓)",
-          "artist": "Eve",
-          "listens": 4
-        },
-        {
-          "title": "Hakugin (白銀)",
-          "artist": "Eve",
-          "listens": 3
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "ognanje",
-        "artist": "Eve",
-        "listens": 10
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg",
-      "coverAlt": "Smile album cover"
     },
     {
       "album": "World Fragments",
@@ -966,71 +1331,6 @@
       },
       "coverSrc": "/images/albums/wmpl-imported/xi_quietus-ray.jpg",
       "coverAlt": "Quietus Ray album cover"
-    },
-    {
-      "album": "文化",
-      "artist": "Eve",
-      "trackCount": 10,
-      "totalListens": 84,
-      "tracks": [
-        {
-          "title": "Anoko Secret (あの娘シークレット)",
-          "artist": "Eve",
-          "listens": 11
-        },
-        {
-          "title": "Kaishingeki (会心劇)",
-          "artist": "Eve",
-          "listens": 10
-        },
-        {
-          "title": "Okinimesumama (お気に召すまま)",
-          "artist": "Eve",
-          "listens": 10
-        },
-        {
-          "title": "paradigm (instrumental)",
-          "artist": "Eve",
-          "listens": 10
-        },
-        {
-          "title": "Dramaturgy (ドラマツルギー)",
-          "artist": "Eve",
-          "listens": 9
-        },
-        {
-          "title": "Furiwoshita (ふりをした。)",
-          "artist": "Eve",
-          "listens": 8
-        },
-        {
-          "title": "fanfare (instrumental)",
-          "artist": "Eve",
-          "listens": 7
-        },
-        {
-          "title": "Homesick (ホームシック)",
-          "artist": "Eve",
-          "listens": 7
-        },
-        {
-          "title": "Nonsense Bungaku (ナンセンス文学)",
-          "artist": "Eve",
-          "listens": 7
-        },
-        {
-          "title": "Hitsuji wo kazeote (羊を数えて)",
-          "artist": "Eve",
-          "listens": 5
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "Anoko Secret (あの娘シークレット)",
-        "artist": "Eve",
-        "listens": 11
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_bunka.jpg",
-      "coverAlt": "文化 album cover"
     },
     {
       "album": "Blurryface",
@@ -1508,304 +1808,99 @@
       "coverAlt": "House of Balloons album cover"
     },
     {
-      "album": "Minecraft Volume Beta",
-      "artist": "C418",
-      "trackCount": 30,
-      "totalListens": 35,
+      "album": "残夢",
+      "artist": "Ado",
+      "trackCount": 16,
+      "totalListens": 42,
       "tracks": [
         {
-          "title": "Blind Spots",
-          "artist": "C418",
+          "title": "0",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "All Night Radio (オールナイトレディオ)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "Eien No Akuruhi (永遠のあくる日)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "I'm a Controversy (アタシは問題作)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "Kura Kura (クラクラ)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "missing (行方知れず)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "Nukegara (抜け空)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "Rebellion (リベリオン)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "Show (唱)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "Value",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "Chocolat Cadabra (ショコラカタブラ)",
+          "artist": "Ado",
           "listens": 2
         },
         {
-          "title": "Flake",
-          "artist": "C418",
+          "title": "DIGNITY",
+          "artist": "Ado",
           "listens": 2
         },
         {
-          "title": "Floating Trees",
-          "artist": "C418",
+          "title": "Himawari (向日葵)",
+          "artist": "Ado",
           "listens": 2
         },
         {
-          "title": "Haunt Muskie",
-          "artist": "C418",
+          "title": "Ibara (いばら)",
+          "artist": "Ado",
           "listens": 2
         },
         {
-          "title": "Strad",
-          "artist": "C418",
+          "title": "MIRROR",
+          "artist": "Ado",
           "listens": 2
         },
         {
-          "title": "Alpha",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Aria Math",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Ballad of the Cats",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Beginning 2",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Biome Fest",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Blocks",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Chirp",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Concrete Halls",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Dead Voxel",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Dreiton",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Eleven",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Far",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Intro",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Ki",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Kyoto",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Mall",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Mellohi",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Moog City 2",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Mutation",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Stal",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Taswell",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "The End",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Wait",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Ward",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Warmth",
-          "artist": "C418",
-          "listens": 1
+          "title": "RuLe (ルル)",
+          "artist": "Ado",
+          "listens": 2
         }
       ],
       "mostListenedTrack": {
-        "title": "Blind Spots",
-        "artist": "C418",
-        "listens": 2
+        "title": "0",
+        "artist": "Ado",
+        "listens": 3
       },
-      "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg",
-      "coverAlt": "Minecraft Volume Beta album cover"
-    },
-    {
-      "album": "Minecraft - Volume Alpha",
-      "artist": "C418",
-      "trackCount": 24,
-      "totalListens": 29,
-      "tracks": [
-        {
-          "title": "Danny",
-          "artist": "C418",
-          "listens": 2
-        },
-        {
-          "title": "Door",
-          "artist": "C418",
-          "listens": 2
-        },
-        {
-          "title": "Excuse",
-          "artist": "C418",
-          "listens": 2
-        },
-        {
-          "title": "Key",
-          "artist": "C418",
-          "listens": 2
-        },
-        {
-          "title": "Moog City",
-          "artist": "C418",
-          "listens": 2
-        },
-        {
-          "title": "Wet Hands",
-          "artist": "C418",
-          "listens": 2
-        },
-        {
-          "title": "Beginning",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Cat",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Chris",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Clark",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Death",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Dog",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Droopy Likes Ricochet",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Droopy Likes Your Face",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Dry Hands",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Equinoxe",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Haggstrom",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Living Mice",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Mice on Venus",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Minecraft",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Oxygene",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Subwoofer Lullaby",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Sweden",
-          "artist": "C418",
-          "listens": 1
-        },
-        {
-          "title": "Thirteen",
-          "artist": "C418",
-          "listens": 0
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "Danny",
-        "artist": "C418",
-        "listens": 2
-      },
-      "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg",
-      "coverAlt": "Minecraft - Volume Alpha album cover"
+      "coverSrc": "/images/albums/wmpl-imported/ado_zanmu.jpg",
+      "coverAlt": "残夢 album cover"
     },
     {
       "album": "Vessel",
@@ -2008,6 +2103,171 @@
       "coverAlt": "THE WORLD EP. FIN: WILL album cover"
     },
     {
+      "album": "Nausicaä of the Valley of the Wind Soundtrack",
+      "artist": "Joe Hisaishi",
+      "trackCount": 13,
+      "totalListens": 20,
+      "tracks": [
+        {
+          "title": "Kaze no Tani no Naushika - Opening theme",
+          "artist": "Joe Hisaishi",
+          "listens": 3
+        },
+        {
+          "title": "Fukai nite",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Kaze no Tani",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Mushi Mezuru Hime",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Pejite no Zenmetsu",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Tori no Hito - Ending theme",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Kushana no Shinryaku",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Mehve to Korubetto no Tatakai",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Naushika Rekuiemu",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Ohmu no Boso",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Ohmu to no Koryu",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Sento",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Yomigaeru Kyoshinhei",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Kaze no Tani no Naushika - Opening theme",
+        "artist": "Joe Hisaishi",
+        "listens": 3
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg",
+      "coverAlt": "Nausicaä of the Valley of the Wind Soundtrack album cover"
+    },
+    {
+      "album": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-",
+      "artist": "Joe Hisaishi",
+      "trackCount": 14,
+      "totalListens": 17,
+      "tracks": [
+        {
+          "title": "Carrying You - With Chorus",
+          "artist": "Suginami Junior Chorus",
+          "listens": 2
+        },
+        {
+          "title": "Morning in the Slag Ravine",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "The Girl Who Fell From the Sky",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "A Rowdy Brawl (- Pursuit)",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "A Sea of Clouds in the Moonlight",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "An Omen to Ruin",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Carrying You",
+          "artist": "Azumi Inoue",
+          "listens": 1
+        },
+        {
+          "title": "Castle in the Sky",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Destruction of Laputa",
+          "artist": "Suginami Junior Chorus",
+          "listens": 1
+        },
+        {
+          "title": "Discouraged Pazu",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Memories of Gondoa",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "On The Tiger Moth",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Robot Soldier (Resurrection - Rescue)",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Sheeta's Decision",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Carrying You - With Chorus",
+        "artist": "Suginami Junior Chorus",
+        "listens": 2
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg",
+      "coverAlt": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone- album cover"
+    },
+    {
       "album": "Starboy",
       "artist": "The Weeknd",
       "trackCount": 18,
@@ -2181,6 +2441,210 @@
       },
       "coverSrc": "/images/albums/wmpl-imported/tomorrow-x-together_the-chaos-chapter-fight-or-escape.jpg",
       "coverAlt": "The Chaos Chapter: FIGHT OR ESCAPE album cover"
+    },
+    {
+      "album": "My Neighbor Totoro (Original Soundtrack)",
+      "artist": "Joe Hisaishi",
+      "trackCount": 20,
+      "totalListens": 9,
+      "tracks": [
+        {
+          "title": "A Haunted House!",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "A Little Monster",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Evening Wind",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Hey Let’s Go - Opening Theme",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Let’s Go to the Hospital",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Mei and the Dust Bunnies",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Mother",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Not Afraid",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "The Village in May",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "A Huge Tree in the Tsukamori Forest",
+          "artist": "Joe Hisaishi",
+          "listens": 0
+        },
+        {
+          "title": "A Lost Child",
+          "artist": "Joe Hisaishi & Azumi Inoue",
+          "listens": 0
+        },
+        {
+          "title": "A Soaking Wet Creature",
+          "artist": "Joe Hisaishi",
+          "listens": 0
+        },
+        {
+          "title": "Cat Bus",
+          "artist": "Joe Hisaishi",
+          "listens": 0
+        },
+        {
+          "title": "Hey Let’s Go - With Chorus",
+          "artist": "Joe Hisaishi & Azumi Inoue",
+          "listens": 0
+        },
+        {
+          "title": "I’m So Glad",
+          "artist": "Joe Hisaishi",
+          "listens": 0
+        },
+        {
+          "title": "Mei Is Missing",
+          "artist": "Joe Hisaishi",
+          "listens": 0
+        },
+        {
+          "title": "Moonlight Flight",
+          "artist": "Joe Hisaishi",
+          "listens": 0
+        },
+        {
+          "title": "My Neighbor Totoro - Ending Theme",
+          "artist": "Joe Hisaishi & Azumi Inoue",
+          "listens": 0
+        },
+        {
+          "title": "The Path of the Wind - Instrumental",
+          "artist": "Joe Hisaishi",
+          "listens": 0
+        },
+        {
+          "title": "Totoro",
+          "artist": "Joe Hisaishi",
+          "listens": 0
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "A Haunted House!",
+        "artist": "Joe Hisaishi",
+        "listens": 1
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_my-neighbor-totoro-original-soundtrack.jpg",
+      "coverAlt": "My Neighbor Totoro (Original Soundtrack) album cover"
+    },
+    {
+      "album": "Christmas",
+      "artist": "Michael Bublé",
+      "trackCount": 16,
+      "totalListens": 0,
+      "tracks": [
+        {
+          "title": "All I Want for Christmas Is You",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Ave Maria",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Blue Christmas",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Christmas (Baby Please Come Home)",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Cold December Night",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Have Yourself a Merry Little Christmas",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Holly Jolly Christmas",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "It’s Beginning to Look a Lot Like Christmas",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "I’ll Be Home for Christmas",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Jingle Bells",
+          "artist": "Michael Bublé feat. The Puppini Sisters",
+          "listens": 0
+        },
+        {
+          "title": "Michael’s Christmas Greeting",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Mis deseos / Feliz Navidad",
+          "artist": "Michael Bublé duet with Thalía",
+          "listens": 0
+        },
+        {
+          "title": "Santa Baby",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Santa Claus Is Coming to Town",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "Silent Night",
+          "artist": "Michael Bublé",
+          "listens": 0
+        },
+        {
+          "title": "White Christmas",
+          "artist": "Michael Bublé duet with Shania Twain",
+          "listens": 0
+        }
+      ],
+      "mostListenedTrack": null
     }
   ]
 }

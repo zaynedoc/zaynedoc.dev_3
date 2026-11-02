@@ -58,10 +58,18 @@ export const albumSettings: AlbumSettings = {
       visibility: "hide"
     },
 
+    "Christmas": {
+      visibility: "hide"
+    },
+
     // TRACK OVERRIDES
 
     "Minecraft - Volume Alpha": { 
       favoriteTrackTitle: "Clark"
+    },
+
+    "Minecraft Volume Beta": {
+      favoriteTrackTitle: "Dreiton"
     },
 
     "Vessel": { 
