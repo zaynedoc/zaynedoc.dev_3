@@ -15,19 +15,19 @@ export const siteConfig = {
   pages: {
     home: {
       path: "/",
-      title: "Zayne Dockery | Software Developer, Designer & AppSec",
+      title: "Zayne Dockery: Portfolio",
       description:
         "Portfolio of Zayne Dockery, a developer, ambassador, and undergraduate focused on UX/UI, DevOps, and application security.",
     },
     roles: {
       path: "/roles",
-      title: "Experience & Roles | Zayne Dockery",
+      title: "Experience of Zayne Dockery",
       description:
         "Software engineering experience and community roles held by Zayne Dockery across UX/UI, DevOps, and application security.",
     },
     works: {
       path: "/works",
-      title: "Selected Work & Projects | Zayne Dockery",
+      title: "Projects of Zayne Dockery",
       description:
         "Selected projects by Zayne Dockery across UX/UI, software development, DevOps, and application security.",
     },
