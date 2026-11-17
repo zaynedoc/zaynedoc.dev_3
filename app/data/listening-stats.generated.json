@@ -1,222 +1,142 @@
 {
   "source": {
-    "capturedAtUtc": "2026-11-02T04:05:02.208435+00:00",
+    "capturedAtUtc": "2026-11-17T04:05:02.8702969+00:00",
     "countMode": "first-seen WMP counts plus positive deltas between active snapshots",
     "includeFirstSeenCounts": true,
-    "snapshot": "20261102T040502208Z.json",
-    "snapshotCount": 44
+    "snapshot": "20261117T040502870Z.json",
+    "snapshotCount": 58
   },
   "albums": [
-    {
-      "album": "Ao",
-      "artist": "Eve & Sou",
-      "trackCount": 13,
-      "totalListens": 604,
-      "tracks": [
-        {
-          "title": "NONSENSE BUNGAKU",
-          "artist": "Eve & Sou",
-          "listens": 51
-        },
-        {
-          "title": "TEIKOKU SHOUJO",
-          "artist": "Eve & Sou",
-          "listens": 51
-        },
-        {
-          "title": "TIG-HUG",
-          "artist": "Eve & Sou",
-          "listens": 49
-        },
-        {
-          "title": "DR.",
-          "artist": "Eve & Sou",
-          "listens": 48
-        },
-        {
-          "title": "HAKUSHI NO HARU",
-          "artist": "Eve & Sou",
-          "listens": 48
-        },
-        {
-          "title": "HAITA",
-          "artist": "Eve & Sou",
-          "listens": 47
-        },
-        {
-          "title": "INOCHI BAKKARI",
-          "artist": "Eve & Sou",
-          "listens": 47
-        },
-        {
-          "title": "MYOUJOU GYARAKUTIKA",
-          "artist": "Eve & Sou",
-          "listens": 46
-        },
-        {
-          "title": "CHOCOLATE TOWN",
-          "artist": "Eve & Sou",
-          "listens": 45
-        },
-        {
-          "title": "FAKE",
-          "artist": "Eve & Sou",
-          "listens": 44
-        },
-        {
-          "title": "MEBERU",
-          "artist": "Eve & Sou",
-          "listens": 44
-        },
-        {
-          "title": "ODORYA N SE",
-          "artist": "Eve & Sou",
-          "listens": 44
-        },
-        {
-          "title": "AME TO PETORA",
-          "artist": "Eve & Sou",
-          "listens": 40
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "NONSENSE BUNGAKU",
-        "artist": "Eve & Sou",
-        "listens": 51
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg",
-      "coverAlt": "Ao album cover"
-    },
     {
       "album": "Minecraft Volume Beta",
       "artist": "C418",
       "trackCount": 30,
-      "totalListens": 583,
+      "totalListens": 776,
       "tracks": [
-        {
-          "title": "Flake",
-          "artist": "C418",
-          "listens": 26
-        },
-        {
-          "title": "Blind Spots",
-          "artist": "C418",
-          "listens": 25
-        },
         {
           "title": "Ki",
           "artist": "C418",
-          "listens": 25
-        },
-        {
-          "title": "Moog City 2",
-          "artist": "C418",
-          "listens": 25
-        },
-        {
-          "title": "Beginning 2",
-          "artist": "C418",
-          "listens": 24
-        },
-        {
-          "title": "Blocks",
-          "artist": "C418",
-          "listens": 24
-        },
-        {
-          "title": "Floating Trees",
-          "artist": "C418",
-          "listens": 24
-        },
-        {
-          "title": "Kyoto",
-          "artist": "C418",
-          "listens": 24
-        },
-        {
-          "title": "Strad",
-          "artist": "C418",
-          "listens": 24
-        },
-        {
-          "title": "Taswell",
-          "artist": "C418",
-          "listens": 24
-        },
-        {
-          "title": "Ward",
-          "artist": "C418",
-          "listens": 24
-        },
-        {
-          "title": "Alpha",
-          "artist": "C418",
-          "listens": 23
-        },
-        {
-          "title": "Dead Voxel",
-          "artist": "C418",
-          "listens": 23
+          "listens": 36
         },
         {
           "title": "Dreiton",
           "artist": "C418",
-          "listens": 23
+          "listens": 35
         },
         {
-          "title": "Eleven",
+          "title": "Moog City 2",
           "artist": "C418",
-          "listens": 23
+          "listens": 34
         },
         {
-          "title": "Mutation",
+          "title": "Flake",
           "artist": "C418",
-          "listens": 23
+          "listens": 33
         },
         {
-          "title": "Chirp",
+          "title": "Alpha",
           "artist": "C418",
-          "listens": 22
+          "listens": 32
+        },
+        {
+          "title": "Blind Spots",
+          "artist": "C418",
+          "listens": 32
+        },
+        {
+          "title": "Dead Voxel",
+          "artist": "C418",
+          "listens": 32
         },
         {
           "title": "Intro",
           "artist": "C418",
-          "listens": 22
+          "listens": 32
+        },
+        {
+          "title": "Taswell",
+          "artist": "C418",
+          "listens": 32
+        },
+        {
+          "title": "Ward",
+          "artist": "C418",
+          "listens": 32
+        },
+        {
+          "title": "Blocks",
+          "artist": "C418",
+          "listens": 31
+        },
+        {
+          "title": "Floating Trees",
+          "artist": "C418",
+          "listens": 31
+        },
+        {
+          "title": "Mutation",
+          "artist": "C418",
+          "listens": 31
+        },
+        {
+          "title": "Strad",
+          "artist": "C418",
+          "listens": 31
+        },
+        {
+          "title": "Beginning 2",
+          "artist": "C418",
+          "listens": 30
+        },
+        {
+          "title": "Chirp",
+          "artist": "C418",
+          "listens": 30
+        },
+        {
+          "title": "Kyoto",
+          "artist": "C418",
+          "listens": 30
         },
         {
           "title": "Stal",
           "artist": "C418",
-          "listens": 22
+          "listens": 30
+        },
+        {
+          "title": "Eleven",
+          "artist": "C418",
+          "listens": 29
         },
         {
           "title": "Wait",
           "artist": "C418",
-          "listens": 22
-        },
-        {
-          "title": "Aria Math",
-          "artist": "C418",
-          "listens": 21
-        },
-        {
-          "title": "Far",
-          "artist": "C418",
-          "listens": 21
-        },
-        {
-          "title": "Mall",
-          "artist": "C418",
-          "listens": 21
-        },
-        {
-          "title": "Ballad of the Cats",
-          "artist": "C418",
-          "listens": 20
+          "listens": 29
         },
         {
           "title": "Warmth",
           "artist": "C418",
-          "listens": 20
+          "listens": 29
+        },
+        {
+          "title": "Far",
+          "artist": "C418",
+          "listens": 28
+        },
+        {
+          "title": "Ballad of the Cats",
+          "artist": "C418",
+          "listens": 27
+        },
+        {
+          "title": "Mall",
+          "artist": "C418",
+          "listens": 27
+        },
+        {
+          "title": "Aria Math",
+          "artist": "C418",
+          "listens": 25
         },
         {
           "title": "Haunt Muskie",
@@ -245,9 +165,9 @@
         }
       ],
       "mostListenedTrack": {
-        "title": "Flake",
+        "title": "Ki",
         "artist": "C418",
-        "listens": 26
+        "listens": 36
       },
       "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg",
       "coverAlt": "Minecraft Volume Beta album cover"
@@ -256,112 +176,112 @@
       "album": "Minecraft - Volume Alpha",
       "artist": "C418",
       "trackCount": 24,
-      "totalListens": 521,
+      "totalListens": 715,
       "tracks": [
         {
           "title": "Clark",
           "artist": "C418",
-          "listens": 35
+          "listens": 51
         },
         {
           "title": "Cat",
           "artist": "C418",
-          "listens": 27
+          "listens": 40
         },
         {
           "title": "Danny",
           "artist": "C418",
-          "listens": 26
-        },
-        {
-          "title": "Moog City",
-          "artist": "C418",
-          "listens": 26
-        },
-        {
-          "title": "Chris",
-          "artist": "C418",
-          "listens": 25
+          "listens": 36
         },
         {
           "title": "Droopy Likes Ricochet",
           "artist": "C418",
-          "listens": 25
-        },
-        {
-          "title": "Droopy Likes Your Face",
-          "artist": "C418",
-          "listens": 25
-        },
-        {
-          "title": "Equinoxe",
-          "artist": "C418",
-          "listens": 25
-        },
-        {
-          "title": "Door",
-          "artist": "C418",
-          "listens": 24
+          "listens": 35
         },
         {
           "title": "Excuse",
           "artist": "C418",
-          "listens": 24
+          "listens": 35
         },
         {
-          "title": "Oxygene",
+          "title": "Moog City",
           "artist": "C418",
-          "listens": 24
+          "listens": 35
         },
         {
-          "title": "Wet Hands",
+          "title": "Droopy Likes Your Face",
           "artist": "C418",
-          "listens": 24
-        },
-        {
-          "title": "Beginning",
-          "artist": "C418",
-          "listens": 23
-        },
-        {
-          "title": "Dog",
-          "artist": "C418",
-          "listens": 23
-        },
-        {
-          "title": "Dry Hands",
-          "artist": "C418",
-          "listens": 23
-        },
-        {
-          "title": "Haggstrom",
-          "artist": "C418",
-          "listens": 23
-        },
-        {
-          "title": "Key",
-          "artist": "C418",
-          "listens": 23
-        },
-        {
-          "title": "Mice on Venus",
-          "artist": "C418",
-          "listens": 23
-        },
-        {
-          "title": "Minecraft",
-          "artist": "C418",
-          "listens": 23
+          "listens": 34
         },
         {
           "title": "Subwoofer Lullaby",
           "artist": "C418",
-          "listens": 23
+          "listens": 34
+        },
+        {
+          "title": "Chris",
+          "artist": "C418",
+          "listens": 33
+        },
+        {
+          "title": "Dog",
+          "artist": "C418",
+          "listens": 33
+        },
+        {
+          "title": "Minecraft",
+          "artist": "C418",
+          "listens": 33
+        },
+        {
+          "title": "Door",
+          "artist": "C418",
+          "listens": 32
+        },
+        {
+          "title": "Dry Hands",
+          "artist": "C418",
+          "listens": 32
+        },
+        {
+          "title": "Equinoxe",
+          "artist": "C418",
+          "listens": 32
+        },
+        {
+          "title": "Oxygene",
+          "artist": "C418",
+          "listens": 32
+        },
+        {
+          "title": "Beginning",
+          "artist": "C418",
+          "listens": 31
+        },
+        {
+          "title": "Haggstrom",
+          "artist": "C418",
+          "listens": 31
+        },
+        {
+          "title": "Mice on Venus",
+          "artist": "C418",
+          "listens": 31
         },
         {
           "title": "Sweden",
           "artist": "C418",
-          "listens": 23
+          "listens": 31
+        },
+        {
+          "title": "Wet Hands",
+          "artist": "C418",
+          "listens": 31
+        },
+        {
+          "title": "Key",
+          "artist": "C418",
+          "listens": 29
         },
         {
           "title": "Living Mice",
@@ -382,31 +302,1181 @@
       "mostListenedTrack": {
         "title": "Clark",
         "artist": "C418",
-        "listens": 35
+        "listens": 51
       },
       "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg",
       "coverAlt": "Minecraft - Volume Alpha album cover"
     },
     {
-      "album": "OFFICIAL NUMBER",
-      "artist": "Eve",
-      "trackCount": 10,
-      "totalListens": 417,
+      "album": "蒼",
+      "artist": "Sou",
+      "trackCount": 13,
+      "totalListens": 647,
       "tracks": [
         {
-          "title": "Demon dance tokyo (デーモンダンストーキョー)",
+          "title": "帝国少女",
+          "artist": "Sou",
+          "listens": 56
+        },
+        {
+          "title": "Dr.",
+          "artist": "Eve",
+          "listens": 52
+        },
+        {
+          "title": "tig‐hug",
+          "artist": "Sou",
+          "listens": 52
+        },
+        {
+          "title": "ナンセンス文学",
+          "artist": "Sou",
+          "listens": 52
+        },
+        {
+          "title": "はくしの春",
+          "artist": "Sou",
+          "listens": 51
+        },
+        {
+          "title": "ハイタ",
+          "artist": "Eve × Sou",
+          "listens": 51
+        },
+        {
+          "title": "命ばっかり",
+          "artist": "Eve",
+          "listens": 50
+        },
+        {
+          "title": "おどりゃんせ",
+          "artist": "Eve × Sou",
+          "listens": 49
+        },
+        {
+          "title": "明星ギャラクティカ",
+          "artist": "Eve × Sou",
+          "listens": 49
+        },
+        {
+          "title": "メーベル",
           "artist": "Eve",
           "listens": 48
         },
         {
+          "title": "フェイク",
+          "artist": "Eve × Sou",
+          "listens": 47
+        },
+        {
+          "title": "チョコレートタウン",
+          "artist": "Sou",
+          "listens": 46
+        },
+        {
+          "title": "雨とペトラ",
+          "artist": "Eve",
+          "listens": 44
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "帝国少女",
+        "artist": "Sou",
+        "listens": 56
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg",
+      "coverAlt": "蒼 album cover"
+    },
+    {
+      "album": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)",
+      "artist": "岩田恭明",
+      "trackCount": 211,
+      "totalListens": 571,
+      "tracks": [
+        {
+          "title": "The King of Hyrule's Wish (ハイラル王の願い)",
+          "artist": "片岡真央",
+          "listens": 5
+        },
+        {
+          "title": "Zora's Domain (ゾーラの里)",
+          "artist": "岩田恭明",
+          "listens": 5
+        },
+        {
+          "title": "Battle (Shrine): Original Soundtrack ver. (戦闘(祠): Original Soundtrack ver.)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Blessing Shrine (祝福の祠)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Blight Ganon Appearance (カースガノン出現)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Champion's Protection (英傑の加護)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Divine Beast of Lightning Lookout Post (雷の神獣監視所)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Divine Beast of Water Vah Ruta (水の神獣 ヴァ・ルッタ)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Divine Beast Vah Naboris (Exploration) (神獣 ヴァ・ナボリス(探索))",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Divine Beast Vah Ruta (Exploration) (神獣 ヴァ・ルッタ(探索))",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Divine Beast Vah Ruta Battle (神獣 ヴァ・ルッタ戦)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Field (Heat) (フィールド(酷暑))",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Guardian's Line of Sight (ガーディアンの視線)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Hateno Village (ハテノ村)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Landing on the Ground (大地に降り立つ)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Main Theme (メインテーマ)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Master Kohga Battle (コーガ様戦)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Mini-Game Sandseal Rally (ミニゲーム スナザラシラリー)",
+          "artist": "若井淑",
+          "listens": 4
+        },
+        {
+          "title": "Mini-Game Test of Will (ミニゲーム ガマンくらべ)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Promise with Sidon (シドとの約束)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Race Start (レーススタート)",
+          "artist": "若井淑",
+          "listens": 4
+        },
+        {
+          "title": "Regrettable Race (無念なレース)",
+          "artist": "若井淑",
+          "listens": 4
+        },
+        {
+          "title": "Ruins (廃墟)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Sandseal Rally Award Ceremony (スナザラシラリー表彰式)",
+          "artist": "若井淑",
+          "listens": 4
+        },
+        {
+          "title": "Shrine of Trials (祠の試練)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Shrine of Trials: Start (祠の試練 開始)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Sibling Rocks Song (兄弟岩の唄)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "Stables (馬宿)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "The Beast Inhabiting the Castle (城に巣食う怪物)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "The Events of 100 Years Ago (100年前の出来事)",
+          "artist": "片岡真央 & 若井淑",
+          "listens": 4
+        },
+        {
+          "title": "The Old Man's Identity (老人の正体)",
+          "artist": "片岡真央",
+          "listens": 4
+        },
+        {
+          "title": "The Temple of Time (時の神殿跡)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "Urbosa Reunion (再会 ウルボザ)",
+          "artist": "岩田恭明",
+          "listens": 4
+        },
+        {
+          "title": "2014 E3 Trailer BGM (Bonus Track) (2014 E3 Trailer BGM)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Accommodation (High-Class) (宿泊（高級）)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Accommodation (Normal) (宿泊（普通）)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Arrogant Master Kohga (驕るコーガ様)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Battle (Field): Original Soundtrack ver. (戦闘(フィールド): Original Soundtrack ver.)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Battle (Inside Divine Beast) (戦闘（神獣内部）)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Bolson Construction Work (サクラダ工務店の仕事)",
+          "artist": "田村理遊",
+          "listens": 3
+        },
+        {
+          "title": "Calamity Ganon Battle — First Form (厄災ガノン戦・第一形態)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Calamity Ganon Battle — Second Form (厄災ガノン戦・第二形態)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Cave (洞窟)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Cooking Failure (料理失敗)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Cooking Success (料理成功)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Dark Beast Ganon Appearance (魔獣ガノン出現)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Daruk and the Divine Beast (ダルケルと神獣)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Decolorization (脱色)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Divine Beast of Lightning Vah Naboris (雷の神獣 ヴァ・ナボリス)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Divine Beast Vah Naboris Battle (神獣 ヴァ・ナボリス戦)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Dress-Up (ドレスアップ)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Entrusted to Riju (ルージュに託された)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Epilogue (エピローグ)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Field (Day) (フィールド(昼))",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Finding a Location for the First Time (初めてのロケーション)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Flight Range (飛行訓練場)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Game Over (ゲームオーバー)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Gerudo Town (ゲルドの街)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Get Fanfare (Sheikah Slate) (ゲットファンファーレ（シーカーストーン）)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Get Fanfare (Spirit Orb/Valuable Item) (ゲットファンファーレ（克服の証／貴重なアイテム）)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Great Hero Daruk (豪傑 ダルケル)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Great Plateau (高地)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Heart Container Appearance (ハートの器出現)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Hyrule Castle (ハイラル城)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Hyrule Castle Ganon's Roar (ハイラル城 ガノン咆哮)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Kass \"Ancient Song\" (カッシーワ ”古の詩”)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Kass \"Song of Legend\" (カッシーワ ”伝承の詩”)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Kass 'Champion Revali's Song' (カッシーワ ”英傑リーバルの詩”)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Kass 'Champion Urbosa's Song' (カッシーワ ”ウルボザの詩”)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Kass 'Song of the Swordsman' (カッシーワ ”剣士の詩”)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Kass 'The Champions' Ballad' (First Stage) (カッシーワ ”英傑たちの詩”（第一段階）)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Kass 'The Champions' Ballad' (Second Stage) (カッシーワ ”英傑たちの詩”（第ニ段階）)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Kass's Theme (Song of the Hero ver.) (カッシーワのテーマ(勇者の詩ver.))",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Kass's Theme (カッシーワのテーマ)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Korok Achievement Theme (コログのお題達成)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Korok Forest (コログの森)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Link's Memory 'Blades of the Yiga' (リンクの記憶「イーガ団の凶刃」)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Link's Memory 'Daruk's Mettle' (リンクの記憶「英傑 ダルケル」)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Link's Memory 'Despair' (リンクの記憶「絶望」)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Link's Memory 'Father and Daughter' (リンクの記憶「父の娘」)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Link's Memory 'Mipha's Touch' (リンクの記憶「英傑 ミファー」)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Link's Memory 'Revali's Flap' (リンクの記憶「英傑 リーバル」)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Link's Memory 'Urbosa's Hand' (リンクの記憶「英傑 ウルボザ」)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Link's Memory 'Zelda's Awakening' (リンクの記憶「覚醒 ゼルダ」)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Lonely Warrior Revali (孤高の戦士 リーバル)",
+          "artist": "阿部壮志",
+          "listens": 3
+        },
+        {
+          "title": "Lost Woods (迷いの森)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Majestic Divine Beast (堂々たる神獣)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Master Sword ~ The Deku Tree's Words (マスターソード〜デクの樹の言葉)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Meeting Riju (ルージュとの出会い)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Meeting Teba (テバとの出会い)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Meeting Yunobo (ユン坊よの出会い)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Memory of the Sacred Sword (聖なる剣の記憶)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Mini-Game Bird-Man Research Study (ミニゲーム 鳥人間チャレンジ)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Mini-Game Flight Range (ミニゲーム 飛行訓練)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Mipha and Sidon (ミファーとシド)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Mipha and the Divine Beast (ミファーと神獣)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Mipha Reunion (再会 ミファー)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Molduga Battle (モルドラジーク戦)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Monk Maz Koshia (導師 ミィズ・キョシア)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Mysterious Old Man (謎の老人)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "New Record (新記録)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Nintendo Switch Presentation 2017 Trailer BGM (Bonus Track) (Nintendo Switch Presentation 2017 Trailer BGM)",
+          "artist": "山下康介",
+          "listens": 3
+        },
+        {
+          "title": "Notts's Birdsong (ナンのさえずり)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Opening (オープニング)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Recovered Memory (The Champions' Ballad ver.) (甦る記憶（英傑たちの詩ver.）)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Reviving Malanya (マーロン復活)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Riding (Day) (襲歩(昼))",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Rito Village (リトの村)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Sheikah Tower (シーカータワー)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Sheikah Tower: Activated (シーカータワー 起動)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Sheikah Tower: Appearance (シーカータワー 出現)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Sidon's Theme (シドのテーマ)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Staff Roll (スタッフロール)",
+          "artist": "片岡真央, 岩田恭明 & 若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Talus Battle (イワロック戦)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Tarrey Town Wedding (イチカラ村の結婚式)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "The Champions' Ballad Ending (英傑たちの詩 エンディング)",
+          "artist": "岩田恭明 & 片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Thunderblight Ganon Battle (雷のカースガノン戦)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Urbosa and the Divine Beast (ウルボザと神獣)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Waterblight Ganon Battle (水のカースガノン戦)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Waterside (水辺)",
+          "artist": "若井淑",
+          "listens": 3
+        },
+        {
+          "title": "Windblight Ganon Battle (風のカースガノン戦)",
+          "artist": "岩田恭明",
+          "listens": 3
+        },
+        {
+          "title": "Yiga Clan Hideout (イーガ団のアジト)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Zelda's Wish (ゼルダの願い)",
+          "artist": "片岡真央",
+          "listens": 3
+        },
+        {
+          "title": "Activate! The Power of the Champions (発動! 英傑の力)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Akkala Ancient Tech Lab (アッカレ古代研究所)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Ancient Folklore (太古の伝承)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Attendant of the Sacred Spring (聖なる泉の使い)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Blood Moon (赤き月)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Brilliant Urbosa (華麗なるウルボザ)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Calamity Ganon Appearance (厄災ガノン出現)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Champion Shrine (英傑の祠)",
+          "artist": "阿部壮志",
+          "listens": 2
+        },
+        {
+          "title": "Dark Beast Ganon Battle (魔獣ガノン戦)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Daruk Reunion (再会 ダルケル)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Decorating with the Picture (写し絵を飾る)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Divine Beast of Flame Vah Rudania (炎の神獣 ヴァ・ルーダニア)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Divine Beast of Wind Vah Medoh (風の神獣 ヴァ・メドー)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Divine Beast Vah Medoh Battle (神獣 ヴァ・メドー戦)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Divine Beast Vah Rudania (Exploration) (神獣 ヴァ・ルーダニア(探索))",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Divine Beast Vah Rudania Battle (神獣 ヴァ・ルーダニア戦)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Do You Remember? (覚えていますか?)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Dyeing (染色)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Field (Freezing Climate) (フィールド(極寒))",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Field (Night) (フィールド(夜))",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Field (Scorching Climate) (フィールド(灼熱))",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Final Trial (最終試練)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Fireblight Ganon Battle (炎のカースガノン戦)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Get Fanfare (Heart Container/Stamina Vessel) (ゲットファンファーレ（ハート／がんばりの器）)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Get Fanfare (Important Item) (ゲットファンファーレ（大切なもの）)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Get Fanfare (Item) (ゲットファンファーレ（アイテム）)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Goron City (ゴロンシティ)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Great Cooking Success (料理大成功)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Great Fairy Fountain (大妖精の泉)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Great Fairy Revival (大妖精 復活)",
+          "artist": "片岡真央 & 若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Guardian Battle (ガーディアン戦)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Hateno Ancient Tech Lab (ハテノ古代研究所)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Hestu Dance! (ボックリンダンス!)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Hyrule Castle Town Ruins (ハイラル城下町跡)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Impa's Story (インパの語り)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Kakariko Village (カカリコ村)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Kara Kara Bazaar (カラカラバザール)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Kass 'Champion Daruk's Song' (カッシーワ ”ダルケルの詩”)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Kass 'The Champions' Ballad' (Fourth Stage) (カッシーワ ”英傑たちの詩”（第四段階）)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Kass 'The Champions' Ballad' (Third Stage) (カッシーワ ”英傑たちの詩”（第三段階）)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Killing Time (暇つぶし)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Kilton (キルトン)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Korok Appearance (コログ登場)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Lava Area (溶岩地帯)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Link's Memory 'A Premonition' (リンクの記憶「予兆」)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Link's Memory 'Resolve and Grief' (リンクの記憶「決意と苦悩」)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Link's Memory 'Return of Calamity Ganon' (リンクの記憶「大厄災 復活」)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Link's Memory 'Silent Princess' (リンクの記憶「姫しずか」)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Link's Memory 'Slumbering Power' (リンクの記憶「訪わぬ力」)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Link's Memory 'Subdued Ceremony' (リンクの記憶「仮初めの儀式」)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Link's Memory 'To Mount Lanayru' (リンクの記憶「ラネール山へ」)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Lodge (民家)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Lord of the Mountain (サトリ山のヌシ)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Lurelin Village (ウオトリー村)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Malanya Spring (マーロンの泉)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Malanya's Dance (マーロンの舞)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Master Sword ~ The Deku Tree's Praise (マスターソード〜デクの樹の称賛)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Meeting Sidon (シドとの出会い)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Meeting the Deku Tree (デクの樹との出会い)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Mini-Game Horseback Archery (ミニゲーム 流鏑馬)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Mini-Game Snowball Bowling (ミニゲーム 雪玉ボウル)",
+          "artist": "片岡真央 & 岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "North Abandoned Mine (北の廃坑)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Puzzle Solved Sound (謎解き正解音)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Repairing (修理)",
+          "artist": "安田拓朗",
+          "listens": 2
+        },
+        {
+          "title": "Revali and the Divine Beast (リーバルと神獣)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Revali Reunion (再会 リーバル)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Riding (Night) (襲歩(夜))",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Rito Village (Kass and Five Sisters ver.) (リトの村(カッシーワと五姉妹ver.))",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Sheikah Slate Augmenting (シーカーストーン 強化)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Stone Monument Appearance (石碑出現)",
+          "artist": "阿部壮志",
+          "listens": 2
+        },
+        {
+          "title": "Teba's Encouragement (テバの激励)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "The Champions' Ballad (英傑たちのバラッド)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "The Sacred Princess and the Five Champions (聖なる姫と五人の英傑)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "To Tarrey Town (イチカラ村へ)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Trial of the Sword Achievement (剣の試練 達成)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Wasteland (荒地)",
+          "artist": "片岡真央",
+          "listens": 2
+        },
+        {
+          "title": "Watch Out for the Flowers (花を踏まないで)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "When the 12 Memories are Collected (十二の記憶が揃う時)",
+          "artist": "若井淑",
+          "listens": 2
+        },
+        {
+          "title": "Yunobo's Chance (ユン坊にもらったチャンス)",
+          "artist": "岩田恭明",
+          "listens": 2
+        },
+        {
+          "title": "Divine Beast Vah Medoh (Exploration) (神獣 ヴァ・メドー(探索))",
+          "artist": "岩田恭明",
+          "listens": 1
+        },
+        {
+          "title": "Hinox Battle (ヒノックス戦)",
+          "artist": "若井淑",
+          "listens": 1
+        },
+        {
+          "title": "Humming of the Mine (採掘場の鼻歌)",
+          "artist": "岩田恭明",
+          "listens": 1
+        },
+        {
+          "title": "Kass 'Champion Mipha's Song' (カッシーワ ”英傑ミファーの詩”)",
+          "artist": "岩田恭明",
+          "listens": 1
+        },
+        {
+          "title": "Master Sword in Hand (マスターソートを我が手に)",
+          "artist": "岩田恭明",
+          "listens": 1
+        },
+        {
+          "title": "Omen of the Blood Moon (赤き月の予兆)",
+          "artist": "片岡真央",
+          "listens": 1
+        },
+        {
+          "title": "Possessed Naydra (憑りつかれたネルドラ)",
+          "artist": "片岡真央",
+          "listens": 1
+        },
+        {
+          "title": "Recovered Memory (甦る記憶)",
+          "artist": "片岡真央",
+          "listens": 1
+        },
+        {
+          "title": "Tarrey Town (イチカラ村)",
+          "artist": "岩田恭明",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "The King of Hyrule's Wish (ハイラル王の願い)",
+        "artist": "片岡真央",
+        "listens": 5
+      },
+      "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg",
+      "coverAlt": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック) album cover"
+    },
+    {
+      "album": "OFFICIAL NUMBER",
+      "artist": "Eve",
+      "trackCount": 10,
+      "totalListens": 429,
+      "tracks": [
+        {
+          "title": "Demon dance tokyo (デーモンダンストーキョー)",
+          "artist": "Eve",
+          "listens": 50
+        },
+        {
           "title": "Wakusei loop (惑星ループ)",
           "artist": "Eve",
-          "listens": 47
+          "listens": 48
         },
         {
           "title": "Rabbit gray (ラビットグレイ)",
           "artist": "Eve",
-          "listens": 44
+          "listens": 46
         },
         {
           "title": "Caravan (キャラバン)",
@@ -419,35 +1489,35 @@
           "listens": 42
         },
         {
-          "title": "sister",
-          "artist": "Eve",
-          "listens": 40
-        },
-        {
           "title": "Fuyukan (浮遊感)",
           "artist": "Eve",
-          "listens": 39
+          "listens": 41
         },
         {
-          "title": "Short umbrella (ショートアンブレラ)",
+          "title": "sister",
           "artist": "Eve",
-          "listens": 39
+          "listens": 41
         },
         {
           "title": "Meru factory (メルファクトリー)",
           "artist": "Eve",
-          "listens": 38
+          "listens": 40
+        },
+        {
+          "title": "Short umbrella (ショートアンブレラ)",
+          "artist": "Eve",
+          "listens": 40
         },
         {
           "title": "Doshiyomonaikuraini kimigasuki (どうしようもないくらいに君が好き)",
           "artist": "Eve",
-          "listens": 37
+          "listens": 38
         }
       ],
       "mostListenedTrack": {
         "title": "Demon dance tokyo (デーモンダンストーキョー)",
         "artist": "Eve",
-        "listens": 48
+        "listens": 50
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg",
       "coverAlt": "OFFICIAL NUMBER album cover"
@@ -456,82 +1526,172 @@
       "album": "ウェザーステーション",
       "artist": "稲葉曇",
       "trackCount": 11,
-      "totalListens": 350,
+      "totalListens": 378,
       "tracks": [
         {
           "title": "Himitsu no Shougakusei (ひみつの小学生)",
           "artist": "稲葉曇",
-          "listens": 38
+          "listens": 40
         },
         {
           "title": "Lagtrain (ラグトレイン)",
           "artist": "稲葉曇",
-          "listens": 37
+          "listens": 40
+        },
+        {
+          "title": "Kiminikaikisen (きみに回帰線)",
+          "artist": "稲葉曇",
+          "listens": 35
         },
         {
           "title": "Postshelter (ポストシェルター)",
+          "artist": "稲葉曇",
+          "listens": 35
+        },
+        {
+          "title": "Rainy Boots (レイニーブーツ)",
+          "artist": "稲葉曇",
+          "listens": 35
+        },
+        {
+          "title": "Hello Marina (ハローマリーナ)",
+          "artist": "稲葉曇",
+          "listens": 34
+        },
+        {
+          "title": "Haro no Sekibaku (ハルノ寂寞)",
           "artist": "稲葉曇",
           "listens": 33
         },
         {
           "title": "Katamusubi (かたむすび)",
           "artist": "稲葉曇",
-          "listens": 32
-        },
-        {
-          "title": "Rainy Boots (レイニーブーツ)",
-          "artist": "稲葉曇",
-          "listens": 32
-        },
-        {
-          "title": "Hello Marina (ハローマリーナ)",
-          "artist": "稲葉曇",
-          "listens": 31
-        },
-        {
-          "title": "Kiminikaikisen (きみに回帰線)",
-          "artist": "稲葉曇",
-          "listens": 31
-        },
-        {
-          "title": "radar (レーダー)",
-          "artist": "稲葉曇",
-          "listens": 30
-        },
-        {
-          "title": "Haro no Sekibaku (ハルノ寂寞)",
-          "artist": "稲葉曇",
-          "listens": 29
+          "listens": 33
         },
         {
           "title": "Tenkyu (天泣)",
           "artist": "稲葉曇",
-          "listens": 29
+          "listens": 32
+        },
+        {
+          "title": "radar (レーダー)",
+          "artist": "稲葉曇",
+          "listens": 31
         },
         {
           "title": "Kazemachigusa (カゼマチグサ) (album ver.)",
           "artist": "稲葉曇",
-          "listens": 28
+          "listens": 30
         }
       ],
       "mostListenedTrack": {
         "title": "Himitsu no Shougakusei (ひみつの小学生)",
         "artist": "稲葉曇",
-        "listens": 38
+        "listens": 40
       },
       "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg",
       "coverAlt": "ウェザーステーション album cover"
     },
     {
+      "album": "廻人",
+      "artist": "Eve",
+      "trackCount": 14,
+      "totalListens": 339,
+      "tracks": [
+        {
+          "title": "Avant (アヴァン)",
+          "artist": "Eve",
+          "listens": 29
+        },
+        {
+          "title": "Heikousen (平行線)",
+          "artist": "Eve × suis from ヨルシカ",
+          "listens": 29
+        },
+        {
+          "title": "Ao No Waltz (蒼のワルツ)",
+          "artist": "Eve",
+          "listens": 28
+        },
+        {
+          "title": "Yoruwahonoka (夜は仄か)",
+          "artist": "Eve",
+          "listens": 27
+        },
+        {
+          "title": "Shinkai (心海)",
+          "artist": "Eve",
+          "listens": 26
+        },
+        {
+          "title": "Taikutsuwo Saienshinaide (退屈を再演しないで)",
+          "artist": "Eve",
+          "listens": 25
+        },
+        {
+          "title": "YOKU",
+          "artist": "Eve",
+          "listens": 24
+        },
+        {
+          "title": "Gunjo Sanka (群青讃歌)",
+          "artist": "Eve",
+          "listens": 23
+        },
+        {
+          "title": "Kaikai Kitan (廻廻奇譚)",
+          "artist": "Eve",
+          "listens": 23
+        },
+        {
+          "title": "Kaizin (廻人)",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "Kotonoha (言の葉)",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "Yuseiboushi (遊生夢死)",
+          "artist": "Eve",
+          "listens": 22
+        },
+        {
+          "title": "Aisai (藍才)",
+          "artist": "Eve",
+          "listens": 20
+        },
+        {
+          "title": "Bouto (暴徒)",
+          "artist": "Eve",
+          "listens": 19
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Avant (アヴァン)",
+        "artist": "Eve",
+        "listens": 29
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_kaizin.jpg",
+      "coverAlt": "廻人 album cover"
+    },
+    {
       "album": "狂言",
       "artist": "Ado",
       "trackCount": 14,
-      "totalListens": 309,
+      "totalListens": 323,
       "tracks": [
         {
           "title": "Kagakushu (過学習)",
           "artist": "Ado",
-          "listens": 27
+          "listens": 29
+        },
+        {
+          "title": "Readymade (レディメイド)",
+          "artist": "Ado",
+          "listens": 26
         },
         {
           "title": "Motherland (マザーランド)",
@@ -544,7 +1704,7 @@
           "listens": 24
         },
         {
-          "title": "Readymade (レディメイド)",
+          "title": "Usseewa (うっせぇわ)",
           "artist": "Ado",
           "listens": 24
         },
@@ -559,9 +1719,14 @@
           "listens": 23
         },
         {
-          "title": "Usseewa (うっせぇわ)",
+          "title": "Yoru No Pierrot (夜のピエロ)",
           "artist": "Ado",
           "listens": 23
+        },
+        {
+          "title": "Gira Gira (ギラギラ)",
+          "artist": "Ado",
+          "listens": 22
         },
         {
           "title": "KokoroToIuNaNoFukakai (心という名の不可解)",
@@ -569,7 +1734,12 @@
           "listens": 22
         },
         {
-          "title": "Yoru No Pierrot (夜のピエロ)",
+          "title": "Domestic De Violence (ドメスティックでバイオレンス)",
+          "artist": "Ado",
+          "listens": 21
+        },
+        {
+          "title": "FREEDOM",
           "artist": "Ado",
           "listens": 21
         },
@@ -579,224 +1749,654 @@
           "listens": 20
         },
         {
-          "title": "Gira Gira (ギラギラ)",
-          "artist": "Ado",
-          "listens": 20
-        },
-        {
-          "title": "Domestic De Violence (ドメスティックでバイオレンス)",
-          "artist": "Ado",
-          "listens": 19
-        },
-        {
           "title": "Fireworks (花火)",
           "artist": "Ado",
-          "listens": 19
-        },
-        {
-          "title": "FREEDOM",
-          "artist": "Ado",
-          "listens": 19
+          "listens": 20
         }
       ],
       "mostListenedTrack": {
         "title": "Kagakushu (過学習)",
         "artist": "Ado",
-        "listens": 27
+        "listens": 29
       },
       "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg",
       "coverAlt": "狂言 album cover"
     },
     {
-      "album": "廻人",
-      "artist": "Eve",
-      "trackCount": 14,
-      "totalListens": 299,
-      "tracks": [
-        {
-          "title": "Ao No Waltz (蒼のワルツ)",
-          "artist": "Eve",
-          "listens": 27
-        },
-        {
-          "title": "Avant (アヴァン)",
-          "artist": "Eve",
-          "listens": 26
-        },
-        {
-          "title": "Heikousen (平行線)",
-          "artist": "Eve × suis from ヨルシカ",
-          "listens": 24
-        },
-        {
-          "title": "Shinkai (心海)",
-          "artist": "Eve",
-          "listens": 24
-        },
-        {
-          "title": "Taikutsuwo Saienshinaide (退屈を再演しないで)",
-          "artist": "Eve",
-          "listens": 23
-        },
-        {
-          "title": "Yoruwahonoka (夜は仄か)",
-          "artist": "Eve",
-          "listens": 23
-        },
-        {
-          "title": "Kaikai Kitan (廻廻奇譚)",
-          "artist": "Eve",
-          "listens": 21
-        },
-        {
-          "title": "YOKU",
-          "artist": "Eve",
-          "listens": 21
-        },
-        {
-          "title": "Gunjo Sanka (群青讃歌)",
-          "artist": "Eve",
-          "listens": 20
-        },
-        {
-          "title": "Yuseiboushi (遊生夢死)",
-          "artist": "Eve",
-          "listens": 20
-        },
-        {
-          "title": "Kaizin (廻人)",
-          "artist": "Eve",
-          "listens": 19
-        },
-        {
-          "title": "Kotonoha (言の葉)",
-          "artist": "Eve",
-          "listens": 18
-        },
-        {
-          "title": "Aisai (藍才)",
-          "artist": "Eve",
-          "listens": 17
-        },
-        {
-          "title": "Bouto (暴徒)",
-          "artist": "Eve",
-          "listens": 16
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "Ao No Waltz (蒼のワルツ)",
-        "artist": "Eve",
-        "listens": 27
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_kaizin.jpg",
-      "coverAlt": "廻人 album cover"
-    },
-    {
       "album": "おとぎ",
       "artist": "Eve",
       "trackCount": 11,
-      "totalListens": 269,
+      "totalListens": 304,
       "tracks": [
-        {
-          "title": "Last Dance (ラストダンス)",
-          "artist": "Eve",
-          "listens": 28
-        },
         {
           "title": "Ambivalent (アンビバレント)",
           "artist": "Eve",
-          "listens": 27
+          "listens": 31
         },
         {
-          "title": "KiminiSekai (君に世界)",
+          "title": "Last Dance (ラストダンス)",
           "artist": "Eve",
-          "listens": 27
+          "listens": 31
         },
         {
           "title": "Outsider (アウトサイダー)",
           "artist": "Eve",
-          "listens": 27
+          "listens": 30
+        },
+        {
+          "title": "KiminiSekai (君に世界)",
+          "artist": "Eve",
+          "listens": 29
         },
         {
           "title": "Tokyo Ghetto (トーキョーゲットー)",
           "artist": "Eve",
-          "listens": 26
-        },
-        {
-          "title": "Bokuramadaunderground (僕らまだアンダーグラウンド)",
-          "artist": "Eve",
-          "listens": 24
+          "listens": 29
         },
         {
           "title": "slumber",
           "artist": "Eve",
-          "listens": 24
-        },
-        {
-          "title": "dawn",
-          "artist": "Eve",
-          "listens": 22
+          "listens": 28
         },
         {
           "title": "Yadorigi (やどりぎ)",
           "artist": "Eve",
-          "listens": 22
+          "listens": 27
         },
         {
-          "title": "Kaede (楓)",
+          "title": "Bokuramadaunderground (僕らまだアンダーグラウンド)",
           "artist": "Eve",
-          "listens": 21
+          "listens": 26
+        },
+        {
+          "title": "dawn",
+          "artist": "Eve",
+          "listens": 25
         },
         {
           "title": "Mayoigo (迷い子)",
           "artist": "Eve",
-          "listens": 21
+          "listens": 25
+        },
+        {
+          "title": "Kaede (楓)",
+          "artist": "Eve",
+          "listens": 23
         }
       ],
       "mostListenedTrack": {
-        "title": "Last Dance (ラストダンス)",
+        "title": "Ambivalent (アンビバレント)",
         "artist": "Eve",
-        "listens": 28
+        "listens": 31
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_otogi.jpg",
       "coverAlt": "おとぎ album cover"
     },
     {
+      "album": "UNDERTALE",
+      "artist": "Toby Fox",
+      "trackCount": 103,
+      "totalListens": 238,
+      "tracks": [
+        {
+          "title": "Snowy",
+          "artist": "Toby Fox",
+          "listens": 9
+        },
+        {
+          "title": "Home",
+          "artist": "Toby Fox",
+          "listens": 8
+        },
+        {
+          "title": "Mysterious Place",
+          "artist": "Toby Fox",
+          "listens": 8
+        },
+        {
+          "title": "Chill",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "Ghost Fight",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "Good Night",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "Hotel",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "It’s Raining Somewhere Else",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "Ruins",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "Uwa!! So Temperate ♫",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "Another Medium",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Fallen Down",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Quiet Water",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Reunited",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Amalgam",
+          "artist": "Toby Fox",
+          "listens": 5
+        },
+        {
+          "title": "Respite",
+          "artist": "Toby Fox",
+          "listens": 5
+        },
+        {
+          "title": "Anticipation",
+          "artist": "Toby Fox",
+          "listens": 3
+        },
+        {
+          "title": "Determination",
+          "artist": "Toby Fox",
+          "listens": 3
+        },
+        {
+          "title": "Enemy Approaching",
+          "artist": "Toby Fox",
+          "listens": 3
+        },
+        {
+          "title": "Once Upon a Time",
+          "artist": "Toby Fox",
+          "listens": 3
+        },
+        {
+          "title": "Unnecessary Tension",
+          "artist": "Toby Fox",
+          "listens": 3
+        },
+        {
+          "title": "Barrier",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Bereavement",
+          "artist": "flashygoodness",
+          "listens": 2
+        },
+        {
+          "title": "Bonetrousle",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Can You Really Call This a Hotel, I Didn’t Receive a Mint on My Pillow or Anything",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Confession",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Danger Mystery",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Dating Fight!",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Dating Start (FM version)",
+          "artist": "coda",
+          "listens": 2
+        },
+        {
+          "title": "Dating Start!",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Dating Tense!",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Death Report",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Dogbass",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Dogsong",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Heartache",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Home (music box)",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Live Report",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Nyeh Heh Heh!",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Oh! Dungeon",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Oh! One True Love",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Premonition",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Run!",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "sans.",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Shop",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Snowdin Town",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Spider Dance",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Start Menu",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Stronger Monsters",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Undyne",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Uwa!! So HEATS!! ♫",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Uwa‼ So Holiday ♫",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Waterfall",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Wrong Enemy!?",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Your Best Friend",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Alphys",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "An Ending",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "ASGORE",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Battle Against a True Hero",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Bergentrückung",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Bird That Carries You Over a Disproportionately Small Gap",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Bring It In, Guys!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Burn in Despair!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "But the Earth Refused to Die",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "CORE",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "CORE Approach",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Death by Glamour",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Don’t Give Up",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Dummy!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Fallen Down (reprise)",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Final Power",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Finale",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "For the Fans",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Ghouliday",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Here We Are",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "His Theme",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Hopes and Dreams",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "It’s Showtime!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Last Episode!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Last Goodbye",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Long Elevator",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "MEGALOVANIA",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Memory",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Menu (full)",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Metal Crusher",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "NGAHHH!!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Oh My…",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Ooo",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Pathetic House",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Power of -NEO-",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "SAVE the World",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "She’s Playing Piano",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Small Shock",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Song That Might Play When You Fight Sans",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Spear of Justice",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Spooktune",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Spookwave",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Tem Shop",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Temmie Village",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "The Choice",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Thundersnail",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Undertale",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "You Idiot",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Your Best Nightmare",
+          "artist": "Toby Fox",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Snowy",
+        "artist": "Toby Fox",
+        "listens": 9
+      },
+      "coverSrc": "/images/albums/wmpl-imported/toby-fox_undertale.jpg",
+      "coverAlt": "UNDERTALE album cover"
+    },
+    {
       "album": "正しい偽りからの起床",
       "artist": "Zutomayo",
       "trackCount": 12,
-      "totalListens": 224,
+      "totalListens": 234,
       "tracks": [
         {
           "title": "Saturn (サターン)",
           "artist": "Zutomayo",
-          "listens": 41
+          "listens": 43
         },
         {
           "title": "Humanoid (ヒューマノイド)",
           "artist": "Zutomayo",
-          "listens": 38
+          "listens": 40
         },
         {
           "title": "Byoushinwo Kamu (秒針を噛む)",
           "artist": "Zutomayo",
-          "listens": 37
+          "listens": 39
         },
         {
           "title": "Nouriueno Cracker (脳裏上のクラッカー)",
           "artist": "Zutomayo",
-          "listens": 36
+          "listens": 37
         },
         {
           "title": "Kimigaite Mizuninaru (君がいて水になる)",
           "artist": "Zutomayo",
-          "listens": 33
+          "listens": 35
         },
         {
           "title": "Uni To Kuri (雲丹と栗)",
           "artist": "Zutomayo",
-          "listens": 33
+          "listens": 34
         },
         {
           "title": "サターン (Instrumental)",
@@ -832,7 +2432,7 @@
       "mostListenedTrack": {
         "title": "Saturn (サターン)",
         "artist": "Zutomayo",
-        "listens": 41
+        "listens": 43
       },
       "coverSrc": "/images/albums/wmpl-imported/zutomayo_hisohiso-banashi.jpg",
       "coverAlt": "正しい偽りからの起床 album cover"
@@ -841,12 +2441,17 @@
       "album": "Parousia",
       "artist": "xi",
       "trackCount": 12,
-      "totalListens": 180,
+      "totalListens": 185,
       "tracks": [
         {
           "title": "PEACE BREAKER",
           "artist": "xi",
-          "listens": 18
+          "listens": 19
+        },
+        {
+          "title": "Evolve Cybernation",
+          "artist": "xi",
+          "listens": 17
         },
         {
           "title": "Mirage Garden",
@@ -854,7 +2459,12 @@
           "listens": 17
         },
         {
-          "title": "Evolve Cybernation",
+          "title": "Blue Zenith",
+          "artist": "xi",
+          "listens": 16
+        },
+        {
+          "title": "Breakthrough Atmosphere",
           "artist": "xi",
           "listens": 16
         },
@@ -874,19 +2484,9 @@
           "listens": 15
         },
         {
-          "title": "Blue Zenith",
-          "artist": "xi",
-          "listens": 15
-        },
-        {
-          "title": "Breakthrough Atmosphere",
-          "artist": "xi",
-          "listens": 15
-        },
-        {
           "title": "Halcyon",
           "artist": "xi",
-          "listens": 14
+          "listens": 15
         },
         {
           "title": "FREEDOM DiVE↓",
@@ -907,7 +2507,7 @@
       "mostListenedTrack": {
         "title": "PEACE BREAKER",
         "artist": "xi",
-        "listens": 18
+        "listens": 19
       },
       "coverSrc": "/images/albums/wmpl-imported/xi_parousia.jpg",
       "coverAlt": "Parousia album cover"
@@ -915,64 +2515,69 @@
     {
       "album": "Round Robin",
       "artist": "Eve",
-      "trackCount": 10,
-      "totalListens": 156,
+      "trackCount": 11,
+      "totalListens": 179,
       "tracks": [
         {
           "title": "Meru factory (メルファクトリー)",
           "artist": "Eve",
-          "listens": 19
+          "listens": 22
         },
         {
           "title": "Shinjuku sick (新宿シック)",
           "artist": "Eve",
-          "listens": 18
+          "listens": 21
         },
         {
           "title": "Goodbye day (グッバイデイ)",
           "artist": "Eve",
-          "listens": 17
+          "listens": 20
         },
         {
           "title": "Fallin My World (フォーリンマイワールド)",
           "artist": "Eve",
-          "listens": 16
+          "listens": 18
         },
         {
           "title": "Ikanaide (いかないで album ver)",
           "artist": "Eve",
-          "listens": 16
-        },
-        {
-          "title": "Miginimagirl (右に曲ガール)",
-          "artist": "Eve",
-          "listens": 16
-        },
-        {
-          "title": "Namaemo shiranai anatani koi wo shita (名前も知らない貴方に恋をした)",
-          "artist": "Eve",
-          "listens": 15
-        },
-        {
-          "title": "Fukanzen na shogu (不完全な処遇 album ver)",
-          "artist": "Eve",
-          "listens": 14
+          "listens": 18
         },
         {
           "title": "Hantaishasen (反対車線)",
           "artist": "Eve",
-          "listens": 14
+          "listens": 17
+        },
+        {
+          "title": "Miginimagirl (右に曲ガール)",
+          "artist": "Eve",
+          "listens": 17
+        },
+        {
+          "title": "Namaemo shiranai anatani koi wo shita (名前も知らない貴方に恋をした)",
+          "artist": "Eve",
+          "listens": 17
+        },
+        {
+          "title": "Fukanzen na shogu (不完全な処遇 album ver)",
+          "artist": "Eve",
+          "listens": 16
         },
         {
           "title": "Round Robin",
           "artist": "Eve",
-          "listens": 11
+          "listens": 12
+        },
+        {
+          "title": "Reprise Round Robin (リプライズ・ラウンドロビン)",
+          "artist": "Eve",
+          "listens": 1
         }
       ],
       "mostListenedTrack": {
         "title": "Meru factory (メルファクトリー)",
         "artist": "Eve",
-        "listens": 19
+        "listens": 22
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_round-robin.jpg",
       "coverAlt": "Round Robin album cover"
@@ -980,58 +2585,58 @@
     {
       "album": "Smile",
       "artist": "Eve",
-      "trackCount": 13,
-      "totalListens": 149,
+      "trackCount": 16,
+      "totalListens": 177,
       "tracks": [
         {
           "title": "LEO",
           "artist": "Eve",
-          "listens": 14
+          "listens": 17
         },
         {
           "title": "ognanje",
           "artist": "Eve",
-          "listens": 14
-        },
-        {
-          "title": "Yamiyo (闇夜)",
-          "artist": "Eve",
-          "listens": 13
-        },
-        {
-          "title": "doublet",
-          "artist": "Eve",
-          "listens": 12
-        },
-        {
-          "title": "Karo No Kioku (虚の記憶)",
-          "artist": "Eve",
-          "listens": 12
-        },
-        {
-          "title": "Kokoroyohou (心予報)",
-          "artist": "Eve",
-          "listens": 12
-        },
-        {
-          "title": "mellow",
-          "artist": "Eve",
-          "listens": 12
+          "listens": 17
         },
         {
           "title": "Raison Detre (レーゾンデートル)",
           "artist": "Eve",
-          "listens": 12
+          "listens": 16
         },
         {
-          "title": "Asa Ga Furu (朝が降る)",
+          "title": "Kokoroyohou (心予報)",
           "artist": "Eve",
-          "listens": 11
+          "listens": 15
+        },
+        {
+          "title": "Yamiyo (闇夜)",
+          "artist": "Eve",
+          "listens": 15
         },
         {
           "title": "Baumkuchen Edn (バウムクーヘンエンド)",
           "artist": "Eve",
-          "listens": 11
+          "listens": 14
+        },
+        {
+          "title": "doublet",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "Karo No Kioku (虚の記憶)",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "Asa Ga Furu (朝が降る)",
+          "artist": "Eve",
+          "listens": 13
+        },
+        {
+          "title": "mellow",
+          "artist": "Eve",
+          "listens": 13
         },
         {
           "title": "Inochi No Tabekata (いのちの食べ方)",
@@ -1041,18 +2646,33 @@
         {
           "title": "Uron Na Shokutaku (胡乱な食卓)",
           "artist": "Eve",
-          "listens": 8
+          "listens": 10
         },
         {
           "title": "Hakugin (白銀)",
           "artist": "Eve",
-          "listens": 7
+          "listens": 8
+        },
+        {
+          "title": "レーゾンデートル",
+          "artist": "Eve",
+          "listens": 0
+        },
+        {
+          "title": "心予報",
+          "artist": "Eve",
+          "listens": 0
+        },
+        {
+          "title": "闇夜",
+          "artist": "Eve",
+          "listens": 0
         }
       ],
       "mostListenedTrack": {
         "title": "LEO",
         "artist": "Eve",
-        "listens": 14
+        "listens": 17
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg",
       "coverAlt": "Smile album cover"
@@ -1061,10 +2681,25 @@
       "album": "文化",
       "artist": "Eve",
       "trackCount": 10,
-      "totalListens": 125,
+      "totalListens": 144,
       "tracks": [
         {
           "title": "Anoko Secret (あの娘シークレット)",
+          "artist": "Eve",
+          "listens": 18
+        },
+        {
+          "title": "paradigm (instrumental)",
+          "artist": "Eve",
+          "listens": 17
+        },
+        {
+          "title": "Kaishingeki (会心劇)",
+          "artist": "Eve",
+          "listens": 16
+        },
+        {
+          "title": "Dramaturgy (ドラマツルギー)",
           "artist": "Eve",
           "listens": 15
         },
@@ -1074,50 +2709,35 @@
           "listens": 15
         },
         {
-          "title": "Kaishingeki (会心劇)",
-          "artist": "Eve",
-          "listens": 14
-        },
-        {
-          "title": "paradigm (instrumental)",
-          "artist": "Eve",
-          "listens": 14
-        },
-        {
-          "title": "Dramaturgy (ドラマツルギー)",
-          "artist": "Eve",
-          "listens": 13
-        },
-        {
           "title": "Furiwoshita (ふりをした。)",
+          "artist": "Eve",
+          "listens": 14
+        },
+        {
+          "title": "Hitsuji wo kazeote (羊を数えて)",
           "artist": "Eve",
           "listens": 13
         },
         {
           "title": "Homesick (ホームシック)",
           "artist": "Eve",
-          "listens": 11
+          "listens": 13
         },
         {
           "title": "Nonsense Bungaku (ナンセンス文学)",
           "artist": "Eve",
-          "listens": 11
+          "listens": 13
         },
         {
           "title": "fanfare (instrumental)",
           "artist": "Eve",
           "listens": 10
-        },
-        {
-          "title": "Hitsuji wo kazeote (羊を数えて)",
-          "artist": "Eve",
-          "listens": 9
         }
       ],
       "mostListenedTrack": {
         "title": "Anoko Secret (あの娘シークレット)",
         "artist": "Eve",
-        "listens": 15
+        "listens": 18
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_bunka.jpg",
       "coverAlt": "文化 album cover"
@@ -1126,32 +2746,32 @@
       "album": "Wonder Word",
       "artist": "Eve",
       "trackCount": 7,
-      "totalListens": 123,
+      "totalListens": 139,
       "tracks": [
         {
           "title": "Yoru wo koero (夜を超えろ)",
           "artist": "Eve",
-          "listens": 25
+          "listens": 29
         },
         {
           "title": "Arukari seizin (アルカリ成人)",
           "artist": "Eve",
-          "listens": 19
+          "listens": 22
         },
         {
           "title": "Senkouhanabi (線香花火)",
           "artist": "Eve",
-          "listens": 18
+          "listens": 20
         },
         {
           "title": "Shinkirou (蜃気楼)",
           "artist": "Eve",
-          "listens": 17
+          "listens": 20
         },
         {
           "title": "Heroumerou (ヘロウメロウ)",
           "artist": "Eve",
-          "listens": 16
+          "listens": 18
         },
         {
           "title": "Mataashita (またあした)",
@@ -1161,22 +2781,392 @@
         {
           "title": "Yoru no yume (よるのゆめ)",
           "artist": "Eve",
-          "listens": 13
+          "listens": 15
         }
       ],
       "mostListenedTrack": {
         "title": "Yoru wo koero (夜を超えろ)",
         "artist": "Eve",
-        "listens": 25
+        "listens": 29
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_wonder-word.jpg",
       "coverAlt": "Wonder Word album cover"
     },
     {
+      "album": "Deltarune: Chapter 2 Soundtrack",
+      "artist": "Toby Fox",
+      "trackCount": 47,
+      "totalListens": 109,
+      "tracks": [
+        {
+          "title": "Lost Girl",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "My Castle Town",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "The Dark Truth",
+          "artist": "Toby Fox",
+          "listens": 7
+        },
+        {
+          "title": "Before The Story",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Dialtone",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Faint Glow",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Ferris Wheel",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Pandora Palace",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Spamton",
+          "artist": "Toby Fox",
+          "listens": 6
+        },
+        {
+          "title": "Girl Next Door",
+          "artist": "Toby Fox",
+          "listens": 5
+        },
+        {
+          "title": "WELCOME TO THE CITY",
+          "artist": "Toby Fox",
+          "listens": 5
+        },
+        {
+          "title": "You Can Always Come Home",
+          "artist": "Toby Fox",
+          "listens": 5
+        },
+        {
+          "title": "Almost to the Guys!",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Giga Size",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "A CYBER’S WORLD?",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "A Real Boy!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "A Simple Diversion",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Acid Tunnel of Love",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Attack Of The Killer Queen",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Berdly",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Berdly (Rejected Concept)",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Big Shot",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Bluebird of Misfortune",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Chill Jailbreak Alarm To Study And Relax To",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Cool Beat",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Cool Mixtape",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Cyber Battle (solo)",
+          "artist": "Toby Fox & Lena Raine",
+          "listens": 1
+        },
+        {
+          "title": "Deal Gone Wrong",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Digital Roots",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Elegant Entrance",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Faint Courage (Game Over)",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "HEY EVERY !",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Holiday Studio",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "It’s Pronounced “Rules”",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "KEYGEN",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Knock You Down !!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Mini Studio",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "NOW’S YOUR CHANCE TO BE A",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Ohhhhohohoho!",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Powers Combined",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Queen",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Sans.",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Smart Race",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Sound Studio",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Until Next Time",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "When I Get Happy I Dance Like This",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "When I Get Mad I Dance Like This",
+          "artist": "Toby Fox",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Lost Girl",
+        "artist": "Toby Fox",
+        "listens": 7
+      },
+      "coverSrc": "/images/albums/wmpl-imported/toby-fox_deltarune-chapter-2.jpg",
+      "coverAlt": "Deltarune: Chapter 2 Soundtrack album cover"
+    },
+    {
+      "album": "Kiki's Delivery Service Soundtrack Music Collection",
+      "artist": "Joe Hisaishi",
+      "trackCount": 21,
+      "totalListens": 100,
+      "tracks": [
+        {
+          "title": "Substitute Jiji",
+          "artist": "Joe Hisaishi",
+          "listens": 9
+        },
+        {
+          "title": "Departure",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "Flying Express Delivery Service",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "Hectic Kiki",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "Jeff",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "On a Clear Day",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "Heartbroken Kiki",
+          "artist": "Joe Hisaishi",
+          "listens": 7
+        },
+        {
+          "title": "Mysterious Painting",
+          "artist": "Joe Hisaishi",
+          "listens": 7
+        },
+        {
+          "title": "A Town Where You Can See the Ocean",
+          "artist": "Joe Hisaishi",
+          "listens": 6
+        },
+        {
+          "title": "Helping at the Bakery",
+          "artist": "Joe Hisaishi",
+          "listens": 6
+        },
+        {
+          "title": "Osono’s Favor",
+          "artist": "Joe Hisaishi",
+          "listens": 6
+        },
+        {
+          "title": "To Ursula’s Cabin",
+          "artist": "Joe Hisaishi",
+          "listens": 6
+        },
+        {
+          "title": "Late for the Party",
+          "artist": "Joe Hisaishi",
+          "listens": 5
+        },
+        {
+          "title": "I Can’t Fly!",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "If Enveloped in Tenderness",
+          "artist": "Yumi Matsutoya",
+          "listens": 1
+        },
+        {
+          "title": "Lipstick Message",
+          "artist": "Yumi Matsutoya",
+          "listens": 1
+        },
+        {
+          "title": "Propeller Bicycle",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Rendezvous with a Deck Brush",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Rough‐Flying Airship Adventure",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Starting a Job",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "The Old Man’s Deck Brush",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Substitute Jiji",
+        "artist": "Joe Hisaishi",
+        "listens": 9
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_kikis-delivery-service-soundtrack.jpg",
+      "coverAlt": "Kiki's Delivery Service Soundtrack Music Collection album cover"
+    },
+    {
       "album": "World Fragments",
       "artist": "xi",
       "trackCount": 12,
-      "totalListens": 94,
+      "totalListens": 100,
       "tracks": [
         {
           "title": "ANiMA",
@@ -1186,7 +3176,22 @@
         {
           "title": "Double Helix",
           "artist": "xi",
+          "listens": 10
+        },
+        {
+          "title": "World Fragments I",
+          "artist": "xi",
           "listens": 9
+        },
+        {
+          "title": "Śiva",
+          "artist": "Diceros Bicornis(xi+BlackY)",
+          "listens": 9
+        },
+        {
+          "title": "Another Halcyon",
+          "artist": "VILA",
+          "listens": 8
         },
         {
           "title": "Dreadnought",
@@ -1204,7 +3209,7 @@
           "listens": 8
         },
         {
-          "title": "World Fragments I",
+          "title": "World Fragments II",
           "artist": "xi",
           "listens": 8
         },
@@ -1214,29 +3219,14 @@
           "listens": 8
         },
         {
-          "title": "Śiva",
-          "artist": "Diceros Bicornis(xi+BlackY)",
-          "listens": 8
-        },
-        {
-          "title": "Another Halcyon",
-          "artist": "VILA",
-          "listens": 7
-        },
-        {
           "title": "Aragami",
-          "artist": "xi",
-          "listens": 7
-        },
-        {
-          "title": "World Fragments II",
           "artist": "xi",
           "listens": 7
         },
         {
           "title": "Hesperides",
           "artist": "xi",
-          "listens": 6
+          "listens": 7
         }
       ],
       "mostListenedTrack": {
@@ -1251,15 +3241,30 @@
       "album": "Quietus Ray",
       "artist": "xi",
       "trackCount": 14,
-      "totalListens": 86,
+      "totalListens": 92,
       "tracks": [
+        {
+          "title": "Bad Elixir",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "Iolite",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "Qliphot",
+          "artist": "Xista(xi + Sta)",
+          "listens": 8
+        },
         {
           "title": "Albatross",
           "artist": "xi vs sakuzyo",
           "listens": 7
         },
         {
-          "title": "Bad Elixir",
+          "title": "Ancient Relics",
           "artist": "xi",
           "listens": 7
         },
@@ -1269,8 +3274,8 @@
           "listens": 7
         },
         {
-          "title": "Iolite",
-          "artist": "xi",
+          "title": "Hyper Vivacity",
+          "artist": "Diceros Bicornis (xi+BlackY)",
           "listens": 7
         },
         {
@@ -1279,23 +3284,13 @@
           "listens": 7
         },
         {
-          "title": "Qliphot",
-          "artist": "Xista(xi + Sta)",
-          "listens": 7
-        },
-        {
-          "title": "Ancient Relics",
-          "artist": "xi",
-          "listens": 6
-        },
-        {
           "title": "Grand Chariot",
           "artist": "xi",
           "listens": 6
         },
         {
-          "title": "Hyper Vivacity",
-          "artist": "Diceros Bicornis (xi+BlackY)",
+          "title": "Longinus",
+          "artist": "xi",
           "listens": 6
         },
         {
@@ -1314,20 +3309,15 @@
           "listens": 5
         },
         {
-          "title": "Longinus",
-          "artist": "xi",
-          "listens": 5
-        },
-        {
           "title": "Quietus Ray",
           "artist": "xi",
           "listens": 5
         }
       ],
       "mostListenedTrack": {
-        "title": "Albatross",
-        "artist": "xi vs sakuzyo",
-        "listens": 7
+        "title": "Bad Elixir",
+        "artist": "xi",
+        "listens": 8
       },
       "coverSrc": "/images/albums/wmpl-imported/xi_quietus-ray.jpg",
       "coverAlt": "Quietus Ray album cover"
@@ -1418,6 +3408,91 @@
       "coverAlt": "Blurryface album cover"
     },
     {
+      "album": "Solution",
+      "artist": "Sou",
+      "trackCount": 14,
+      "totalListens": 75,
+      "tracks": [
+        {
+          "title": "God-ish (神っぽいな), cover",
+          "artist": "Sou",
+          "listens": 7
+        },
+        {
+          "title": "Jouyatou (常夜灯)",
+          "artist": "Sou",
+          "listens": 7
+        },
+        {
+          "title": "Mrs. Huse (Mrs.ヒューズ)",
+          "artist": "Sou",
+          "listens": 7
+        },
+        {
+          "title": "Yosasou (よさそう)",
+          "artist": "Sou",
+          "listens": 7
+        },
+        {
+          "title": "Ghost Girl (少女レイ)",
+          "artist": "Sou",
+          "listens": 6
+        },
+        {
+          "title": "Gimigimi (ぎみぎみ)",
+          "artist": "Sou",
+          "listens": 6
+        },
+        {
+          "title": "Karakara (からから)",
+          "artist": "Sou",
+          "listens": 5
+        },
+        {
+          "title": "sakura breeze",
+          "artist": "Sou & sekai",
+          "listens": 5
+        },
+        {
+          "title": "Spark Bug (スパークバグ)",
+          "artist": "Sou",
+          "listens": 5
+        },
+        {
+          "title": "Tomadoi Rhythm (トマドイリズム)",
+          "artist": "Sou",
+          "listens": 5
+        },
+        {
+          "title": "Otonani Natta (大人になった)",
+          "artist": "Sou",
+          "listens": 4
+        },
+        {
+          "title": "Wonder Life (ワンダーライフ)",
+          "artist": "Sou",
+          "listens": 4
+        },
+        {
+          "title": "Yurushite Seiran (ユルシテ青蘭)",
+          "artist": "Sou",
+          "listens": 4
+        },
+        {
+          "title": "Lagrange (ラグランジュ)",
+          "artist": "Sou",
+          "listens": 3
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "God-ish (神っぽいな), cover",
+        "artist": "Sou",
+        "listens": 7
+      },
+      "coverSrc": "/images/albums/wmpl-imported/sou_solution.jpg",
+      "coverAlt": "Solution album cover"
+    },
+    {
       "album": "IGOR",
       "artist": "Tyler, The Creator",
       "trackCount": 12,
@@ -1491,6 +3566,121 @@
       },
       "coverSrc": "/images/albums/wmpl-imported/tyler-the-creator_igor.jpg",
       "coverAlt": "IGOR album cover"
+    },
+    {
+      "album": "My Neighbor Totoro (Original Soundtrack)",
+      "artist": "Joe Hisaishi",
+      "trackCount": 20,
+      "totalListens": 68,
+      "tracks": [
+        {
+          "title": "A Haunted House!",
+          "artist": "Joe Hisaishi",
+          "listens": 11
+        },
+        {
+          "title": "Cat Bus",
+          "artist": "Joe Hisaishi",
+          "listens": 11
+        },
+        {
+          "title": "The Village in May",
+          "artist": "Joe Hisaishi",
+          "listens": 9
+        },
+        {
+          "title": "Mei Is Missing",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "The Path of the Wind - Instrumental",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "A Huge Tree in the Tsukamori Forest",
+          "artist": "Joe Hisaishi",
+          "listens": 7
+        },
+        {
+          "title": "A Little Monster",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "A Lost Child",
+          "artist": "Joe Hisaishi & Azumi Inoue",
+          "listens": 1
+        },
+        {
+          "title": "A Soaking Wet Creature",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Evening Wind",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Hey Let’s Go - Opening Theme",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Hey Let’s Go - With Chorus",
+          "artist": "Joe Hisaishi & Azumi Inoue",
+          "listens": 1
+        },
+        {
+          "title": "I’m So Glad",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Let’s Go to the Hospital",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Mei and the Dust Bunnies",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Moonlight Flight",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Mother",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "My Neighbor Totoro - Ending Theme",
+          "artist": "Joe Hisaishi & Azumi Inoue",
+          "listens": 1
+        },
+        {
+          "title": "Not Afraid",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Totoro",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "A Haunted House!",
+        "artist": "Joe Hisaishi",
+        "listens": 11
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_my-neighbor-totoro-original-soundtrack.jpg",
+      "coverAlt": "My Neighbor Totoro (Original Soundtrack) album cover"
     },
     {
       "album": "Wolf",
@@ -1598,6 +3788,151 @@
       "coverAlt": "Wolf album cover"
     },
     {
+      "album": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-",
+      "artist": "Joe Hisaishi",
+      "trackCount": 14,
+      "totalListens": 66,
+      "tracks": [
+        {
+          "title": "The Girl Who Fell From the Sky",
+          "artist": "Joe Hisaishi",
+          "listens": 12
+        },
+        {
+          "title": "Morning in the Slag Ravine",
+          "artist": "Joe Hisaishi",
+          "listens": 10
+        },
+        {
+          "title": "Destruction of Laputa",
+          "artist": "Suginami Junior Chorus",
+          "listens": 9
+        },
+        {
+          "title": "Discouraged Pazu",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "Memories of Gondoa",
+          "artist": "Joe Hisaishi",
+          "listens": 7
+        },
+        {
+          "title": "A Sea of Clouds in the Moonlight",
+          "artist": "Joe Hisaishi",
+          "listens": 6
+        },
+        {
+          "title": "Castle in the Sky",
+          "artist": "Joe Hisaishi",
+          "listens": 6
+        },
+        {
+          "title": "Carrying You - With Chorus",
+          "artist": "Suginami Junior Chorus",
+          "listens": 2
+        },
+        {
+          "title": "A Rowdy Brawl (- Pursuit)",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "An Omen to Ruin",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Carrying You",
+          "artist": "Azumi Inoue",
+          "listens": 1
+        },
+        {
+          "title": "On The Tiger Moth",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Robot Soldier (Resurrection - Rescue)",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Sheeta's Decision",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "The Girl Who Fell From the Sky",
+        "artist": "Joe Hisaishi",
+        "listens": 12
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg",
+      "coverAlt": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone- album cover"
+    },
+    {
+      "album": "Agartha",
+      "artist": "xi",
+      "trackCount": 9,
+      "totalListens": 64,
+      "tracks": [
+        {
+          "title": "HEAVENLY GALAXiES / Xiphoid Sphere",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "Valhalla",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "wild card",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "天衣無縫",
+          "artist": "xi",
+          "listens": 8
+        },
+        {
+          "title": "Agartha",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Information Transmission",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Niflheimr",
+          "artist": "xi",
+          "listens": 7
+        },
+        {
+          "title": "Zauberkugel",
+          "artist": "xi",
+          "listens": 6
+        },
+        {
+          "title": "ハッピーエンドオブザワールド",
+          "artist": "xi",
+          "listens": 5
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "HEAVENLY GALAXiES / Xiphoid Sphere",
+        "artist": "xi",
+        "listens": 8
+      },
+      "coverSrc": "/images/albums/wmpl-imported/xi_agartha.jpg",
+      "coverAlt": "Agartha album cover"
+    },
+    {
       "album": "Trench",
       "artist": "twenty one pilots",
       "trackCount": 14,
@@ -1683,64 +4018,487 @@
       "coverAlt": "Trench album cover"
     },
     {
-      "album": "Agartha",
-      "artist": "xi",
-      "trackCount": 9,
-      "totalListens": 58,
+      "album": "残夢",
+      "artist": "Ado",
+      "trackCount": 16,
+      "totalListens": 61,
       "tracks": [
         {
-          "title": "wild card",
-          "artist": "xi",
-          "listens": 8
-        },
-        {
-          "title": "HEAVENLY GALAXiES / Xiphoid Sphere",
-          "artist": "xi",
-          "listens": 7
-        },
-        {
-          "title": "Information Transmission",
-          "artist": "xi",
-          "listens": 7
-        },
-        {
-          "title": "Valhalla",
-          "artist": "xi",
-          "listens": 7
-        },
-        {
-          "title": "天衣無縫",
-          "artist": "xi",
-          "listens": 7
-        },
-        {
-          "title": "Agartha",
-          "artist": "xi",
+          "title": "Eien No Akuruhi (永遠のあくる日)",
+          "artist": "Ado",
           "listens": 6
         },
         {
-          "title": "Zauberkugel",
-          "artist": "xi",
-          "listens": 6
-        },
-        {
-          "title": "Niflheimr",
-          "artist": "xi",
+          "title": "All Night Radio (オールナイトレディオ)",
+          "artist": "Ado",
           "listens": 5
         },
         {
-          "title": "ハッピーエンドオブザワールド",
-          "artist": "xi",
+          "title": "Kura Kura (クラクラ)",
+          "artist": "Ado",
           "listens": 5
+        },
+        {
+          "title": "missing (行方知れず)",
+          "artist": "Ado",
+          "listens": 5
+        },
+        {
+          "title": "Nukegara (抜け空)",
+          "artist": "Ado",
+          "listens": 5
+        },
+        {
+          "title": "Value",
+          "artist": "Ado",
+          "listens": 5
+        },
+        {
+          "title": "0",
+          "artist": "Ado",
+          "listens": 4
+        },
+        {
+          "title": "Chocolat Cadabra (ショコラカタブラ)",
+          "artist": "Ado",
+          "listens": 4
+        },
+        {
+          "title": "I'm a Controversy (アタシは問題作)",
+          "artist": "Ado",
+          "listens": 4
+        },
+        {
+          "title": "Rebellion (リベリオン)",
+          "artist": "Ado",
+          "listens": 4
+        },
+        {
+          "title": "Ibara (いばら)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "Show (唱)",
+          "artist": "Ado",
+          "listens": 3
+        },
+        {
+          "title": "DIGNITY",
+          "artist": "Ado",
+          "listens": 2
+        },
+        {
+          "title": "Himawari (向日葵)",
+          "artist": "Ado",
+          "listens": 2
+        },
+        {
+          "title": "MIRROR",
+          "artist": "Ado",
+          "listens": 2
+        },
+        {
+          "title": "RuLe (ルル)",
+          "artist": "Ado",
+          "listens": 2
         }
       ],
       "mostListenedTrack": {
-        "title": "wild card",
-        "artist": "xi",
-        "listens": 8
+        "title": "Eien No Akuruhi (永遠のあくる日)",
+        "artist": "Ado",
+        "listens": 6
       },
-      "coverSrc": "/images/albums/wmpl-imported/xi_agartha.jpg",
-      "coverAlt": "Agartha album cover"
+      "coverSrc": "/images/albums/wmpl-imported/ado_zanmu.jpg",
+      "coverAlt": "残夢 album cover"
+    },
+    {
+      "album": "Nausicaä of the Valley of the Wind Soundtrack",
+      "artist": "Joe Hisaishi",
+      "trackCount": 13,
+      "totalListens": 60,
+      "tracks": [
+        {
+          "title": "Kaze no Tani",
+          "artist": "Joe Hisaishi",
+          "listens": 10
+        },
+        {
+          "title": "Fukai nite",
+          "artist": "Joe Hisaishi",
+          "listens": 9
+        },
+        {
+          "title": "Tori no Hito - Ending theme",
+          "artist": "Joe Hisaishi",
+          "listens": 9
+        },
+        {
+          "title": "Kaze no Tani no Naushika - Opening theme",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "Kushana no Shinryaku",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "Mushi Mezuru Hime",
+          "artist": "Joe Hisaishi",
+          "listens": 8
+        },
+        {
+          "title": "Pejite no Zenmetsu",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Mehve to Korubetto no Tatakai",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Naushika Rekuiemu",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Ohmu no Boso",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Ohmu to no Koryu",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Sento",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Yomigaeru Kyoshinhei",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Kaze no Tani",
+        "artist": "Joe Hisaishi",
+        "listens": 10
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg",
+      "coverAlt": "Nausicaä of the Valley of the Wind Soundtrack album cover"
+    },
+    {
+      "album": "Christmas",
+      "artist": "Michael Bublé",
+      "trackCount": 16,
+      "totalListens": 46,
+      "tracks": [
+        {
+          "title": "Have Yourself a Merry Little Christmas",
+          "artist": "Michael Bublé",
+          "listens": 4
+        },
+        {
+          "title": "All I Want for Christmas Is You",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "Christmas (Baby Please Come Home)",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "Holly Jolly Christmas",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "It’s Beginning to Look a Lot Like Christmas",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "I’ll Be Home for Christmas",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "Jingle Bells",
+          "artist": "Michael Bublé feat. The Puppini Sisters",
+          "listens": 3
+        },
+        {
+          "title": "Michael’s Christmas Greeting",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "Mis deseos / Feliz Navidad",
+          "artist": "Michael Bublé duet with Thalía",
+          "listens": 3
+        },
+        {
+          "title": "Santa Baby",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "Santa Claus Is Coming to Town",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "Silent Night",
+          "artist": "Michael Bublé",
+          "listens": 3
+        },
+        {
+          "title": "White Christmas",
+          "artist": "Michael Bublé duet with Shania Twain",
+          "listens": 3
+        },
+        {
+          "title": "Ave Maria",
+          "artist": "Michael Bublé",
+          "listens": 2
+        },
+        {
+          "title": "Blue Christmas",
+          "artist": "Michael Bublé",
+          "listens": 2
+        },
+        {
+          "title": "Cold December Night",
+          "artist": "Michael Bublé",
+          "listens": 2
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Have Yourself a Merry Little Christmas",
+        "artist": "Michael Bublé",
+        "listens": 4
+      }
+    },
+    {
+      "album": "DELTARUNE Chapter 1 OST",
+      "artist": "Toby Fox",
+      "trackCount": 40,
+      "totalListens": 45,
+      "tracks": [
+        {
+          "title": "ANOTHER HIM",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Card Castle",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Lancer",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "Rouxls Kaard",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "The Chase",
+          "artist": "Toby Fox",
+          "listens": 2
+        },
+        {
+          "title": "A Town Called Hometown",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "April 2012",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Basement",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Before the Story",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Beginning",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Chaos King",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Checker Dance",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Cliffs",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Darkness Falls",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Don’t Forget",
+          "artist": "Laura Shigihara",
+          "listens": 1
+        },
+        {
+          "title": "Empty Town",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Fanfare (from Rose of Winter)",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Field of Hopes and Dreams",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Friendship",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Gallery",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Hip Shop",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Imminent Death",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "I’m Very Bad",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Lantern",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Quiet Autumn",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Rude Buster",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Scarlet Forest",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "School",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Susie",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "The Circus",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "The Door",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "THE HOLY",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "The Legend",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "THE WORLD REVOLVING",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Thrash Machine",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Vs. Lancer",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Vs. Susie",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Weird Birds",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "You Can Always Come Home",
+          "artist": "Toby Fox",
+          "listens": 1
+        },
+        {
+          "title": "Your Power",
+          "artist": "Toby Fox",
+          "listens": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "ANOTHER HIM",
+        "artist": "Toby Fox",
+        "listens": 2
+      },
+      "coverSrc": "/images/albums/wmpl-imported/toby-fox_deltarune-chapter-1.jpg",
+      "coverAlt": "DELTARUNE Chapter 1 OST album cover"
     },
     {
       "album": "House of Balloons",
@@ -1808,99 +4566,134 @@
       "coverAlt": "House of Balloons album cover"
     },
     {
-      "album": "残夢",
-      "artist": "Ado",
-      "trackCount": 16,
-      "totalListens": 42,
+      "album": "Porco Rosso Soundtrack",
+      "artist": "Joe Hisaishi",
+      "trackCount": 23,
+      "totalListens": 32,
       "tracks": [
         {
-          "title": "0",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "All Night Radio (オールナイトレディオ)",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "Eien No Akuruhi (永遠のあくる日)",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "I'm a Controversy (アタシは問題作)",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "Kura Kura (クラクラ)",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "missing (行方知れず)",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "Nukegara (抜け空)",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "Rebellion (リベリオン)",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "Show (唱)",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "Value",
-          "artist": "Ado",
-          "listens": 3
-        },
-        {
-          "title": "Chocolat Cadabra (ショコラカタブラ)",
-          "artist": "Ado",
+          "title": "A Picture in Sepia",
+          "artist": "Joe Hisaishi",
           "listens": 2
         },
         {
-          "title": "DIGNITY",
-          "artist": "Ado",
+          "title": "Addio!",
+          "artist": "Joe Hisaishi",
           "listens": 2
         },
         {
-          "title": "Himawari (向日葵)",
-          "artist": "Ado",
+          "title": "At the End of the Summer",
+          "artist": "Joe Hisaishi",
           "listens": 2
         },
         {
-          "title": "Ibara (いばら)",
-          "artist": "Ado",
+          "title": "Fio – Seventeen",
+          "artist": "Joe Hisaishi",
           "listens": 2
         },
         {
-          "title": "MIRROR",
-          "artist": "Ado",
+          "title": "Friend",
+          "artist": "Joe Hisaishi",
           "listens": 2
         },
         {
-          "title": "RuLe (ルル)",
-          "artist": "Ado",
+          "title": "LOST SPIRIT",
+          "artist": "Joe Hisaishi",
           "listens": 2
+        },
+        {
+          "title": "MAMMA AIUTO",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Partnership",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Porco e Bella",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "To the Adriatic Sea",
+          "artist": "Joe Hisaishi",
+          "listens": 2
+        },
+        {
+          "title": "Bygone Days",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Dog Fight",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Doom – Trap of Clouds",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Flying Boatmen",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "In Search of the Distant Era",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Love at the First Sight in the Wildness",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Madness – Flight",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Porco e Bella – Ending",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Serbian March",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "The Time of the Cherries",
+          "artist": "Tokiko Kato",
+          "listens": 1
+        },
+        {
+          "title": "The Wind of Ages – When a Human Can be a Human",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Women of Piccolo",
+          "artist": "Joe Hisaishi",
+          "listens": 1
+        },
+        {
+          "title": "Once in a While, Let's Talk About the Old Days",
+          "artist": "Tokiko Kato",
+          "listens": 0
         }
       ],
       "mostListenedTrack": {
-        "title": "0",
-        "artist": "Ado",
-        "listens": 3
+        "title": "A Picture in Sepia",
+        "artist": "Joe Hisaishi",
+        "listens": 2
       },
-      "coverSrc": "/images/albums/wmpl-imported/ado_zanmu.jpg",
-      "coverAlt": "残夢 album cover"
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_porco-rosso-soundtrack.jpg",
+      "coverAlt": "Porco Rosso Soundtrack album cover"
     },
     {
       "album": "Vessel",
@@ -2103,171 +4896,6 @@
       "coverAlt": "THE WORLD EP. FIN: WILL album cover"
     },
     {
-      "album": "Nausicaä of the Valley of the Wind Soundtrack",
-      "artist": "Joe Hisaishi",
-      "trackCount": 13,
-      "totalListens": 20,
-      "tracks": [
-        {
-          "title": "Kaze no Tani no Naushika - Opening theme",
-          "artist": "Joe Hisaishi",
-          "listens": 3
-        },
-        {
-          "title": "Fukai nite",
-          "artist": "Joe Hisaishi",
-          "listens": 2
-        },
-        {
-          "title": "Kaze no Tani",
-          "artist": "Joe Hisaishi",
-          "listens": 2
-        },
-        {
-          "title": "Mushi Mezuru Hime",
-          "artist": "Joe Hisaishi",
-          "listens": 2
-        },
-        {
-          "title": "Pejite no Zenmetsu",
-          "artist": "Joe Hisaishi",
-          "listens": 2
-        },
-        {
-          "title": "Tori no Hito - Ending theme",
-          "artist": "Joe Hisaishi",
-          "listens": 2
-        },
-        {
-          "title": "Kushana no Shinryaku",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Mehve to Korubetto no Tatakai",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Naushika Rekuiemu",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Ohmu no Boso",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Ohmu to no Koryu",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Sento",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Yomigaeru Kyoshinhei",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "Kaze no Tani no Naushika - Opening theme",
-        "artist": "Joe Hisaishi",
-        "listens": 3
-      },
-      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg",
-      "coverAlt": "Nausicaä of the Valley of the Wind Soundtrack album cover"
-    },
-    {
-      "album": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-",
-      "artist": "Joe Hisaishi",
-      "trackCount": 14,
-      "totalListens": 17,
-      "tracks": [
-        {
-          "title": "Carrying You - With Chorus",
-          "artist": "Suginami Junior Chorus",
-          "listens": 2
-        },
-        {
-          "title": "Morning in the Slag Ravine",
-          "artist": "Joe Hisaishi",
-          "listens": 2
-        },
-        {
-          "title": "The Girl Who Fell From the Sky",
-          "artist": "Joe Hisaishi",
-          "listens": 2
-        },
-        {
-          "title": "A Rowdy Brawl (- Pursuit)",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "A Sea of Clouds in the Moonlight",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "An Omen to Ruin",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Carrying You",
-          "artist": "Azumi Inoue",
-          "listens": 1
-        },
-        {
-          "title": "Castle in the Sky",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Destruction of Laputa",
-          "artist": "Suginami Junior Chorus",
-          "listens": 1
-        },
-        {
-          "title": "Discouraged Pazu",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Memories of Gondoa",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "On The Tiger Moth",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Robot Soldier (Resurrection - Rescue)",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Sheeta's Decision",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "Carrying You - With Chorus",
-        "artist": "Suginami Junior Chorus",
-        "listens": 2
-      },
-      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg",
-      "coverAlt": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone- album cover"
-    },
-    {
       "album": "Starboy",
       "artist": "The Weeknd",
       "trackCount": 18,
@@ -2443,204 +5071,84 @@
       "coverAlt": "The Chaos Chapter: FIGHT OR ESCAPE album cover"
     },
     {
-      "album": "My Neighbor Totoro (Original Soundtrack)",
-      "artist": "Joe Hisaishi",
-      "trackCount": 20,
-      "totalListens": 9,
+      "album": "The Ocean Waves (海がきこえる)",
+      "artist": "永田茂",
+      "trackCount": 10,
+      "totalListens": 6,
       "tracks": [
         {
-          "title": "A Haunted House!",
-          "artist": "Joe Hisaishi",
+          "title": "A Girl's Thoughts (少女の想い)",
+          "artist": "永田茂",
           "listens": 1
         },
         {
-          "title": "A Little Monster",
-          "artist": "Joe Hisaishi",
+          "title": "A Seaside Street (シーサイド ストリート)",
+          "artist": "永田茂",
           "listens": 1
         },
         {
-          "title": "Evening Wind",
-          "artist": "Joe Hisaishi",
+          "title": "Alone Late at Night (夜更けにひとり)",
+          "artist": "永田茂",
           "listens": 1
         },
         {
-          "title": "Hey Let’s Go - Opening Theme",
-          "artist": "Joe Hisaishi",
+          "title": "First Impression (ファースト インプレッション)",
+          "artist": "永田茂",
           "listens": 1
         },
         {
-          "title": "Let’s Go to the Hospital",
-          "artist": "Joe Hisaishi",
+          "title": "On a Sunny Day (ある晴れた日)",
+          "artist": "永田茂",
           "listens": 1
         },
         {
-          "title": "Mei and the Dust Bunnies",
-          "artist": "Joe Hisaishi",
+          "title": "The Ocean Waves (海がきこえる)",
+          "artist": "永田茂",
           "listens": 1
         },
         {
-          "title": "Mother",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "Not Afraid",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "The Village in May",
-          "artist": "Joe Hisaishi",
-          "listens": 1
-        },
-        {
-          "title": "A Huge Tree in the Tsukamori Forest",
-          "artist": "Joe Hisaishi",
+          "title": "A Cheerful Drunk (陽気なよっぱらい)",
+          "artist": "永田茂",
           "listens": 0
         },
         {
-          "title": "A Lost Child",
-          "artist": "Joe Hisaishi & Azumi Inoue",
+          "title": "A Tree-Lined Boulevard in the Wind (風の並木道)",
+          "artist": "永田茂",
           "listens": 0
         },
         {
-          "title": "A Soaking Wet Creature",
-          "artist": "Joe Hisaishi",
+          "title": "If I Could Be the Sea (ending) (海になれたら（エンディング）)",
+          "artist": "永田茂",
           "listens": 0
         },
         {
-          "title": "Cat Bus",
-          "artist": "Joe Hisaishi",
-          "listens": 0
-        },
-        {
-          "title": "Hey Let’s Go - With Chorus",
-          "artist": "Joe Hisaishi & Azumi Inoue",
-          "listens": 0
-        },
-        {
-          "title": "I’m So Glad",
-          "artist": "Joe Hisaishi",
-          "listens": 0
-        },
-        {
-          "title": "Mei Is Missing",
-          "artist": "Joe Hisaishi",
-          "listens": 0
-        },
-        {
-          "title": "Moonlight Flight",
-          "artist": "Joe Hisaishi",
-          "listens": 0
-        },
-        {
-          "title": "My Neighbor Totoro - Ending Theme",
-          "artist": "Joe Hisaishi & Azumi Inoue",
-          "listens": 0
-        },
-        {
-          "title": "The Path of the Wind - Instrumental",
-          "artist": "Joe Hisaishi",
-          "listens": 0
-        },
-        {
-          "title": "Totoro",
-          "artist": "Joe Hisaishi",
+          "title": "When a Heart Sets Out for a Journey (心が旅立つ時)",
+          "artist": "永田茂",
           "listens": 0
         }
       ],
       "mostListenedTrack": {
-        "title": "A Haunted House!",
-        "artist": "Joe Hisaishi",
+        "title": "A Girl's Thoughts (少女の想い)",
+        "artist": "永田茂",
         "listens": 1
       },
-      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_my-neighbor-totoro-original-soundtrack.jpg",
-      "coverAlt": "My Neighbor Totoro (Original Soundtrack) album cover"
+      "coverSrc": "/images/albums/wmpl-imported/shigeru-nagata_the-ocean-waves-original-soundtrack.jpg",
+      "coverAlt": "The Ocean Waves (海がきこえる) album cover"
     },
     {
-      "album": "Christmas",
-      "artist": "Michael Bublé",
-      "trackCount": 16,
+      "album": "Under Blue",
+      "artist": "Eve",
+      "trackCount": 2,
       "totalListens": 0,
       "tracks": [
         {
-          "title": "All I Want for Christmas Is You",
-          "artist": "Michael Bublé",
+          "title": "Glorious Day",
+          "artist": "Eve",
           "listens": 0
         },
         {
-          "title": "Ave Maria",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Blue Christmas",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Christmas (Baby Please Come Home)",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Cold December Night",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Have Yourself a Merry Little Christmas",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Holly Jolly Christmas",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "It’s Beginning to Look a Lot Like Christmas",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "I’ll Be Home for Christmas",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Jingle Bells",
-          "artist": "Michael Bublé feat. The Puppini Sisters",
-          "listens": 0
-        },
-        {
-          "title": "Michael’s Christmas Greeting",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Mis deseos / Feliz Navidad",
-          "artist": "Michael Bublé duet with Thalía",
-          "listens": 0
-        },
-        {
-          "title": "Santa Baby",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Santa Claus Is Coming to Town",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "Silent Night",
-          "artist": "Michael Bublé",
-          "listens": 0
-        },
-        {
-          "title": "White Christmas",
-          "artist": "Michael Bublé duet with Shania Twain",
+          "title": "メメント",
+          "artist": "Eve",
           "listens": 0
         }
       ],
