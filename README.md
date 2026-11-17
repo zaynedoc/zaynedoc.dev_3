@@ -30,6 +30,16 @@ desktop setting. It reads WMPL Wrap and your media-library metadata without chan
 either one, and it refuses to write anywhere outside this portfolio repository.
 
 Every album in the latest snapshot is included, even if it has no recorded listens.
+On Windows, the importer also reads the current Windows Media Player library for
+the displayed track title, all contributing artists, track and disc numbers,
+duration, album artist, and
+current play count. These fields populate `/library`; the existing snapshot
+totals continue to populate the portfolio carousel. If WMP is unavailable, the
+import falls back to snapshot fields. Local media paths are only used to match
+records during import and are never written to the generated JSON.
+The importer also reads Picard's `CATALOGNUMBER` tag directly from each local
+audio file. Distinct numbers from every track in an album appear in its detail
+view; albums without the tag display `Unknown`.
 The importer reads WMPL Wrap's `data/desktop-settings.json`, joins each album to its
 Discord asset key, and copies the matching `_coverarts` file into
 `public/images/albums/wmpl-imported`. Only the portable website path is written to
@@ -38,9 +48,11 @@ the generated dataset; local file paths are never exposed. New albums use
 
 ### Show or hide imported albums
 
-Edit `app/data/album-settings.ts`. New albums follow `defaultVisibility`, which is
-`"show"` by default. Add an album under `albums` to override it by its WMPL album
-title:
+Edit `app/data/album-settings.ts`. Each `npm run data:listening` run adds an empty
+entry for any imported album missing from the file and sorts the entries by album
+title. Existing overrides and notes are preserved, so you can edit the generated
+`{}` entry without copying the WMPL album title yourself. New albums follow
+`defaultVisibility`, which is `"show"` by default. For example:
 
 ```ts
 albums: {
@@ -53,10 +65,15 @@ albums: {
 },
 ```
 
+Keep overrides within the sorted section's markers; edit their values freely.
+
 Changing `visibility` never deletes listening data; it only controls whether the
 album appears in the public carousel. Album-title matching ignores capitalization,
 leading or trailing spaces, and repeated spaces. A manually configured `coverSrc`
 takes precedence over automatically imported artwork.
+Add `notes` to an album override to show a Notes section on that album's
+`/library` detail view. Leave it unset to omit the section. Separate paragraphs
+with `\n\n` in the note string.
 
 These snapshots are sourced from your metadata of a valid [WMPL Wrap](https://github.com/zaynedoc/WMPL-Wrap) instance.
 

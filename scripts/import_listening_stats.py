@@ -10,11 +10,16 @@ import argparse
 import json
 import os
 import shutil
+import subprocess
+import sys
+import tempfile
 import unicodedata
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+
+from mutagen import File as read_audio_file, MutagenError
 
 
 SITE_ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +39,9 @@ DEFAULT_COVER_ART_DIRECTORY = Path(
 IMPORTED_COVER_DIRECTORY = (
     SITE_ROOT / "public" / "images" / "albums" / "wmpl-imported"
 )
+ALBUM_SETTINGS_PATH = SITE_ROOT / "app" / "data" / "album-settings.ts"
+ALBUM_SETTINGS_START = "    // BEGIN SORTED ALBUM SETTINGS"
+ALBUM_SETTINGS_END = "    // END SORTED ALBUM SETTINGS"
 SUPPORTED_COVER_EXTENSIONS = (".webp", ".jpg", ".jpeg", ".png")
 
 
@@ -41,8 +49,15 @@ SUPPORTED_COVER_EXTENSIONS = (".webp", ".jpg", ".jpeg", ".png")
 class TrackTally:
     album: str
     artist: str
+    contributing_artist: str
     title: str
     listens: int
+    track_number: int | None
+    disc_number: int | None
+    duration_seconds: int | None
+    play_count: int
+    album_artist: str
+    catalog_numbers: tuple[str, ...]
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -101,7 +116,86 @@ def snapshot_tracks(snapshot: dict[str, Any]) -> list[dict[str, Any]]:
     return [track for track in tracks if isinstance(track, dict)]
 
 
-def inclusive_tallies(snapshots: list[tuple[Path, dict[str, Any]]]) -> list[TrackTally]:
+def optional_positive_int(value: Any) -> int | None:
+    try:
+        number = int(str(value).split("/", 1)[0])
+    except (TypeError, ValueError):
+        return None
+    return number if number > 0 else None
+
+
+def duration_seconds(value: Any) -> int | None:
+    try:
+        seconds = float(value)
+    except (TypeError, ValueError):
+        return None
+    return round(seconds) if seconds >= 0 else None
+
+
+def live_wmp_metadata() -> dict[str, dict[str, Any]]:
+    """Read WMP display fields without changing the library or logger snapshots."""
+    if sys.platform != "win32":
+        return {}
+    script = SITE_ROOT / "scripts" / "read_wmp_library.ps1"
+    with tempfile.TemporaryDirectory(dir=script.parent) as temporary_directory:
+        output = Path(temporary_directory) / "wmp-library.json"
+        result = subprocess.run(
+            ["powershell.exe", "-NoProfile", "-File", str(script), str(output)],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0 or not output.is_file():
+            print("Live WMP metadata unavailable; using snapshot fields. " + result.stderr.strip())
+            return {}
+        items = json.loads(output.read_text(encoding="utf-8-sig"))
+    if not isinstance(items, list):
+        return {}
+    return {
+        str(item["sourceUrl"]).casefold(): item
+        for item in items
+        if isinstance(item, dict) and item.get("sourceUrl")
+    }
+
+
+def catalog_numbers_for_file(
+    source_url: Any, cache: dict[str, tuple[str, ...]]
+) -> tuple[str, ...]:
+    """Read Picard's CATALOGNUMBER tag from the local audio file, when available."""
+    source = str(source_url or "").strip()
+    if not source:
+        return ()
+    if source in cache:
+        return cache[source]
+
+    numbers: list[str] = []
+    path = Path(source)
+    if path.is_file():
+        try:
+            audio = read_audio_file(path)
+            if audio is not None and audio.tags is not None:
+                for key, frame in audio.tags.items():
+                    tag_name = str(key).rsplit(":", 1)[-1].replace("_", "").replace(" ", "")
+                    if tag_name.casefold() != "catalognumber":
+                        continue
+                    values = getattr(frame, "text", frame)
+                    if not isinstance(values, (list, tuple)):
+                        values = [values]
+                    for value in values:
+                        number = (value.decode("utf-8", errors="replace") if isinstance(value, bytes) else str(value)).strip()
+                        if number:
+                            numbers.append(number)
+        except (MutagenError, OSError, ValueError):
+            pass
+
+    cache[source] = tuple(dict.fromkeys(numbers))
+    return cache[source]
+
+
+def inclusive_tallies(
+    snapshots: list[tuple[Path, dict[str, Any]]],
+    live_metadata: dict[str, dict[str, Any]] | None = None,
+) -> list[TrackTally]:
     """Include every current track and its first-seen count plus positive deltas."""
     totals: defaultdict[str, int] = defaultdict(int)
     latest_tracks: dict[str, dict[str, Any]] = {}
@@ -126,15 +220,32 @@ def inclusive_tallies(snapshots: list[tuple[Path, dict[str, Any]]]) -> list[Trac
         latest_tracks = current_tracks
 
     tallies: list[TrackTally] = []
+    catalog_cache: dict[str, tuple[str, ...]] = {}
     for track_id, listens in totals.items():
         track = latest_tracks.get(track_id)
         if not track:
             continue
-        album = str(track.get("Album", "")).strip()
-        title = str(track.get("Title", "")).strip()
-        artist = str(track.get("Artist", "")).strip()
+        live = (live_metadata or {}).get(str(track.get("SourceUrl", "")).casefold(), {})
+        album = str(live.get("album") or track.get("Album", "")).strip()
+        # WMP's Title is the display title, including edits made inside WMP.
+        title = str(live.get("title") or track.get("Title", "")).strip()
+        artist = str(live.get("artist") or track.get("Artist", "")).strip()
         if album and title:
-            tallies.append(TrackTally(album, artist or "Unknown artist", title, listens))
+            tallies.append(
+                TrackTally(
+                    album,
+                    artist or "Unknown artist",
+                    str(live.get("contributingArtist") or artist or "Unknown artist").strip(),
+                    title,
+                    listens,
+                    optional_positive_int(live.get("trackNumber") or track.get("TrackNumber")),
+                    optional_positive_int(live.get("discNumber") or track.get("DiscNumber")),
+                    duration_seconds(live.get("duration") or track.get("Duration")),
+                    max(0, int(live.get("playCount", track.get("PlayCount", 0)))),
+                    str(live.get("albumArtist") or track.get("AlbumArtist") or "").strip(),
+                    catalog_numbers_for_file(track.get("SourceUrl"), catalog_cache),
+                )
+            )
     return tallies
 
 
@@ -144,13 +255,21 @@ def normalize_album_title(title: str) -> str:
 
 
 def representative_artist(tracks: list[TrackTally]) -> str:
-    artist_counts = Counter(track.artist for track in tracks if track.artist)
+    artist_counts = Counter(track.album_artist or track.artist for track in tracks)
     if not artist_counts:
         return "Unknown artist"
     return sorted(
         artist_counts.items(),
         key=lambda item: (-item[1], item[0].casefold()),
     )[0][0]
+
+
+def distinct_catalog_numbers(tracks: list[TrackTally]) -> list[str]:
+    numbers: dict[str, str] = {}
+    for track in tracks:
+        for number in track.catalog_numbers:
+            numbers.setdefault(number.casefold(), number)
+    return sorted(numbers.values(), key=str.casefold)
 
 
 def aggregate_albums(tallies: list[TrackTally]) -> list[dict[str, Any]]:
@@ -170,13 +289,19 @@ def aggregate_albums(tallies: list[TrackTally]) -> list[dict[str, Any]]:
             {
                 "album": album,
                 "artist": representative_artist(tracks),
+                "catalogNumbers": distinct_catalog_numbers(tracks),
                 "trackCount": len(tracks),
                 "totalListens": sum(track.listens for track in tracks),
                 "tracks": [
                     {
                         "title": track.title,
                         "artist": track.artist,
+                        "contributingArtist": track.contributing_artist,
                         "listens": track.listens,
+                        "trackNumber": track.track_number,
+                        "discNumber": track.disc_number,
+                        "durationSeconds": track.duration_seconds,
+                        "playCount": track.play_count,
                     }
                     for track in ranked_tracks
                 ],
@@ -252,8 +377,14 @@ def index_cover_art(cover_art_directory: Path) -> dict[str, Path]:
         ),
     )
     for path in files:
-        indexed.setdefault(path.stem.casefold(), path)
+        indexed.setdefault(normalize_asset_key(path.stem), path)
     return indexed
+
+
+def normalize_asset_key(key: str) -> str:
+    """Match ASCII artwork keys to accented local filenames."""
+    decomposed = unicodedata.normalize("NFKD", key)
+    return "".join(char for char in decomposed if not unicodedata.combining(char)).casefold()
 
 
 def import_album_covers(
@@ -279,7 +410,7 @@ def import_album_covers(
             missing_mappings.append(album_title)
             continue
 
-        source = cover_files.get(asset_key.casefold())
+        source = cover_files.get(normalize_asset_key(asset_key))
         if source is None:
             missing_files.append(f"{album_title} ({asset_key})")
             continue
@@ -318,13 +449,155 @@ def previous_album_titles(destination: Path) -> set[str]:
     }
 
 
+def skip_ts_string(source: str, index: int) -> int:
+    quote = source[index]
+    index += 1
+    while index < len(source):
+        if source[index] == "\\":
+            index += 2
+        elif source[index] == quote:
+            return index + 1
+        else:
+            index += 1
+    raise RuntimeError("Unterminated string in album settings")
+
+
+def skip_ts_comment(source: str, index: int) -> int | None:
+    if source.startswith("//", index):
+        end = source.find("\n", index)
+        return len(source) if end < 0 else end + 1
+    if source.startswith("/*", index):
+        end = source.find("*/", index + 2)
+        if end < 0:
+            raise RuntimeError("Unterminated comment in album settings")
+        return end + 2
+    return None
+
+
+def skip_ts_spacing(source: str, index: int) -> int:
+    while index < len(source):
+        if source[index].isspace():
+            index += 1
+        elif (end := skip_ts_comment(source, index)) is not None:
+            index = end
+        else:
+            break
+    return index
+
+
+def scan_ts_object(source: str, index: int) -> int:
+    if source[index] != "{":
+        raise RuntimeError("Expected an object in album settings")
+    depth = 0
+    while index < len(source):
+        character = source[index]
+        if character in ('"', "'", "`"):
+            index = skip_ts_string(source, index)
+        elif (end := skip_ts_comment(source, index)) is not None:
+            index = end
+        elif character == "{":
+            depth += 1
+            index += 1
+        elif character == "}":
+            depth -= 1
+            index += 1
+            if depth == 0:
+                return index
+        else:
+            index += 1
+    raise RuntimeError("Unclosed object in album settings")
+
+
+def parse_album_settings_entries(source: str) -> dict[str, tuple[str, str]]:
+    """Keep each hand-edited override intact while sorting top-level album keys."""
+    entries: dict[str, tuple[str, str]] = {}
+    index = 0
+    while index < len(source):
+        while index < len(source) and source[index].isspace():
+            index += 1
+        if index == len(source):
+            break
+        if source[index] != '"':
+            raise RuntimeError("Unexpected content in sorted album settings; no changes made")
+        start = index
+        index = skip_ts_string(source, index)
+        title = json.loads(source[start:index])
+        index = skip_ts_spacing(source, index)
+        if index >= len(source) or source[index] != ":":
+            raise RuntimeError(f"Missing colon after album title {title!r}")
+        index = skip_ts_spacing(source, index + 1)
+        if index >= len(source) or source[index] != "{":
+            raise RuntimeError(f"Missing override object for album {title!r}")
+        index = scan_ts_object(source, index)
+        while index < len(source) and source[index].isspace():
+            index += 1
+        if index >= len(source) or source[index] != ",":
+            raise RuntimeError(f"Missing trailing comma for album {title!r}")
+        index += 1
+        entry = "\n".join(line.rstrip() for line in source[start:index].splitlines())
+        normalized = normalize_album_title(title)
+        if normalized in entries:
+            raise RuntimeError(f"Duplicate album setting for {title!r}")
+        entries[normalized] = (title, entry)
+    return entries
+
+
+def sync_album_settings(albums: list[dict[str, Any]]) -> list[str]:
+    settings_path = ALBUM_SETTINGS_PATH.resolve()
+    ensure_portfolio_path(settings_path)
+    source = settings_path.read_text(encoding="utf-8")
+    if source.count(ALBUM_SETTINGS_START) != 1 or source.count(ALBUM_SETTINGS_END) != 1:
+        raise RuntimeError("Album settings sorting markers are missing or duplicated")
+    albums_property = source.index("  albums: {", source.index("export const albumSettings"))
+    albums_open = source.index("{", albums_property)
+    albums_close = scan_ts_object(source, albums_open) - 1
+    start_marker = source.index(ALBUM_SETTINGS_START)
+    end_marker = source.index(ALBUM_SETTINGS_END)
+    if not albums_open < start_marker < end_marker < albums_close:
+        raise RuntimeError("Album settings sorting markers are outside the albums object")
+    before_entries = source[albums_open + 1:start_marker]
+    after_entries = source[end_marker + len(ALBUM_SETTINGS_END):albums_close]
+    if (skip_ts_spacing(before_entries, 0) != len(before_entries)
+            or skip_ts_spacing(after_entries, 0) != len(after_entries)):
+        raise RuntimeError("Album settings exist outside the sorted section; no changes made")
+    start = source.index(ALBUM_SETTINGS_START) + len(ALBUM_SETTINGS_START)
+    end = source.index(ALBUM_SETTINGS_END, start)
+    entries = parse_album_settings_entries(source[start:end])
+
+    added: list[str] = []
+    for album in albums:
+        title = str(album["album"])
+        normalized = normalize_album_title(title)
+        if normalized not in entries:
+            entries[normalized] = (title, f"{json.dumps(title, ensure_ascii=False)}: {{}},")
+            added.append(title)
+
+    sorted_entries = sorted(entries.values(), key=lambda entry: (normalize_album_title(entry[0]), entry[0]))
+    replacement = "\n\n" + "\n\n".join(f"    {entry}" for _, entry in sorted_entries) + "\n\n"
+    updated = source[:start] + replacement + source[end:]
+    if updated != source:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", newline="\n", dir=settings_path.parent,
+            prefix=".album-settings-", suffix=".tmp", delete=False,
+        ) as temporary:
+            temporary.write(updated)
+            temporary_path = Path(temporary.name)
+        try:
+            temporary_path.replace(settings_path)
+        finally:
+            temporary_path.unlink(missing_ok=True)
+    return sorted(added, key=normalize_album_title)
+
+
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(errors="backslashreplace")
     arguments = parse_arguments()
     logger_root = arguments.logger_root.expanduser().resolve()
     snapshot_directory = logger_root / "data" / "snapshots"
     snapshots = load_snapshots(snapshot_directory)
 
-    tallies = inclusive_tallies(snapshots)
+    tallies = inclusive_tallies(snapshots, live_wmp_metadata())
     albums = aggregate_albums(tallies)
     cover_art_directory = arguments.cover_art_dir.expanduser().resolve()
     artwork_mappings = load_album_art_mappings(
@@ -360,6 +633,7 @@ def main() -> None:
         json.dumps(output, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    added_album_settings = sync_album_settings(albums)
     displayed_destination = destination.relative_to(SITE_ROOT)
     print(
         f"Imported {len(output['albums'])} albums from {len(snapshots)} active snapshots "
@@ -371,6 +645,8 @@ def main() -> None:
     )
     if newly_discovered:
         print("Newly discovered albums: " + ", ".join(newly_discovered))
+    if added_album_settings:
+        print("Added empty album settings: " + ", ".join(added_album_settings))
     if missing_artwork_mappings:
         print("Albums without artwork mappings: " + ", ".join(missing_artwork_mappings))
     if missing_cover_files:

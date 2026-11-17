@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "data:listening": "uv run python scripts/import_listening_stats.py"
+    "data:listening": "uv run --with mutagen==1.48.1 python scripts/import_listening_stats.py"
   },
   "dependencies": {
     "@react-three/fiber": "^9.8.1",

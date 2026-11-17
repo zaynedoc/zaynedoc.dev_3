@@ -335,6 +335,7 @@ function createAlbum(
   delete curated.listeningTitle;
   delete presentationOverride.visibility;
   delete presentationOverride.favoriteTrackTitle;
+  delete presentationOverride.notes;
   const fallbackArtist =
     listening?.artist ??
     listening?.mostListenedTrack?.artist ??

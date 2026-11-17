@@ -3,6 +3,8 @@ export type AlbumVisibility = "show" | "hide";
 export type AlbumOverride = {
   /** Controls whether this album is included in the public carousel. */
   visibility?: AlbumVisibility;
+  /** Optional note shown only in this album's /library detail view. */
+  notes?: string;
   /**
    * Displays this track as the favorite when its title matches imported WMPL
    * data. Matching ignores capitalization, Unicode width, and extra spacing.
@@ -33,119 +35,152 @@ export const albumSettings: AlbumSettings = {
   defaultVisibility: "show",
 
   albums: {
-    /* EXAMPLE OVERRIDE ENTRY
+    // Edit values inside each entry; data:listening adds and sorts album titles.
+    // BEGIN SORTED ALBUM SETTINGS
 
-    "Parousia": {
-      visibility: "{show ? hide}",
-      favoriteTrackTitle: "Ascension to Heaven"
-      coverSrc: "/images/albums/quietus-ray.webp",
-      coverAlt: "Parousia album cover",
+    "Agartha": {},
+
+    "Ao": {
+      favoriteTrackTitle: "TEIKOKU SHOUJO"
     },
 
-    */
-
-    // HIDDEN
-
-    "Wolf": { 
-      visibility: "hide" 
-    },
-
-    "Starboy": { 
-      visibility: "hide" 
-    },
-
-    "House of Balloons": { 
-      visibility: "hide"
+    "Blurryface": {
+      favoriteTrackTitle: "The Judge"
     },
 
     "Christmas": {
       visibility: "hide"
     },
 
-    // TRACK OVERRIDES
+    "DELTARUNE Chapter 1 OST": {},
 
-    "Minecraft - Volume Alpha": { 
+    "Deltarune: Chapter 2 Soundtrack": {},
+
+    "House of Balloons": {
+      visibility: "hide"
+    },
+
+    "IGOR": {
+      favoriteTrackTitle: "BOYFRIEND"
+    },
+
+    "Kiki's Delivery Service Soundtrack Music Collection": {},
+
+    "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-": {},
+
+    "Minecraft - Volume Alpha": {
       favoriteTrackTitle: "Clark"
     },
 
     "Minecraft Volume Beta": {
-      favoriteTrackTitle: "Dreiton"
+      favoriteTrackTitle: "Dreiton",
+      notes: "Man I love Dreiton, I can't describe how unearthly that track is.\n\nI give this album a solid 9.8/10, though I feel as if much of that rating comes from nostalgia bias."
     },
 
-    "Vessel": { 
-      favoriteTrackTitle: "Ode to Sleep"
-    },
+    "My Neighbor Totoro (Original Soundtrack)": {},
 
-    "THE WORLD EP. FIN: WILL": { 
-      favoriteTrackTitle: "미친 폼 (Crazy Form)"
-    },
+    "Nausicaä of the Valley of the Wind Soundtrack": {},
 
-    "文化": { 
-      favoriteTrackTitle: "Kaishingeki (会心劇)"
-    },
-
-    "廻人": { 
-      favoriteTrackTitle: "Taikutsuwo Saienshinaide (退屈を再演しないで)"
-    },
-
-    "Ao": { 
-      favoriteTrackTitle: "TEIKOKU SHOUJO"
-    },
-
-    "Wonder Word": { 
-      favoriteTrackTitle: "Yoru wo koero (夜を超えろ)"
-    },
-
-    "The Chaos Chapter: FIGHT OR ESCAPE": { 
-      favoriteTrackTitle: "Frost"
-    },
-
-    "狂言": { 
-      favoriteTrackTitle: "Kagakushu (過学習)"
-    },
-
-    "OFFICIAL NUMBER": { 
+    "OFFICIAL NUMBER": {
       favoriteTrackTitle: "Perfect seimei (パーフェクト生命)"
     },
 
-    "Round Robin": { 
-      favoriteTrackTitle: "Hantaishasen (反対車線)"
+    "Parousia": {
+      favoriteTrackTitle: "Ascension to Heaven",
+      notes: "I'm not the biggest proponent of EDM, but this album is just somethin else bro, a mix of piano and insane dubstep is something unheard of, especially for 2011. Unfortunately, the version I have is the 2015 re-release of this album, but still incredibly happy that I bought this for only $15 on Suruga-ya when people scalp this album for over >$100 on Ebay lol.\n\nFavorites from this album are 'Ascension to Heaven,' 'Parousia,' and 'Freedom Dive.' I actually stemmed my online pseudonym from 2017 from this album. About 9.6/10, I like jazz."
     },
 
-    "Smile": { 
-      favoriteTrackTitle: "Inochi No Tabekata (いのちの食べ方)"
-    },
-
-    "Blurryface": { 
-      favoriteTrackTitle: "The Judge"
-    },
-
-    "Trench": { 
-      favoriteTrackTitle: "Morph"
-    },
-
-    "IGOR": { 
-      favoriteTrackTitle: "BOYFRIEND"
-    },
-
-    "play with earth! 0.03": { 
+    "play with earth! 0.03": {
       favoriteTrackTitle: "slow dive"
     },
 
-    "Parousia": { 
-      favoriteTrackTitle: "Ascension to Heaven"
-    },
+    "Porco Rosso Soundtrack": {},
 
     "Quietus Ray": {
       favoriteTrackTitle: "Bad Elixir"
+    },
+
+    "Round Robin": {
+      favoriteTrackTitle: "Hantaishasen (反対車線)"
+    },
+
+    "Smile": {
+      favoriteTrackTitle: "Inochi No Tabekata (いのちの食べ方)"
+    },
+
+    "Solution": {
+      notes: "Owning this album is kinda funny for me, because I've long heard all the songs on this album from just following Sou's music career since around 2022. So, when I bought this album recently (Oct. 2026), hearing all my favorites in a single collective was really refreshing. Also, this specific version has an unreleased cover of God-ish, amazing song.\n\nFavorites on this album are 'Spark Bug,' 'Jouyatou,' and 'Sakura Breeze.' Overall, 9/10."
+    },
+
+    "Starboy": {
+      visibility: "hide"
+    },
+
+    "The Chaos Chapter: FIGHT OR ESCAPE": {
+      favoriteTrackTitle: "Frost"
+    },
+
+    "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)": {
+      notes: "This has consistently been one of my favorite games of all time, if we exclude Geometry Dash lol. I fully believe that the soundtrack plays a huge role in this game, along with much of the game's sound design. Genuinely a modern-day masterpiece.\n\nI give a personal rating of about 9.6/10. Favorite track: prolly Zora's Domain. I used to listen to many of the town theme songs back in high school as background noise.",
+    },
+
+    "The Ocean Waves (海がきこえる)": {
+      notes: "Generally pretty normal Japanese animated film soundtrack. I've consistently heard that not too many people like this movie compared to other Studio Ghibli films, but I personally love it for not being too fantasy-focused, even if it lacks the insane animation component. I fully recommend everyone watches this movie at least once if they like slice of life films/stories.\n\nFavorite track: easily has to be 'First Impression,' it's literally the theme I think of when I think about this movie lol.",
+    },
+
+    "THE WORLD EP. FIN: WILL": {
+      favoriteTrackTitle: "미친 폼 (Crazy Form)"
+    },
+
+    "Trench": {
+      favoriteTrackTitle: "Morph"
+    },
+
+    "Under Blue": {},
+
+    "UNDERTALE": {},
+
+    "Vessel": {
+      favoriteTrackTitle: "Ode to Sleep"
+    },
+
+    "Wolf": {
+      visibility: "hide"
+    },
+
+    "Wonder Word": {
+      favoriteTrackTitle: "Yoru wo koero (夜を超えろ)",
+      notes: "Definitely one of my more rarer-ish albums. For the longest time, I never really listened to Eve's earlier works, but this definitely helped bridge me into it, especially since I was already a fan of his other works, like 'Round Robin' and 'OFFICIAL NUMBER,' which I also have in my collection.\n\nThanks to this album, I have set my eyes on collecting a lot of his more even nicher albums (like hopefully 'einie' one day), and some albums from when he was still a part of Riot of Color.\n\nOverall, this album is pretty good, solid 8.5/10, very vocaloidy. Favorite tracks have to be either 'Yoru wo koero' or 'Senukouhanabi.'"
     },
 
     "World Fragments": {
       favoriteTrackTitle: "ANiMA"
     },
 
+    "おとぎ": {},
+
     "ウェザーステーション": {
       favoriteTrackTitle: "Postshelter (ポストシェルター)"
     },
+
+    "廻人": {
+      favoriteTrackTitle: "Taikutsuwo Saienshinaide (退屈を再演しないで)"
+    },
+
+    "文化": {
+      favoriteTrackTitle: "Kaishingeki (会心劇)"
+    },
+
+    "正しい偽りからの起床": {},
+
+    "残夢": {},
+
+    "狂言": {
+      favoriteTrackTitle: "Kagakushu (過学習)"
+    },
+
+    "蒼": {},
+
+    // END SORTED ALBUM SETTINGS
   },
 };
