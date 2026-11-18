@@ -20,6 +20,8 @@ from pathlib import Path
 from typing import Any
 
 from mutagen import File as read_audio_file, MutagenError
+from generate_library_og import generate_library_og
+from generate_library_overview import generate_library_overview
 
 
 SITE_ROOT = Path(__file__).resolve().parents[1]
@@ -30,6 +32,7 @@ DEFAULT_LOGGER_ROOT = Path(
     )
 )
 DEFAULT_OUTPUT = SITE_ROOT / "app" / "data" / "listening-stats.generated.json"
+OVERVIEW_OUTPUT = SITE_ROOT / "app" / "data" / "library-overview.generated.json"
 DEFAULT_COVER_ART_DIRECTORY = Path(
     os.environ.get(
         "WMPL_COVER_ART_ROOT",
@@ -597,7 +600,8 @@ def main() -> None:
     snapshot_directory = logger_root / "data" / "snapshots"
     snapshots = load_snapshots(snapshot_directory)
 
-    tallies = inclusive_tallies(snapshots, live_wmp_metadata())
+    live_metadata = live_wmp_metadata()
+    tallies = inclusive_tallies(snapshots, live_metadata)
     albums = aggregate_albums(tallies)
     cover_art_directory = arguments.cover_art_dir.expanduser().resolve()
     artwork_mappings = load_album_art_mappings(
@@ -606,6 +610,8 @@ def main() -> None:
     imported_cover_count, missing_artwork_mappings, missing_cover_files = (
         import_album_covers(albums, artwork_mappings, cover_art_directory)
     )
+    overview = generate_library_overview(snapshots, live_metadata, albums)
+    featured_album_titles = generate_library_og(albums)
     count_mode = "first-seen WMP counts plus positive deltas between active snapshots"
 
     latest_path, latest_snapshot = snapshots[-1]
@@ -633,6 +639,10 @@ def main() -> None:
         json.dumps(output, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    OVERVIEW_OUTPUT.write_text(
+        json.dumps(overview, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     added_album_settings = sync_album_settings(albums)
     displayed_destination = destination.relative_to(SITE_ROOT)
     print(
@@ -643,6 +653,8 @@ def main() -> None:
         f"Imported {imported_cover_count} album covers into "
         f"{IMPORTED_COVER_DIRECTORY.relative_to(SITE_ROOT)}"
     )
+    print("Generated library social image featuring: " + ", ".join(featured_album_titles))
+    print(f"Generated library overview for {len(overview['periods'])} time frames")
     if newly_discovered:
         print("Newly discovered albums: " + ", ".join(newly_discovered))
     if added_album_settings:

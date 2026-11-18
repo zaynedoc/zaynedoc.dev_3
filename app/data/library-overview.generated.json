@@ -1,0 +1,906 @@
+{
+  "source": {
+    "capturedAtUtc": "2026-11-18T04:05:02.1752167+00:00",
+    "firstSnapshotAtUtc": "2026-09-27T05:00:53.1291278+00:00",
+    "snapshotCount": 59,
+    "countMode": "first-seen WMP counts plus positive deltas between active snapshots"
+  },
+  "periods": {
+    "week": {
+      "fromUtc": "2026-11-11T04:05:02.175216+00:00",
+      "throughUtc": "2026-11-18T04:05:02.175216+00:00",
+      "listens": 1210,
+      "listeningSeconds": 173426,
+      "rankings": {
+        "listens": {
+          "artists": [
+            {
+              "name": "Joe Hisaishi",
+              "listens": 324,
+              "listeningSeconds": 47720,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_kikis-delivery-service-soundtrack.jpg"
+            },
+            {
+              "name": "岩田恭明",
+              "listens": 273,
+              "listeningSeconds": 37008,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "片岡真央",
+              "listens": 176,
+              "listeningSeconds": 16206,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "Eve",
+              "listens": 123,
+              "listeningSeconds": 26350,
+              "coverSrc": "/images/albums/wmpl-imported/eve_otogi.jpg"
+            },
+            {
+              "name": "若井淑",
+              "listens": 109,
+              "listeningSeconds": 8325,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            }
+          ],
+          "albums": [
+            {
+              "name": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)",
+              "detail": "Nintendo",
+              "listens": 589,
+              "listeningSeconds": 66629,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "Kiki's Delivery Service Soundtrack Music Collection",
+              "detail": "Joe Hisaishi",
+              "listens": 107,
+              "listeningSeconds": 13795,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_kikis-delivery-service-soundtrack.jpg"
+            },
+            {
+              "name": "My Neighbor Totoro (Original Soundtrack)",
+              "detail": "Joe Hisaishi",
+              "listens": 70,
+              "listeningSeconds": 9054,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_my-neighbor-totoro-original-soundtrack.jpg"
+            },
+            {
+              "name": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-",
+              "detail": "Joe Hisaishi",
+              "listens": 68,
+              "listeningSeconds": 10879,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg"
+            },
+            {
+              "name": "Nausicaä of the Valley of the Wind Soundtrack",
+              "detail": "Joe Hisaishi",
+              "listens": 61,
+              "listeningSeconds": 12287,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg"
+            }
+          ],
+          "tracks": [
+            {
+              "name": "A Haunted House!",
+              "detail": "Joe Hisaishi",
+              "listens": 13,
+              "listeningSeconds": 1083,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_my-neighbor-totoro-original-soundtrack.jpg"
+            },
+            {
+              "name": "The Girl Who Fell From the Sky",
+              "detail": "Joe Hisaishi",
+              "listens": 12,
+              "listeningSeconds": 1769,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg"
+            },
+            {
+              "name": "Cat Bus",
+              "detail": "Joe Hisaishi",
+              "listens": 11,
+              "listeningSeconds": 1442,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_my-neighbor-totoro-original-soundtrack.jpg"
+            },
+            {
+              "name": "Fukai nite",
+              "detail": "Joe Hisaishi",
+              "listens": 10,
+              "listeningSeconds": 1533,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg"
+            },
+            {
+              "name": "Kaze no Tani",
+              "detail": "Joe Hisaishi",
+              "listens": 10,
+              "listeningSeconds": 1929,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg"
+            }
+          ]
+        },
+        "listeningSeconds": {
+          "artists": [
+            {
+              "name": "Joe Hisaishi",
+              "listens": 324,
+              "listeningSeconds": 47720,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_kikis-delivery-service-soundtrack.jpg"
+            },
+            {
+              "name": "岩田恭明",
+              "listens": 273,
+              "listeningSeconds": 37008,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "Eve",
+              "listens": 123,
+              "listeningSeconds": 26350,
+              "coverSrc": "/images/albums/wmpl-imported/eve_otogi.jpg"
+            },
+            {
+              "name": "片岡真央",
+              "listens": 176,
+              "listeningSeconds": 16206,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "C418",
+              "listens": 45,
+              "listeningSeconds": 8804,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            }
+          ],
+          "albums": [
+            {
+              "name": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)",
+              "detail": "Nintendo",
+              "listens": 589,
+              "listeningSeconds": 66629,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "Kiki's Delivery Service Soundtrack Music Collection",
+              "detail": "Joe Hisaishi",
+              "listens": 107,
+              "listeningSeconds": 13795,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_kikis-delivery-service-soundtrack.jpg"
+            },
+            {
+              "name": "Nausicaä of the Valley of the Wind Soundtrack",
+              "detail": "Joe Hisaishi",
+              "listens": 61,
+              "listeningSeconds": 12287,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg"
+            },
+            {
+              "name": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-",
+              "detail": "Joe Hisaishi",
+              "listens": 68,
+              "listeningSeconds": 10879,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg"
+            },
+            {
+              "name": "My Neighbor Totoro (Original Soundtrack)",
+              "detail": "Joe Hisaishi",
+              "listens": 70,
+              "listeningSeconds": 9054,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_my-neighbor-totoro-original-soundtrack.jpg"
+            }
+          ],
+          "tracks": [
+            {
+              "name": "Staff Roll (スタッフロール)",
+              "detail": "片岡真央, 岩田恭明 & 若井淑",
+              "listens": 4,
+              "listeningSeconds": 2335,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "Kaze no Tani no Naushika - Opening theme",
+              "detail": "Joe Hisaishi",
+              "listens": 8,
+              "listeningSeconds": 2225,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg"
+            },
+            {
+              "name": "Tori no Hito - Ending theme",
+              "detail": "Joe Hisaishi",
+              "listens": 9,
+              "listeningSeconds": 2046,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg"
+            },
+            {
+              "name": "Kaze no Tani",
+              "detail": "Joe Hisaishi",
+              "listens": 10,
+              "listeningSeconds": 1929,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg"
+            },
+            {
+              "name": "Morning in the Slag Ravine",
+              "detail": "Joe Hisaishi",
+              "listens": 10,
+              "listeningSeconds": 1838,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg"
+            }
+          ]
+        }
+      }
+    },
+    "month": {
+      "fromUtc": "2026-10-18T04:05:02.175216+00:00",
+      "throughUtc": "2026-11-18T04:05:02.175216+00:00",
+      "listens": 4414,
+      "listeningSeconds": 813929,
+      "rankings": {
+        "listens": {
+          "artists": [
+            {
+              "name": "C418",
+              "listens": 1507,
+              "listeningSeconds": 313920,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Eve",
+              "listens": 773,
+              "listeningSeconds": 170563,
+              "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg"
+            },
+            {
+              "name": "Toby Fox",
+              "listens": 401,
+              "listeningSeconds": 30343,
+              "coverSrc": "/images/albums/wmpl-imported/toby-fox_undertale.jpg"
+            },
+            {
+              "name": "Joe Hisaishi",
+              "listens": 324,
+              "listeningSeconds": 47720,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_kikis-delivery-service-soundtrack.jpg"
+            },
+            {
+              "name": "岩田恭明",
+              "listens": 273,
+              "listeningSeconds": 37008,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            }
+          ],
+          "albums": [
+            {
+              "name": "Minecraft Volume Beta",
+              "detail": "C418",
+              "listens": 786,
+              "listeningSeconds": 205124,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Minecraft - Volume Alpha",
+              "detail": "C418",
+              "listens": 721,
+              "listeningSeconds": 108796,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)",
+              "detail": "Nintendo",
+              "listens": 589,
+              "listeningSeconds": 66629,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "UNDERTALE",
+              "detail": "Toby Fox",
+              "listens": 245,
+              "listeningSeconds": 20353,
+              "coverSrc": "/images/albums/wmpl-imported/toby-fox_undertale.jpg"
+            },
+            {
+              "name": "蒼",
+              "detail": "Eve × Sou",
+              "listens": 134,
+              "listeningSeconds": 30239,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            }
+          ],
+          "tracks": [
+            {
+              "name": "Clark",
+              "detail": "C418",
+              "listens": 51,
+              "listeningSeconds": 9754,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "Cat",
+              "detail": "C418",
+              "listens": 40,
+              "listeningSeconds": 7432,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "Dreiton",
+              "detail": "C418",
+              "listens": 37,
+              "listeningSeconds": 18345,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Danny",
+              "detail": "C418",
+              "listens": 36,
+              "listeningSeconds": 9139,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "Droopy Likes Ricochet",
+              "detail": "C418",
+              "listens": 36,
+              "listeningSeconds": 3455,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            }
+          ]
+        },
+        "listeningSeconds": {
+          "artists": [
+            {
+              "name": "C418",
+              "listens": 1507,
+              "listeningSeconds": 313920,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Eve",
+              "listens": 773,
+              "listeningSeconds": 170563,
+              "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg"
+            },
+            {
+              "name": "Joe Hisaishi",
+              "listens": 324,
+              "listeningSeconds": 47720,
+              "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_kikis-delivery-service-soundtrack.jpg"
+            },
+            {
+              "name": "Ado",
+              "listens": 189,
+              "listeningSeconds": 40757,
+              "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg"
+            },
+            {
+              "name": "岩田恭明",
+              "listens": 273,
+              "listeningSeconds": 37008,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            }
+          ],
+          "albums": [
+            {
+              "name": "Minecraft Volume Beta",
+              "detail": "C418",
+              "listens": 786,
+              "listeningSeconds": 205124,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Minecraft - Volume Alpha",
+              "detail": "C418",
+              "listens": 721,
+              "listeningSeconds": 108796,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)",
+              "detail": "Nintendo",
+              "listens": 589,
+              "listeningSeconds": 66629,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "蒼",
+              "detail": "Eve × Sou",
+              "listens": 134,
+              "listeningSeconds": 30239,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "廻人",
+              "detail": "Eve",
+              "listens": 127,
+              "listeningSeconds": 28519,
+              "coverSrc": "/images/albums/wmpl-imported/eve_kaizin.jpg"
+            }
+          ],
+          "tracks": [
+            {
+              "name": "Alpha",
+              "detail": "C418",
+              "listens": 32,
+              "listeningSeconds": 19250,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Dreiton",
+              "detail": "C418",
+              "listens": 37,
+              "listeningSeconds": 18345,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Taswell",
+              "detail": "C418",
+              "listens": 32,
+              "listeningSeconds": 16470,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Blind Spots",
+              "detail": "C418",
+              "listens": 33,
+              "listeningSeconds": 10946,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Blocks",
+              "detail": "C418",
+              "listens": 31,
+              "listeningSeconds": 10607,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            }
+          ]
+        }
+      }
+    },
+    "year": {
+      "fromUtc": "2026-09-27T05:00:53.129127+00:00",
+      "throughUtc": "2026-11-18T04:05:02.175216+00:00",
+      "listens": 7244,
+      "listeningSeconds": 1471138,
+      "rankings": {
+        "listens": {
+          "artists": [
+            {
+              "name": "Eve",
+              "listens": 1894,
+              "listeningSeconds": 420107,
+              "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg"
+            },
+            {
+              "name": "C418",
+              "listens": 1507,
+              "listeningSeconds": 313920,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Toby Fox",
+              "listens": 401,
+              "listeningSeconds": 30343,
+              "coverSrc": "/images/albums/wmpl-imported/toby-fox_undertale.jpg"
+            },
+            {
+              "name": "稲葉曇",
+              "listens": 388,
+              "listeningSeconds": 80781,
+              "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg"
+            },
+            {
+              "name": "Ado",
+              "listens": 384,
+              "listeningSeconds": 84926,
+              "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg"
+            }
+          ],
+          "albums": [
+            {
+              "name": "Minecraft Volume Beta",
+              "detail": "C418",
+              "listens": 786,
+              "listeningSeconds": 205124,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Minecraft - Volume Alpha",
+              "detail": "C418",
+              "listens": 721,
+              "listeningSeconds": 108796,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "蒼",
+              "detail": "Eve × Sou",
+              "listens": 647,
+              "listeningSeconds": 146120,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)",
+              "detail": "Nintendo",
+              "listens": 589,
+              "listeningSeconds": 66629,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "OFFICIAL NUMBER",
+              "detail": "Eve",
+              "listens": 429,
+              "listeningSeconds": 94753,
+              "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg"
+            }
+          ],
+          "tracks": [
+            {
+              "name": "帝国少女",
+              "detail": "Sou",
+              "listens": 56,
+              "listeningSeconds": 14275,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "Dr.",
+              "detail": "Eve",
+              "listens": 52,
+              "listeningSeconds": 12256,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "tig‐hug",
+              "detail": "Sou",
+              "listens": 52,
+              "listeningSeconds": 13136,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "ナンセンス文学",
+              "detail": "Sou",
+              "listens": 52,
+              "listeningSeconds": 10709,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "Clark",
+              "detail": "C418",
+              "listens": 51,
+              "listeningSeconds": 9754,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            }
+          ]
+        },
+        "listeningSeconds": {
+          "artists": [
+            {
+              "name": "Eve",
+              "listens": 1894,
+              "listeningSeconds": 420107,
+              "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg"
+            },
+            {
+              "name": "C418",
+              "listens": 1507,
+              "listeningSeconds": 313920,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "xi",
+              "listens": 362,
+              "listeningSeconds": 97179,
+              "coverSrc": "/images/albums/wmpl-imported/xi_parousia.jpg"
+            },
+            {
+              "name": "Ado",
+              "listens": 384,
+              "listeningSeconds": 84926,
+              "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg"
+            },
+            {
+              "name": "稲葉曇",
+              "listens": 388,
+              "listeningSeconds": 80781,
+              "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg"
+            }
+          ],
+          "albums": [
+            {
+              "name": "Minecraft Volume Beta",
+              "detail": "C418",
+              "listens": 786,
+              "listeningSeconds": 205124,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "蒼",
+              "detail": "Eve × Sou",
+              "listens": 647,
+              "listeningSeconds": 146120,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "Minecraft - Volume Alpha",
+              "detail": "C418",
+              "listens": 721,
+              "listeningSeconds": 108796,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "OFFICIAL NUMBER",
+              "detail": "Eve",
+              "listens": 429,
+              "listeningSeconds": 94753,
+              "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg"
+            },
+            {
+              "name": "ウェザーステーション",
+              "detail": "稲葉曇",
+              "listens": 378,
+              "listeningSeconds": 78689,
+              "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg"
+            }
+          ],
+          "tracks": [
+            {
+              "name": "Alpha",
+              "detail": "C418",
+              "listens": 32,
+              "listeningSeconds": 19250,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Dreiton",
+              "detail": "C418",
+              "listens": 37,
+              "listeningSeconds": 18345,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Taswell",
+              "detail": "C418",
+              "listens": 32,
+              "listeningSeconds": 16470,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "帝国少女",
+              "detail": "Sou",
+              "listens": 56,
+              "listeningSeconds": 14275,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "はくしの春",
+              "detail": "Sou",
+              "listens": 51,
+              "listeningSeconds": 13879,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            }
+          ]
+        }
+      }
+    },
+    "all": {
+      "fromUtc": "2026-09-27T05:00:53.129127+00:00",
+      "throughUtc": "2026-11-18T04:05:02.175216+00:00",
+      "listens": 7244,
+      "listeningSeconds": 1471138,
+      "rankings": {
+        "listens": {
+          "artists": [
+            {
+              "name": "Eve",
+              "listens": 1894,
+              "listeningSeconds": 420107,
+              "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg"
+            },
+            {
+              "name": "C418",
+              "listens": 1507,
+              "listeningSeconds": 313920,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Toby Fox",
+              "listens": 401,
+              "listeningSeconds": 30343,
+              "coverSrc": "/images/albums/wmpl-imported/toby-fox_undertale.jpg"
+            },
+            {
+              "name": "稲葉曇",
+              "listens": 388,
+              "listeningSeconds": 80781,
+              "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg"
+            },
+            {
+              "name": "Ado",
+              "listens": 384,
+              "listeningSeconds": 84926,
+              "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg"
+            }
+          ],
+          "albums": [
+            {
+              "name": "Minecraft Volume Beta",
+              "detail": "C418",
+              "listens": 786,
+              "listeningSeconds": 205124,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Minecraft - Volume Alpha",
+              "detail": "C418",
+              "listens": 721,
+              "listeningSeconds": 108796,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "蒼",
+              "detail": "Eve × Sou",
+              "listens": 647,
+              "listeningSeconds": 146120,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)",
+              "detail": "Nintendo",
+              "listens": 589,
+              "listeningSeconds": 66629,
+              "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg"
+            },
+            {
+              "name": "OFFICIAL NUMBER",
+              "detail": "Eve",
+              "listens": 429,
+              "listeningSeconds": 94753,
+              "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg"
+            }
+          ],
+          "tracks": [
+            {
+              "name": "帝国少女",
+              "detail": "Sou",
+              "listens": 56,
+              "listeningSeconds": 14275,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "Dr.",
+              "detail": "Eve",
+              "listens": 52,
+              "listeningSeconds": 12256,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "tig‐hug",
+              "detail": "Sou",
+              "listens": 52,
+              "listeningSeconds": 13136,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "ナンセンス文学",
+              "detail": "Sou",
+              "listens": 52,
+              "listeningSeconds": 10709,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "Clark",
+              "detail": "C418",
+              "listens": 51,
+              "listeningSeconds": 9754,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            }
+          ]
+        },
+        "listeningSeconds": {
+          "artists": [
+            {
+              "name": "Eve",
+              "listens": 1894,
+              "listeningSeconds": 420107,
+              "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg"
+            },
+            {
+              "name": "C418",
+              "listens": 1507,
+              "listeningSeconds": 313920,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "xi",
+              "listens": 362,
+              "listeningSeconds": 97179,
+              "coverSrc": "/images/albums/wmpl-imported/xi_parousia.jpg"
+            },
+            {
+              "name": "Ado",
+              "listens": 384,
+              "listeningSeconds": 84926,
+              "coverSrc": "/images/albums/wmpl-imported/ado_kyogen.jpg"
+            },
+            {
+              "name": "稲葉曇",
+              "listens": 388,
+              "listeningSeconds": 80781,
+              "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg"
+            }
+          ],
+          "albums": [
+            {
+              "name": "Minecraft Volume Beta",
+              "detail": "C418",
+              "listens": 786,
+              "listeningSeconds": 205124,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "蒼",
+              "detail": "Eve × Sou",
+              "listens": 647,
+              "listeningSeconds": 146120,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "Minecraft - Volume Alpha",
+              "detail": "C418",
+              "listens": 721,
+              "listeningSeconds": 108796,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-alpha.jpg"
+            },
+            {
+              "name": "OFFICIAL NUMBER",
+              "detail": "Eve",
+              "listens": 429,
+              "listeningSeconds": 94753,
+              "coverSrc": "/images/albums/wmpl-imported/eve_official-number.jpg"
+            },
+            {
+              "name": "ウェザーステーション",
+              "detail": "稲葉曇",
+              "listens": 378,
+              "listeningSeconds": 78689,
+              "coverSrc": "/images/albums/wmpl-imported/inabakumori_weather-station.jpg"
+            }
+          ],
+          "tracks": [
+            {
+              "name": "Alpha",
+              "detail": "C418",
+              "listens": 32,
+              "listeningSeconds": 19250,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Dreiton",
+              "detail": "C418",
+              "listens": 37,
+              "listeningSeconds": 18345,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "Taswell",
+              "detail": "C418",
+              "listens": 32,
+              "listeningSeconds": 16470,
+              "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg"
+            },
+            {
+              "name": "帝国少女",
+              "detail": "Sou",
+              "listens": 56,
+              "listeningSeconds": 14275,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            },
+            {
+              "name": "はくしの春",
+              "detail": "Sou",
+              "listens": 51,
+              "listeningSeconds": 13879,
+              "coverSrc": "/images/albums/wmpl-imported/eve-x-sou_ao.jpg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

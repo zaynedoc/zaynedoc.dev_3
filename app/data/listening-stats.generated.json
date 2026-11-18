@@ -1,10 +1,10 @@
 {
   "source": {
-    "capturedAtUtc": "2026-11-17T04:05:02.8702969+00:00",
+    "capturedAtUtc": "2026-11-18T04:05:02.1752167+00:00",
     "countMode": "first-seen WMP counts plus positive deltas between active snapshots",
     "includeFirstSeenCounts": true,
-    "snapshot": "20261117T040502870Z.json",
-    "snapshotCount": 58
+    "snapshot": "20261118T040502175Z.json",
+    "snapshotCount": 59
   },
   "albums": [
     {
@@ -14,8 +14,18 @@
         "GI-360"
       ],
       "trackCount": 30,
-      "totalListens": 776,
+      "totalListens": 786,
       "tracks": [
+        {
+          "title": "Dreiton",
+          "artist": "C418",
+          "contributingArtist": "C418",
+          "listens": 37,
+          "trackNumber": 18,
+          "discNumber": 2,
+          "durationSeconds": 496,
+          "playCount": 38
+        },
         {
           "title": "Ki",
           "artist": "C418",
@@ -27,14 +37,14 @@
           "playCount": 36
         },
         {
-          "title": "Dreiton",
+          "title": "Flake",
           "artist": "C418",
           "contributingArtist": "C418",
-          "listens": 35,
-          "trackNumber": 18,
-          "discNumber": 2,
-          "durationSeconds": 496,
-          "playCount": 37
+          "listens": 34,
+          "trackNumber": 5,
+          "discNumber": 1,
+          "durationSeconds": 170,
+          "playCount": 35
         },
         {
           "title": "Moog City 2",
@@ -47,30 +57,10 @@
           "playCount": 34
         },
         {
-          "title": "Flake",
-          "artist": "C418",
-          "contributingArtist": "C418",
-          "listens": 33,
-          "trackNumber": 5,
-          "discNumber": 1,
-          "durationSeconds": 170,
-          "playCount": 34
-        },
-        {
-          "title": "Alpha",
-          "artist": "C418",
-          "contributingArtist": "C418",
-          "listens": 32,
-          "trackNumber": 2,
-          "discNumber": 1,
-          "durationSeconds": 602,
-          "playCount": 32
-        },
-        {
           "title": "Blind Spots",
           "artist": "C418",
           "contributingArtist": "C418",
-          "listens": 32,
+          "listens": 33,
           "trackNumber": 4,
           "discNumber": 1,
           "durationSeconds": 332,
@@ -80,20 +70,30 @@
           "title": "Dead Voxel",
           "artist": "C418",
           "contributingArtist": "C418",
-          "listens": 32,
+          "listens": 33,
           "trackNumber": 3,
           "discNumber": 1,
           "durationSeconds": 295,
-          "playCount": 33
+          "playCount": 34
         },
         {
           "title": "Intro",
           "artist": "C418",
           "contributingArtist": "C418",
-          "listens": 32,
+          "listens": 33,
           "trackNumber": 30,
           "discNumber": 2,
           "durationSeconds": 276,
+          "playCount": 33
+        },
+        {
+          "title": "Alpha",
+          "artist": "C418",
+          "contributingArtist": "C418",
+          "listens": 32,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 602,
           "playCount": 33
         },
         {
@@ -115,6 +115,16 @@
           "discNumber": 2,
           "durationSeconds": 250,
           "playCount": 32
+        },
+        {
+          "title": "Beginning 2",
+          "artist": "C418",
+          "contributingArtist": "C418",
+          "listens": 31,
+          "trackNumber": 17,
+          "discNumber": 2,
+          "durationSeconds": 176,
+          "playCount": 31
         },
         {
           "title": "Blocks",
@@ -147,6 +157,16 @@
           "playCount": 31
         },
         {
+          "title": "Stal",
+          "artist": "C418",
+          "contributingArtist": "C418",
+          "listens": 31,
+          "trackNumber": 23,
+          "discNumber": 2,
+          "durationSeconds": 152,
+          "playCount": 31
+        },
+        {
           "title": "Strad",
           "artist": "C418",
           "contributingArtist": "C418",
@@ -154,16 +174,6 @@
           "trackNumber": 24,
           "discNumber": 2,
           "durationSeconds": 188,
-          "playCount": 31
-        },
-        {
-          "title": "Beginning 2",
-          "artist": "C418",
-          "contributingArtist": "C418",
-          "listens": 30,
-          "trackNumber": 17,
-          "discNumber": 2,
-          "durationSeconds": 176,
           "playCount": 31
         },
         {
@@ -184,17 +194,17 @@
           "trackNumber": 14,
           "discNumber": 1,
           "durationSeconds": 248,
-          "playCount": 30
+          "playCount": 31
         },
         {
-          "title": "Stal",
+          "title": "Wait",
           "artist": "C418",
           "contributingArtist": "C418",
           "listens": 30,
-          "trackNumber": 23,
+          "trackNumber": 21,
           "discNumber": 2,
-          "durationSeconds": 152,
-          "playCount": 31
+          "durationSeconds": 234,
+          "playCount": 30
         },
         {
           "title": "Eleven",
@@ -207,14 +217,14 @@
           "playCount": 29
         },
         {
-          "title": "Wait",
+          "title": "Far",
           "artist": "C418",
           "contributingArtist": "C418",
           "listens": 29,
-          "trackNumber": 21,
+          "trackNumber": 29,
           "discNumber": 2,
-          "durationSeconds": 234,
-          "playCount": 30
+          "durationSeconds": 192,
+          "playCount": 29
         },
         {
           "title": "Warmth",
@@ -227,16 +237,6 @@
           "playCount": 29
         },
         {
-          "title": "Far",
-          "artist": "C418",
-          "contributingArtist": "C418",
-          "listens": 28,
-          "trackNumber": 29,
-          "discNumber": 2,
-          "durationSeconds": 192,
-          "playCount": 29
-        },
-        {
           "title": "Ballad of the Cats",
           "artist": "C418",
           "contributingArtist": "C418",
@@ -244,7 +244,7 @@
           "trackNumber": 15,
           "discNumber": 1,
           "durationSeconds": 276,
-          "playCount": 27
+          "playCount": 28
         },
         {
           "title": "Mall",
@@ -254,7 +254,7 @@
           "trackNumber": 27,
           "discNumber": 2,
           "durationSeconds": 198,
-          "playCount": 27
+          "playCount": 28
         },
         {
           "title": "Aria Math",
@@ -264,7 +264,7 @@
           "trackNumber": 13,
           "discNumber": 1,
           "durationSeconds": 309,
-          "playCount": 25
+          "playCount": 26
         },
         {
           "title": "Haunt Muskie",
@@ -318,9 +318,9 @@
         }
       ],
       "mostListenedTrack": {
-        "title": "Ki",
+        "title": "Dreiton",
         "artist": "C418",
-        "listens": 36
+        "listens": 37
       },
       "coverSrc": "/images/albums/wmpl-imported/c418_minecraft-volume-beta.jpg",
       "coverAlt": "Minecraft Volume Beta album cover"
@@ -332,7 +332,7 @@
         "GI-243"
       ],
       "trackCount": 24,
-      "totalListens": 715,
+      "totalListens": 721,
       "tracks": [
         {
           "title": "Clark",
@@ -342,7 +342,7 @@
           "trackNumber": 14,
           "discNumber": 1,
           "durationSeconds": 191,
-          "playCount": 51
+          "playCount": 52
         },
         {
           "title": "Cat",
@@ -362,13 +362,13 @@
           "trackNumber": 21,
           "discNumber": 1,
           "durationSeconds": 254,
-          "playCount": 36
+          "playCount": 37
         },
         {
           "title": "Droopy Likes Ricochet",
           "artist": "C418",
           "contributingArtist": "C418",
-          "listens": 35,
+          "listens": 36,
           "trackNumber": 23,
           "discNumber": 1,
           "durationSeconds": 96,
@@ -395,6 +395,16 @@
           "playCount": 35
         },
         {
+          "title": "Subwoofer Lullaby",
+          "artist": "C418",
+          "contributingArtist": "C418",
+          "listens": 35,
+          "trackNumber": 3,
+          "discNumber": 1,
+          "durationSeconds": 208,
+          "playCount": 35
+        },
+        {
           "title": "Droopy Likes Your Face",
           "artist": "C418",
           "contributingArtist": "C418",
@@ -402,16 +412,6 @@
           "trackNumber": 24,
           "discNumber": 1,
           "durationSeconds": 116,
-          "playCount": 34
-        },
-        {
-          "title": "Subwoofer Lullaby",
-          "artist": "C418",
-          "contributingArtist": "C418",
-          "listens": 34,
-          "trackNumber": 3,
-          "discNumber": 1,
-          "durationSeconds": 208,
           "playCount": 35
         },
         {
@@ -435,6 +435,26 @@
           "playCount": 33
         },
         {
+          "title": "Door",
+          "artist": "C418",
+          "contributingArtist": "C418",
+          "listens": 33,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 111,
+          "playCount": 33
+        },
+        {
+          "title": "Dry Hands",
+          "artist": "C418",
+          "contributingArtist": "C418",
+          "listens": 33,
+          "trackNumber": 12,
+          "discNumber": 1,
+          "durationSeconds": 69,
+          "playCount": 33
+        },
+        {
           "title": "Minecraft",
           "artist": "C418",
           "contributingArtist": "C418",
@@ -445,24 +465,14 @@
           "playCount": 33
         },
         {
-          "title": "Door",
+          "title": "Oxygene",
           "artist": "C418",
           "contributingArtist": "C418",
-          "listens": 32,
-          "trackNumber": 2,
+          "listens": 33,
+          "trackNumber": 9,
           "discNumber": 1,
-          "durationSeconds": 111,
-          "playCount": 33
-        },
-        {
-          "title": "Dry Hands",
-          "artist": "C418",
-          "contributingArtist": "C418",
-          "listens": 32,
-          "trackNumber": 12,
-          "discNumber": 1,
-          "durationSeconds": 69,
-          "playCount": 33
+          "durationSeconds": 65,
+          "playCount": 34
         },
         {
           "title": "Equinoxe",
@@ -472,16 +482,6 @@
           "trackNumber": 10,
           "discNumber": 1,
           "durationSeconds": 115,
-          "playCount": 32
-        },
-        {
-          "title": "Oxygene",
-          "artist": "C418",
-          "contributingArtist": "C418",
-          "listens": 32,
-          "trackNumber": 9,
-          "discNumber": 1,
-          "durationSeconds": 65,
           "playCount": 33
         },
         {
@@ -502,7 +502,7 @@
           "trackNumber": 7,
           "discNumber": 1,
           "durationSeconds": 203,
-          "playCount": 31
+          "playCount": 32
         },
         {
           "title": "Mice on Venus",
@@ -538,11 +538,11 @@
           "title": "Key",
           "artist": "C418",
           "contributingArtist": "C418",
-          "listens": 29,
+          "listens": 30,
           "trackNumber": 1,
           "discNumber": 1,
           "durationSeconds": 65,
-          "playCount": 30
+          "playCount": 31
         },
         {
           "title": "Living Mice",
@@ -742,17 +742,47 @@
         "COCX-40312"
       ],
       "trackCount": 211,
-      "totalListens": 571,
+      "totalListens": 589,
       "tracks": [
         {
           "title": "The King of Hyrule's Wish (ハイラル王の願い)",
           "artist": "片岡真央",
           "contributingArtist": "片岡真央",
-          "listens": 5,
+          "listens": 6,
           "trackNumber": 15,
           "discNumber": 1,
           "durationSeconds": 136,
           "playCount": 6
+        },
+        {
+          "title": "Blessing Shrine (祝福の祠)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 5,
+          "trackNumber": 35,
+          "discNumber": 1,
+          "durationSeconds": 161,
+          "playCount": 5
+        },
+        {
+          "title": "Ruins (廃墟)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 5,
+          "trackNumber": 113,
+          "discNumber": 4,
+          "durationSeconds": 150,
+          "playCount": 5
+        },
+        {
+          "title": "The Temple of Time (時の神殿跡)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 5,
+          "trackNumber": 12,
+          "discNumber": 1,
+          "durationSeconds": 122,
+          "playCount": 5
         },
         {
           "title": "Zora's Domain (ゾーラの里)",
@@ -775,16 +805,6 @@
           "playCount": 4
         },
         {
-          "title": "Blessing Shrine (祝福の祠)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 4,
-          "trackNumber": 35,
-          "discNumber": 1,
-          "durationSeconds": 161,
-          "playCount": 5
-        },
-        {
           "title": "Blight Ganon Appearance (カースガノン出現)",
           "artist": "岩田恭明",
           "contributingArtist": "岩田恭明",
@@ -805,6 +825,16 @@
           "playCount": 4
         },
         {
+          "title": "Daruk and the Divine Beast (ダルケルと神獣)",
+          "artist": "若井淑",
+          "contributingArtist": "若井淑",
+          "listens": 4,
+          "trackNumber": 88,
+          "discNumber": 3,
+          "durationSeconds": 92,
+          "playCount": 4
+        },
+        {
           "title": "Divine Beast of Lightning Lookout Post (雷の神獣監視所)",
           "artist": "岩田恭明",
           "contributingArtist": "岩田恭明",
@@ -812,7 +842,7 @@
           "trackNumber": 99,
           "discNumber": 3,
           "durationSeconds": 162,
-          "playCount": 4
+          "playCount": 5
         },
         {
           "title": "Divine Beast of Water Vah Ruta (水の神獣 ヴァ・ルッタ)",
@@ -855,6 +885,16 @@
           "playCount": 4
         },
         {
+          "title": "Field (Day) (フィールド(昼))",
+          "artist": "片岡真央",
+          "contributingArtist": "片岡真央",
+          "listens": 4,
+          "trackNumber": 17,
+          "discNumber": 1,
+          "durationSeconds": 166,
+          "playCount": 4
+        },
+        {
           "title": "Field (Heat) (フィールド(酷暑))",
           "artist": "片岡真央",
           "contributingArtist": "片岡真央",
@@ -863,6 +903,16 @@
           "discNumber": 3,
           "durationSeconds": 107,
           "playCount": 4
+        },
+        {
+          "title": "Gerudo Town (ゲルドの街)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 4,
+          "trackNumber": 93,
+          "discNumber": 3,
+          "durationSeconds": 431,
+          "playCount": 5
         },
         {
           "title": "Guardian's Line of Sight (ガーディアンの視線)",
@@ -885,6 +935,26 @@
           "playCount": 4
         },
         {
+          "title": "Hyrule Castle (ハイラル城)",
+          "artist": "片岡真央",
+          "contributingArtist": "片岡真央",
+          "listens": 4,
+          "trackNumber": 143,
+          "discNumber": 4,
+          "durationSeconds": 284,
+          "playCount": 5
+        },
+        {
+          "title": "Korok Forest (コログの森)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 4,
+          "trackNumber": 115,
+          "discNumber": 4,
+          "durationSeconds": 273,
+          "playCount": 4
+        },
+        {
           "title": "Landing on the Ground (大地に降り立つ)",
           "artist": "片岡真央",
           "contributingArtist": "片岡真央",
@@ -893,6 +963,16 @@
           "discNumber": 1,
           "durationSeconds": 15,
           "playCount": 4
+        },
+        {
+          "title": "Link's Memory 'Mipha's Touch' (リンクの記憶「英傑 ミファー」)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 4,
+          "trackNumber": 43,
+          "discNumber": 2,
+          "durationSeconds": 109,
+          "playCount": 5
         },
         {
           "title": "Main Theme (メインテーマ)",
@@ -965,16 +1045,6 @@
           "playCount": 4
         },
         {
-          "title": "Ruins (廃墟)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 4,
-          "trackNumber": 113,
-          "discNumber": 4,
-          "durationSeconds": 150,
-          "playCount": 5
-        },
-        {
           "title": "Sandseal Rally Award Ceremony (スナザラシラリー表彰式)",
           "artist": "若井淑",
           "contributingArtist": "若井淑",
@@ -1025,6 +1095,16 @@
           "playCount": 4
         },
         {
+          "title": "Staff Roll (スタッフロール)",
+          "artist": "片岡真央, 岩田恭明 & 若井淑",
+          "contributingArtist": "片岡真央, 岩田恭明 & 若井淑",
+          "listens": 4,
+          "trackNumber": 151,
+          "discNumber": 4,
+          "durationSeconds": 584,
+          "playCount": 4
+        },
+        {
           "title": "The Beast Inhabiting the Castle (城に巣食う怪物)",
           "artist": "片岡真央",
           "contributingArtist": "片岡真央",
@@ -1035,6 +1115,16 @@
           "playCount": 4
         },
         {
+          "title": "The Champions' Ballad Ending (英傑たちの詩 エンディング)",
+          "artist": "岩田恭明 & 片岡真央",
+          "contributingArtist": "岩田恭明 & 片岡真央",
+          "listens": 4,
+          "trackNumber": 207,
+          "discNumber": 5,
+          "durationSeconds": 94,
+          "playCount": 5
+        },
+        {
           "title": "The Events of 100 Years Ago (100年前の出来事)",
           "artist": "片岡真央 & 若井淑",
           "contributingArtist": "片岡真央 & 若井淑",
@@ -1042,7 +1132,7 @@
           "trackNumber": 14,
           "discNumber": 1,
           "durationSeconds": 216,
-          "playCount": 4
+          "playCount": 5
         },
         {
           "title": "The Old Man's Identity (老人の正体)",
@@ -1053,16 +1143,6 @@
           "discNumber": 1,
           "durationSeconds": 55,
           "playCount": 4
-        },
-        {
-          "title": "The Temple of Time (時の神殿跡)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 4,
-          "trackNumber": 12,
-          "discNumber": 1,
-          "durationSeconds": 122,
-          "playCount": 5
         },
         {
           "title": "Urbosa Reunion (再会 ウルボザ)",
@@ -1205,16 +1285,6 @@
           "playCount": 3
         },
         {
-          "title": "Daruk and the Divine Beast (ダルケルと神獣)",
-          "artist": "若井淑",
-          "contributingArtist": "若井淑",
-          "listens": 3,
-          "trackNumber": 88,
-          "discNumber": 3,
-          "durationSeconds": 92,
-          "playCount": 4
-        },
-        {
           "title": "Decolorization (脱色)",
           "artist": "若井淑",
           "contributingArtist": "若井淑",
@@ -1232,7 +1302,7 @@
           "trackNumber": 90,
           "discNumber": 3,
           "durationSeconds": 41,
-          "playCount": 3
+          "playCount": 4
         },
         {
           "title": "Divine Beast Vah Naboris Battle (神獣 ヴァ・ナボリス戦)",
@@ -1242,6 +1312,26 @@
           "trackNumber": 100,
           "discNumber": 3,
           "durationSeconds": 169,
+          "playCount": 3
+        },
+        {
+          "title": "Divine Beast Vah Rudania (Exploration) (神獣 ヴァ・ルーダニア(探索))",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 3,
+          "trackNumber": 85,
+          "discNumber": 3,
+          "durationSeconds": 381,
+          "playCount": 3
+        },
+        {
+          "title": "Divine Beast Vah Rudania Battle (神獣 ヴァ・ルーダニア戦)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 3,
+          "trackNumber": 83,
+          "discNumber": 3,
+          "durationSeconds": 188,
           "playCount": 3
         },
         {
@@ -1275,16 +1365,6 @@
           "playCount": 3
         },
         {
-          "title": "Field (Day) (フィールド(昼))",
-          "artist": "片岡真央",
-          "contributingArtist": "片岡真央",
-          "listens": 3,
-          "trackNumber": 17,
-          "discNumber": 1,
-          "durationSeconds": 166,
-          "playCount": 4
-        },
-        {
           "title": "Finding a Location for the First Time (初めてのロケーション)",
           "artist": "片岡真央",
           "contributingArtist": "片岡真央",
@@ -1302,7 +1382,7 @@
           "trackNumber": 60,
           "discNumber": 2,
           "durationSeconds": 148,
-          "playCount": 3
+          "playCount": 4
         },
         {
           "title": "Game Over (ゲームオーバー)",
@@ -1313,16 +1393,6 @@
           "discNumber": 5,
           "durationSeconds": 11,
           "playCount": 3
-        },
-        {
-          "title": "Gerudo Town (ゲルドの街)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 3,
-          "trackNumber": 93,
-          "discNumber": 3,
-          "durationSeconds": 431,
-          "playCount": 4
         },
         {
           "title": "Get Fanfare (Sheikah Slate) (ゲットファンファーレ（シーカーストーン）)",
@@ -1373,16 +1443,6 @@
           "discNumber": 2,
           "durationSeconds": 35,
           "playCount": 3
-        },
-        {
-          "title": "Hyrule Castle (ハイラル城)",
-          "artist": "片岡真央",
-          "contributingArtist": "片岡真央",
-          "listens": 3,
-          "trackNumber": 143,
-          "discNumber": 4,
-          "durationSeconds": 284,
-          "playCount": 4
         },
         {
           "title": "Hyrule Castle Ganon's Roar (ハイラル城 ガノン咆哮)",
@@ -1495,16 +1555,6 @@
           "playCount": 3
         },
         {
-          "title": "Korok Forest (コログの森)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 3,
-          "trackNumber": 115,
-          "discNumber": 4,
-          "durationSeconds": 273,
-          "playCount": 4
-        },
-        {
           "title": "Link's Memory 'Blades of the Yiga' (リンクの記憶「イーガ団の凶刃」)",
           "artist": "片岡真央",
           "contributingArtist": "片岡真央",
@@ -1542,16 +1592,6 @@
           "trackNumber": 132,
           "discNumber": 4,
           "durationSeconds": 152,
-          "playCount": 3
-        },
-        {
-          "title": "Link's Memory 'Mipha's Touch' (リンクの記憶「英傑 ミファー」)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 3,
-          "trackNumber": 43,
-          "discNumber": 2,
-          "durationSeconds": 109,
           "playCount": 4
         },
         {
@@ -1582,7 +1622,7 @@
           "trackNumber": 138,
           "discNumber": 4,
           "durationSeconds": 134,
-          "playCount": 3
+          "playCount": 4
         },
         {
           "title": "Lonely Warrior Revali (孤高の戦士 リーバル)",
@@ -1795,6 +1835,16 @@
           "playCount": 3
         },
         {
+          "title": "Revali Reunion (再会 リーバル)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 3,
+          "trackNumber": 67,
+          "discNumber": 2,
+          "durationSeconds": 80,
+          "playCount": 4
+        },
+        {
           "title": "Reviving Malanya (マーロン復活)",
           "artist": "若井淑",
           "contributingArtist": "若井淑",
@@ -1865,16 +1915,6 @@
           "playCount": 3
         },
         {
-          "title": "Staff Roll (スタッフロール)",
-          "artist": "片岡真央, 岩田恭明 & 若井淑",
-          "contributingArtist": "片岡真央, 岩田恭明 & 若井淑",
-          "listens": 3,
-          "trackNumber": 151,
-          "discNumber": 4,
-          "durationSeconds": 584,
-          "playCount": 4
-        },
-        {
           "title": "Talus Battle (イワロック戦)",
           "artist": "片岡真央",
           "contributingArtist": "片岡真央",
@@ -1895,14 +1935,14 @@
           "playCount": 3
         },
         {
-          "title": "The Champions' Ballad Ending (英傑たちの詩 エンディング)",
-          "artist": "岩田恭明 & 片岡真央",
-          "contributingArtist": "岩田恭明 & 片岡真央",
+          "title": "The Sacred Princess and the Five Champions (聖なる姫と五人の英傑)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
           "listens": 3,
-          "trackNumber": 207,
+          "trackNumber": 206,
           "discNumber": 5,
-          "durationSeconds": 94,
-          "playCount": 4
+          "durationSeconds": 161,
+          "playCount": 3
         },
         {
           "title": "Thunderblight Ganon Battle (雷のカースガノン戦)",
@@ -1962,7 +2002,7 @@
           "trackNumber": 95,
           "discNumber": 3,
           "durationSeconds": 122,
-          "playCount": 3
+          "playCount": 4
         },
         {
           "title": "Zelda's Wish (ゼルダの願い)",
@@ -2105,6 +2145,16 @@
           "playCount": 2
         },
         {
+          "title": "Divine Beast Vah Medoh (Exploration) (神獣 ヴァ・メドー(探索))",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 2,
+          "trackNumber": 65,
+          "discNumber": 2,
+          "durationSeconds": 431,
+          "playCount": 2
+        },
+        {
           "title": "Divine Beast Vah Medoh Battle (神獣 ヴァ・メドー戦)",
           "artist": "岩田恭明",
           "contributingArtist": "岩田恭明",
@@ -2113,26 +2163,6 @@
           "discNumber": 2,
           "durationSeconds": 166,
           "playCount": 2
-        },
-        {
-          "title": "Divine Beast Vah Rudania (Exploration) (神獣 ヴァ・ルーダニア(探索))",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 2,
-          "trackNumber": 85,
-          "discNumber": 3,
-          "durationSeconds": 381,
-          "playCount": 3
-        },
-        {
-          "title": "Divine Beast Vah Rudania Battle (神獣 ヴァ・ルーダニア戦)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 2,
-          "trackNumber": 83,
-          "discNumber": 3,
-          "durationSeconds": 188,
-          "playCount": 3
         },
         {
           "title": "Do You Remember? (覚えていますか?)",
@@ -2262,7 +2292,7 @@
           "trackNumber": 28,
           "discNumber": 1,
           "durationSeconds": 102,
-          "playCount": 2
+          "playCount": 3
         },
         {
           "title": "Great Fairy Revival (大妖精 復活)",
@@ -2572,7 +2602,7 @@
           "trackNumber": 159,
           "discNumber": 5,
           "durationSeconds": 102,
-          "playCount": 2
+          "playCount": 3
         },
         {
           "title": "Mini-Game Snowball Bowling (ミニゲーム 雪玉ボウル)",
@@ -2625,16 +2655,6 @@
           "playCount": 2
         },
         {
-          "title": "Revali Reunion (再会 リーバル)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 2,
-          "trackNumber": 67,
-          "discNumber": 2,
-          "durationSeconds": 80,
-          "playCount": 3
-        },
-        {
           "title": "Riding (Night) (襲歩(夜))",
           "artist": "片岡真央",
           "contributingArtist": "片岡真央",
@@ -2675,6 +2695,16 @@
           "playCount": 2
         },
         {
+          "title": "Tarrey Town (イチカラ村)",
+          "artist": "岩田恭明",
+          "contributingArtist": "岩田恭明",
+          "listens": 2,
+          "trackNumber": 156,
+          "discNumber": 5,
+          "durationSeconds": 589,
+          "playCount": 2
+        },
+        {
           "title": "Teba's Encouragement (テバの激励)",
           "artist": "岩田恭明",
           "contributingArtist": "岩田恭明",
@@ -2693,16 +2723,6 @@
           "discNumber": 5,
           "durationSeconds": 46,
           "playCount": 2
-        },
-        {
-          "title": "The Sacred Princess and the Five Champions (聖なる姫と五人の英傑)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 2,
-          "trackNumber": 206,
-          "discNumber": 5,
-          "durationSeconds": 161,
-          "playCount": 3
         },
         {
           "title": "To Tarrey Town (イチカラ村へ)",
@@ -2762,16 +2782,6 @@
           "trackNumber": 84,
           "discNumber": 3,
           "durationSeconds": 38,
-          "playCount": 2
-        },
-        {
-          "title": "Divine Beast Vah Medoh (Exploration) (神獣 ヴァ・メドー(探索))",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 1,
-          "trackNumber": 65,
-          "discNumber": 2,
-          "durationSeconds": 431,
           "playCount": 2
         },
         {
@@ -2843,22 +2853,12 @@
           "discNumber": 4,
           "durationSeconds": 23,
           "playCount": 1
-        },
-        {
-          "title": "Tarrey Town (イチカラ村)",
-          "artist": "岩田恭明",
-          "contributingArtist": "岩田恭明",
-          "listens": 1,
-          "trackNumber": 156,
-          "discNumber": 5,
-          "durationSeconds": 589,
-          "playCount": 2
         }
       ],
       "mostListenedTrack": {
         "title": "The King of Hyrule's Wish (ハイラル王の願い)",
         "artist": "片岡真央",
-        "listens": 5
+        "listens": 6
       },
       "coverSrc": "/images/albums/wmpl-imported/nintendo_zelda-botw-ost.jpg",
       "coverAlt": "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック) album cover"
@@ -3433,7 +3433,7 @@
         "TFCC-86665"
       ],
       "trackCount": 11,
-      "totalListens": 304,
+      "totalListens": 308,
       "tracks": [
         {
           "title": "Ambivalent (アンビバレント)",
@@ -3459,10 +3459,20 @@
           "title": "Outsider (アウトサイダー)",
           "artist": "Eve",
           "contributingArtist": "Eve",
-          "listens": 30,
+          "listens": 31,
           "trackNumber": 3,
           "discNumber": 1,
           "durationSeconds": 207,
+          "playCount": 31
+        },
+        {
+          "title": "Tokyo Ghetto (トーキョーゲットー)",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 30,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 240,
           "playCount": 30
         },
         {
@@ -3476,34 +3486,24 @@
           "playCount": 29
         },
         {
-          "title": "Tokyo Ghetto (トーキョーゲットー)",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 29,
-          "trackNumber": 2,
-          "discNumber": 1,
-          "durationSeconds": 240,
-          "playCount": 29
-        },
-        {
           "title": "slumber",
           "artist": "Eve",
           "contributingArtist": "Eve",
-          "listens": 28,
+          "listens": 29,
           "trackNumber": 1,
           "discNumber": 1,
           "durationSeconds": 109,
-          "playCount": 28
+          "playCount": 29
         },
         {
           "title": "Yadorigi (やどりぎ)",
           "artist": "Eve",
           "contributingArtist": "Eve",
-          "listens": 27,
+          "listens": 28,
           "trackNumber": 5,
           "discNumber": 1,
           "durationSeconds": 230,
-          "playCount": 27
+          "playCount": 28
         },
         {
           "title": "Bokuramadaunderground (僕らまだアンダーグラウンド)",
@@ -3561,8 +3561,28 @@
         "[none]"
       ],
       "trackCount": 103,
-      "totalListens": 238,
+      "totalListens": 245,
       "tracks": [
+        {
+          "title": "Home",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 9,
+          "trackNumber": 12,
+          "discNumber": 1,
+          "durationSeconds": 123,
+          "playCount": 9
+        },
+        {
+          "title": "Ruins",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 9,
+          "trackNumber": 5,
+          "discNumber": 1,
+          "durationSeconds": 92,
+          "playCount": 9
+        },
         {
           "title": "Snowy",
           "artist": "Toby Fox",
@@ -3574,13 +3594,23 @@
           "playCount": 9
         },
         {
-          "title": "Home",
+          "title": "Ghost Fight",
           "artist": "Toby Fox",
           "contributingArtist": "Toby Fox",
           "listens": 8,
-          "trackNumber": 12,
+          "trackNumber": 10,
           "discNumber": 1,
-          "durationSeconds": 123,
+          "durationSeconds": 56,
+          "playCount": 8
+        },
+        {
+          "title": "It’s Raining Somewhere Else",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 8,
+          "trackNumber": 63,
+          "discNumber": 1,
+          "durationSeconds": 170,
           "playCount": 9
         },
         {
@@ -3604,16 +3634,6 @@
           "playCount": 7
         },
         {
-          "title": "Ghost Fight",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 7,
-          "trackNumber": 10,
-          "discNumber": 1,
-          "durationSeconds": 56,
-          "playCount": 8
-        },
-        {
           "title": "Good Night",
           "artist": "Toby Fox",
           "contributingArtist": "Toby Fox",
@@ -3621,7 +3641,7 @@
           "trackNumber": 101,
           "discNumber": 2,
           "durationSeconds": 31,
-          "playCount": 7
+          "playCount": 8
         },
         {
           "title": "Hotel",
@@ -3634,26 +3654,6 @@
           "playCount": 7
         },
         {
-          "title": "It’s Raining Somewhere Else",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 7,
-          "trackNumber": 63,
-          "discNumber": 1,
-          "durationSeconds": 170,
-          "playCount": 8
-        },
-        {
-          "title": "Ruins",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 7,
-          "trackNumber": 5,
-          "discNumber": 1,
-          "durationSeconds": 92,
-          "playCount": 9
-        },
-        {
           "title": "Uwa!! So Temperate ♫",
           "artist": "Toby Fox",
           "contributingArtist": "Toby Fox",
@@ -3662,6 +3662,16 @@
           "discNumber": 1,
           "durationSeconds": 56,
           "playCount": 7
+        },
+        {
+          "title": "Amalgam",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 6,
+          "trackNumber": 84,
+          "discNumber": 2,
+          "durationSeconds": 80,
+          "playCount": 6
         },
         {
           "title": "Another Medium",
@@ -3694,6 +3704,16 @@
           "playCount": 6
         },
         {
+          "title": "Respite",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 6,
+          "trackNumber": 94,
+          "discNumber": 2,
+          "durationSeconds": 114,
+          "playCount": 6
+        },
+        {
           "title": "Reunited",
           "artist": "Toby Fox",
           "contributingArtist": "Toby Fox",
@@ -3701,26 +3721,6 @@
           "trackNumber": 92,
           "discNumber": 2,
           "durationSeconds": 283,
-          "playCount": 6
-        },
-        {
-          "title": "Amalgam",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 5,
-          "trackNumber": 84,
-          "discNumber": 2,
-          "durationSeconds": 80,
-          "playCount": 6
-        },
-        {
-          "title": "Respite",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 5,
-          "trackNumber": 94,
-          "discNumber": 2,
-          "durationSeconds": 114,
           "playCount": 6
         },
         {
@@ -4595,7 +4595,7 @@
         }
       ],
       "mostListenedTrack": {
-        "title": "Snowy",
+        "title": "Home",
         "artist": "Toby Fox",
         "listens": 9
       },
@@ -5015,7 +5015,7 @@
         "TFCC-86702"
       ],
       "trackCount": 16,
-      "totalListens": 177,
+      "totalListens": 178,
       "tracks": [
         {
           "title": "LEO",
@@ -5048,6 +5048,16 @@
           "playCount": 16
         },
         {
+          "title": "doublet",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 15,
+          "trackNumber": 1,
+          "discNumber": 1,
+          "durationSeconds": 74,
+          "playCount": 15
+        },
+        {
           "title": "Kokoroyohou (心予報)",
           "artist": "Eve",
           "contributingArtist": "Eve",
@@ -5075,16 +5085,6 @@
           "trackNumber": 10,
           "discNumber": 1,
           "durationSeconds": 209,
-          "playCount": 14
-        },
-        {
-          "title": "doublet",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 14,
-          "trackNumber": 1,
-          "discNumber": 1,
-          "durationSeconds": 74,
           "playCount": 14
         },
         {
@@ -5185,6 +5185,94 @@
       },
       "coverSrc": "/images/albums/wmpl-imported/eve_smile.jpg",
       "coverAlt": "Smile album cover"
+    },
+    {
+      "album": "Wonder Word",
+      "artist": "Eve",
+      "catalogNumbers": [
+        "EVE-0001"
+      ],
+      "trackCount": 7,
+      "totalListens": 147,
+      "tracks": [
+        {
+          "title": "Yoru wo koero (夜を超えろ)",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 30,
+          "trackNumber": 7,
+          "discNumber": 1,
+          "durationSeconds": 199,
+          "playCount": 30
+        },
+        {
+          "title": "Arukari seizin (アルカリ成人)",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 23,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 228,
+          "playCount": 23
+        },
+        {
+          "title": "Senkouhanabi (線香花火)",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 22,
+          "trackNumber": 3,
+          "discNumber": 1,
+          "durationSeconds": 253,
+          "playCount": 22
+        },
+        {
+          "title": "Shinkirou (蜃気楼)",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 21,
+          "trackNumber": 5,
+          "discNumber": 1,
+          "durationSeconds": 222,
+          "playCount": 21
+        },
+        {
+          "title": "Heroumerou (ヘロウメロウ)",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 19,
+          "trackNumber": 4,
+          "discNumber": 1,
+          "durationSeconds": 216,
+          "playCount": 19
+        },
+        {
+          "title": "Mataashita (またあした)",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 16,
+          "trackNumber": 6,
+          "discNumber": 1,
+          "durationSeconds": 193,
+          "playCount": 16
+        },
+        {
+          "title": "Yoru no yume (よるのゆめ)",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 16,
+          "trackNumber": 1,
+          "discNumber": 1,
+          "durationSeconds": 224,
+          "playCount": 16
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Yoru wo koero (夜を超えろ)",
+        "artist": "Eve",
+        "listens": 30
+      },
+      "coverSrc": "/images/albums/wmpl-imported/eve_wonder-word.jpg",
+      "coverAlt": "Wonder Word album cover"
     },
     {
       "album": "文化",
@@ -5305,111 +5393,63 @@
       "coverAlt": "文化 album cover"
     },
     {
-      "album": "Wonder Word",
-      "artist": "Eve",
-      "catalogNumbers": [
-        "EVE-0001"
-      ],
-      "trackCount": 7,
-      "totalListens": 139,
-      "tracks": [
-        {
-          "title": "Yoru wo koero (夜を超えろ)",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 29,
-          "trackNumber": 7,
-          "discNumber": 1,
-          "durationSeconds": 199,
-          "playCount": 29
-        },
-        {
-          "title": "Arukari seizin (アルカリ成人)",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 22,
-          "trackNumber": 2,
-          "discNumber": 1,
-          "durationSeconds": 228,
-          "playCount": 22
-        },
-        {
-          "title": "Senkouhanabi (線香花火)",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 20,
-          "trackNumber": 3,
-          "discNumber": 1,
-          "durationSeconds": 253,
-          "playCount": 20
-        },
-        {
-          "title": "Shinkirou (蜃気楼)",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 20,
-          "trackNumber": 5,
-          "discNumber": 1,
-          "durationSeconds": 222,
-          "playCount": 20
-        },
-        {
-          "title": "Heroumerou (ヘロウメロウ)",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 18,
-          "trackNumber": 4,
-          "discNumber": 1,
-          "durationSeconds": 216,
-          "playCount": 18
-        },
-        {
-          "title": "Mataashita (またあした)",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 15,
-          "trackNumber": 6,
-          "discNumber": 1,
-          "durationSeconds": 193,
-          "playCount": 15
-        },
-        {
-          "title": "Yoru no yume (よるのゆめ)",
-          "artist": "Eve",
-          "contributingArtist": "Eve",
-          "listens": 15,
-          "trackNumber": 1,
-          "discNumber": 1,
-          "durationSeconds": 224,
-          "playCount": 15
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "Yoru wo koero (夜を超えろ)",
-        "artist": "Eve",
-        "listens": 29
-      },
-      "coverSrc": "/images/albums/wmpl-imported/eve_wonder-word.jpg",
-      "coverAlt": "Wonder Word album cover"
-    },
-    {
       "album": "Deltarune: Chapter 2 Soundtrack",
       "artist": "Toby Fox",
       "catalogNumbers": [
         "FG47"
       ],
       "trackCount": 47,
-      "totalListens": 109,
+      "totalListens": 117,
       "tracks": [
+        {
+          "title": "Dialtone",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 8,
+          "trackNumber": 41,
+          "discNumber": 2,
+          "durationSeconds": 44,
+          "playCount": 9
+        },
         {
           "title": "Lost Girl",
           "artist": "Toby Fox",
           "contributingArtist": "Toby Fox",
-          "listens": 7,
+          "listens": 8,
           "trackNumber": 30,
           "discNumber": 1,
           "durationSeconds": 80,
           "playCount": 8
+        },
+        {
+          "title": "Before The Story",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 7,
+          "trackNumber": 46,
+          "discNumber": 2,
+          "durationSeconds": 90,
+          "playCount": 7
+        },
+        {
+          "title": "Ferris Wheel",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 7,
+          "trackNumber": 31,
+          "discNumber": 1,
+          "durationSeconds": 79,
+          "playCount": 8
+        },
+        {
+          "title": "Girl Next Door",
+          "artist": "Toby Fox",
+          "contributingArtist": "Toby Fox",
+          "listens": 7,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 55,
+          "playCount": 7
         },
         {
           "title": "My Castle Town",
@@ -5429,26 +5469,6 @@
           "trackNumber": 36,
           "discNumber": 2,
           "durationSeconds": 72,
-          "playCount": 7
-        },
-        {
-          "title": "Before The Story",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 6,
-          "trackNumber": 46,
-          "discNumber": 2,
-          "durationSeconds": 90,
-          "playCount": 7
-        },
-        {
-          "title": "Dialtone",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 6,
-          "trackNumber": 41,
-          "discNumber": 2,
-          "durationSeconds": 44,
           "playCount": 8
         },
         {
@@ -5459,16 +5479,6 @@
           "trackNumber": 1,
           "discNumber": 1,
           "durationSeconds": 77,
-          "playCount": 6
-        },
-        {
-          "title": "Ferris Wheel",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 6,
-          "trackNumber": 31,
-          "discNumber": 1,
-          "durationSeconds": 79,
           "playCount": 7
         },
         {
@@ -5479,7 +5489,7 @@
           "trackNumber": 26,
           "discNumber": 1,
           "durationSeconds": 99,
-          "playCount": 6
+          "playCount": 7
         },
         {
           "title": "Spamton",
@@ -5489,17 +5499,17 @@
           "trackNumber": 22,
           "discNumber": 1,
           "durationSeconds": 43,
-          "playCount": 6
+          "playCount": 7
         },
         {
-          "title": "Girl Next Door",
+          "title": "You Can Always Come Home",
           "artist": "Toby Fox",
           "contributingArtist": "Toby Fox",
-          "listens": 5,
-          "trackNumber": 2,
-          "discNumber": 1,
-          "durationSeconds": 55,
-          "playCount": 7
+          "listens": 6,
+          "trackNumber": 44,
+          "discNumber": 2,
+          "durationSeconds": 103,
+          "playCount": 6
         },
         {
           "title": "WELCOME TO THE CITY",
@@ -5509,16 +5519,6 @@
           "trackNumber": 17,
           "discNumber": 1,
           "durationSeconds": 114,
-          "playCount": 5
-        },
-        {
-          "title": "You Can Always Come Home",
-          "artist": "Toby Fox",
-          "contributingArtist": "Toby Fox",
-          "listens": 5,
-          "trackNumber": 44,
-          "discNumber": 2,
-          "durationSeconds": 103,
           "playCount": 6
         },
         {
@@ -5873,9 +5873,9 @@
         }
       ],
       "mostListenedTrack": {
-        "title": "Lost Girl",
+        "title": "Dialtone",
         "artist": "Toby Fox",
-        "listens": 7
+        "listens": 8
       },
       "coverSrc": "/images/albums/wmpl-imported/toby-fox_deltarune-chapter-2.jpg",
       "coverAlt": "Deltarune: Chapter 2 Soundtrack album cover"
@@ -5885,8 +5885,38 @@
       "artist": "Joe Hisaishi",
       "catalogNumbers": [],
       "trackCount": 21,
-      "totalListens": 100,
+      "totalListens": 107,
       "tracks": [
+        {
+          "title": "Flying Express Delivery Service",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 9,
+          "trackNumber": 4,
+          "discNumber": 1,
+          "durationSeconds": 129,
+          "playCount": 9
+        },
+        {
+          "title": "Jeff",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 9,
+          "trackNumber": 8,
+          "discNumber": 1,
+          "durationSeconds": 150,
+          "playCount": 10
+        },
+        {
+          "title": "Mysterious Painting",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 9,
+          "trackNumber": 16,
+          "discNumber": 1,
+          "durationSeconds": 142,
+          "playCount": 9
+        },
         {
           "title": "Substitute Jiji",
           "artist": "Joe Hisaishi",
@@ -5905,17 +5935,17 @@
           "trackNumber": 2,
           "discNumber": 1,
           "durationSeconds": 173,
-          "playCount": 8
+          "playCount": 9
         },
         {
-          "title": "Flying Express Delivery Service",
+          "title": "Heartbroken Kiki",
           "artist": "Joe Hisaishi",
           "contributingArtist": "Joe Hisaishi",
           "listens": 8,
-          "trackNumber": 4,
+          "trackNumber": 14,
           "discNumber": 1,
-          "durationSeconds": 129,
-          "playCount": 9
+          "durationSeconds": 71,
+          "playCount": 8
         },
         {
           "title": "Hectic Kiki",
@@ -5928,16 +5958,6 @@
           "playCount": 8
         },
         {
-          "title": "Jeff",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 8,
-          "trackNumber": 8,
-          "discNumber": 1,
-          "durationSeconds": 150,
-          "playCount": 9
-        },
-        {
           "title": "On a Clear Day",
           "artist": "Joe Hisaishi",
           "contributingArtist": "Joe Hisaishi",
@@ -5948,33 +5968,23 @@
           "playCount": 8
         },
         {
-          "title": "Heartbroken Kiki",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 7,
-          "trackNumber": 14,
-          "discNumber": 1,
-          "durationSeconds": 71,
-          "playCount": 8
-        },
-        {
-          "title": "Mysterious Painting",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 7,
-          "trackNumber": 16,
-          "discNumber": 1,
-          "durationSeconds": 142,
-          "playCount": 9
-        },
-        {
           "title": "A Town Where You Can See the Ocean",
           "artist": "Joe Hisaishi",
           "contributingArtist": "Joe Hisaishi",
-          "listens": 6,
+          "listens": 7,
           "trackNumber": 3,
           "discNumber": 1,
           "durationSeconds": 180,
+          "playCount": 7
+        },
+        {
+          "title": "Osono’s Favor",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 7,
+          "trackNumber": 11,
+          "discNumber": 1,
+          "durationSeconds": 181,
           "playCount": 7
         },
         {
@@ -5986,16 +5996,6 @@
           "discNumber": 1,
           "durationSeconds": 64,
           "playCount": 6
-        },
-        {
-          "title": "Osono’s Favor",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 6,
-          "trackNumber": 11,
-          "discNumber": 1,
-          "durationSeconds": 181,
-          "playCount": 7
         },
         {
           "title": "To Ursula’s Cabin",
@@ -6099,7 +6099,7 @@
         }
       ],
       "mostListenedTrack": {
-        "title": "Substitute Jiji",
+        "title": "Flying Express Delivery Service",
         "artist": "Joe Hisaishi",
         "listens": 9
       },
@@ -6861,17 +6861,17 @@
       "artist": "Joe Hisaishi",
       "catalogNumbers": [],
       "trackCount": 20,
-      "totalListens": 68,
+      "totalListens": 70,
       "tracks": [
         {
           "title": "A Haunted House!",
           "artist": "Joe Hisaishi",
           "contributingArtist": "Joe Hisaishi",
-          "listens": 11,
+          "listens": 13,
           "trackNumber": 3,
           "discNumber": 1,
           "durationSeconds": 83,
-          "playCount": 13
+          "playCount": 14
         },
         {
           "title": "Cat Bus",
@@ -6881,7 +6881,7 @@
           "trackNumber": 17,
           "discNumber": 1,
           "durationSeconds": 131,
-          "playCount": 11
+          "playCount": 12
         },
         {
           "title": "The Village in May",
@@ -6911,7 +6911,7 @@
           "trackNumber": 13,
           "discNumber": 1,
           "durationSeconds": 196,
-          "playCount": 8
+          "playCount": 9
         },
         {
           "title": "A Huge Tree in the Tsukamori Forest",
@@ -7067,10 +7067,166 @@
       "mostListenedTrack": {
         "title": "A Haunted House!",
         "artist": "Joe Hisaishi",
-        "listens": 11
+        "listens": 13
       },
       "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_my-neighbor-totoro-original-soundtrack.jpg",
       "coverAlt": "My Neighbor Totoro (Original Soundtrack) album cover"
+    },
+    {
+      "album": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-",
+      "artist": "Joe Hisaishi",
+      "catalogNumbers": [],
+      "trackCount": 14,
+      "totalListens": 68,
+      "tracks": [
+        {
+          "title": "The Girl Who Fell From the Sky",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 12,
+          "trackNumber": 1,
+          "discNumber": 1,
+          "durationSeconds": 147,
+          "playCount": 13
+        },
+        {
+          "title": "Morning in the Slag Ravine",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 10,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 184,
+          "playCount": 10
+        },
+        {
+          "title": "Destruction of Laputa",
+          "artist": "Suginami Junior Chorus",
+          "contributingArtist": "Suginami Junior Chorus",
+          "listens": 9,
+          "trackNumber": 13,
+          "discNumber": 1,
+          "durationSeconds": 120,
+          "playCount": 10
+        },
+        {
+          "title": "Discouraged Pazu",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 9,
+          "trackNumber": 5,
+          "discNumber": 1,
+          "durationSeconds": 106,
+          "playCount": 10
+        },
+        {
+          "title": "Memories of Gondoa",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 8,
+          "trackNumber": 4,
+          "discNumber": 1,
+          "durationSeconds": 166,
+          "playCount": 8
+        },
+        {
+          "title": "A Sea of Clouds in the Moonlight",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 6,
+          "trackNumber": 11,
+          "discNumber": 1,
+          "durationSeconds": 153,
+          "playCount": 6
+        },
+        {
+          "title": "Castle in the Sky",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 6,
+          "trackNumber": 12,
+          "discNumber": 1,
+          "durationSeconds": 276,
+          "playCount": 7
+        },
+        {
+          "title": "Carrying You - With Chorus",
+          "artist": "Suginami Junior Chorus",
+          "contributingArtist": "Suginami Junior Chorus",
+          "listens": 2,
+          "trackNumber": 7,
+          "discNumber": 1,
+          "durationSeconds": 123,
+          "playCount": 2
+        },
+        {
+          "title": "A Rowdy Brawl (- Pursuit)",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 3,
+          "discNumber": 1,
+          "durationSeconds": 267,
+          "playCount": 1
+        },
+        {
+          "title": "An Omen to Ruin",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 10,
+          "discNumber": 1,
+          "durationSeconds": 138,
+          "playCount": 1
+        },
+        {
+          "title": "Carrying You",
+          "artist": "Azumi Inoue",
+          "contributingArtist": "Azumi Inoue",
+          "listens": 1,
+          "trackNumber": 14,
+          "discNumber": 1,
+          "durationSeconds": 247,
+          "playCount": 1
+        },
+        {
+          "title": "On The Tiger Moth",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 9,
+          "discNumber": 1,
+          "durationSeconds": 152,
+          "playCount": 1
+        },
+        {
+          "title": "Robot Soldier (Resurrection - Rescue)",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 6,
+          "discNumber": 1,
+          "durationSeconds": 154,
+          "playCount": 1
+        },
+        {
+          "title": "Sheeta's Decision",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 8,
+          "discNumber": 1,
+          "durationSeconds": 125,
+          "playCount": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "The Girl Who Fell From the Sky",
+        "artist": "Joe Hisaishi",
+        "listens": 12
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg",
+      "coverAlt": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone- album cover"
     },
     {
       "album": "Wolf",
@@ -7269,162 +7425,6 @@
       },
       "coverSrc": "/images/albums/wmpl-imported/tyler-the-creator_wolf.jpg",
       "coverAlt": "Wolf album cover"
-    },
-    {
-      "album": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-",
-      "artist": "Joe Hisaishi",
-      "catalogNumbers": [],
-      "trackCount": 14,
-      "totalListens": 66,
-      "tracks": [
-        {
-          "title": "The Girl Who Fell From the Sky",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 12,
-          "trackNumber": 1,
-          "discNumber": 1,
-          "durationSeconds": 147,
-          "playCount": 12
-        },
-        {
-          "title": "Morning in the Slag Ravine",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 10,
-          "trackNumber": 2,
-          "discNumber": 1,
-          "durationSeconds": 184,
-          "playCount": 10
-        },
-        {
-          "title": "Destruction of Laputa",
-          "artist": "Suginami Junior Chorus",
-          "contributingArtist": "Suginami Junior Chorus",
-          "listens": 9,
-          "trackNumber": 13,
-          "discNumber": 1,
-          "durationSeconds": 120,
-          "playCount": 9
-        },
-        {
-          "title": "Discouraged Pazu",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 8,
-          "trackNumber": 5,
-          "discNumber": 1,
-          "durationSeconds": 106,
-          "playCount": 9
-        },
-        {
-          "title": "Memories of Gondoa",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 7,
-          "trackNumber": 4,
-          "discNumber": 1,
-          "durationSeconds": 166,
-          "playCount": 8
-        },
-        {
-          "title": "A Sea of Clouds in the Moonlight",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 6,
-          "trackNumber": 11,
-          "discNumber": 1,
-          "durationSeconds": 153,
-          "playCount": 6
-        },
-        {
-          "title": "Castle in the Sky",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 6,
-          "trackNumber": 12,
-          "discNumber": 1,
-          "durationSeconds": 276,
-          "playCount": 6
-        },
-        {
-          "title": "Carrying You - With Chorus",
-          "artist": "Suginami Junior Chorus",
-          "contributingArtist": "Suginami Junior Chorus",
-          "listens": 2,
-          "trackNumber": 7,
-          "discNumber": 1,
-          "durationSeconds": 123,
-          "playCount": 2
-        },
-        {
-          "title": "A Rowdy Brawl (- Pursuit)",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 3,
-          "discNumber": 1,
-          "durationSeconds": 267,
-          "playCount": 1
-        },
-        {
-          "title": "An Omen to Ruin",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 10,
-          "discNumber": 1,
-          "durationSeconds": 138,
-          "playCount": 1
-        },
-        {
-          "title": "Carrying You",
-          "artist": "Azumi Inoue",
-          "contributingArtist": "Azumi Inoue",
-          "listens": 1,
-          "trackNumber": 14,
-          "discNumber": 1,
-          "durationSeconds": 247,
-          "playCount": 1
-        },
-        {
-          "title": "On The Tiger Moth",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 9,
-          "discNumber": 1,
-          "durationSeconds": 152,
-          "playCount": 1
-        },
-        {
-          "title": "Robot Soldier (Resurrection - Rescue)",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 6,
-          "discNumber": 1,
-          "durationSeconds": 154,
-          "playCount": 1
-        },
-        {
-          "title": "Sheeta's Decision",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 8,
-          "discNumber": 1,
-          "durationSeconds": 125,
-          "playCount": 1
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "The Girl Who Fell From the Sky",
-        "artist": "Joe Hisaishi",
-        "listens": 12
-      },
-      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_laputa-castle-in-the-sky-soundtrack-the-mystery-of-the-levitation-stone.jpg",
-      "coverAlt": "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone- album cover"
     },
     {
       "album": "Agartha",
@@ -7693,6 +7693,152 @@
       "coverAlt": "Trench album cover"
     },
     {
+      "album": "Nausicaä of the Valley of the Wind Soundtrack",
+      "artist": "Joe Hisaishi",
+      "catalogNumbers": [],
+      "trackCount": 13,
+      "totalListens": 61,
+      "tracks": [
+        {
+          "title": "Fukai nite",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 10,
+          "trackNumber": 8,
+          "discNumber": 1,
+          "durationSeconds": 153,
+          "playCount": 11
+        },
+        {
+          "title": "Kaze no Tani",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 10,
+          "trackNumber": 3,
+          "discNumber": 1,
+          "durationSeconds": 193,
+          "playCount": 11
+        },
+        {
+          "title": "Tori no Hito - Ending theme",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 9,
+          "trackNumber": 13,
+          "discNumber": 1,
+          "durationSeconds": 227,
+          "playCount": 9
+        },
+        {
+          "title": "Kaze no Tani no Naushika - Opening theme",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 8,
+          "trackNumber": 1,
+          "discNumber": 1,
+          "durationSeconds": 278,
+          "playCount": 8
+        },
+        {
+          "title": "Kushana no Shinryaku",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 8,
+          "trackNumber": 5,
+          "discNumber": 1,
+          "durationSeconds": 208,
+          "playCount": 8
+        },
+        {
+          "title": "Mushi Mezuru Hime",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 8,
+          "trackNumber": 4,
+          "discNumber": 1,
+          "durationSeconds": 191,
+          "playCount": 8
+        },
+        {
+          "title": "Pejite no Zenmetsu",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 2,
+          "trackNumber": 9,
+          "discNumber": 1,
+          "durationSeconds": 230,
+          "playCount": 2
+        },
+        {
+          "title": "Mehve to Korubetto no Tatakai",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 10,
+          "discNumber": 1,
+          "durationSeconds": 77,
+          "playCount": 1
+        },
+        {
+          "title": "Naushika Rekuiemu",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 12,
+          "discNumber": 1,
+          "durationSeconds": 175,
+          "playCount": 1
+        },
+        {
+          "title": "Ohmu no Boso",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 155,
+          "playCount": 1
+        },
+        {
+          "title": "Ohmu to no Koryu",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 7,
+          "discNumber": 1,
+          "durationSeconds": 99,
+          "playCount": 1
+        },
+        {
+          "title": "Sento",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 6,
+          "discNumber": 1,
+          "durationSeconds": 192,
+          "playCount": 1
+        },
+        {
+          "title": "Yomigaeru Kyoshinhei",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 1,
+          "trackNumber": 11,
+          "discNumber": 1,
+          "durationSeconds": 208,
+          "playCount": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "Fukai nite",
+        "artist": "Joe Hisaishi",
+        "listens": 10
+      },
+      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg",
+      "coverAlt": "Nausicaä of the Valley of the Wind Soundtrack album cover"
+    },
+    {
       "album": "残夢",
       "artist": "Ado",
       "catalogNumbers": [
@@ -7869,152 +8015,6 @@
       },
       "coverSrc": "/images/albums/wmpl-imported/ado_zanmu.jpg",
       "coverAlt": "残夢 album cover"
-    },
-    {
-      "album": "Nausicaä of the Valley of the Wind Soundtrack",
-      "artist": "Joe Hisaishi",
-      "catalogNumbers": [],
-      "trackCount": 13,
-      "totalListens": 60,
-      "tracks": [
-        {
-          "title": "Kaze no Tani",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 10,
-          "trackNumber": 3,
-          "discNumber": 1,
-          "durationSeconds": 193,
-          "playCount": 10
-        },
-        {
-          "title": "Fukai nite",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 9,
-          "trackNumber": 8,
-          "discNumber": 1,
-          "durationSeconds": 153,
-          "playCount": 10
-        },
-        {
-          "title": "Tori no Hito - Ending theme",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 9,
-          "trackNumber": 13,
-          "discNumber": 1,
-          "durationSeconds": 227,
-          "playCount": 9
-        },
-        {
-          "title": "Kaze no Tani no Naushika - Opening theme",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 8,
-          "trackNumber": 1,
-          "discNumber": 1,
-          "durationSeconds": 278,
-          "playCount": 8
-        },
-        {
-          "title": "Kushana no Shinryaku",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 8,
-          "trackNumber": 5,
-          "discNumber": 1,
-          "durationSeconds": 208,
-          "playCount": 8
-        },
-        {
-          "title": "Mushi Mezuru Hime",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 8,
-          "trackNumber": 4,
-          "discNumber": 1,
-          "durationSeconds": 191,
-          "playCount": 8
-        },
-        {
-          "title": "Pejite no Zenmetsu",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 2,
-          "trackNumber": 9,
-          "discNumber": 1,
-          "durationSeconds": 230,
-          "playCount": 2
-        },
-        {
-          "title": "Mehve to Korubetto no Tatakai",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 10,
-          "discNumber": 1,
-          "durationSeconds": 77,
-          "playCount": 1
-        },
-        {
-          "title": "Naushika Rekuiemu",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 12,
-          "discNumber": 1,
-          "durationSeconds": 175,
-          "playCount": 1
-        },
-        {
-          "title": "Ohmu no Boso",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 2,
-          "discNumber": 1,
-          "durationSeconds": 155,
-          "playCount": 1
-        },
-        {
-          "title": "Ohmu to no Koryu",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 7,
-          "discNumber": 1,
-          "durationSeconds": 99,
-          "playCount": 1
-        },
-        {
-          "title": "Sento",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 6,
-          "discNumber": 1,
-          "durationSeconds": 192,
-          "playCount": 1
-        },
-        {
-          "title": "Yomigaeru Kyoshinhei",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 11,
-          "discNumber": 1,
-          "durationSeconds": 208,
-          "playCount": 1
-        }
-      ],
-      "mostListenedTrack": {
-        "title": "Kaze no Tani",
-        "artist": "Joe Hisaishi",
-        "listens": 10
-      },
-      "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_nausicaa-of-the-valley-of-the-wind.jpg",
-      "coverAlt": "Nausicaä of the Valley of the Wind Soundtrack album cover"
     },
     {
       "album": "Christmas",
@@ -8735,17 +8735,37 @@
       "artist": "Joe Hisaishi",
       "catalogNumbers": [],
       "trackCount": 23,
-      "totalListens": 32,
+      "totalListens": 36,
       "tracks": [
         {
           "title": "A Picture in Sepia",
           "artist": "Joe Hisaishi",
           "contributingArtist": "Joe Hisaishi",
-          "listens": 2,
+          "listens": 3,
           "trackNumber": 5,
           "discNumber": 1,
           "durationSeconds": 48,
+          "playCount": 4
+        },
+        {
+          "title": "Fio – Seventeen",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 3,
+          "trackNumber": 10,
+          "discNumber": 1,
+          "durationSeconds": 124,
           "playCount": 3
+        },
+        {
+          "title": "LOST SPIRIT",
+          "artist": "Joe Hisaishi",
+          "contributingArtist": "Joe Hisaishi",
+          "listens": 3,
+          "trackNumber": 19,
+          "discNumber": 1,
+          "durationSeconds": 251,
+          "playCount": 4
         },
         {
           "title": "Addio!",
@@ -8765,17 +8785,17 @@
           "trackNumber": 18,
           "discNumber": 1,
           "durationSeconds": 86,
-          "playCount": 2
+          "playCount": 3
         },
         {
-          "title": "Fio – Seventeen",
+          "title": "Bygone Days",
           "artist": "Joe Hisaishi",
           "contributingArtist": "Joe Hisaishi",
           "listens": 2,
-          "trackNumber": 10,
+          "trackNumber": 4,
           "discNumber": 1,
-          "durationSeconds": 124,
-          "playCount": 3
+          "durationSeconds": 136,
+          "playCount": 2
         },
         {
           "title": "Friend",
@@ -8786,16 +8806,6 @@
           "discNumber": 1,
           "durationSeconds": 184,
           "playCount": 2
-        },
-        {
-          "title": "LOST SPIRIT",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 2,
-          "trackNumber": 19,
-          "discNumber": 1,
-          "durationSeconds": 251,
-          "playCount": 3
         },
         {
           "title": "MAMMA AIUTO",
@@ -8835,16 +8845,6 @@
           "trackNumber": 15,
           "discNumber": 1,
           "durationSeconds": 110,
-          "playCount": 2
-        },
-        {
-          "title": "Bygone Days",
-          "artist": "Joe Hisaishi",
-          "contributingArtist": "Joe Hisaishi",
-          "listens": 1,
-          "trackNumber": 4,
-          "discNumber": 1,
-          "durationSeconds": 136,
           "playCount": 2
         },
         {
@@ -8971,7 +8971,7 @@
       "mostListenedTrack": {
         "title": "A Picture in Sepia",
         "artist": "Joe Hisaishi",
-        "listens": 2
+        "listens": 3
       },
       "coverSrc": "/images/albums/wmpl-imported/joe-hisaishi_porco-rosso-soundtrack.jpg",
       "coverAlt": "Porco Rosso Soundtrack album cover"
@@ -9663,6 +9663,360 @@
       "coverAlt": "The Chaos Chapter: FIGHT OR ESCAPE album cover"
     },
     {
+      "album": "COLORFUL",
+      "artist": "Riot of color",
+      "catalogNumbers": [
+        "ROC-0002"
+      ],
+      "trackCount": 7,
+      "totalListens": 12,
+      "tracks": [
+        {
+          "title": "5:04",
+          "artist": "ゆりん",
+          "contributingArtist": "ゆりん",
+          "listens": 2,
+          "trackNumber": 1,
+          "discNumber": 1,
+          "durationSeconds": 238,
+          "playCount": 2
+        },
+        {
+          "title": "sister",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 2,
+          "trackNumber": 4,
+          "discNumber": 1,
+          "durationSeconds": 238,
+          "playCount": 2
+        },
+        {
+          "title": "swarm",
+          "artist": "S!N",
+          "contributingArtist": "S!N",
+          "listens": 2,
+          "trackNumber": 3,
+          "discNumber": 1,
+          "durationSeconds": 191,
+          "playCount": 2
+        },
+        {
+          "title": "Wait for you",
+          "artist": "kradness",
+          "contributingArtist": "kradness",
+          "listens": 2,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 277,
+          "playCount": 2
+        },
+        {
+          "title": "ユウエイ",
+          "artist": "夏代孝明",
+          "contributingArtist": "夏代孝明",
+          "listens": 2,
+          "trackNumber": 5,
+          "discNumber": 1,
+          "durationSeconds": 269,
+          "playCount": 2
+        },
+        {
+          "title": "COLORFUL",
+          "artist": "Riot of color",
+          "contributingArtist": "Riot of color",
+          "listens": 1,
+          "trackNumber": 7,
+          "discNumber": 1,
+          "durationSeconds": 266,
+          "playCount": 2
+        },
+        {
+          "title": "ジーニアス",
+          "artist": "KK",
+          "contributingArtist": "KK",
+          "listens": 1,
+          "trackNumber": 6,
+          "discNumber": 1,
+          "durationSeconds": 352,
+          "playCount": 2
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "5:04",
+        "artist": "ゆりん",
+        "listens": 2
+      },
+      "coverSrc": "/images/albums/wmpl-imported/riot-of-color_colorful.jpg",
+      "coverAlt": "COLORFUL album cover"
+    },
+    {
+      "album": "アンチサイクロン",
+      "artist": "稲葉曇",
+      "catalogNumbers": [
+        "INBK-0001"
+      ],
+      "trackCount": 14,
+      "totalListens": 10,
+      "tracks": [
+        {
+          "title": "An Image in the Making (ツクリカケノ心象)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 7,
+          "discNumber": 1,
+          "durationSeconds": 207,
+          "playCount": 1
+        },
+        {
+          "title": "Anticyclone (アンチサイクロン)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 1,
+          "discNumber": 1,
+          "durationSeconds": 193,
+          "playCount": 1
+        },
+        {
+          "title": "Billow of Fireworks (渦巻ハナビ)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 10,
+          "discNumber": 1,
+          "durationSeconds": 179,
+          "playCount": 1
+        },
+        {
+          "title": "Cooler Girl (クーラーガール)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 4,
+          "discNumber": 1,
+          "durationSeconds": 228,
+          "playCount": 1
+        },
+        {
+          "title": "Floating Moonlight City (浮遊月光街)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 8,
+          "discNumber": 1,
+          "durationSeconds": 217,
+          "playCount": 1
+        },
+        {
+          "title": "Loop Spinner (ループスピナ)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 5,
+          "discNumber": 1,
+          "durationSeconds": 205,
+          "playCount": 1
+        },
+        {
+          "title": "Lost Umbrella (ロストアンブレラ)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 205,
+          "playCount": 1
+        },
+        {
+          "title": "Pascal Beats (パスカルビーツ)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 3,
+          "discNumber": 1,
+          "durationSeconds": 198,
+          "playCount": 2
+        },
+        {
+          "title": "Tears Radar (ナミダ電波)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 6,
+          "discNumber": 1,
+          "durationSeconds": 235,
+          "playCount": 1
+        },
+        {
+          "title": "The Stars Get Dark (絶体暗星)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 1,
+          "trackNumber": 9,
+          "discNumber": 1,
+          "durationSeconds": 225,
+          "playCount": 1
+        },
+        {
+          "title": "Copy and Pastime (うつしあそび)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 0,
+          "trackNumber": 11,
+          "discNumber": 1,
+          "durationSeconds": 234,
+          "playCount": 1
+        },
+        {
+          "title": "Non-Use (ノンユース)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 0,
+          "trackNumber": 13,
+          "discNumber": 1,
+          "durationSeconds": 214,
+          "playCount": 1
+        },
+        {
+          "title": "Sakasama Girl Feeling (さかさま少女感)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 0,
+          "trackNumber": 12,
+          "discNumber": 1,
+          "durationSeconds": 206,
+          "playCount": 1
+        },
+        {
+          "title": "Secret Music (秘密音楽)",
+          "artist": "稲葉曇",
+          "contributingArtist": "稲葉曇",
+          "listens": 0,
+          "trackNumber": 14,
+          "discNumber": 1,
+          "durationSeconds": 180,
+          "playCount": 1
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "An Image in the Making (ツクリカケノ心象)",
+        "artist": "稲葉曇",
+        "listens": 1
+      },
+      "coverSrc": "/images/albums/wmpl-imported/inabakumori_anticyclone.jpg",
+      "coverAlt": "アンチサイクロン album cover"
+    },
+    {
+      "album": "SHUFFLE",
+      "artist": "Riot of color",
+      "catalogNumbers": [
+        "ROC-0003"
+      ],
+      "trackCount": 9,
+      "totalListens": 9,
+      "tracks": [
+        {
+          "title": "5:04",
+          "artist": "Eve",
+          "contributingArtist": "Eve",
+          "listens": 1,
+          "trackNumber": 4,
+          "discNumber": 1,
+          "durationSeconds": 239,
+          "playCount": 2
+        },
+        {
+          "title": "diary",
+          "artist": "S!N",
+          "contributingArtist": "S!N",
+          "listens": 1,
+          "trackNumber": 3,
+          "discNumber": 1,
+          "durationSeconds": 348,
+          "playCount": 2
+        },
+        {
+          "title": "ENDING TELLER",
+          "artist": "KK & 夏代孝明",
+          "contributingArtist": "KK & 夏代孝明",
+          "listens": 1,
+          "trackNumber": 9,
+          "discNumber": 1,
+          "durationSeconds": 383,
+          "playCount": 1
+        },
+        {
+          "title": "Left Behind",
+          "artist": "KK",
+          "contributingArtist": "KK",
+          "listens": 1,
+          "trackNumber": 6,
+          "discNumber": 1,
+          "durationSeconds": 265,
+          "playCount": 2
+        },
+        {
+          "title": "sister",
+          "artist": "夏代孝明",
+          "contributingArtist": "夏代孝明",
+          "listens": 1,
+          "trackNumber": 5,
+          "discNumber": 1,
+          "durationSeconds": 238,
+          "playCount": 2
+        },
+        {
+          "title": "Unfair",
+          "artist": "kradness & S!N",
+          "contributingArtist": "kradness & S!N",
+          "listens": 1,
+          "trackNumber": 8,
+          "discNumber": 1,
+          "durationSeconds": 287,
+          "playCount": 1
+        },
+        {
+          "title": "再終回",
+          "artist": "Eve & ゆりん",
+          "contributingArtist": "Eve & ゆりん",
+          "listens": 1,
+          "trackNumber": 7,
+          "discNumber": 1,
+          "durationSeconds": 258,
+          "playCount": 2
+        },
+        {
+          "title": "破獄伝エクゾダス",
+          "artist": "kradness",
+          "contributingArtist": "kradness",
+          "listens": 1,
+          "trackNumber": 1,
+          "discNumber": 1,
+          "durationSeconds": 227,
+          "playCount": 2
+        },
+        {
+          "title": "風来",
+          "artist": "ゆりん",
+          "contributingArtist": "ゆりん",
+          "listens": 1,
+          "trackNumber": 2,
+          "discNumber": 1,
+          "durationSeconds": 189,
+          "playCount": 2
+        }
+      ],
+      "mostListenedTrack": {
+        "title": "5:04",
+        "artist": "Eve",
+        "listens": 1
+      },
+      "coverSrc": "/images/albums/wmpl-imported/riot-of-color_shuffle.jpg",
+      "coverAlt": "SHUFFLE album cover"
+    },
+    {
       "album": "The Ocean Waves (海がきこえる)",
       "artist": "Shigeru Nagata",
       "catalogNumbers": [
@@ -9787,13 +10141,13 @@
         "PRTF-8737"
       ],
       "trackCount": 2,
-      "totalListens": 0,
+      "totalListens": 2,
       "tracks": [
         {
           "title": "Glorious Day",
           "artist": "Eve",
           "contributingArtist": "Eve; Tower Records",
-          "listens": 0,
+          "listens": 1,
           "trackNumber": 1,
           "discNumber": 1,
           "durationSeconds": 204,
@@ -9803,14 +10157,18 @@
           "title": "メメント",
           "artist": "Eve",
           "contributingArtist": "Eve; Tower Records",
-          "listens": 0,
+          "listens": 1,
           "trackNumber": 2,
           "discNumber": 1,
           "durationSeconds": 214,
-          "playCount": 0
+          "playCount": 1
         }
       ],
-      "mostListenedTrack": null,
+      "mostListenedTrack": {
+        "title": "Glorious Day",
+        "artist": "Eve",
+        "listens": 1
+      },
       "coverSrc": "/images/albums/wmpl-imported/eve_under-blue.jpg",
       "coverAlt": "Under Blue album cover"
     }

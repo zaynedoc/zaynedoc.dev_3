@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent as ReactDragEvent, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from "react";
+import { focusGridButton } from "./keyboard-navigation";
+import { LibraryOverview, type LibraryOverviewData } from "./library-overview";
 import styles from "./library.module.css";
 
 type Track = {
@@ -21,6 +23,7 @@ type Album = {
   artist: string;
   catalogNumbers?: string[];
   notes?: string;
+  overviewFeatured?: boolean;
   trackCount: number;
   totalListens: number;
   coverSrc?: string;
@@ -92,6 +95,15 @@ function MusicIcon() {
   );
 }
 
+function PagesIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+      <path d="M2.5 2.5h8l2.5 2.5v8.5h-10.5z" fill="#f7fbff" stroke="#7298b8" />
+      <path d="M10.5 2.5V5h2.5M4.5 7.5h6M4.5 10h6" stroke="#7298b8" />
+    </svg>
+  );
+}
+
 function AlbumIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
@@ -122,12 +134,17 @@ function AlbumNotes({ notes }: { notes: string }) {
   );
 }
 
-export default function LibraryView({ albums }: { albums: Album[] }) {
+export default function LibraryView({ albums, overview }: { albums: Album[]; overview: LibraryOverviewData }) {
   const sortedAlbums = useMemo(
     () => [...albums].sort((a, b) => albumSort.compare(a.album, b.album)),
     [albums],
   );
+  const overviewAlbums = useMemo(() => [
+    ...sortedAlbums.filter((album) => album.overviewFeatured),
+    ...sortedAlbums.filter((album) => !album.overviewFeatured),
+  ].slice(0, 6), [sortedAlbums]);
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
+  const [libraryPage, setLibraryPage] = useState<"overview" | "collection">("overview");
   const [search, setSearch] = useState("");
   const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false);
   const [albumOrder, setAlbumOrder] = useState<string[]>([]);
@@ -138,9 +155,14 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
   const [draggingColumn, setDraggingColumn] = useState<ColumnId | null>(null);
   const [columnDropCue, setColumnDropCue] = useState<{ id: ColumnId; side: DropSide } | null>(null);
   const [sort, setSort] = useState<{ key: SortKey; direction: SortDirection }>({ key: "number", direction: "ascending" });
+  const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
   const activeResize = useRef<{ id: ColumnId; pointerX: number; width: number } | null>(null);
   const dragTitle = useRef<string | null>(null);
   const dragColumnId = useRef<ColumnId | null>(null);
+  const albumTreeRef = useRef<HTMLDivElement>(null);
+  const albumGridRef = useRef<HTMLDivElement>(null);
+  const detailScrollRef = useRef<HTMLDivElement>(null);
+  const mobileBackRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const mobileViewport = window.matchMedia("(max-width: 700px)");
@@ -155,6 +177,8 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
     function syncHash() {
       const matching = sortedAlbums.find((album) => `#${albumHash(album.album)}` === window.location.hash);
       setSelectedTitle(matching?.album ?? null);
+      setSelectedTrack(null);
+      setLibraryPage(window.location.hash === "#albums" || matching ? "collection" : "overview");
     }
     syncHash();
     window.addEventListener("hashchange", syncHash);
@@ -220,15 +244,64 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
     if (adjacent) reorderAlbum(album.album, adjacent.album, backward ? "before" : "after");
   }
 
-  function selectAlbum(album: Album) {
-    window.location.hash = albumHash(album.album);
-    setSelectedTitle(album.album);
-    setMobileNavigationOpen(false);
+  function keyboardNavigateMusic(event: ReactKeyboardEvent<HTMLButtonElement>, index: number) {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (!["ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const next = event.key === "Home" ? 0
+      : event.key === "End" ? sortedAlbums.length - 1
+      : index + (event.key === "ArrowUp" ? -1 : 1);
+    const album = sortedAlbums[next];
+    if (!album) return;
+    albumTreeRef.current?.querySelectorAll("button")[next]?.focus();
+    selectAlbum(album);
   }
 
-  function showAlbums() {
-    history.replaceState(null, "", window.location.pathname);
+  function keyboardSelectTrack(event: ReactKeyboardEvent<HTMLDivElement>, orderedTracks: Track[], index: number) {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      setSelectedTrack(orderedTracks[index]);
+      return;
+    }
+    if (!["ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const next = event.key === "Home" ? 0
+      : event.key === "End" ? orderedTracks.length - 1
+      : index + (event.key === "ArrowUp" ? -1 : 1);
+    if (next < 0 || next >= orderedTracks.length) return;
+    setSelectedTrack(orderedTracks[next]);
+    event.currentTarget.closest('[role="listbox"]')?.querySelectorAll<HTMLElement>('[role="option"]')[next]?.focus();
+  }
+
+  function selectAlbum(album: Album, focusContent = false) {
+    const shouldFocusContent = focusContent || mobileNavigationOpen;
+    window.location.hash = albumHash(album.album);
+    setSelectedTitle(album.album);
+    setSelectedTrack(null);
+    setLibraryPage("collection");
+    setMobileNavigationOpen(false);
+    if (shouldFocusContent) {
+      window.requestAnimationFrame(() => {
+        if (window.matchMedia("(max-width: 700px)").matches) mobileBackRef.current?.focus();
+        else (detailScrollRef.current?.querySelector<HTMLElement>('[role="option"]') ?? detailScrollRef.current)?.focus();
+      });
+    }
+  }
+
+  function showAlbums(focusCollection = false) {
+    window.location.hash = "albums";
     setSelectedTitle(null);
+    setSelectedTrack(null);
+    setLibraryPage("collection");
+    setMobileNavigationOpen(false);
+    if (focusCollection) window.requestAnimationFrame(() => albumGridRef.current?.querySelector("button")?.focus());
+  }
+
+  function showOverview() {
+    window.location.hash = "overview";
+    setSelectedTitle(null);
+    setLibraryPage("overview");
     setMobileNavigationOpen(false);
   }
 
@@ -262,6 +335,7 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
   }
 
   const tracks = selected ? [...selected.tracks].sort(naturalTrackOrder) : [];
+  const activeTrack = selectedTrack && selected?.tracks.includes(selectedTrack) ? selectedTrack : null;
   const fallbackTrackNumbers = new Map(tracks.map((track, index) => [track, index + 1]));
   const desktopTracks = [...tracks].sort((a, b) => {
     if (sort.key === "number") {
@@ -306,7 +380,7 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
           <span className={styles.viewCaret} aria-hidden="true">▾</span>
           <label className={styles.searchBox}>
             <span className={styles.srOnly}>Search albums</span>
-            <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search" type="search" />
+            <input value={search} onChange={(event) => { setSearch(event.target.value); if (event.target.value) showAlbums(); }} placeholder="Search" type="search" />
             <span className={styles.magnify} aria-hidden="true" />
           </label>
           <span className={styles.helpIcon} aria-hidden="true">?</span>
@@ -325,24 +399,37 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
         <aside
           className={`${styles.sidebar} ${mobileNavigationOpen ? styles.sidebarOpen : ""}`}
           id="library-sidebar"
-          aria-label="Music library"
+          aria-label="Library navigation"
         >
-          <Link className={styles.homeLink} href="/">
-            <span className={styles.libraryIcon} aria-hidden="true">▤</span>
-            Zayne Dockery
-          </Link>
-          <button className={styles.musicTree} onClick={showAlbums}>
+          <div className={styles.pagesTree}>
+            <span className={styles.chevronOpen} aria-hidden="true" />
+            <span className={styles.treeIcon}><PagesIcon /></span>
+            <span>Pages</span>
+          </div>
+          <div className={styles.pageTree}>
+            <button className={`${styles.treeAlbum} ${!selected && libraryPage === "overview" ? styles.treeSelected : ""}`} onClick={showOverview} type="button">
+              <span className={styles.treeIcon}><PagesIcon /></span><span className={styles.treeLabel}>Overview</span>
+            </button>
+            <Link className={styles.treeAlbum} href="/">
+              <span className={styles.treeIcon}><PagesIcon /></span><span className={styles.treeLabel}>Portfolio</span>
+            </Link>
+          </div>
+          <button className={`${styles.musicTree} ${!selected && libraryPage === "collection" ? styles.treeSelected : ""}`} onClick={() => showAlbums()} onKeyDown={(event) => keyboardNavigateMusic(event, -1)} type="button">
             <span className={styles.chevronOpen} aria-hidden="true" />
             <span className={styles.treeIcon}><MusicIcon /></span>
             <span>Music</span>
           </button>
-          <div className={styles.albumTree}>
-              {sortedAlbums.map((album) => (
+          <div className={styles.albumTree} ref={albumTreeRef}>
+              {sortedAlbums.map((album, index) => (
                 <button
+                  aria-current={selectedTitle === album.album ? "page" : undefined}
                   className={`${styles.treeAlbum} ${selectedTitle === album.album ? styles.treeSelected : ""}`}
                   key={album.album}
                   onClick={() => selectAlbum(album)}
+                  onKeyDown={(event) => keyboardNavigateMusic(event, index)}
+                  tabIndex={selectedTitle === album.album || (!selectedTitle && index === 0) ? 0 : -1}
                   title={album.album}
+                  type="button"
                 >
                   <span className={styles.treeIcon}><AlbumIcon /></span>
                   <span className={styles.treeLabel}>{album.album}</span>
@@ -351,10 +438,10 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
           </div>
         </aside>
 
-        <section className={styles.content} aria-label={selected ? selected.album : "Albums"}>
+        <section className={styles.content} aria-label={selected ? selected.album : libraryPage === "overview" ? "Library overview" : "Albums"}>
           {selected ? (
             <>
-              <div className={styles.detailScroll}>
+              <div className={styles.detailScroll} ref={detailScrollRef} tabIndex={-1}>
                 <div className={styles.detailTable} style={tableStyle}>
                   <div className={`${styles.columnHeader} ${styles.detailHeader}`}>
                     {columnOrder.map((id) => {
@@ -440,9 +527,17 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
                       </div>
                       {selected.notes?.trim() && <AlbumNotes notes={selected.notes} />}
                     </div>
-                    <div className={styles.trackRows}>
+                    <div aria-label={`Tracks on ${selected.album}`} className={styles.trackRows} role="listbox">
                       {desktopTracks.map((track, index) => (
-                        <div className={styles.trackRow} key={`${track.title}-${index}`}>
+                        <div
+                          aria-selected={activeTrack === track}
+                          className={`${styles.trackRow} ${activeTrack === track ? styles.trackRowSelected : ""}`}
+                          key={`${track.title}-${index}`}
+                          onClick={(event) => { setSelectedTrack(track); event.currentTarget.focus(); }}
+                          onKeyDown={(event) => keyboardSelectTrack(event, desktopTracks, index)}
+                          role="option"
+                          tabIndex={activeTrack === track || (!activeTrack && index === 0) ? 0 : -1}
+                        >
                           {columnOrder.map((id) => {
                             const value = id === "number" ? track.trackNumber ?? fallbackTrackNumbers.get(track)
                               : id === "title" ? track.title
@@ -459,7 +554,12 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
                 </div>
               </div>
               <div className={styles.mobileDetail}>
-                <button className={styles.mobileBack} onClick={showAlbums} type="button">
+                <button className={styles.mobileBack} onClick={() => showAlbums(true)} onKeyDown={(event) => {
+                  if (event.key !== "ArrowDown" || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || tracks.length === 0) return;
+                  event.preventDefault();
+                  setSelectedTrack(tracks[0]);
+                  event.currentTarget.parentElement?.querySelector<HTMLElement>('[role="option"]')?.focus();
+                }} ref={mobileBackRef} type="button">
                   <span aria-hidden="true">‹</span> Albums
                 </button>
                 <div className={styles.mobileAlbumSummary}>
@@ -483,15 +583,22 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
                 <div className={styles.mobileTrackHeader} aria-hidden="true">
                   <span>#</span><span>Title</span><span>Length</span>
                 </div>
-                <div className={styles.mobileTracks}>
+                <div aria-label={`Tracks on ${selected.album}`} className={styles.mobileTracks} role="listbox">
                   {tracks.map((track, index) => {
                     const disc = track.discNumber ?? 1;
                     const beginsDisc = index === 0 || (tracks[index - 1].discNumber ?? 1) !== disc;
                     const playCount = track.playCount ?? track.listens;
                     return (
-                      <div key={`${track.title}-${index}`}>
+                      <div key={`${track.title}-${index}`} role="presentation">
                         {hasMultipleDiscs && beginsDisc && <div className={styles.mobileDisc}>Disc {disc}</div>}
-                        <div className={styles.mobileTrackRow}>
+                        <div
+                          aria-selected={activeTrack === track}
+                          className={`${styles.mobileTrackRow} ${activeTrack === track ? styles.mobileTrackSelected : ""}`}
+                          onClick={(event) => { setSelectedTrack(track); event.currentTarget.focus(); }}
+                          onKeyDown={(event) => keyboardSelectTrack(event, tracks, index)}
+                          role="option"
+                          tabIndex={activeTrack === track || (!activeTrack && index === 0) ? 0 : -1}
+                        >
                           <span className={styles.mobileTrackNumber}>{track.trackNumber ?? index + 1}</span>
                           <div className={styles.mobileTrackInfo}>
                             <span className={styles.mobileTrackTitle}>{track.title}</span>
@@ -508,20 +615,30 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
                 </div>
               </div>
             </>
+          ) : libraryPage === "overview" ? (
+            <LibraryOverview
+              albums={overviewAlbums}
+              data={overview}
+              onOpenAlbum={(title) => {
+                const album = sortedAlbums.find((item) => item.album === title);
+                if (album) selectAlbum(album, true);
+              }}
+              onOpenCollection={() => showAlbums(true)}
+            />
           ) : (
             <>
               <div className={`${styles.columnHeader} ${styles.overviewHeader}`} aria-hidden="true">
                 <span>Album</span><span>Album Artist</span><span>Count</span><span>Total Listens</span>
               </div>
               <div className={styles.albumGridScroll}>
-                <div className={styles.albumGrid}>
+                <div className={styles.albumGrid} ref={albumGridRef}>
                   {visibleAlbums.map((album) => (
                     <button
                       aria-keyshortcuts="Alt+ArrowLeft Alt+ArrowRight Alt+ArrowUp Alt+ArrowDown"
                       className={`${styles.albumCard} ${draggingAlbum === album.album ? styles.albumDragging : ""} ${dropCue?.album === album.album ? dropCue.side === "before" ? styles.albumDropBefore : styles.albumDropAfter : ""}`}
                       draggable
                       key={album.album}
-                      onClick={() => selectAlbum(album)}
+                      onClick={() => selectAlbum(album, true)}
                       onDragEnd={finishAlbumDrag}
                       onDragOver={(event) => {
                         if (!dragTitle.current || dragTitle.current === album.album) return;
@@ -541,7 +658,10 @@ export default function LibraryView({ albums }: { albums: Album[] }) {
                         if (dragTitle.current) reorderAlbum(dragTitle.current, album.album, dropSide(event));
                         finishAlbumDrag();
                       }}
-                      onKeyDown={(event) => keyboardMoveAlbum(event, album)}
+                      onKeyDown={(event) => {
+                        keyboardMoveAlbum(event, album);
+                        focusGridButton(event);
+                      }}
                       type="button"
                     >
                       <Image alt="" className={styles.gridCover} draggable={false} src={album.coverSrc ?? "/images/albums/wmp_empty.png"} width={86} height={86} unoptimized />
