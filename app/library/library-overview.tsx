@@ -188,7 +188,7 @@ export function LibraryOverview({
           </p>
           <div className={styles.snapshotTotals}>
             <div><span>Total listens</span><strong>{selected.listens.toLocaleString("en-US")}</strong></div>
-            <div><span>Est. listening time</span><strong>{formatDuration(selected.listeningSeconds)}</strong></div>
+            <div><span>Total listening time</span><strong>{formatDuration(selected.listeningSeconds)}</strong></div>
           </div>
           <div className={styles.rankingGrid}>
             {subjects.map((subject) => (

@@ -37,6 +37,8 @@ type ColumnId = "album" | "number" | "title" | "length" | "artist" | "playCount"
 type SortKey = Exclude<ColumnId, "album">;
 type SortDirection = "ascending" | "descending";
 type ColumnWidths = Record<ColumnId, number>;
+type ListColumnId = "album" | "artist" | "count" | "listens";
+type ListWidths = Record<ListColumnId, number>;
 
 const columns: { id: ColumnId; label: string }[] = [
   { id: "album", label: "Album" },
@@ -48,6 +50,29 @@ const columns: { id: ColumnId; label: string }[] = [
 ];
 const initialWidths: ColumnWidths = { album: 252, number: 100, title: 315, length: 70, artist: 150, playCount: 108 };
 const minimumWidths: ColumnWidths = { album: 240, number: 54, title: 180, length: 68, artist: 150, playCount: 90 };
+const listColumns: { id: ListColumnId; label: string }[] = [
+  { id: "album", label: "Album" },
+  { id: "artist", label: "Album Artist" },
+  { id: "count", label: "Count" },
+  { id: "listens", label: "Total Listens" },
+];
+const listMinimumWidths: ListWidths = { album: 110, artist: 80, count: 50, listens: 80 };
+const listInitialWidths: ListWidths = { album: 400, artist: 300, count: 120, listens: 180 };
+
+function fitListWidths(viewportWidth: number, previous?: ListWidths): ListWidths {
+  const minimum = Object.values(listMinimumWidths).reduce((sum, width) => sum + width, 0);
+  const surplus = Math.max(0, Math.round(viewportWidth) - minimum);
+  const weights = listColumns.map(({ id }) => Math.max(1, (previous?.[id] ?? listInitialWidths[id]) - listMinimumWidths[id]));
+  const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+  const widths = { ...listMinimumWidths };
+  let remaining = surplus;
+  listColumns.forEach(({ id }, index) => {
+    const extra = index === listColumns.length - 1 ? remaining : Math.floor(surplus * weights[index] / totalWeight);
+    widths[id] += extra;
+    remaining -= extra;
+  });
+  return widths;
+}
 
 function naturalTrackOrder(a: Track, b: Track) {
   return (a.discNumber ?? 1) - (b.discNumber ?? 1) ||
@@ -114,6 +139,16 @@ function AlbumIcon() {
   );
 }
 
+function ToolbarIcon({ kind }: { kind: "browse" | "sort" | "share" }) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      {kind === "browse" && <path d="M1.5 4.5h5l1.5 1.5h6.5v7h-13zM1.5 4.5V3h5.2l1.2 1.5" />}
+      {kind === "sort" && <path d="M2 3h9M2 6.5h6M2 10h3M12.5 5v8m-2.5-2.5 2.5 2.5 2.5-2.5" />}
+      {kind === "share" && <path d="M9 2h5v5m0-5-7 7M12.5 9v4.5h-10v-10H7" />}
+    </svg>
+  );
+}
+
 function CatalogNumbers({ numbers = [] }: { numbers?: string[] }) {
   return (
     <div className={styles.catalogMetadata}>
@@ -146,6 +181,18 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
   const [libraryPage, setLibraryPage] = useState<"overview" | "collection">("overview");
   const [search, setSearch] = useState("");
+  const [collectionView, setCollectionView] = useState<"covers" | "details">("covers");
+  const [helpOpen, setHelpOpen] = useState(false);
+  const [pagesExpanded, setPagesExpanded] = useState(true);
+  const [musicExpanded, setMusicExpanded] = useState(true);
+  const [openMenu, setOpenMenu] = useState<"browse" | "sort" | "share" | null>(null);
+  const [shareMessage, setShareMessage] = useState("");
+  const [shareFallbackUrl, setShareFallbackUrl] = useState("");
+  const [listColumnOrder, setListColumnOrder] = useState<ListColumnId[]>(() => listColumns.map(({ id }) => id));
+  const [listColumnWidths, setListColumnWidths] = useState<ListWidths>(listInitialWidths);
+  const [listSort, setListSort] = useState<{ key: ListColumnId; direction: SortDirection } | null>(null);
+  const [draggingListColumn, setDraggingListColumn] = useState<ListColumnId | null>(null);
+  const [listColumnDropCue, setListColumnDropCue] = useState<{ id: ListColumnId; side: DropSide } | null>(null);
   const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false);
   const [albumOrder, setAlbumOrder] = useState<string[]>([]);
   const [draggingAlbum, setDraggingAlbum] = useState<string | null>(null);
@@ -160,7 +207,15 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   const dragTitle = useRef<string | null>(null);
   const dragColumnId = useRef<ColumnId | null>(null);
   const albumTreeRef = useRef<HTMLDivElement>(null);
-  const albumGridRef = useRef<HTMLDivElement>(null);
+  const albumItemsRef = useRef<HTMLDivElement>(null);
+  const listViewportRef = useRef<HTMLDivElement>(null);
+  const listViewportWidth = useRef(0);
+  const listDragColumnId = useRef<ListColumnId | null>(null);
+  const activeListResize = useRef<{ id: ListColumnId; pointerX: number; widths: ListWidths } | null>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
+  const toolbarMenusRef = useRef<HTMLDivElement>(null);
+  const helpRef = useRef<HTMLDivElement>(null);
+  const helpButtonRef = useRef<HTMLButtonElement>(null);
   const detailScrollRef = useRef<HTMLDivElement>(null);
   const mobileBackRef = useRef<HTMLButtonElement>(null);
 
@@ -174,6 +229,40 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   }, []);
 
   useEffect(() => {
+    if (!helpOpen) return;
+    function closeOnOutsideClick(event: PointerEvent) {
+      if (!helpRef.current?.contains(event.target as Node)) setHelpOpen(false);
+    }
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      setHelpOpen(false);
+      helpButtonRef.current?.focus();
+    }
+    document.addEventListener("pointerdown", closeOnOutsideClick);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsideClick);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [helpOpen]);
+
+  useEffect(() => {
+    if (!openMenu) return;
+    function closeOnOutsideClick(event: PointerEvent) {
+      if (!toolbarMenusRef.current?.contains(event.target as Node)) setOpenMenu(null);
+    }
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpenMenu(null);
+    }
+    document.addEventListener("pointerdown", closeOnOutsideClick);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsideClick);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [openMenu]);
+
+  useEffect(() => {
     function syncHash() {
       const matching = sortedAlbums.find((album) => `#${albumHash(album.album)}` === window.location.hash);
       setSelectedTitle(matching?.album ?? null);
@@ -184,6 +273,20 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
     window.addEventListener("hashchange", syncHash);
     return () => window.removeEventListener("hashchange", syncHash);
   }, [sortedAlbums]);
+
+  useEffect(() => {
+    if (selectedTitle || libraryPage !== "collection") return;
+    const viewport = listViewportRef.current;
+    if (!viewport) return;
+    const observer = new ResizeObserver(() => {
+      const width = viewport.clientWidth;
+      if (!width || width === listViewportWidth.current) return;
+      listViewportWidth.current = width;
+      setListColumnWidths((previous) => fitListWidths(width, previous));
+    });
+    observer.observe(viewport);
+    return () => observer.disconnect();
+  }, [collectionView, selectedTitle, libraryPage]);
 
   const selected = sortedAlbums.find((album) => album.album === selectedTitle);
   const orderedAlbums = useMemo(() => {
@@ -197,13 +300,79 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   const visibleAlbums = orderedAlbums.filter((album) =>
     `${album.album} ${album.artist}`.toLocaleLowerCase().includes(search.toLocaleLowerCase()),
   );
+  const listAlbums = listSort ? [...visibleAlbums].sort((a, b) => {
+    const order = listSort.key === "album" ? albumSort.compare(a.album, b.album)
+      : listSort.key === "artist" ? albumSort.compare(a.artist, b.artist)
+      : listSort.key === "count" ? a.trackCount - b.trackCount
+      : a.totalListens - b.totalListens;
+    return order * (listSort.direction === "ascending" ? 1 : -1);
+  }) : visibleAlbums;
+  const listStyle = {
+    "--list-columns": listColumnOrder.map((id) => `${listColumnWidths[id]}px`).join(" "),
+    "--list-width": `${listColumnOrder.reduce((sum, id) => sum + listColumnWidths[id], 0)}px`,
+  } as CSSProperties;
 
   function reorderAlbum(dragged: string, target: string, side: DropSide) {
-    setAlbumOrder(moveInOrder(orderedAlbums.map((album) => album.album), dragged, target, side));
+    const visibleTitles = listAlbums.map((album) => album.album);
+    const hiddenTitles = orderedAlbums.map((album) => album.album).filter((title) => !visibleTitles.includes(title));
+    setAlbumOrder(moveInOrder([...visibleTitles, ...hiddenTitles], dragged, target, side));
+    setListSort(null);
   }
 
   function reorderColumn(dragged: ColumnId, target: ColumnId, side: DropSide) {
     setColumnOrder((order) => moveInOrder(order, dragged, target, side));
+  }
+
+  function finishListColumnDrag() {
+    listDragColumnId.current = null;
+    setDraggingListColumn(null);
+    setListColumnDropCue(null);
+  }
+
+  function keyboardMoveListColumn(event: ReactKeyboardEvent<HTMLDivElement>, id: ListColumnId) {
+    if (!event.altKey || (event.key !== "ArrowLeft" && event.key !== "ArrowRight")) return;
+    if ((event.target as HTMLElement).getAttribute("role") === "separator") return;
+    event.preventDefault();
+    const index = listColumnOrder.indexOf(id);
+    const backward = event.key === "ArrowLeft";
+    const adjacent = listColumnOrder[index + (backward ? -1 : 1)];
+    if (adjacent) setListColumnOrder((order) => moveInOrder(order, id, adjacent, backward ? "before" : "after"));
+  }
+
+  function changeListSort(key: ListColumnId) {
+    setListSort((previous) => ({
+      key,
+      direction: previous?.key === key && previous.direction === "ascending" ? "descending" : "ascending",
+    }));
+  }
+
+  function resizeListColumn(id: ListColumnId, delta: number, base: ListWidths) {
+    const index = listColumnOrder.indexOf(id);
+    const neighbor = listColumnOrder[index === listColumnOrder.length - 1 ? index - 1 : index + 1];
+    if (!neighbor) return;
+    const change = Math.max(
+      listMinimumWidths[id] - base[id],
+      Math.min(delta, base[neighbor] - listMinimumWidths[neighbor]),
+    );
+    setListColumnWidths({ ...base, [id]: base[id] + change, [neighbor]: base[neighbor] - change });
+  }
+
+  function startListResize(event: ReactPointerEvent<HTMLSpanElement>, id: ListColumnId) {
+    event.preventDefault();
+    event.currentTarget.setPointerCapture(event.pointerId);
+    activeListResize.current = { id, pointerX: event.clientX, widths: listColumnWidths };
+  }
+
+  function moveListResize(event: ReactPointerEvent<HTMLSpanElement>) {
+    const resize = activeListResize.current;
+    if (!resize) return;
+    const isLast = listColumnOrder[listColumnOrder.length - 1] === resize.id;
+    resizeListColumn(resize.id, (event.clientX - resize.pointerX) * (isLast ? -1 : 1), resize.widths);
+  }
+
+  function endListResize(event: ReactPointerEvent<HTMLSpanElement>) {
+    activeListResize.current = null;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
   }
 
   function finishColumnDrag() {
@@ -238,9 +407,9 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   function keyboardMoveAlbum(event: ReactKeyboardEvent<HTMLButtonElement>, album: Album) {
     if (!event.altKey || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)) return;
     event.preventDefault();
-    const index = visibleAlbums.findIndex((item) => item.album === album.album);
+    const index = listAlbums.findIndex((item) => item.album === album.album);
     const backward = event.key === "ArrowLeft" || event.key === "ArrowUp";
-    const adjacent = visibleAlbums[index + (backward ? -1 : 1)];
+    const adjacent = listAlbums[index + (backward ? -1 : 1)];
     if (adjacent) reorderAlbum(album.album, adjacent.album, backward ? "before" : "after");
   }
 
@@ -275,6 +444,7 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   }
 
   function selectAlbum(album: Album, focusContent = false) {
+    setMusicExpanded(true);
     const shouldFocusContent = focusContent || mobileNavigationOpen;
     window.location.hash = albumHash(album.album);
     setSelectedTitle(album.album);
@@ -290,19 +460,54 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   }
 
   function showAlbums(focusCollection = false) {
+    setMusicExpanded(true);
     window.location.hash = "albums";
     setSelectedTitle(null);
     setSelectedTrack(null);
     setLibraryPage("collection");
     setMobileNavigationOpen(false);
-    if (focusCollection) window.requestAnimationFrame(() => albumGridRef.current?.querySelector("button")?.focus());
+    if (focusCollection) window.requestAnimationFrame(() => albumItemsRef.current?.querySelector("button")?.focus());
+  }
+
+  function toggleCollectionView() {
+    setCollectionView((view) => view === "covers" ? "details" : "covers");
+    setHelpOpen(false);
+    showAlbums();
   }
 
   function showOverview() {
+    setPagesExpanded(true);
     window.location.hash = "overview";
     setSelectedTitle(null);
     setLibraryPage("overview");
     setMobileNavigationOpen(false);
+  }
+
+  function togglePages() {
+    if (pagesExpanded) setPagesExpanded(false);
+    else showOverview();
+  }
+
+  function toggleMusic() {
+    if (musicExpanded) setMusicExpanded(false);
+    else showAlbums();
+  }
+
+  function selectCollectionSort(key: ListColumnId | null, direction: SortDirection = "ascending") {
+    setListSort(key ? { key, direction } : null);
+    setOpenMenu(null);
+    showAlbums();
+  }
+
+  async function copyLibraryLink(url: string) {
+    try {
+      await navigator.clipboard.writeText(url);
+      setShareMessage("Link copied");
+      setShareFallbackUrl("");
+    } catch {
+      setShareMessage("Copy unavailable. Select the link below.");
+      setShareFallbackUrl(url);
+    }
   }
 
   function changeSort(key: SortKey) {
@@ -358,11 +563,136 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   } as CSSProperties;
   const hasMultipleDiscs = tracks.some((track) => (track.discNumber ?? 1) > 1);
 
+  const collectionHeader = (
+    <div className={`${styles.columnHeader} ${styles.albumListHeader}`}>
+      {listColumnOrder.map((id) => {
+        const label = listColumns.find((column) => column.id === id)!.label;
+        const isLast = id === listColumnOrder[listColumnOrder.length - 1];
+        return (
+          <div
+            aria-keyshortcuts="Alt+ArrowLeft Alt+ArrowRight"
+            className={`${styles.detailHeaderCell} ${draggingListColumn === id ? styles.columnDragging : ""} ${listColumnDropCue?.id === id ? listColumnDropCue.side === "before" ? styles.columnDropBefore : styles.columnDropAfter : ""}`}
+            draggable
+            key={id}
+            onDragEnd={finishListColumnDrag}
+            onDragOver={(event) => {
+              if (!listDragColumnId.current || listDragColumnId.current === id) return;
+              event.preventDefault();
+              event.dataTransfer.dropEffect = "move";
+              const bounds = event.currentTarget.getBoundingClientRect();
+              const side = event.clientX > bounds.left + bounds.width / 2 ? "after" : "before";
+              if (listColumnDropCue?.id !== id || listColumnDropCue.side !== side) setListColumnDropCue({ id, side });
+            }}
+            onDragStart={(event) => {
+              if (activeListResize.current || (event.target as HTMLElement).closest('[role="separator"]')) {
+                event.preventDefault();
+                return;
+              }
+              listDragColumnId.current = id;
+              setDraggingListColumn(id);
+              event.dataTransfer.effectAllowed = "move";
+              event.dataTransfer.setData("text/plain", id);
+            }}
+            onDrop={(event) => {
+              event.preventDefault();
+              const dragged = listDragColumnId.current;
+              if (dragged) {
+                const bounds = event.currentTarget.getBoundingClientRect();
+                const side = event.clientX > bounds.left + bounds.width / 2 ? "after" : "before";
+                setListColumnOrder((order) => moveInOrder(order, dragged, id, side));
+              }
+              finishListColumnDrag();
+            }}
+            onKeyDown={(event) => keyboardMoveListColumn(event, id)}
+          >
+            <button
+              aria-label={`Sort by ${label}${listSort?.key === id ? `, currently ${listSort.direction}` : ""}`}
+              className={styles.sortButton}
+              onClick={() => changeListSort(id)}
+              type="button"
+            >
+              {label}
+              {listSort?.key === id && <span aria-hidden="true" className={styles.sortArrow}>{listSort.direction === "ascending" ? "▲" : "▼"}</span>}
+            </button>
+            <span
+              aria-label={`Resize ${label} column`}
+              aria-orientation="vertical"
+              aria-valuemin={listMinimumWidths[id]}
+              aria-valuenow={listColumnWidths[id]}
+              className={`${styles.resizeHandle} ${isLast ? styles.listLastResize : ""}`}
+              onKeyDown={(event) => {
+                if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+                event.preventDefault();
+                event.stopPropagation();
+                resizeListColumn(id, event.key === "ArrowRight" ? 10 : -10, listColumnWidths);
+              }}
+              onPointerCancel={endListResize}
+              onPointerDown={(event) => startListResize(event, id)}
+              onPointerMove={moveListResize}
+              onPointerUp={endListResize}
+              role="separator"
+              tabIndex={0}
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+
   return (
     <main className={styles.window}>
       <div className={styles.toolbar}>
         <div className={styles.menus}>
-          <span className={styles.desktopOrganize} aria-hidden="true">Organize <i /></span>
+          <div className={styles.desktopToolbarMenus} ref={toolbarMenusRef}>
+            {(["browse", "sort", "share"] as const).map((menu) => (
+              <div className={styles.menuAnchor} key={menu}>
+                <button
+                  aria-controls={`library-${menu}-menu`}
+                  aria-expanded={openMenu === menu}
+                  className={styles.menuButton}
+                  onClick={() => { setOpenMenu((current) => current === menu ? null : menu); setHelpOpen(false); setShareMessage(""); }}
+                  type="button"
+                >
+                  <ToolbarIcon kind={menu} />
+                  <span>{menu[0].toUpperCase() + menu.slice(1)}</span>
+                  <i aria-hidden="true" />
+                </button>
+                {openMenu === menu && (
+                  <div className={styles.toolbarPopup} id={`library-${menu}-menu`}>
+                    {menu === "browse" && (
+                      <>
+                        <button className={styles.menuItem} onClick={() => { setOpenMenu(null); showOverview(); }} type="button">Overview</button>
+                        <button className={styles.menuItem} onClick={() => { setOpenMenu(null); showAlbums(); }} type="button">All albums</button>
+                        <button className={styles.menuItem} onClick={() => {
+                          setOpenMenu(null);
+                          showOverview();
+                          window.requestAnimationFrame(() => document.getElementById("listening-snapshot-title")?.scrollIntoView({ block: "start" }));
+                        }} type="button">Listening snapshot</button>
+                      </>
+                    )}
+                    {menu === "sort" && (
+                      <>
+                        <button className={styles.menuItem} onClick={() => selectCollectionSort("album")} type="button">Album A–Z</button>
+                        <button className={styles.menuItem} onClick={() => selectCollectionSort("album", "descending")} type="button">Album Z–A</button>
+                        <button className={styles.menuItem} onClick={() => selectCollectionSort("artist")} type="button">Album artist A–Z</button>
+                        <button className={styles.menuItem} onClick={() => selectCollectionSort("count", "descending")} type="button">Most songs</button>
+                        <button className={styles.menuItem} onClick={() => selectCollectionSort("listens", "descending")} type="button">Most listened</button>
+                        <button className={styles.menuItem} onClick={() => selectCollectionSort(null)} type="button">Custom order</button>
+                      </>
+                    )}
+                    {menu === "share" && (
+                      <>
+                        <button className={styles.menuItem} onClick={() => copyLibraryLink(window.location.href)} type="button">Copy current link</button>
+                        <button className={styles.menuItem} onClick={() => copyLibraryLink(`${window.location.origin}/library#albums`)} type="button">Copy collection link</button>
+                        {shareMessage && <p className={styles.shareMessage} role="status">{shareMessage}</p>}
+                        {shareFallbackUrl && <input aria-label="Link to copy" className={styles.shareFallback} onFocus={(event) => event.currentTarget.select()} readOnly value={shareFallbackUrl} />}
+                      </>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
           <button
             aria-controls="library-sidebar"
             aria-expanded={mobileNavigationOpen}
@@ -372,18 +702,39 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
           >
             Navigate <i />
           </button>
-          <span className={styles.desktopMenu} aria-hidden="true">Stream <i /></span>
-          <span className={styles.desktopMenu} aria-hidden="true">Create playlist <i /></span>
         </div>
         <div className={styles.tools}>
-          <span className={styles.viewIcon} aria-hidden="true">▦</span>
-          <span className={styles.viewCaret} aria-hidden="true">▾</span>
-          <label className={styles.searchBox}>
-            <span className={styles.srOnly}>Search albums</span>
-            <input value={search} onChange={(event) => { setSearch(event.target.value); if (event.target.value) showAlbums(); }} placeholder="Search" type="search" />
-            <span className={styles.magnify} aria-hidden="true" />
-          </label>
-          <span className={styles.helpIcon} aria-hidden="true">?</span>
+          <button
+            aria-label={collectionView === "covers" ? "Show album details list" : "Show album covers"}
+            className={styles.viewToggle}
+            onClick={toggleCollectionView}
+            title={collectionView === "covers" ? "Show album details list" : "Show album covers"}
+            type="button"
+          >
+            {collectionView === "covers" ? (
+              <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M1.5 2.5h3v3h-3zm5 0h3v3h-3zm5 0h3v3h-3zm-10 5h3v3h-3zm5 0h3v3h-3zm5 0h3v3h-3zm-10 5h3v2h-3zm5 0h3v2h-3zm5 0h3v2h-3z" /></svg>
+            ) : (
+              <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M1.5 2.5h3v3h-3zm5 0h8v1.5h-8zm0 2.5h8v.8h-8zm-5 2.5h3v3h-3zm5 0h8V9h-8zm0 2.5h8v.8h-8zm-5 2.5h3v2h-3zm5 0h8v1.5h-8z" /></svg>
+            )}
+            <span className={styles.viewCaret} aria-hidden="true" />
+          </button>
+          <div className={styles.searchBox}>
+            <label className={styles.srOnly} htmlFor="library-search">Search albums</label>
+            <input id="library-search" ref={searchRef} value={search} onChange={(event) => { setSearch(event.target.value); if (event.target.value) showAlbums(); }} placeholder="Search" type="search" />
+            <button aria-label="Focus album search" className={styles.searchButton} onClick={() => searchRef.current?.focus()} type="button">
+              <svg aria-hidden="true" viewBox="0 0 16 16"><circle cx="6.5" cy="6.5" r="4.5" /><path d="m10 10 4 4" /></svg>
+            </button>
+          </div>
+          <div className={styles.helpAnchor} ref={helpRef}>
+            <button aria-controls="library-help" aria-expanded={helpOpen} aria-label="Library help" className={styles.helpIcon} onClick={() => { setHelpOpen((open) => !open); setOpenMenu(null); }} ref={helpButtonRef} type="button">?</button>
+            {helpOpen && (
+              <div aria-label="Library help" className={styles.helpPopup} id="library-help" role="dialog">
+                <strong>Library help</strong>
+                <p>Search album titles or artists. Use the view button to switch between album covers and a full album list.</p>
+                <p>Use the arrow keys in Music to browse albums. Press Enter on a cover or list row to open it.</p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -401,25 +752,33 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
           id="library-sidebar"
           aria-label="Library navigation"
         >
-          <div className={styles.pagesTree}>
-            <span className={styles.chevronOpen} aria-hidden="true" />
+          <button aria-controls="library-pages-tree" aria-expanded={pagesExpanded} className={styles.pagesTree} onClick={togglePages} type="button">
+            <span className={pagesExpanded ? styles.chevronOpen : styles.chevron} aria-hidden="true" />
             <span className={styles.treeIcon}><PagesIcon /></span>
             <span>Pages</span>
-          </div>
-          <div className={styles.pageTree}>
+          </button>
+          {pagesExpanded && <div className={styles.pageTree} id="library-pages-tree">
             <button className={`${styles.treeAlbum} ${!selected && libraryPage === "overview" ? styles.treeSelected : ""}`} onClick={showOverview} type="button">
               <span className={styles.treeIcon}><PagesIcon /></span><span className={styles.treeLabel}>Overview</span>
             </button>
             <Link className={styles.treeAlbum} href="/">
               <span className={styles.treeIcon}><PagesIcon /></span><span className={styles.treeLabel}>Portfolio</span>
             </Link>
-          </div>
-          <button className={`${styles.musicTree} ${!selected && libraryPage === "collection" ? styles.treeSelected : ""}`} onClick={() => showAlbums()} onKeyDown={(event) => keyboardNavigateMusic(event, -1)} type="button">
-            <span className={styles.chevronOpen} aria-hidden="true" />
+          </div>}
+          <button aria-controls="library-music-tree" aria-expanded={musicExpanded} className={`${styles.musicTree} ${!selected && libraryPage === "collection" ? styles.treeSelected : ""}`} onClick={toggleMusic} onKeyDown={(event) => {
+            if (!musicExpanded && event.key === "ArrowDown") {
+              event.preventDefault();
+              showAlbums();
+              window.requestAnimationFrame(() => albumTreeRef.current?.querySelector("button")?.focus());
+              return;
+            }
+            keyboardNavigateMusic(event, -1);
+          }} type="button">
+            <span className={musicExpanded ? styles.chevronOpen : styles.chevron} aria-hidden="true" />
             <span className={styles.treeIcon}><MusicIcon /></span>
             <span>Music</span>
           </button>
-          <div className={styles.albumTree} ref={albumTreeRef}>
+          {musicExpanded && <div className={styles.albumTree} id="library-music-tree" ref={albumTreeRef}>
               {sortedAlbums.map((album, index) => (
                 <button
                   aria-current={selectedTitle === album.album ? "page" : undefined}
@@ -435,7 +794,7 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
                   <span className={styles.treeLabel}>{album.album}</span>
                 </button>
               ))}
-          </div>
+          </div>}
         </aside>
 
         <section className={styles.content} aria-label={selected ? selected.album : libraryPage === "overview" ? "Library overview" : "Albums"}>
@@ -627,12 +986,12 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
             />
           ) : (
             <>
-              <div className={`${styles.columnHeader} ${styles.overviewHeader}`} aria-hidden="true">
-                <span>Album</span><span>Album Artist</span><span>Count</span><span>Total Listens</span>
-              </div>
-              <div className={styles.albumGridScroll}>
-                <div className={styles.albumGrid} ref={albumGridRef}>
-                  {visibleAlbums.map((album) => (
+              {collectionView === "covers" ? (
+                <div className={styles.albumGridScroll} ref={listViewportRef}>
+                  <div className={styles.albumListTable} style={listStyle}>
+                    {collectionHeader}
+                    <div className={styles.albumGrid} ref={albumItemsRef}>
+                  {listAlbums.map((album) => (
                     <button
                       aria-keyshortcuts="Alt+ArrowLeft Alt+ArrowRight Alt+ArrowUp Alt+ArrowDown"
                       className={`${styles.albumCard} ${draggingAlbum === album.album ? styles.albumDragging : ""} ${dropCue?.album === album.album ? dropCue.side === "before" ? styles.albumDropBefore : styles.albumDropAfter : ""}`}
@@ -666,15 +1025,33 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
                     >
                       <Image alt="" className={styles.gridCover} draggable={false} src={album.coverSrc ?? "/images/albums/wmp_empty.png"} width={86} height={86} unoptimized />
                       <span className={styles.albumInfo}>
-                        <span className={styles.albumName}>{album.album}</span>
-                        <span className={styles.albumMuted}>{album.artist}</span>
-                        <span className={styles.albumMuted}>{album.trackCount} songs</span>
-                        <span className={styles.albumMuted}>{album.totalListens} listens</span>
+                        {listColumnOrder.map((id) => {
+                          const value = id === "album" ? album.album : id === "artist" ? album.artist : id === "count" ? `${album.trackCount} songs` : `${album.totalListens} listens`;
+                          return <span className={id === "album" ? styles.albumName : styles.albumMuted} key={id} title={value}>{value}</span>;
+                        })}
                       </span>
                     </button>
                   ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
+                ) : (
+                  <div className={styles.albumGridScroll} ref={listViewportRef}>
+                    <div className={styles.albumListTable} style={listStyle}>
+                      {collectionHeader}
+                      <div className={styles.albumList} ref={albumItemsRef}>
+                        {listAlbums.map((album) => (
+                          <button className={styles.albumListRow} key={album.album} onClick={() => selectAlbum(album, true)} onKeyDown={focusGridButton} type="button">
+                            {listColumnOrder.map((id) => {
+                              const value = id === "album" ? album.album : id === "artist" ? album.artist : id === "count" ? album.trackCount : album.totalListens;
+                              return <span key={id} title={typeof value === "string" ? value : undefined}>{value}</span>;
+                            })}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
             </>
           )}
         </section>

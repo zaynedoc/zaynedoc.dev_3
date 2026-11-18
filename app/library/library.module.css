@@ -24,6 +24,8 @@
 .window a:hover { color: #102b4b; }
 
 .toolbar {
+  position: relative;
+  z-index: 7;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,22 +38,41 @@
   color: #173a62;
 }
 .menus, .tools { display: flex; align-items: center; height: 100%; }
-.menus { gap: 20px; white-space: nowrap; }
+.menus { gap: 8px; white-space: nowrap; }
 .menus span, .mobileNavigate { display: inline-flex; align-items: center; gap: 8px; }
 .menus i { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid #173a62; }
+.desktopToolbarMenus { display: flex; align-items: center; gap: 7px; }
+.menuAnchor { position: relative; }
+.menuButton { display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 2px 5px; border: 1px solid transparent; background: transparent; color: #173a62; cursor: pointer; }
+.menuButton:hover, .menuButton:focus-visible, .menuButton[aria-expanded="true"] { border-color: #9dbbd8; background: linear-gradient(#fff, #dcebf8); outline: none; }
+.menuButton svg { width: 15px; height: 15px; color: #3087c9; }
+.menuButton i { margin-left: 2px; }
+.toolbarPopup { position: absolute; z-index: 8; top: calc(100% + 2px); left: 0; min-width: 165px; padding: 4px; border: 1px solid #8eabc7; background: linear-gradient(#fff, #eaf3fb); box-shadow: 2px 3px 9px #31577755; }
+.menuItem { display: block; width: 100%; min-height: 24px; padding: 4px 8px; border: 0; background: transparent; color: #173a62; text-align: left; white-space: nowrap; cursor: pointer; }
+.menuItem:hover, .menuItem:focus-visible { background: linear-gradient(#e9f4ff, #cce4fc); outline: 1px solid #86b2d8; }
+.shareMessage { margin: 4px 8px; color: #315d85; }
+.shareFallback { width: 220px; max-width: 100%; margin: 3px; border: 1px solid #94a8bd; background: #fff; color: #173a62; }
 .mobileNavigate { display: none; padding: 3px 2px; border: 0; background: transparent; color: #173a62; cursor: pointer; }
 .mobileNavigate:focus-visible { outline: 1px solid #729bd1; }
 .tools { gap: 7px; }
-.viewIcon { font-size: 17px; line-height: 1; color: #3973a1; }
-.viewCaret { margin-right: 2px; font-size: 10px; color: #233e5a; }
+.viewToggle { display: inline-flex; align-items: center; gap: 5px; height: 23px; padding: 2px 3px; border: 1px solid transparent; background: transparent; color: #3973a1; cursor: pointer; }
+.viewToggle:hover, .viewToggle:focus-visible { border-color: #9dbbd8; background: linear-gradient(#fff, #dcebf8); outline: none; }
+.viewToggle svg { width: 16px; height: 16px; fill: currentColor; }
+.viewCaret { width: 0; height: 0; border-right: 4px solid transparent; border-left: 4px solid transparent; border-top: 4px solid #233e5a; }
 .searchBox { display: flex; align-items: center; width: 240px; height: 23px; padding: 0 5px; border: 1px solid #94a8bd; background: linear-gradient(#fff, #f8fafc); box-shadow: inset 0 1px 2px #dce4ec; }
 .searchBox:focus-within { outline: 1px solid #7cadde; }
 .searchBox input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: #172b3c; font-style: italic; }
 .searchBox input::-webkit-search-cancel-button { display: none; }
 .searchBox input::placeholder { color: #56657a; opacity: 1; }
-.magnify { width: 11px; height: 11px; flex: 0 0 auto; margin: 0 5px 3px 2px; border: 2px solid #3087c9; border-radius: 50%; position: relative; }
-.magnify::after { content: ""; position: absolute; width: 5px; height: 2px; right: -4px; bottom: -2px; transform: rotate(-45deg); background: #3087c9; }
-.helpIcon { display: grid; place-items: center; width: 17px; height: 17px; border: 1px solid #4774ac; border-radius: 50%; background: linear-gradient(#75a7df, #2e6fae); box-shadow: inset 0 1px #cbe5ff; color: #fff; font-weight: 700; }
+.searchButton { display: grid; place-items: center; flex: 0 0 19px; height: 19px; padding: 1px; border: 0; background: transparent; color: #3087c9; cursor: pointer; }
+.searchButton:hover, .searchButton:focus-visible { background: #dcecfb; outline: 1px solid #82b3dc; }
+.searchButton svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.helpAnchor { position: relative; }
+.helpIcon { display: grid; place-items: center; width: 17px; height: 17px; padding: 0; border: 1px solid #4774ac; border-radius: 50%; background: linear-gradient(#75a7df, #2e6fae); box-shadow: inset 0 1px #cbe5ff; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.helpIcon:focus-visible { outline: 2px solid #4774ac; outline-offset: 2px; }
+.helpPopup { position: absolute; z-index: 6; top: calc(100% + 7px); right: 0; width: min(285px, calc(100vw - 16px)); padding: 11px 13px; border: 1px solid #8eabc7; background: linear-gradient(#fff, #eaf3fb); box-shadow: 2px 3px 9px #31577755; color: #173a62; font-size: 12px; line-height: 1.45; }
+.helpPopup strong { font-weight: 600; }
+.helpPopup p { margin: 6px 0 0; }
 
 .body { position: relative; display: flex; flex: 1; min-height: 0; }
 .sidebar {
@@ -68,7 +89,7 @@
 .homeLink, .pagesTree, .musicTree, .treeAlbum { display: flex; align-items: center; width: 100%; min-height: 20px; padding: 0 3px; text-align: left; white-space: nowrap; }
 .homeLink { gap: 4px; margin-left: 17px; width: calc(100% - 17px); color: #365c86 !important; }
 .libraryIcon { width: 14px; color: #5e8fb7; font-size: 14px; }
-.musicTree, .treeAlbum { border: 0; background: transparent; cursor: pointer; }
+.pagesTree, .musicTree, .treeAlbum { border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
 .pagesTree, .musicTree { gap: 3px; padding-left: 3px; }
 .musicTree { margin-top: 8px; }
 .pageTree { padding-left: 37px; }
@@ -78,15 +99,22 @@
 .chevronOpen { transform: rotate(45deg); margin-top: -4px; }
 .albumTree { padding-left: 37px; }
 .treeAlbum { gap: 4px; height: 21px; min-height: 21px; padding: 0 3px; }
-.treeAlbum:hover, .musicTree:hover { background: #e5effa; }
-.treeAlbum:focus-visible, .musicTree:focus-visible { outline: 1px solid #729bd1; outline-offset: -1px; }
+.treeAlbum:hover, .pagesTree:hover, .musicTree:hover { background: #e5effa; }
+.treeAlbum:focus-visible, .pagesTree:focus-visible, .musicTree:focus-visible { outline: 1px solid #729bd1; outline-offset: -1px; }
 .treeSelected { outline: 1px solid #729bd1; outline-offset: -1px; border-radius: 3px; background: linear-gradient(#e9f4ff, #cce4fc) !important; }
 .treeLabel { overflow: hidden; text-overflow: ellipsis; }
 
 .content { display: flex; flex: 1; flex-direction: column; min-width: 0; overflow: hidden; }
 .columnHeader { flex: 0 0 24px; height: 24px; display: grid; align-items: center; border-bottom: 1px solid #c9dced; background: linear-gradient(#fcfdfe, #f0f6fb); color: #334d69; }
 .columnHeader > span { height: 18px; padding: 1px 6px; border-right: 1px solid #d4e3f1; overflow: hidden; white-space: nowrap; }
-.overviewHeader { grid-template-columns: 137px 138px 66px 110px 1fr; }
+.albumListTable { width: max(100%, var(--list-width)); min-height: 100%; }
+.albumListHeader, .albumListRow { grid-template-columns: var(--list-columns); }
+.albumListHeader { position: sticky; z-index: 1; top: 0; user-select: none; }
+.albumList { min-width: 0; }
+.albumListRow { display: grid; align-items: center; width: 100%; min-height: 29px; padding: 0; border: 0; border-bottom: 1px solid #d7e5f1; background: transparent; color: #101820; font: inherit; text-align: left; cursor: pointer; }
+.albumListRow > span { min-width: 0; overflow: hidden; padding: 5px 6px; border-right: 1px solid #d7e5f1; text-overflow: ellipsis; white-space: nowrap; }
+.albumListRow:hover, .albumListRow:focus-visible { background: linear-gradient(#f5faff, #dcecf9); outline: 1px solid #729bd1; outline-offset: -1px; }
+.listLastResize { right: auto; left: -5px; z-index: 3; }
 .detailHeader { position: sticky; z-index: 1; top: 0; grid-template-columns: var(--detail-columns) minmax(0, 1fr); user-select: none; }
 .detailHeaderCell { position: relative; display: flex; align-items: center; height: 23px; min-width: 0; border-right: 1px solid #d4e3f1; cursor: grab; }
 .detailHeaderCell:active { cursor: grabbing; }
@@ -213,15 +241,12 @@
   .periodTabs button:nth-child(-n + 2) { margin-top: -1px; }
   .periodTabs button:nth-child(-n + 2).periodActive { border-top-color: #f4f9fd; border-bottom-color: var(--library-rule); border-radius: 0 0 3px 3px; }
   .periodTabs button:nth-child(n + 3) { margin-bottom: -1px; }
-  .overviewHeader { grid-template-columns: repeat(4, minmax(0, 1fr)); font-size: clamp(10px, 3vw, 12px); }
-  .overviewHeader > span { padding-right: 3px; padding-left: 3px; }
   .sidebar { display: none; position: absolute; z-index: 3; inset: 0 auto 0 0; width: min(82vw, 320px); box-shadow: 3px 0 12px #7892a855; }
   .sidebarOpen { display: block; }
   .mobileScrim { display: block; position: absolute; z-index: 2; inset: 0; width: 100%; border: 0; background: #2447674a; cursor: pointer; }
-  .desktopOrganize, .desktopMenu { display: none !important; }
+  .desktopToolbarMenus { display: none; }
   .mobileNavigate { display: inline-flex; }
   .albumTree { padding-left: 37px; }
-  .viewIcon, .viewCaret { display: none; }
   .albumGrid { grid-auto-rows: 112px; }
   .detailScroll { display: none; }
   .mobileDetail { display: flex; flex: 1; flex-direction: column; min-height: 0; overflow-y: auto; scrollbar-width: thin; }
