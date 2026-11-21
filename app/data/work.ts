@@ -60,6 +60,7 @@ export const experience: TimelineItem[] = [
       "/images/roles/figma2.webp",
       "/images/roles/figma3.webp",
       "/images/roles/figma4.webp",
+      "/images/roles/figma5.webp",
     ], "Organizing and hosting workshops, events, and hackathon sponsorship initiatives that help 400+ students learn Figma, sharpen design and prototyping skills, and collaborate on creative, portfolio-ready projects!"),
     roles: [{ label: "Figma Campus Leader", detail: "Aug. 2026 – Present" }],
     url: "https://www.figma.com/",
@@ -69,9 +70,12 @@ export const experience: TimelineItem[] = [
     details: createRoleDetails("Bank of New York Software Engineer Intern", [
       "/images/roles/bny1.webp",
       "/images/roles/bny2.webp",
-    ], "Building a full-stack banking technology solution, applying DevOps practices, infrastructure fundamentals, and database systems across a collaborative, semester-long project with industry mentors."),
+      "/images/roles/bny3.webp",
+      "/images/roles/bny4.webp",
+      "/images/roles/bny5.webp",
+    ], "Built a banking technology solution, applying DevOps practices, infrastructure fundamentals, and database systems across a collaborative, semester-long project with industry mentors."),
     roles: [
-      { label: "Software Engineer Intern", detail: "Jul. 2026 – Present" },
+      { label: "Software Engineer Intern", detail: "Jul. 2026 – Nov. 2026" },
     ],
     url: "https://www.bny.com/",
   },

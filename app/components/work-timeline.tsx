@@ -45,6 +45,10 @@ export function WorkTimeline({
       {items.map((item, index) => {
         const detailsId = `timeline-details-${index}`;
         const isExpanded = expandedItems.has(item.title);
+        const visibleRoles =
+          areProjects && item.details && !isExpanded
+            ? item.roles.slice(0, 1)
+            : item.roles;
         const actionLinkClassName = `timeline-role__detail project-action-link${item.action?.mobileDisabled ? " project-action-link--desktop-only" : ""}`;
 
         return (
@@ -78,7 +82,7 @@ export function WorkTimeline({
                 )}
               </h2>
               <div className="timeline-roles">
-                {item.roles.map((role) => (
+                {visibleRoles.map((role) => (
                   <div className="timeline-role" key={role.label}>
                     <p className="timeline-role__label">{role.label}</p>
                     <p className="timeline-role__detail">{role.detail}</p>

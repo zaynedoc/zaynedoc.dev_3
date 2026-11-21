@@ -42,7 +42,7 @@ export const albumSettings: AlbumSettings = {
     // BEGIN SORTED ALBUM SETTINGS
 
     "Agartha": {
-      
+
     },
 
     "Ao": {
@@ -95,6 +95,8 @@ export const albumSettings: AlbumSettings = {
 
     "Nausicaä of the Valley of the Wind Soundtrack": {},
 
+    "Nintendo 3DS Pokémon Omega Ruby & Alpha Sapphire Super Music Complete (ニンテンドー3DS ポケモン オメガルビー・アルファサファイア スーパーミュージックコンプリート)": {},
+
     "OFFICIAL NUMBER": {
       favoriteTrackTitle: "Perfect seimei (パーフェクト生命)"
     },
@@ -132,6 +134,8 @@ export const albumSettings: AlbumSettings = {
     "Starboy": {
       visibility: "hide"
     },
+
+    "SUPER MARIO GALAXY ORIGINAL SOUND TRACK Platinum Version": {},
 
     "The Chaos Chapter: FIGHT OR ESCAPE": {
       favoriteTrackTitle: "Frost"
