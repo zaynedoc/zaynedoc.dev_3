@@ -305,6 +305,7 @@ def aggregate_albums(tallies: list[TrackTally]) -> list[dict[str, Any]]:
                         "discNumber": track.disc_number,
                         "durationSeconds": track.duration_seconds,
                         "playCount": track.play_count,
+                        **({"catalogNumbers": list(track.catalog_numbers)} if track.catalog_numbers else {}),
                     }
                     for track in ranked_tracks
                 ],

@@ -82,20 +82,28 @@ export const albumSettings: AlbumSettings = {
 
     "Laputa: Castle in the Sky Soundtrack -The Mystery of the Levitation Stone-": {},
 
+    "LOST CORNER": {},
+
     "Minecraft - Volume Alpha": {
       favoriteTrackTitle: "Clark"
     },
 
     "Minecraft Volume Beta": {
       favoriteTrackTitle: "Dreiton",
-      notes: "Man I love Dreiton, I can't describe how unearthly that track is.\n\nI give this album a solid 9.8/10, though I feel as if much of that rating comes from nostalgia bias."
+      notes: "Man I love Dreiton, I can't describe how unearthly that track is.\n\nI give this album a solid 9.8/10, though I feel as if much of that rating comes from nostalgia bias.\n\n"
     },
 
-    "My Neighbor Totoro (Original Soundtrack)": {},
+    "My Neighbor Totoro (Original Soundtrack)": {
 
-    "Nausicaä of the Valley of the Wind Soundtrack": {},
+    },
 
-    "Nintendo 3DS Pokémon Omega Ruby & Alpha Sapphire Super Music Complete (ニンテンドー3DS ポケモン オメガルビー・アルファサファイア スーパーミュージックコンプリート)": {},
+    "Nausicaä of the Valley of the Wind Soundtrack": {
+
+    },
+
+    "Nintendo 3DS Pokémon Omega Ruby & Alpha Sapphire Super Music Complete (ニンテンドー3DS ポケモン オメガルビー・アルファサファイア スーパーミュージックコンプリート)": {
+
+    },
 
     "OFFICIAL NUMBER": {
       favoriteTrackTitle: "Perfect seimei (パーフェクト生命)"
@@ -104,14 +112,18 @@ export const albumSettings: AlbumSettings = {
     "Parousia": {
       overviewFeatured: true,
       favoriteTrackTitle: "Ascension to Heaven",
-      notes: "I'm not the biggest proponent of EDM, but this album is just somethin else bro, a mix of piano and insane dubstep is something unheard of, especially for 2011. Unfortunately, the version I have is the 2015 re-release of this album, but still incredibly happy that I bought this for only $15 on Suruga-ya when people scalp this album for over >$100 on Ebay lol.\n\nFavorites from this album are 'Ascension to Heaven,' 'Parousia,' and 'Freedom Dive.' I actually stemmed my online pseudonym from 2017 from this album. About 9.6/10, I like jazz."
+      notes: "I'm not the biggest proponent of EDM, but this album is just somethin else bro, a mix of piano and insane dubstep is something unheard of, especially for 2011. Unfortunately, the version I have is the 2015 re-release of this album, but still incredibly happy that I bought this for only $15 on Suruga-ya when people scalp this album for over >$100 on Ebay lol.\n\nFavorites from this album are 'Ascension to Heaven,' 'Parousia,' and 'Freedom Dive.' I actually stemmed my online pseudonym from 2017 from this album. About 9.6/10, I like jazz.\n\n"
     },
 
     "play with earth! 0.03": {
       favoriteTrackTitle: "slow dive"
     },
 
-    "Porco Rosso Soundtrack": {},
+    "Pokémon X & Pokémon Y: Super Music Collection (ニンテンドー3DS ポケモンX・Y スーパーミュージックコレクション)": {},
+
+    "Porco Rosso Soundtrack": {
+
+    },
 
     "Quietus Ray": {
       favoriteTrackTitle: "Bad Elixir"
@@ -128,7 +140,7 @@ export const albumSettings: AlbumSettings = {
     },
 
     "Solution": {
-      notes: "Owning this album is kinda funny for me, because I've long heard all the songs on this album from just following Sou's music career since around 2022. So, when I bought this album recently (Oct. 2026), hearing all my favorites in a single collective was really refreshing. Also, this specific version has an unreleased cover of God-ish, amazing song.\n\nFavorites on this album are 'Spark Bug,' 'Jouyatou,' and 'Sakura Breeze.' Overall, 9/10."
+      notes: "Owning this album is kinda funny for me, because I've long heard all the songs on this album from just following Sou's music career since around 2022. So, when I bought this album recently (Oct. 2026), hearing all my favorites in a single collective was really refreshing. Also, this specific version has an unreleased cover of God-ish, amazing song.\n\nFavorites on this album are 'Spark Bug,' 'Jouyatou,' and 'Sakura Breeze.' Overall, 9/10.\n\n"
     },
 
     "Starboy": {
@@ -143,12 +155,12 @@ export const albumSettings: AlbumSettings = {
 
     "The Legend of Zelda Breath of the Wild Original Soundtrack (ゼルダの伝説 ブレス オブ ザ ワイルド オリジナルサウンドトラック)": {
       overviewFeatured: true,
-      notes: "This has consistently been one of my favorite games of all time, if we exclude Geometry Dash lol. I fully believe that the soundtrack plays a huge role in this game, along with much of the game's sound design. Genuinely a modern-day masterpiece.\n\nI give a personal rating of about 9.6/10. Favorite track: prolly Zora's Domain. I used to listen to many of the town theme songs back in high school as background noise.",
+      notes: "This has consistently been one of my favorite games of all time, if we exclude Geometry Dash lol. I fully believe that the soundtrack plays a huge role in this game, along with much of the game's sound design. Genuinely a modern-day masterpiece.\n\nI give a personal rating of about 9.6/10. Favorite track: prolly Zora's Domain. I used to listen to many of the town theme songs back in high school as background noise.\n\n",
     },
 
     "The Ocean Waves (海がきこえる)": {
       overviewFeatured: true,
-      notes: "Generally pretty normal Japanese animated film soundtrack. I've consistently heard that not too many people like this movie compared to other Studio Ghibli films, but I personally love it for not being too fantasy-focused, even if it lacks the insane animation component. I fully recommend everyone watches this movie at least once if they like slice of life films/stories.\n\nFavorite track: easily has to be 'First Impression,' it's literally the theme I think of when I think about this movie lol.",
+      notes: "Generally pretty normal Japanese animated film soundtrack. I've consistently heard that not too many people like this movie compared to other Studio Ghibli films, but I personally love it for not being too fantasy-focused, even if it lacks the insane animation component. I fully recommend everyone watches this movie at least once if they like slice of life films/stories.\n\nFavorite track: easily has to be 'First Impression,' it's literally the theme I think of when I think about this movie lol.\n\n",
     },
 
     "THE WORLD EP. FIN: WILL": {
@@ -173,7 +185,7 @@ export const albumSettings: AlbumSettings = {
 
     "Wonder Word": {
       favoriteTrackTitle: "Yoru wo koero (夜を超えろ)",
-      notes: "Definitely one of my more rarer-ish albums. For the longest time, I never really listened to Eve's earlier works, but this definitely helped bridge me into it, especially since I was already a fan of his other works, like 'Round Robin' and 'OFFICIAL NUMBER,' which I also have in my collection.\n\nThanks to this album, I have set my eyes on collecting a lot of his more even nicher albums (like hopefully 'einie' one day), and some albums from when he was still a part of Riot of Color.\n\nOverall, this album is pretty good, solid 8.5/10, very vocaloidy. Favorite tracks have to be either 'Yoru wo koero' or 'Senukouhanabi.'"
+      notes: "Definitely one of my more rarer-ish albums. For the longest time, I never really listened to Eve's earlier works, but this definitely helped bridge me into it, especially since I was already a fan of his other works, like 'Round Robin' and 'OFFICIAL NUMBER,' which I also have in my collection.\n\nThanks to this album, I have set my eyes on collecting a lot of his more even nicher albums (like hopefully 'einie' one day), and some albums from when he was still a part of Riot of Color.\n\nOverall, this album is pretty good, solid 8.5/10, very vocaloidy. Favorite tracks have to be either 'Yoru wo koero' or 'Senukouhanabi.'\n\n"
     },
 
     "World Fragments": {
@@ -184,7 +196,7 @@ export const albumSettings: AlbumSettings = {
 
     "アンチサイクロン": {
       overviewFeatured: true,
-      notes: "Of all the albums in my collection, this one definitely cost the most when buying second-hand, even from Suruga-ya. I can see why though, inabakumori's debut album plus really good song selection.\n\nFavorite tracks include 'Secret Music', 'Lost Umbrella,' and 'Pascal Beats.' Definitely nostalgia bias since I listened to this album a lot in highschool, but a solid 9.2/10.\n\nFun fact: I got this album into my collection exactly 6 years after the initial release date, 11/17/2019 > 11/17/2026"
+      notes: "Of all the albums in my collection, this one definitely cost the most when buying second-hand, even from Suruga-ya. I can see why though, inabakumori's debut album plus really good song selection.\n\nFavorite tracks include 'Secret Music', 'Lost Umbrella,' and 'Pascal Beats.' Definitely nostalgia bias since I listened to this album a lot in highschool, but a solid 9.2/10.\n\nFun fact: I got this album into my collection exactly 6 years after the initial release date, 11/17/2019 > 11/17/2026\n\n"
     },
 
     "ウェザーステーション": {
@@ -209,7 +221,7 @@ export const albumSettings: AlbumSettings = {
 
     "蒼": {
       overviewFeatured: true,
-      notes: "One of my most favorite albums of all time, and probably my most prized album within my collection, personally (even though I bought it for $20 lol). Genuinely a 10/10 Utaite album, specifically the limited edition version, which has a few extra cover songs.\n\nFavorite tracks:'チョコレートタウン' and '帝国少女' above all, but there's practically no skips in this entire EP."
+      notes: "One of my most favorite albums of all time, and probably my most prized album within my collection, personally (even though I bought it for $20 lol). Genuinely a 10/10 Utaite album, specifically the limited edition version, which has a few extra cover songs.\n\nFavorite tracks:'チョコレートタウン' and '帝国少女' above all, but there's practically no skips in this entire EP.\n\n"
     },
 
     // END SORTED ALBUM SETTINGS

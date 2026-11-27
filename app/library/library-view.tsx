@@ -5,9 +5,10 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent as ReactDragEvent, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from "react";
 import { focusGridButton } from "./keyboard-navigation";
 import { LibraryOverview, type LibraryOverviewData } from "./library-overview";
+import { ArtistView } from "./artist-view";
 import styles from "./library.module.css";
 
-type Track = {
+export type Track = {
   title: string;
   artist: string;
   contributingArtist?: string;
@@ -16,9 +17,10 @@ type Track = {
   discNumber?: number | null;
   durationSeconds?: number | null;
   playCount?: number;
+  catalogNumbers?: string[];
 };
 
-type Album = {
+export type Album = {
   album: string;
   artist: string;
   catalogNumbers?: string[];
@@ -33,7 +35,7 @@ type Album = {
 
 const albumSort = new Intl.Collator("en", { sensitivity: "base", numeric: true });
 
-type ColumnId = "album" | "number" | "title" | "length" | "artist" | "playCount";
+type ColumnId = "album" | "number" | "title" | "length" | "artist" | "playCount" | "catalogNumber";
 type SortKey = Exclude<ColumnId, "album">;
 type SortDirection = "ascending" | "descending";
 type ColumnWidths = Record<ColumnId, number>;
@@ -47,9 +49,10 @@ const columns: { id: ColumnId; label: string }[] = [
   { id: "length", label: "Length" },
   { id: "artist", label: "Contributing artist" },
   { id: "playCount", label: "Play count" },
+  { id: "catalogNumber", label: "Catalog Number" },
 ];
-const initialWidths: ColumnWidths = { album: 252, number: 100, title: 315, length: 70, artist: 150, playCount: 108 };
-const minimumWidths: ColumnWidths = { album: 240, number: 54, title: 180, length: 68, artist: 150, playCount: 90 };
+const initialWidths: ColumnWidths = { album: 252, number: 100, title: 315, length: 70, artist: 150, playCount: 108, catalogNumber: 145 };
+const minimumWidths: ColumnWidths = { album: 240, number: 54, title: 180, length: 68, artist: 150, playCount: 90, catalogNumber: 110 };
 const listColumns: { id: ListColumnId; label: string }[] = [
   { id: "album", label: "Album" },
   { id: "artist", label: "Album Artist" },
@@ -88,6 +91,10 @@ function compareOptionalNumbers(a: number | null | undefined, b: number | null |
 
 function albumHash(title: string) {
   return `album-${encodeURIComponent(title)}`;
+}
+
+function artistHash(name: string) {
+  return `artist-${encodeURIComponent(name)}`;
 }
 
 function formatLength(seconds: number | null | undefined) {
@@ -178,13 +185,21 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
     ...sortedAlbums.filter((album) => album.overviewFeatured),
     ...sortedAlbums.filter((album) => !album.overviewFeatured),
   ].slice(0, 6), [sortedAlbums]);
+  const artistGroups = useMemo(() => {
+    const groups = new Map<string, Album[]>();
+    for (const album of sortedAlbums) groups.set(album.artist, [...(groups.get(album.artist) ?? []), album]);
+    return [...groups].sort(([a], [b]) => albumSort.compare(a, b)).map(([name, artistAlbums]) => ({ name, albums: artistAlbums }));
+  }, [sortedAlbums]);
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
-  const [libraryPage, setLibraryPage] = useState<"overview" | "collection">("overview");
+  const [selectedArtist, setSelectedArtist] = useState<string | null>(null);
+  const [libraryPage, setLibraryPage] = useState<"overview" | "collection" | "artists">("overview");
   const [search, setSearch] = useState("");
   const [collectionView, setCollectionView] = useState<"covers" | "details">("covers");
   const [helpOpen, setHelpOpen] = useState(false);
   const [pagesExpanded, setPagesExpanded] = useState(true);
   const [musicExpanded, setMusicExpanded] = useState(true);
+  const [artistsExpanded, setArtistsExpanded] = useState(true);
+  const [albumsExpanded, setAlbumsExpanded] = useState(true);
   const [openMenu, setOpenMenu] = useState<"browse" | "sort" | "share" | null>(null);
   const [shareMessage, setShareMessage] = useState("");
   const [shareFallbackUrl, setShareFallbackUrl] = useState("");
@@ -207,6 +222,7 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   const dragTitle = useRef<string | null>(null);
   const dragColumnId = useRef<ColumnId | null>(null);
   const albumTreeRef = useRef<HTMLDivElement>(null);
+  const artistTreeRef = useRef<HTMLDivElement>(null);
   const albumItemsRef = useRef<HTMLDivElement>(null);
   const listViewportRef = useRef<HTMLDivElement>(null);
   const listViewportWidth = useRef(0);
@@ -265,14 +281,16 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
   useEffect(() => {
     function syncHash() {
       const matching = sortedAlbums.find((album) => `#${albumHash(album.album)}` === window.location.hash);
+      const matchingArtist = artistGroups.find((artist) => `#${artistHash(artist.name)}` === window.location.hash);
       setSelectedTitle(matching?.album ?? null);
+      setSelectedArtist(matchingArtist?.name ?? null);
       setSelectedTrack(null);
-      setLibraryPage(window.location.hash === "#albums" || matching ? "collection" : "overview");
+      setLibraryPage(window.location.hash === "#artists" || matchingArtist ? "artists" : window.location.hash === "#albums" || matching ? "collection" : "overview");
     }
     syncHash();
     window.addEventListener("hashchange", syncHash);
     return () => window.removeEventListener("hashchange", syncHash);
-  }, [sortedAlbums]);
+  }, [sortedAlbums, artistGroups]);
 
   useEffect(() => {
     if (selectedTitle || libraryPage !== "collection") return;
@@ -445,9 +463,11 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
 
   function selectAlbum(album: Album, focusContent = false) {
     setMusicExpanded(true);
+    setAlbumsExpanded(true);
     const shouldFocusContent = focusContent || mobileNavigationOpen;
     window.location.hash = albumHash(album.album);
     setSelectedTitle(album.album);
+    setSelectedArtist(null);
     setSelectedTrack(null);
     setLibraryPage("collection");
     setMobileNavigationOpen(false);
@@ -461,12 +481,51 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
 
   function showAlbums(focusCollection = false) {
     setMusicExpanded(true);
+    setAlbumsExpanded(true);
     window.location.hash = "albums";
     setSelectedTitle(null);
+    setSelectedArtist(null);
     setSelectedTrack(null);
     setLibraryPage("collection");
     setMobileNavigationOpen(false);
     if (focusCollection) window.requestAnimationFrame(() => albumItemsRef.current?.querySelector("button")?.focus());
+  }
+
+  function keyboardNavigateArtist(event: ReactKeyboardEvent<HTMLButtonElement>, index: number) {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (!["ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const next = event.key === "Home" ? 0
+      : event.key === "End" ? artistGroups.length - 1
+      : index + (event.key === "ArrowUp" ? -1 : 1);
+    const artist = artistGroups[next];
+    if (!artist) return;
+    artistTreeRef.current?.querySelectorAll("button")[next]?.focus();
+    selectArtist(artist.name);
+  }
+
+  function showArtists(focusGallery = false) {
+    setMusicExpanded(true);
+    setArtistsExpanded(true);
+    window.location.hash = "artists";
+    setSelectedTitle(null);
+    setSelectedArtist(null);
+    setSelectedTrack(null);
+    setLibraryPage("artists");
+    setMobileNavigationOpen(false);
+    if (focusGallery) window.requestAnimationFrame(() => document.querySelector<HTMLElement>(`.${styles.artistGallery} button`)?.focus());
+  }
+
+  function selectArtist(name: string, focusContent = false) {
+    setMusicExpanded(true);
+    setArtistsExpanded(true);
+    window.location.hash = artistHash(name);
+    setSelectedTitle(null);
+    setSelectedArtist(name);
+    setSelectedTrack(null);
+    setLibraryPage("artists");
+    setMobileNavigationOpen(false);
+    if (focusContent) window.requestAnimationFrame(() => document.querySelector<HTMLElement>(`.${styles.artistBack}`)?.focus());
   }
 
   function toggleCollectionView() {
@@ -479,6 +538,7 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
     setPagesExpanded(true);
     window.location.hash = "overview";
     setSelectedTitle(null);
+    setSelectedArtist(null);
     setLibraryPage("overview");
     setMobileNavigationOpen(false);
   }
@@ -490,7 +550,7 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
 
   function toggleMusic() {
     if (musicExpanded) setMusicExpanded(false);
-    else showAlbums();
+    else setMusicExpanded(true);
   }
 
   function selectCollectionSort(key: ListColumnId | null, direction: SortDirection = "ascending") {
@@ -541,8 +601,10 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
 
   const tracks = selected ? [...selected.tracks].sort(naturalTrackOrder) : [];
   const activeTrack = selectedTrack && selected?.tracks.includes(selectedTrack) ? selectedTrack : null;
-  const fallbackTrackNumbers = new Map(tracks.map((track, index) => [track, index + 1]));
-  const desktopTracks = [...tracks].sort((a, b) => {
+  const artistAlbums = artistGroups.find((group) => group.name === selectedArtist)?.albums ?? [];
+  const detailAlbums = selected ? [selected] : libraryPage === "artists" && selectedArtist ? artistAlbums : [];
+  function sortedDetailTracks(album: Album) {
+    return [...album.tracks].sort((a, b) => {
     if (sort.key === "number") {
       const order = naturalTrackOrder(a, b);
       return sort.direction === "ascending" ? order : -order;
@@ -552,12 +614,18 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
     if (sort.key === "length") order = compareOptionalNumbers(a.durationSeconds, b.durationSeconds, sort.direction);
     if (sort.key === "artist") order = albumSort.compare(a.contributingArtist ?? a.artist, b.contributingArtist ?? b.artist);
     if (sort.key === "playCount") order = (a.playCount ?? a.listens) - (b.playCount ?? b.listens);
+    if (sort.key === "catalogNumber") {
+      const first = a.catalogNumbers?.join("; ") ?? "";
+      const second = b.catalogNumbers?.join("; ") ?? "";
+      if (!first || !second) return first ? -1 : second ? 1 : naturalTrackOrder(a, b);
+      order = albumSort.compare(first, second);
+    }
     if (sort.key === "length") return order || naturalTrackOrder(a, b);
     return order * (sort.direction === "ascending" ? 1 : -1) || naturalTrackOrder(a, b);
-  });
+    });
+  }
   const tableStyle = {
-    "--album-width": `${columnWidths.album}px`,
-    "--album-offset": `${columnOrder.slice(0, columnOrder.indexOf("album")).reduce((total, id) => total + columnWidths[id], 0)}px`,
+    "--album-column": columnOrder.indexOf("album") + 1,
     "--detail-columns": columnOrder.map((id) => `${columnWidths[id]}px`).join(" "),
     "--table-width": `${Object.values(columnWidths).reduce((total, width) => total + width, 0)}px`,
   } as CSSProperties;
@@ -662,6 +730,7 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
                     {menu === "browse" && (
                       <>
                         <button className={styles.menuItem} onClick={() => { setOpenMenu(null); showOverview(); }} type="button">Overview</button>
+                        <button className={styles.menuItem} onClick={() => { setOpenMenu(null); showArtists(); }} type="button">Artists</button>
                         <button className={styles.menuItem} onClick={() => { setOpenMenu(null); showAlbums(); }} type="button">All albums</button>
                         <button className={styles.menuItem} onClick={() => {
                           setOpenMenu(null);
@@ -765,20 +834,53 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
               <span className={styles.treeIcon}><PagesIcon /></span><span className={styles.treeLabel}>Portfolio</span>
             </Link>
           </div>}
-          <button aria-controls="library-music-tree" aria-expanded={musicExpanded} className={`${styles.musicTree} ${!selected && libraryPage === "collection" ? styles.treeSelected : ""}`} onClick={toggleMusic} onKeyDown={(event) => {
+          <button aria-controls="library-music-tree" aria-expanded={musicExpanded} className={styles.musicTree} onClick={toggleMusic} onKeyDown={(event) => {
             if (!musicExpanded && event.key === "ArrowDown") {
               event.preventDefault();
-              showAlbums();
-              window.requestAnimationFrame(() => albumTreeRef.current?.querySelector("button")?.focus());
+              setMusicExpanded(true);
+              window.requestAnimationFrame(() => document.getElementById("library-artist-branch")?.focus());
               return;
             }
-            keyboardNavigateMusic(event, -1);
           }} type="button">
             <span className={musicExpanded ? styles.chevronOpen : styles.chevron} aria-hidden="true" />
             <span className={styles.treeIcon}><MusicIcon /></span>
             <span>Music</span>
           </button>
-          {musicExpanded && <div className={styles.albumTree} id="library-music-tree" ref={albumTreeRef}>
+          {musicExpanded && <div className={styles.musicBranches} id="library-music-tree">
+            <button aria-controls="library-artist-tree" aria-expanded={artistsExpanded} className={`${styles.treeBranch} ${libraryPage === "artists" && !selectedArtist ? styles.treeSelected : ""}`} id="library-artist-branch" onClick={() => {
+              if (libraryPage === "artists" && !selectedArtist) setArtistsExpanded((value) => !value);
+              else showArtists();
+            }} onKeyDown={(event) => {
+              if (event.key === "ArrowRight" && !artistsExpanded) { event.preventDefault(); setArtistsExpanded(true); }
+              if (event.key === "ArrowLeft" && artistsExpanded) { event.preventDefault(); setArtistsExpanded(false); }
+              if (event.key === "ArrowDown" && artistsExpanded && artistGroups.length) { event.preventDefault(); artistTreeRef.current?.querySelector("button")?.focus(); }
+            }} type="button">
+              <span className={artistsExpanded ? styles.chevronOpen : styles.chevron} aria-hidden="true" />
+              <span className={styles.treeIcon}><AlbumIcon /></span><span className={styles.treeLabel}>Artist</span>
+            </button>
+            {artistsExpanded && <div className={styles.branchItems} id="library-artist-tree" ref={artistTreeRef}>
+              {artistGroups.map((artist, index) => <button
+                aria-current={selectedArtist === artist.name ? "page" : undefined}
+                className={`${styles.treeAlbum} ${selectedArtist === artist.name ? styles.treeSelected : ""}`}
+                key={artist.name}
+                onClick={() => selectArtist(artist.name)}
+                onKeyDown={(event) => keyboardNavigateArtist(event, index)}
+                title={artist.name}
+                type="button"
+              ><span className={styles.treeIcon}><AlbumIcon /></span><span className={styles.treeLabel}>{artist.name}</span></button>)}
+            </div>}
+            <button aria-controls="library-album-tree" aria-expanded={albumsExpanded} className={`${styles.treeBranch} ${libraryPage === "collection" && !selected ? styles.treeSelected : ""}`} onClick={() => {
+              if (libraryPage === "collection" && !selected) setAlbumsExpanded((value) => !value);
+              else showAlbums();
+            }} onKeyDown={(event) => {
+              if (event.key === "ArrowRight" && !albumsExpanded) { event.preventDefault(); setAlbumsExpanded(true); }
+              if (event.key === "ArrowLeft" && albumsExpanded) { event.preventDefault(); setAlbumsExpanded(false); }
+              if (event.key === "ArrowDown" && albumsExpanded && sortedAlbums.length) { event.preventDefault(); albumTreeRef.current?.querySelector("button")?.focus(); }
+            }} type="button">
+              <span className={albumsExpanded ? styles.chevronOpen : styles.chevron} aria-hidden="true" />
+              <span className={styles.treeIcon}><AlbumIcon /></span><span className={styles.treeLabel}>Album</span>
+            </button>
+            {albumsExpanded && <div className={styles.branchItems} id="library-album-tree" ref={albumTreeRef}>
               {sortedAlbums.map((album, index) => (
                 <button
                   aria-current={selectedTitle === album.album ? "page" : undefined}
@@ -786,7 +888,6 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
                   key={album.album}
                   onClick={() => selectAlbum(album)}
                   onKeyDown={(event) => keyboardNavigateMusic(event, index)}
-                  tabIndex={selectedTitle === album.album || (!selectedTitle && index === 0) ? 0 : -1}
                   title={album.album}
                   type="button"
                 >
@@ -794,11 +895,12 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
                   <span className={styles.treeLabel}>{album.album}</span>
                 </button>
               ))}
+            </div>}
           </div>}
         </aside>
 
-        <section className={styles.content} aria-label={selected ? selected.album : libraryPage === "overview" ? "Library overview" : "Albums"}>
-          {selected ? (
+        <section className={styles.content} aria-label={selected ? selected.album : selectedArtist ?? (libraryPage === "overview" ? "Library overview" : libraryPage === "artists" ? "Artists" : "Albums")}>
+          {detailAlbums.length > 0 ? (
             <>
               <div className={styles.detailScroll} ref={detailScrollRef} tabIndex={-1}>
                 <div className={styles.detailTable} style={tableStyle}>
@@ -877,42 +979,50 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
                       );
                     })}
                   </div>
-                  <div className={styles.groupTitle}><span>{selected.album}</span></div>
-                  <div className={styles.trackGrid}>
-                    <div className={styles.albumCell}>
-                      <div className={styles.albumIdentity}>
-                        <Image alt={selected.coverAlt ?? `${selected.album} album cover`} src={selected.coverSrc ?? "/images/albums/wmp_empty.png"} width={110} height={110} unoptimized />
-                        <div className={styles.albumIdentityText}><strong>{selected.album}</strong><br /><strong>{selected.artist}</strong><CatalogNumbers numbers={selected.catalogNumbers} /></div>
-                      </div>
-                      {selected.notes?.trim() && <AlbumNotes notes={selected.notes} />}
-                    </div>
-                    <div aria-label={`Tracks on ${selected.album}`} className={styles.trackRows} role="listbox">
-                      {desktopTracks.map((track, index) => (
-                        <div
-                          aria-selected={activeTrack === track}
-                          className={`${styles.trackRow} ${activeTrack === track ? styles.trackRowSelected : ""}`}
-                          key={`${track.title}-${index}`}
-                          onClick={(event) => { setSelectedTrack(track); event.currentTarget.focus(); }}
-                          onKeyDown={(event) => keyboardSelectTrack(event, desktopTracks, index)}
-                          role="option"
-                          tabIndex={activeTrack === track || (!activeTrack && index === 0) ? 0 : -1}
-                        >
-                          {columnOrder.map((id) => {
-                            const value = id === "number" ? track.trackNumber ?? fallbackTrackNumbers.get(track)
-                              : id === "title" ? track.title
-                              : id === "length" ? formatLength(track.durationSeconds)
-                              : id === "artist" ? track.contributingArtist ?? track.artist
-                              : id === "playCount" ? track.playCount ?? track.listens
-                              : null;
-                            return <span key={id} title={id === "title" || id === "artist" ? String(value ?? "") : undefined}>{value}</span>;
-                          })}
+                  {detailAlbums.map((album) => {
+                    const albumTracks = sortedDetailTracks(album);
+                    const naturalNumbers = new Map([...album.tracks].sort(naturalTrackOrder).map((track, index) => [track, index + 1]));
+                    const selectedAlbumTrack = selectedTrack && album.tracks.includes(selectedTrack) ? selectedTrack : null;
+                    return <div className={`${styles.detailAlbumGroup} ${selected ? styles.singleDetailAlbumGroup : ""}`} key={album.album}>
+                      <div className={styles.groupTitle}><span>{album.album}</span></div>
+                      <div className={styles.trackGrid} style={!selected ? { minHeight: 140 } : undefined}>
+                        <div className={styles.albumCell}>
+                          <div className={styles.albumIdentity}>
+                            <Image alt={album.coverAlt ?? `${album.album} album cover`} src={album.coverSrc ?? "/images/albums/wmp_empty.png"} width={110} height={110} unoptimized />
+                            <div className={styles.albumIdentityText}><strong>{album.album}</strong><br /><strong>{album.artist}</strong><CatalogNumbers numbers={album.catalogNumbers} /></div>
+                          </div>
+                          {album.notes?.trim() && <AlbumNotes notes={album.notes} />}
                         </div>
-                      ))}
-                    </div>
-                  </div>
+                        <div aria-label={`Tracks on ${album.album}`} className={styles.trackRows} role="listbox">
+                          {albumTracks.map((track, index) => (
+                            <div
+                              aria-selected={selectedAlbumTrack === track}
+                              className={`${styles.trackRow} ${selectedAlbumTrack === track ? styles.trackRowSelected : ""}`}
+                              key={`${track.title}-${index}`}
+                              onClick={(event) => { setSelectedTrack(track); event.currentTarget.focus(); }}
+                              onKeyDown={(event) => keyboardSelectTrack(event, albumTracks, index)}
+                              role="option"
+                              tabIndex={selectedAlbumTrack === track || (!selectedAlbumTrack && index === 0) ? 0 : -1}
+                            >
+                              {columnOrder.map((id) => {
+                                const value = id === "number" ? track.trackNumber ?? naturalNumbers.get(track)
+                                  : id === "title" ? track.title
+                                  : id === "length" ? formatLength(track.durationSeconds)
+                                  : id === "artist" ? track.contributingArtist ?? track.artist
+                                  : id === "playCount" ? track.playCount ?? track.listens
+                                  : id === "catalogNumber" ? track.catalogNumbers?.join("; ") ?? ""
+                                  : null;
+                                return <span key={id} title={id === "title" || id === "artist" || id === "catalogNumber" ? String(value ?? "") : undefined}>{value}</span>;
+                              })}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>;
+                  })}
                 </div>
               </div>
-              <div className={styles.mobileDetail}>
+              {selected ? <div className={styles.mobileDetail}>
                 <button className={styles.mobileBack} onClick={() => showAlbums(true)} onKeyDown={(event) => {
                   if (event.key !== "ArrowDown" || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || tracks.length === 0) return;
                   event.preventDefault();
@@ -962,6 +1072,7 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
                           <div className={styles.mobileTrackInfo}>
                             <span className={styles.mobileTrackTitle}>{track.title}</span>
                             <span className={styles.mobileTrackArtist}>{track.contributingArtist ?? track.artist}</span>
+                            {!!track.catalogNumbers?.length && <span className={styles.mobileTrackCatalog}>Catalog No.: {track.catalogNumbers.join("; ")}</span>}
                           </div>
                           <div className={styles.mobileTrackStats}>
                             <span>{formatLength(track.durationSeconds)}</span>
@@ -972,8 +1083,15 @@ export default function LibraryView({ albums, overview }: { albums: Album[]; ove
                     );
                   })}
                 </div>
-              </div>
+              </div> : <ArtistView artists={artistGroups} selectedArtist={selectedArtist} onSelectArtist={(name) => selectArtist(name, true)} onShowArtists={() => showArtists(true)} />}
             </>
+          ) : libraryPage === "artists" ? (
+            <ArtistView
+              artists={artistGroups}
+              selectedArtist={selectedArtist}
+              onSelectArtist={(name) => selectArtist(name, true)}
+              onShowArtists={() => showArtists(true)}
+            />
           ) : libraryPage === "overview" ? (
             <LibraryOverview
               albums={overviewAlbums}
